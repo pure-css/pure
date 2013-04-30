@@ -1,0 +1,83 @@
+/* MAIN MENU STYLING */
+
+.yui3-menu.yui3-menu-open,
+.yui3-menu.yui3-menu-horizontal li .yui3-menu-children {
+    background: #ffffff; /* Old browsers */    
+    border-radius: 3px;
+    border: 1px solid #b7b7b7;
+}
+
+/* remove borders for horizontal menus */
+.yui3-menu.yui3-menu-horizontal, .yui3-menu.yui3-menu-horizontal .yui3-menu-heading {
+    border: none;
+}
+
+
+
+/* LINK STYLES */
+
+.yui3-menu a {
+    border: 1px solid transparent;
+    border-left: none;
+    border-right: none;
+
+}
+
+.yui3-menu a,
+.yui3-menu .yui3-menu-can-have-children > li:after {
+    color: #777;
+}
+
+.yui3-menu .yui3-menu-can-have-children > li:hover:after {
+    color: #fff;
+}
+
+
+
+/* HOVER STATES */
+.yui3-menu li a:hover {
+    background: #46b9e3;
+    color: #fff;
+
+}
+
+/* DISABLED STATES */
+.yui3-menu li.yui3-menu-disabled a:hover {
+    background: #fff;
+    color: #bfbfbf;
+}
+
+.yui3-menu .yui3-menu-disabled > a {
+    background-image: none;
+    border-color: transparent;
+    cursor: default;
+}
+
+.yui3-menu .yui3-menu-disabled > a,
+.yui3-menu .yui3-menu-can-have-children.yui3-menu-disabled > a:after {
+    color: #bfbfbf;
+}
+
+/* HEADINGS */
+.yui3-menu .yui3-menu-heading {
+    color: #565d64;
+    text-transform: uppercase;
+    font-size:90%;
+    margin-top:0.5em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #dfdfdf;
+}
+
+/* ACTIVE MENU ITEM */
+.yui3-menu .yui3-menu-selected a {
+    font-weight: bold;
+    color: #000;
+}
+
+/* FIXED MENU */
+.yui3-menu.yui3-menu-open.yui3-menu-fixed {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #b7b7b7;
+}

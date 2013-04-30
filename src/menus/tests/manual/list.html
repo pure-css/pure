@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width = device-width">
+    <title>List CSS</title>
+    <link rel="stylesheet" type="text/css" href="http://necolas.github.com/normalize.css/1.0.2/normalize.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.6.0/build/cssbutton/cssbutton.css">
+    <link rel="stylesheet" type="text/css" href="assets/grids-responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../../../build/gallerycss-csslist/gallerycss-csslist.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.0/build/cssbutton/cssbutton-min.css">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .header {
+             background: black;
+             min-height: 80px;
+             margin: 0;
+             color:white;
+             padding: 30px 20px;
+         }
+             .header h2 {
+                 font-weight:300;
+                 color: #666;
+                 margin:0;
+             }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+                         "Helvetica Neue", sans-serif;
+            font-weight: 300;
+        }
+        .content {
+            padding:0 30px;
+        }
+
+        .content h2 {
+            color:#2B474F;
+            margin:50px 0 20px 0;
+            font-weight:bold;
+        }
+
+        #menu-1 {
+            width:120px;
+        }
+
+        #vertical-menu1, #vertical-menu2, #vertical-menu3 {
+            width:40%;
+        }
+
+        #vertical-menu3 {
+            margin: 10px;
+        }
+
+        .yui3-menu {
+            margin-bottom:15px;
+        }
+
+    </style>
+</head>
+<body class="yui3-skin-sam">
+
+    <div class="header y-u-1">
+
+        <h1 class="yui3-u-1">YUI3 List CSS</h1>
+        <h2 class="yui3-u">Simple styling for HTML List elements.</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>
+            <code>gallerycss-csslist</code> is a YUI Gallery module that makes it easy to display good looking lists on your website. 
+        </p>
+
+        <h2>Horizontal Menu</h2>
+
+        <p>
+            You can mark the active list element by adding the <code>.yui3-menu-selected</code> class to the list element.
+        </p>
+
+        <div class="yui3-menu yui3-menu-open yui3-menu-horizontal">
+            <a href="#" class="yui3-menu-heading">Site Title</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="yui3-menu-selected"><a href="#">Flickr</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Finance</a></li>
+                <li class="yui3-menu-disabled"><a href="#">Disabled</a></li>
+            </ul>
+        </div>
+
+        <h2>Vertical Menu</h2>
+
+        <div id="vertical-menu1" class="yui3-menu yui3-menu-open">
+            <a href="#" class="yui3-menu-heading">Site Title</a>
+            <ul>
+                <li class="yui3-menu-selected"><a href="#">Home</a></li>
+                <li><a href="#">Flickr</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li class="yui3-menu-heading">Yahoo! Sites</li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Finance</a></li>
+                <li class="yui3-menu-disabled"><a href="#">Disabled</a></li>
+            </ul>
+        </div>
+
+        <div id="vertical-menu1" class="yui3-menu yui3-menu-open">
+            <ul>
+                <li class="yui3-menu-heading">Site Title</li>
+                <li class="yui3-menu-selected"><a href="#">Home</a></li>
+                <li><a href="#">Flickr</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li class="yui3-menu-heading">Yahoo! Sites</li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Finance</a></li>
+                <li class="yui3-menu-disabled"><a href="#">Disabled</a></li>
+            </ul>
+        </div>
+
+
+        <h2>Add Dropdowns to Menus</h2>
+
+        <p>
+            Adding dropdowns to menus requires the use of JavaScript. The <code>Y.Menu</code> module adds dropdown functionality and the ability to create JavaScript menus. It uses <code>csslist</code> to style these menus, so they look identical.
+        </p>
+
+
+        <div id="horizontal-menu">
+            <a href="#" class="yui3-menu-heading">Site Title</a>
+            <ul id="std-menu-items">
+                <li class="yui3-menu-selected"><a href="#">Flickr</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Finance</a></li>
+                <li>
+                    <a href="#">Other</a>
+                    <ul>
+                        <li class="yui3-menu-heading">More from Yahoo!</li>
+                        <li class="yui3-menu-separator"></li>
+                        <li><a href="#">Autos</a></li>
+                        <li><a href="#">Flickr</a></li>
+                        <li><a href="#">Answers</a></li>
+                        <li>
+                            <a href="#">Even More</a>
+                            <ul>
+                                <li><a href="#">Horoscopes</a></li>
+                                <li><a href="#">Games</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">OMG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <h2>Fixed Menus</h2>
+
+        <p>
+            Fixed menus can be created by adding the <code>yui3-menu-fixed</code> class name to the wrapper. This will fix a menu to the top of the page.
+        </p>
+
+        <p>
+            <button class="yui3-button" id="showFixedMenuBtn">Toggle Fixed Menu</button>
+        </p>
+
+        <div id="fixed-menu" class="yui3-menu yui3-menu-horizontal yui3-menu-fixed">
+            <ul>
+                <li class="yui3-menu-selected"><a href="#">Flickr</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Finance</a></li>
+            </ul>
+        </div>
+
+
+
+    </div>
+    <script src="../../../../../yui3/build/yui/yui.js"></script>
+    <script>
+    var Y = YUI({
+        fetchCSS: false
+    }).use('gallery-sm-menu', 'event-tap', 'node-base', function (Y) {
+
+        var horizontalMenu = new Y.Menu({
+            container: '#horizontal-menu',
+            sourceNode: '#std-menu-items',
+            orientation: 'horizontal',
+            hideOnOutsideClick: false
+        });
+
+        horizontalMenu.render();
+        horizontalMenu.show();
+
+
+        Y.one('#showFixedMenuBtn').on('tap', function (e) {
+            var fixedMenu = Y.one('#fixed-menu');
+            fixedMenu.toggleClass('yui3-menu-open');
+        });
+
+    });
+    </script>
+</body>
+</html>

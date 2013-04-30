@@ -1,0 +1,14 @@
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .yui3-menu-horizontal {
+        width:100%;
+    }
+
+    .yui3-menu-children li {
+        display: block;
+        border-bottom:1px solid block;
+    }
+
+}

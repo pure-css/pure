@@ -1,0 +1,111 @@
+.yui3-menu ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+.yui3-menu.yui3-menu-open {
+    visibility: visible;
+    z-index: 2;
+    width: 100%;
+}
+
+.yui3-menu ul {
+    left: -10000px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: -10000px;
+    z-index: 1;
+}
+
+.yui3-menu > ul { position: relative; }
+
+.yui3-menu-open > ul {
+    left: 0;
+    top: 0;
+    visibility: visible;
+}
+
+.yui3-menu li { position: relative; }
+
+.yui3-menu a, .yui3-menu .yui3-menu-heading {
+    display: block;
+    color: inherit;
+    line-height: 1.5em;
+    padding: 5px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.yui3-menu.yui3-menu-horizontal > .yui3-menu-heading {
+    display: inline-block;
+    margin: 0;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+.yui3-menu.yui3-menu-horizontal > ul {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+.yui3-menu li a { padding: 5px 20px; }
+
+.yui3-menu-can-have-children > .yui3-menu-label:after {
+    content: '\25B8';
+    float: right;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
+    margin-right: -20px;
+    margin-top: -1px;
+}
+
+.yui3-menu-can-have-children > .yui3-menu-label {
+    padding-right:30px;
+}
+
+.yui3-menu-separator {
+    background-color: #dfdfdf;
+    display: block;
+    height: 1px;
+    font-size: 0;
+    margin: 7px 2px;
+    overflow: hidden;
+}
+
+.yui3-menu-hidden { display: none; }
+
+/* FIXED MENU */
+.yui3-menu-fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+
+/* HORIZONTAL MENU CODE */
+
+/* Initial menus should be inline-block so that they are horizontal */
+.yui3-menu-horizontal li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+/* Submenus should still be display:block; */
+.yui3-menu-horizontal li li {
+    display: block;
+}
+
+/* Content after should be down arrow */
+.yui3-menu-horizontal > .yui3-menu-children > .yui3-menu-can-have-children > .yui3-menu-label:after {
+    content: "\25BE";
+}
+/*Add extra padding to elements that have the arrow so that the hover looks nice */
+.yui3-menu-horizontal > .yui3-menu-children > .yui3-menu-can-have-children > .yui3-menu-label {
+    padding-right:30px;
+}
+

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width = device-width">
+    <title>Forms CSS</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../yui3/build/cssnormalize/cssnormalize.css">
+    <link rel="stylesheet" href="../../../../../yui3/build/cssbutton/cssbutton.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../yui3/build/cssgrids-responsive/cssgrids-responsive-min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../build/gallerycss-cssform/gallerycss-cssform.css">
+    
+<!--     <link rel="stylesheet" type="text/css" href="../../css/forms.css">
+    <link rel="stylesheet" type="text/css" href="../../css/forms-responsive.css"> -->
+    <style>
+        body {
+            color: #333;
+            font-size:1.2em;
+        }
+
+        .header {
+             background: black;
+             min-height: 80px;
+             margin: 0;
+             color:white;
+             padding: 30px 20px;
+         }
+             .header h2 {
+                 font-weight:300;
+                 color: #666;
+                 margin:0;
+             }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+                         "Helvetica Neue", sans-serif;
+            font-weight: 300;
+            margin:0;
+            padding:0;
+        }
+        .content {
+            padding:0 30px;
+        }
+
+        .content h2 {
+            color:#2B474F;
+            margin:50px 0 20px 0;
+            font-weight:bold;
+        }
+
+        .notice {
+            background-color: #61B842;
+            color: white;
+        }
+    </style>
+</head>
+<body class="yui3-skin-sam">
+
+    <div class="header y-u-1">
+
+        <h1 class="yui3-u-1">YUI3 Forms CSS</h1>
+        <h2 class="yui3-u">Simple styling for HTML Form elements.</h2>
+
+    </div>
+
+    <div class="content">
+
+     <p>
+      CSSForm is a YUI module that makes it easy to display good looking forms on your website. 
+     </p>
+
+
+    
+    <h2>Default Form</h2>
+
+    <form class="yui3-form">
+    <fieldset>
+     <legend>A default inline form.</legend>
+     <input type="text" placeholder="Email">
+     <input type="password" placeholder="Password">
+     <label>
+     <input type="checkbox"> Remember me
+     </label>
+     <button type="submit" class="yui3-button">Sign in</button>
+    </fieldset>
+    </form>
+
+     <h2>Multi-Column Form (with YUI Grids)</h2>
+
+     <p>
+      Multi-column forms such as the one below can be created by pulling down YUI Grids. 
+     </p>
+
+     <form class="yui3-form yui3-form-stacked">
+      <fieldset>
+      <legend>Legend</legend>
+
+      <div class='yui3-g-r'>
+       <div class='yui3-u-1-3'>
+        <label>First Name</label>
+        <input type="text">
+       </div>
+       <div class='yui3-u-1-3'>
+        <label>Last Name</label>
+        <input type="text">
+       </div>
+       <div class='yui3-u-1-3'>
+        <label>E-Mail</label>
+        <input type="email" required>
+       </div>
+       
+       <div class='yui3-u-1-3'>
+        <label>City</label>
+        <input type="text">
+       </div>
+
+       <div class='yui3-u-1-3'>
+        <label>State</label>
+        <select class='yui3-input-medium'>
+         <option>AL</option>
+         <option>CA</option>
+         <option>IL</option>
+         <option>MD</option>
+         <option>NY</option>
+        </select>
+       </div>
+      </div>
+      <label class="yui3-checkbox">
+       <input type="checkbox"> I've read the terms and conditions
+      </label>
+      <button type="submit" class='yui3-button'>Submit</button>
+      </fieldset>
+     </form>
+
+    
+    <h2>Stacked Form</h2>
+
+    <p>
+     Apply stacked label styling to any form by applying the <code>yui3-form-stacked</code> classname.
+    </p>
+    <form class="yui3-form yui3-form-stacked">
+     <fieldset>
+     <legend>Legend</legend>
+     <label>First Name</label>
+     <input type="text">
+     <label>Last Name</label>
+     <input type="text">
+     <label>E-Mail</label>
+     <input type="email" required>
+     <aside class='yui3-help-inline'>This is a required field.</aside>
+     <label>City</label>
+     <input type="text">
+     <label>State</label>
+     <select class='yui3-input-medium'>
+      <option>AL</option>
+      <option>CA</option>
+      <option>IL</option>
+      <option>MD</option>
+      <option>NY</option>
+     </select>
+     <label class="yui3-checkbox">
+      <input type="checkbox"> I've read the terms and conditions
+     </label>
+     <button type="submit" class='yui3-button notice'>Submit</button>
+     </fieldset>
+    </form>
+
+     <h2>Aligned Form</h2>
+
+     <p>Aligned forms are great for standard forms that look well-aligned. The labels are right-aligned against the form input controls.</p>
+
+     <form class="yui3-form yui3-form-aligned">
+      <fieldset>
+      <div class="yui3-control-group">
+       <label>Username</label>
+       <input type="text" placeholder="Username">
+      </div>
+
+      <div class="yui3-control-group">
+       <label>Password</label>
+       <input type="password" placeholder="Password">
+      </div>
+
+      <div class="yui3-control-group">
+       <label>Email Address</label>
+       <input type="text" placeholder="Email Address">
+      </div>
+
+      <div class="yui3-control-group">
+       <label>Supercalifragilistic Label</label>
+       <input type="text" placeholder="Enter something here...">
+      </div>
+
+      <div class="yui3-controls">
+       <label class="yui3-checkbox">
+        <input type="checkbox"> Check me out
+       </label>
+       <button type="submit" class="yui3-button">Submit</button>
+      </div>
+      </fieldset>
+     </form>
+
+     <h2>Grouped Inputs</h2>
+     
+     <p>Grouped inputs are great for grouping small sets of text-based input elements. They work well for sign-up forms, and look natural on mobile devices.</p>
+       
+     <form class="yui3-form">
+      <fieldset class='yui3-group'>
+       <input type="text" class="yui3-input-1-3" placeholder='Username'>
+       <input type="text" class="yui3-input-1-3" placeholder='Password'>
+       <input type="text" class="yui3-input-1-3" placeholder='Email'>
+      </fieldset>
+      <fieldset class='yui3-group'>
+       <input type="text" class="yui3-input-1-3" placeholder='Another Group'>
+       <input type="text" class="yui3-input-1-3" placeholder='More Stuff'>
+       <button type="submit" class="yui3-button yui3-input-1-3">Sign in</button>
+      </fieldset>
+     </form>
+
+
+
+
+     <h2>Input Sizing</h2>
+
+     <p>You can take advantage of YUI Grids and the <code>yui3-input-block</code> class to create fluid width inputs in practically any size that you want.</p>
+
+     <form class="yui3-form">
+       <input class="yui3-input-1" type="text" placeholder=".yui3-input-1"><br/>
+       <input class="yui3-input-2-3" type="text" placeholder=".yui3-input-2-3"><br/>
+       <input class="yui3-input-1-2" type="text" placeholder=".yui3-input-1-2"><br/>
+       <input class="yui3-input-1-3" type="text" placeholder=".yui3-input-1-3"><br/>
+       <input class="yui3-input-1-4" type="text" placeholder=".yui3-input-1-4"><br/>
+     </form>
+     
+     <div class="yui3-g sizing">
+       <form class="yui3-form">
+        <div class="yui3-u-1-4">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1-4">
+        </div>
+        <div class="yui3-u-3-4">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-3-4">
+        </div>
+
+
+        <div class="yui3-u-1-2">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1-2">
+        </div>
+        <div class="yui3-u-1-2">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1-2">
+        </div>
+
+
+        <div class="yui3-u-1-8">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1-8">
+        </div>
+        <div class="yui3-u-1-8">
+         <input class="v" type="text" placeholder=".yui3-u-1-8">
+        </div>
+        <div class="yui3-u-1-4">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1-4">
+        </div>
+        <div class="yui3-u-1-2">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1-2">
+        </div>
+
+
+        <div class="yui3-u-1-5">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1-5">
+        </div>
+        <div class="yui3-u-2-5">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-2-5">
+        </div>
+        <div class="yui3-u-2-5">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-2-5">
+        </div>
+
+        <div class="yui3-u-1">
+         <input class="yui3-input-1" type="text" placeholder=".yui3-u-1">
+        </div>
+       </form>
+     </div>
+
+     <h2>Invalid Inputs</h2>
+     <p>Add the required attribute to any form control.</p>
+     <form class="yui3-form">
+       <input type="email" placeholder="Requires an email" required>
+     </form>
+
+     <h2>Disabled Inputs</h2>
+     <p>Add the disabled attribute to any form control.</p>
+     <form class="yui3-form">
+       <input class="yui3-input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+     </form>
+
+     <h2>Rounded Form</h2>
+     <p>Add the yui3-input-rounded classname to any form control.</p>
+
+     <form class="yui3-form">
+       <input type="text" class="yui3-input-rounded">
+       <button type="submit" class='yui3-button'>Search</button>
+     </form>
+
+
+     <h2>Selects</h2>
+     <form class="yui3-form">
+       <select class='yui3-input-medium'>
+        <option>Brazil</option>
+        <option>Canada</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
+        <option>Venezuela</option>
+       </select>
+
+      
+     <select multiple="multiple" class="yui3-input-large">
+      <option>Brazil</option>
+      <option>Canada</option>
+      <option>United States</option>
+      <option>United Kingdom</option>
+      <option>Venezuela</option>
+     </select>
+     </form>
+
+     <h2>Checkboxes and Radios</h2>
+     <form class="yui3-form">
+       <label class="yui3-checkbox">
+        <input type="checkbox" value="">
+        Here's option one. 
+       </label>
+        
+       <label class="yui3-radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Here's a radio button. You can choose this one..
+       </label>
+       <label class="yui3-radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        ..Or this one! 
+       </label>
+     </form>
+    </div>
+    <script type="text/javascript" src="//use.typekit.net/ajf8ggy.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</body>
+</html>
