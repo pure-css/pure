@@ -1,0 +1,15 @@
+{
+    "name": "base",
+    "builds": {
+        "base": {
+            "cssfiles": [
+                "normalize.css"
+            ]
+        },
+        "base-context": {
+            "cssfiles": [
+                "normalize-context.css"
+            ]
+        }
+    }
+}

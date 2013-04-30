@@ -1,0 +1,28 @@
+{
+    "name": "grids",
+    "builds": {
+        "grids": {
+            "cssfiles": [
+                "cssgrids-base.css",
+                "cssgrids-units.css"
+            ]
+        },
+        "grids-units": {
+            "cssfiles": [
+                "cssgrids-units.css"
+            ]
+        },
+        "grids-base": {
+            "cssfiles": [
+                "cssgrids-base.css"
+            ]
+        },
+        "grids-responsive": {
+            "cssfiles": [
+                "cssgrids-base.css",
+                "cssgrids-units.css",
+                "cssgrids-responsive-base.css"
+            ]
+        }
+    }
+}

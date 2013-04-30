@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../../../../build/cssgrids-responsive/cssgrids-responsive.css">
+	<title></title>
+</head>
+<body class="yui3-g-r">
+
+    <div class="header yui3-u-1">
+
+        <h1 class="yui3-u-1">YUI3 Responsive Grids</h1>
+        <h2 class="yui3-u">An example of making your YUI3 Grids behave responsively.</h2>
+
+    </div>
+
+    <div class='yui3-g'>
+        <h1 class="yui3-u-1 centered">How does it work?</h1>
+        <div class='yui3-u-1'>
+            <div class='cell'>
+                <p>YUI3 Responsive Grids builds on top of the existing YUI3 Grids implementation. It adds a single new class name called <code>.yui3-g-r</code>. You can use this instead of using <code>.yui3-g</code> as you normally do. All elements with a class name of <code>.yui3-u-*-*</code> will automatically become responsive if they are direct descendents of a <code>.yui3-g-r.</code></p>
+
+                <h2>The HTML</h2>
+                <p>The first gist shows how regular YUI3 grids are written. These grids are unresponsive. They'll always be one-thirds irrespective of the width of the screen. The second gist replaces the <code>yui3-g</code> with <code>yui3-g-r</code>, thereby making the one-third columns collapse to full width on lower screen widths.</p>
+                <script src="https://gist.github.com/3955432.js"></script>
+            </div>
+        </div>
+
+
+        <h1 class="yui3-u-1 centered">Features.</h1>
+        <div class="yui3-u-1">
+            <div class="cell">
+                <ul>
+                    <li>Adds configurable media queries for different screen widths (Desktops, Landscape Tablets, Portrait Tablets, Phones)</li>
+                    <li>Collapses elements to 100% if smaller than a certain width (767px by default)</li>
+                    <li>Adjusts images to fit on smaller screens</li>
+                    <li>Works with as many columns as you want (or as few)</li>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="yui3-g-r">
+        <h1 class="yui3-u-1 centered">Example.</h1>
+        <div class="yui3-u-1-4">
+            <div class="cell">
+                  <h3>Fast</h3>
+                  <p>YUI's lightweight core and modular architecture make it scalable, fast, and robust. Built by frontend engineers at Yahoo!, YUI powers the most popular websites in the world.</p>
+             </div>
+        </div><!--/span-->
+
+        <div class="yui3-u-1-4">
+            <div class="cell">
+                  <h3>Complete</h3>
+                  <p>YUI's intuitive and well-documented API takes you from basic DOM handling to building performant and maintainable applications on desktop browsers, mobile devices, and servers.</p>
+             </div>
+        </div><!--/span-->
+        <div class="yui3-u-1-4">
+            <div class="cell">
+                  <h3>Industrial Strength</h3>
+                  <p>A thriving community, a carefully architected infrastructure, and a comprehensive suite of tools help you code like a pro, from simple web pages to complex web applications.</p>
+             </div>
+        </div><!--/span-->
+        <div class="yui3-u-1-4">
+            <div class="cell">
+                  <h3>Free and Open</h3>
+                  <p>YUI is free for all uses and is developed in the open on GitHub. Core team members can always be found in the forums and the #yui IRC channel on Freenode. Pull requests welcome!</p>
+             </div>
+        </div><!--/span-->
+
+        <div class="yui3-u-1 centered">
+            <img class="yui3-u" src="http://lorempixel.com/800/400/" alt="test image">
+        </div>
+
+        <div class="yui3-u-2-5">
+            <div class="cell">
+                <h3>Two-Fifth Column</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum dui turpis. Duis nulla dolor, suscipit in venenatis vitae, auctor eu nibh. Proin lobortis arcu nec tellus vehicula vitae pellentesque nisi molestie. Aenean felis ligula, hendrerit id dictum sed, ornare nec leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec non lectus et quam porttitor dignissim vitae ac odio. Aenean mattis dui porta lacus egestas ultricies. Mauris vel dolor libero, sit amet rhoncus nibh.</p>
+            </div>
+        </div> 
+
+        <div class="yui3-u-3-5">
+            <div class="cell">
+                <h3>Three-Fifth Column</h3>
+                <p>Quisque ac magna eget est porta varius ut eget quam. Curabitur tincidunt gravida nisl, vitae luctus velit vulputate vel. Aliquam sed sodales orci. Proin varius placerat magna tristique tincidunt. Morbi non dignissim felis. Proin bibendum libero nec felis eleifend porttitor. Morbi auctor venenatis justo, molestie luctus mi pulvinar nec. Pellentesque vitae ornare lacus. Nulla hendrerit tempor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus facilisis cursus. Integer in lacinia dui. Phasellus ullamcorper, sem at congue pretium, velit sapien ornare mi, eu eleifend risus sapien ac eros.</p>
+
+                <p>Fusce accumsan, sem vitae tempus tempor, nulla lectus interdum felis, eget molestie urna mauris vel elit. Curabitur vel ipsum nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam viverra, augue et sollicitudin dignissim, lectus tellus imperdiet lectus, a tempor ipsum mauris vitae augue. Nullam vel nulla a purus cursus consequat. Nulla orci elit, malesuada nec egestas non, ornare quis nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+        </div>
+    </div>
+    <div class='yui3-g'>
+        <h1 class="yui3-u-1 centered">Grids on mobile</h1>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+    </div>
+    <div class='yui3-g'>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+    </div>
+    <div class='yui3-g'>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+        <div class="yui3-u-1-3">
+            <div class="cell">
+                <h4>Thirds</h4>
+                <p>This cell will be a grid even on mobile devices.</p>
+             </div>
+        </div>
+    </div>
+
+
+    <div class='yui3-g-r'>
+        <h1 class="yui3-u-1 centered">Helper Classes</h1>
+        <div class="yui3-u-1 yui3-hidden-phone">
+            <div class="cell">
+                <h4>No Phones Allowed</h4>
+                <p>Should be hidden on phones</p>
+             </div>
+        </div>
+        <div class="yui3-u-1 yui3-hidden-tablet">
+            <div class="cell">
+                <h4>No Tablets Allowed</h4>
+                <p>Should be hidden on tablets</p>
+             </div>
+        </div>
+        <div class="yui3-u-1 yui3-hidden-desktop">
+            <div class="cell">
+                <h4>No big screens allowed.</h4>
+                <p>Should be hidden on desktops/laptops</p>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

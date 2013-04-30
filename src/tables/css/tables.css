@@ -1,0 +1,116 @@
+/* 
+
+CSS TABLES 
+Simple CSS for HTML Tables
+
+Part of YUI CSS
+
+Author: Tilo Mitra
+
+*/
+
+
+/* foundational CSS */
+.yui3-table {
+    empty-cells: show;
+}
+
+/* basic skin styles */
+.yui3-table {
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0;
+    /* IE7- don't support border-spacing, but separate is needed for more
+     * reliable dimension calculation for scrollable's header width sync,
+     * and it doesn't hurt to have the declaration here.
+     */
+    /**border-collapse: collapse;*/
+    border: 1px solid #cbcbcb;
+}
+
+.yui3-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.yui3-table td,
+.yui3-table th {
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+	overflow: visible; /*to make ths where the title is really long work*/
+    padding: 6px 12px; /* cell padding */
+}
+.yui3-table td:first-child,
+.yui3-table th:first-child {
+    border-left-width: 0;
+}
+
+.yui3-table thead {
+    /* header gradient */
+    background: #fff url(../../../../assets/skins/sam/sprite.png) repeat-x 0 0;
+
+    background-image:-webkit-linear-gradient(transparent 40%, rgba(0,0,0,0.21));
+    background-image:-moz-linear-gradient(top,transparent 40%,rgba(0,0,0,0.21));
+    background-image:    -ms-linear-gradient(transparent 40%, rgba(0,0,0,0.21));
+    background-image:     -o-linear-gradient(transparent 40%, rgba(0,0,0,0.21));
+    background-image:        linear-gradient(transparent 40%, rgba(0,0,0,0.21));
+    /* Not using an IE gradient because it doesn't support color stops */
+
+    color: #000;
+    font-weight: normal;
+    text-align: left;
+    text-shadow: 0 1px 1px #fff;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #edf5ff (light blue)
+*/
+.yui3-table td {
+    background-color: transparent;
+}
+.yui3-table-odd td {
+    background-color: #f2f2f2;
+}
+
+
+/* BORDERED TABLES */
+.yui3-table-bordered td {
+    border-bottom:1px solid #cbcbcb;
+}
+.yui3-table-bordered tbody > tr:last-child td,
+.yui3-table-horizontal tbody > tr:last-child td {
+    border-bottom:1px solid #fff;
+}
+
+
+/* HORIZONTAL BORDERED TABLES */
+.yui3-table-horizontal {
+    border-width: 1px 0;
+}
+.yui3-table-horizontal td,
+.yui3-table-horizontal th {
+    border-width: 0 0 1px 0;
+    border-bottom:1px solid #cbcbcb;
+}
+.yui3-table-horizontal tbody > tr:last-child td {
+    border-bottom:1px solid #fff;
+}
+
+
+/* PLAIN HEADERS */
+.yui3-table .yui3-thead-simple {
+    /* header gradient */
+    background: #fff;
+    border-width:0 0 1px 0;
+}
+.yui3-table .yui3-thead-simple th {
+    border-bottom:1px solid #cbcbcb;
+}
