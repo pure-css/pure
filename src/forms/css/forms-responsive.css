@@ -1,29 +1,29 @@
 @media only screen and (max-width : 480px) {
-	.yui3-form button[type='submit'] {
+	.k-form button[type='submit'] {
 		margin: 0.7em 0 0;
 	}
 
-	.yui3-form input[type='text'], .yui3-form button, .yui3-form label {
+	.k-form input[type='text'], .k-form button, .k-form label {
 		margin-bottom: 0.3em;
 		display: block;
 	}
 
-	.yui3-group input[type='text'] {
+	.k-group input[type='text'] {
 		margin-bottom: 0;
 	}
 
-	.yui3-form-aligned .yui3-control-group label {
+	.k-form-aligned .k-control-group label {
 		margin-bottom: 0.3em;
 		text-align: left;
 		display: block;
 		width: 100%;
 	}
 
-	.yui3-form-aligned .yui3-controls {
+	.k-form-aligned .k-controls {
 		margin: 1.5em 0 0 0;
 	}
 
-	.yui3-form .yui3-help-inline {
+	.k-form .k-help-inline {
 		display: block;
 		font-size: 80%;
 		padding: 0.2em 0 0.8em; /* increased bottom padding to make it group with its related input element */

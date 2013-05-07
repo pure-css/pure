@@ -1,5 +1,5 @@
-.yui3-form input,
-.yui3-form select {
+.k-form input,
+.k-form select {
   padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -17,57 +17,57 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.yui3-form input:focus,
-.yui3-form select:focus {
+.k-form input:focus,
+.k-form select:focus {
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
   border-color: #129FEA;
 }
-.yui3-form .yui3-checkbox,
-.yui3-form .yui3-radio {
+.k-form .k-checkbox,
+.k-form .k-radio {
   margin: 0.5em 0;
   display: block;
 }
-.yui3-form input[disabled],
-.yui3-form select[disabled],
-.yui3-form textarea[disabled],
-.yui3-form input[readonly],
-.yui3-form select[readonly],
-.yui3-form textarea[readonly] {
+.k-form input[disabled],
+.k-form select[disabled],
+.k-form textarea[disabled],
+.k-form input[readonly],
+.k-form select[readonly],
+.k-form textarea[readonly] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
   border-color: transparent;
 }
-.yui3-form input:focus:invalid,
-.yui3-form textarea:focus:invalid,
-.yui3-form select:focus:invalid {
+.k-form input:focus:invalid,
+.k-form textarea:focus:invalid,
+.k-form select:focus:invalid {
   color: #b94a48;
   border: 1px solid #ee5f5b;
 }
-.yui3-form input:focus:invalid:focus,
-.yui3-form textarea:focus:invalid:focus,
-.yui3-form select:focus:invalid:focus {
+.k-form input:focus:invalid:focus,
+.k-form textarea:focus:invalid:focus,
+.k-form select:focus:invalid:focus {
   border-color: #e9322d;
 }
-.yui3-form select {
+.k-form select {
   border: 1px solid #ccc;
   background-color: white;
 }
-.yui3-form select[multiple] {
+.k-form select[multiple] {
   height: auto;
 }
-.yui3-form label {
+.k-form label {
   margin: 0.5em 0 0.2em;
   color: #999;
   font-size:90%;
 }
-.yui3-form fieldset {
+.k-form fieldset {
   margin: 0;
   padding: 0.35em 0 0.75em;
   border: 0;
 }
-.yui3-form legend {
+.k-form legend {
   display: block;
   width: 100%;
   padding: 0.3em 0;
@@ -77,16 +77,16 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.yui3-form.yui3-form-stacked input[type='text'], 
-.yui3-form.yui3-form-stacked select, 
-.yui3-form.yui3-form-stacked label {
+.k-form.k-form-stacked input[type='text'],
+.k-form.k-form-stacked select,
+.k-form.k-form-stacked label {
   display: block;
 }
 
-.yui3-form-aligned input,
-.yui3-form-aligned textarea,
-.yui3-form-aligned select,
-.yui3-form-aligned .yui3-help-inline {
+.k-form-aligned input,
+.k-form-aligned textarea,
+.k-form-aligned select,
+.k-form-aligned .k-help-inline {
   display: inline-block;
   *display: inline; /* IE7 inline-block hack */
   *zoom: 1;
@@ -94,31 +94,31 @@
 }
 
 /* aligned Forms */
-.yui3-form-aligned .yui3-control-group {
+.k-form-aligned .k-control-group {
   margin-bottom: 0.5em;
 }
-.yui3-form-aligned .yui3-control-group label {
+.k-form-aligned .k-control-group label {
   text-align: right;
   display: inline-block;
   vertical-align: middle;
   width: 10em;
   margin: 0 1em 0 0;
 }
-.yui3-form-aligned .yui3-controls {
+.k-form-aligned .k-controls {
   margin: 1.5em 0 0 10em;
 }
 
 /* Rounded Inputs */
-.yui3-form .yui3-input-rounded {
+.k-form .k-input-rounded {
   border-radius: 20px;
   padding-left:1em;
 }
 
 /* Grouped Inputs */
-.yui3-form .yui3-group fieldset {
+.k-form .k-group fieldset {
   margin-bottom: 10px;
 }
-.yui3-form .yui3-group input {
+.k-form .k-group input {
   display: block;
   padding: 10px;
   margin: 0;
@@ -126,39 +126,39 @@
   position: relative;
   top: -1px;
 }
-.yui3-form .yui3-group input:focus {
+.k-form .k-group input:focus {
   z-index: 2;
 }
-.yui3-form .yui3-group input:first-child {
+.k-form .k-group input:first-child {
   top: 1px;
   border-radius: 4px 4px 0 0;
 }
-.yui3-form .yui3-group input:last-child {
+.k-form .k-group input:last-child {
   top: -2px;
   border-radius: 0 0 4px 4px;
 }
-.yui3-form .yui3-group button {
+.k-form .k-group button {
   margin: 0.35em 0;
 }
 
-.yui3-form .yui3-input-1 {
+.k-form .k-input-1 {
   width: 100%;
 }
-.yui3-form .yui3-input-2-3 {
+.k-form .k-input-2-3 {
   width: 66%;
 }
-.yui3-form .yui3-input-1-2 {
+.k-form .k-input-1-2 {
   width: 50%;
 }
-.yui3-form .yui3-input-1-3 {
+.k-form .k-input-1-3 {
   width: 33%;
 }
-.yui3-form .yui3-input-1-4 {
+.k-form .k-input-1-4 {
   width: 25%;
 }
 
 /* Inline help for forms */
-.yui3-form .yui3-help-inline {
+.k-form .k-help-inline {
   display: inline-block;
   padding-left: 0.3em;
   color: #666;

@@ -1,10 +1,10 @@
 /*! Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
 /* This page lists core form styles adopted from Normalize.css. */
-/*! Copyright (c) Nicolas Gallagher and Jonathan Neal */ 
+/*! Copyright (c) Nicolas Gallagher and Jonathan Neal */
 
 /*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 
-/* This page has Normalize.css form-specific style rules applied to a .yui3-form context */
+/* This page has Normalize.css form-specific style rules applied to a .k-form context */
 
 /* ==========
    Forms Core
@@ -14,7 +14,7 @@
  * Corrects margin displayed oddly in IE 6/7.
  */
 
-.yui3-form {
+.k-form {
     margin: 0;
 }
 
@@ -22,7 +22,7 @@
  * Define consistent border, margin, and padding.
  */
 
-.yui3-form fieldset {
+.k-form fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
@@ -34,7 +34,7 @@
  * 3. Corrects alignment displayed oddly in IE 6/7.
  */
 
-.yui3-form legend {
+.k-form legend {
     border: 0; /* 1 */
     padding: 0;
     white-space: normal; /* 2 */
@@ -48,10 +48,10 @@
  * 3. Improves appearance and consistency in all browsers.
  */
 
-.yui3-form button,
-.yui3-form input,
-.yui3-form select,
-.yui3-form textarea {
+.k-form button,
+.k-form input,
+.k-form select,
+.k-form textarea {
     font-size: 100%; /* 1 */
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
@@ -63,8 +63,8 @@
  * the UA stylesheet.
  */
 
-.yui3-form button,
-.yui3-form input {
+.k-form button,
+.k-form input {
     line-height: normal;
 }
 
@@ -78,10 +78,10 @@
  *    Known issue: inner spacing remains in IE 6.
  */
 
-.yui3-form button,
-.yui3-form input[type="button"], /* 1 */
-.yui3-form input[type="reset"],
-.yui3-form input[type="submit"] {
+.k-form button,
+.k-form input[type="button"], /* 1 */
+.k-form input[type="reset"],
+.k-form input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
     *overflow: visible;  /* 4 */
@@ -91,8 +91,8 @@
  * Re-set default cursor for disabled elements.
  */
 
-.yui3-form button[disabled],
-.yui3-form input[disabled] {
+.k-form button[disabled],
+.k-form input[disabled] {
     cursor: default;
 }
 
@@ -103,8 +103,8 @@
  *    Known issue: excess padding remains in IE 6.
  */
 
-.yui3-form input[type="checkbox"],
-.yui3-form input[type="radio"] {
+.k-form input[type="checkbox"],
+.k-form input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
     *height: 13px; /* 3 */
@@ -117,7 +117,7 @@
  *    (include `-moz` to future-proof).
  */
 
-.yui3-form input[type="search"] {
+.k-form input[type="search"] {
     -webkit-appearance: textfield; /* 1 */
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box; /* 2 */
@@ -129,8 +129,8 @@
  * on OS X.
  */
 
-.yui3-form input[type="search"]::-webkit-search-cancel-button,
-.yui3-form input[type="search"]::-webkit-search-decoration {
+.k-form input[type="search"]::-webkit-search-cancel-button,
+.k-form input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -138,8 +138,8 @@
  * Removes inner padding and border in Firefox 3+.
  */
 
-.yui3-form button::-moz-focus-inner,
-.yui3-form input::-moz-focus-inner {
+.k-form button::-moz-focus-inner,
+.k-form input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -149,7 +149,7 @@
  * 2. Improves readability and alignment in all browsers.
  */
 
-.yui3-form textarea {
+.k-form textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
 }
