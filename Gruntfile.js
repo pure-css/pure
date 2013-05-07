@@ -19,27 +19,27 @@ module.exports = function(grunt) {
       forms: {
         files: {
           'build/forms/forms-min.css'    : ['src/forms/css/*.css'],
-          'build/forms/forms-nr-min.css' : ['src/forms/css/forms-core.css', 'src/forms/css/forms.css'],
+          'build/forms/forms-nr-min.css' : ['src/forms/css/forms-core.css', 'src/forms/css/forms.css']
         }
       },
 
       grids: {
         files: {
           'build/grids/grids-min.css'    : ['src/grids/css/*.css'],
-          'build/grids/grids-nr-min.css' : ['src/grids/css/cssgrids-base.css', 'src/grids/css/cssgrids-units.css'],
+          'build/grids/grids-nr-min.css' : ['src/grids/css/cssgrids-base.css', 'src/grids/css/cssgrids-units.css']
         }
       },
 
       menus: {
         files: {
           'build/menus/menus-min.css'    : ['src/menus/css/*.css'],
-          'build/menus/menus-nr-min.css' : ['src/menus/css/list-core.css', 'src/menus/css/list.css', 'src/menus/css/list-paginator.css'],
+          'build/menus/menus-nr-min.css' : ['src/menus/css/list-core.css', 'src/menus/css/list.css', 'src/menus/css/list-paginator.css']
         }
       },
 
       tables: {
         files: {
-          'build/tables/tables-min.css'    : ['src/tables/css/*.css'],
+          'build/tables/tables-min.css'    : ['src/tables/css/*.css']
         }
       }
     }
@@ -49,7 +49,11 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.registerTask('default', ['cssmin']);
-
+  grunt.registerTask('base'   , ['cssmin:base']);
+  grunt.registerTask('forms'  , ['cssmin:forms']);
+  grunt.registerTask('grids'  , ['cssmin:grids']);
+  grunt.registerTask('menus'  , ['cssmin:menus']);
+  grunt.registerTask('tables' , ['cssmin:tables']);
 
 
   /*
