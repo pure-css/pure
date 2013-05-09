@@ -1,0 +1,54 @@
+.k-g-r {
+    letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.k-g-r {
+    word-spacing: -0.43em;
+}
+
+.k-g-r img {
+    max-width: 100%;
+}
+
+@media (min-width:980px) {
+    .k-visible-phone {
+        display: none;
+    }
+    .k-visible-tablet {
+        display: none;
+    }
+    .k-hidden-desktop {
+        display: none;
+    }
+}
+@media (max-width:480px) {
+    .k-g-r > [class ^= "yui3-u"] {
+        width: 100%;
+    }
+}
+@media (max-width:767px) {
+    .k-g-r > [class ^= "yui3-u"] {
+        width: 100%;
+    }
+    .k-hidden-phone {
+        display: none;
+    }
+    .k-visible-desktop {
+        display: none;
+    }
+}
+@media (min-width:768px) and (max-width:979px) {
+    .k-hidden-tablet {
+        display: none;
+    }
+    .k-visible-desktop {
+        display: none;
+    }
+}
