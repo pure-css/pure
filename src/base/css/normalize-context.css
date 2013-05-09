@@ -29,6 +29,8 @@
     display: none; 
 }
 .k {
+    background: #fff; 
+    color: #000; 
     font-size: 100%; 
     -webkit-text-size-adjust: 100%; 
     -ms-text-size-adjust: 100%; 
