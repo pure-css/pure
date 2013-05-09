@@ -29,12 +29,12 @@
     }
 }
 @media (max-width:480px) {
-    .k-g-r > [class ^= "yui3-u"] {
+    .k-g-r > [class ^= "k-u"] {
         width: 100%;
     }
 }
 @media (max-width:767px) {
-    .k-g-r > [class ^= "yui3-u"] {
+    .k-g-r > [class ^= "k-u"] {
         width: 100%;
     }
     .k-hidden-phone {

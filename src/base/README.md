@@ -10,9 +10,9 @@ found at <http://necolas.github.com/normalize.css/>.
 Differences
 -----------
 
-Changes are minimal. Base uses Normalize v1.1.0.
+Changes are minimal. Base uses Normalize v1.1.1.
 
-  - Create a contextual normalize.css (normalize-context.css) toggled off a parent class-name (.yui3-normalized)
+  - Create a contextual normalize.css (normalize-context.css) toggled off a parent class-name (.k)
 
 License
 =======
