@@ -1,6 +1,7 @@
 {
   "name": "Kimono",
   "version": "0.1.0",
+  "private": true,
 
   "devDependencies": {
     "grunt": "~0.4.1",
