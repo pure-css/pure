@@ -152,7 +152,7 @@ grunt.registerTask('base-create-context', 'Make context version', function () {
             var nextSelector = event.selectors[i + 1];
 
             // If the selector does not contain the html selector, we can go
-            // ahead and prepend .k-normalized in front of it.
+            // ahead and prepend .k in front of it.
             if (selector.text.indexOf('html') === -1) {
                 context += prefix + ' ' + selector.text;
             } else if (selector.text.indexOf('html') !== -1) {
