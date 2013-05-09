@@ -45,6 +45,12 @@ module.exports = function(grunt) {
                 files: {
                     'build/tables/tables-min.css'    : ['src/tables/css/*.css']
                 }
+            },
+
+            buttons: {
+                files: {
+                    'build/buttons/buttons-min.css'  : ['src/buttons/css/*.css']
+                }
             }
         }
     });
@@ -58,6 +64,7 @@ module.exports = function(grunt) {
   grunt.registerTask('grids'  , ['cssmin:grids']);
   grunt.registerTask('menus'  , ['cssmin:menus']);
   grunt.registerTask('tables' , ['cssmin:tables']);
+  grunt.registerTask('buttons' , ['cssmin:buttons']);
 
 
   /*
