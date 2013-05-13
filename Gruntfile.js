@@ -22,6 +22,13 @@ grunt.initConfig({
         '\n'
     ].join('\n'),
 
+    // -- Clean Config ---------------------------------------------------------
+
+    clean: {
+        build: ['build/'],
+        base : ['src/base/css/', 'src/base/tests/', 'src/base/LICENSE.md']
+    },
+
     // -- CSSMin Config --------------------------------------------------------
 
     cssmin: {
@@ -77,9 +84,14 @@ grunt.initConfig({
 
 // -- Main Tasks ---------------------------------------------------------------
 
+grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-grunt.registerTask('default', ['cssmin']);
+grunt.registerTask('default', [
+    'clean:build',
+    'cssmin'
+]);
+
 grunt.registerTask('base',    ['cssmin:base']);
 grunt.registerTask('buttons', ['cssmin:buttons']);
 grunt.registerTask('forms',   ['cssmin:forms']);
@@ -88,15 +100,6 @@ grunt.registerTask('menus',   ['cssmin:menus']);
 grunt.registerTask('tables',  ['cssmin:tables']);
 
 // -- Import Tasks -------------------------------------------------------------
-
-grunt.registerTask('base-clean', 'Clean Source Tree', function () {
-    var files = grunt.file.expand(grunt.config('BASE_DIR') + 'css/*.css');
-
-    files.forEach(function (file) {
-        grunt.log.writeln('Deleting: '.red + file.cyan);
-        grunt.file['delete'](file);
-    });
-});
 
 grunt.registerTask('base-import-css', 'Import Normalize CSS Files', function () {
     var file = 'normalize.css',
@@ -115,6 +118,19 @@ grunt.registerTask('base-import-tests', 'Import Normalize Tests', function () {
     var file = 'test.html',
         src  = path.join(grunt.config('NORMALIZE_LIB'), file),
         dest = path.join(grunt.config('BASE_DIR'), 'tests', 'manual', file);
+
+    if (!grunt.file.exists(src)) {
+        grunt.fail.fatal('Did you clone normalize.css yet?');
+    }
+
+    grunt.log.writeln('Copying: '.green + file.cyan + ' to ' + dest.cyan);
+    grunt.file.copy(src, dest);
+});
+
+grunt.registerTask('base-import-meta', 'Import Normalize License', function () {
+    var file = 'LICENSE.md',
+        src  = path.join(grunt.config('NORMALIZE_LIB'), file),
+        dest = path.join(grunt.config('BASE_DIR'), file);
 
     if (!grunt.file.exists(src)) {
         grunt.fail.fatal('Did you clone normalize.css yet?');
@@ -206,14 +222,15 @@ grunt.registerTask('base-prep', 'Prep Normalize.css import', function () {
 
 grunt.registerTask('base-all', [
     'base-prep',
-    'base-clean',
+    'clean:base',
     'base-import',
     'base-create-context'
 ]);
 
 grunt.registerTask('base-import', [
     'base-import-css',
-    'base-import-tests'
+    'base-import-tests',
+    'base-import-meta'
 ]);
 
 };
