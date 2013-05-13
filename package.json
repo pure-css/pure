@@ -2,10 +2,12 @@
   "name": "Kimono",
   "version": "0.0.1",
   "private": true,
-
   "devDependencies": {
     "grunt": "~0.4.1",
     "parserlib": "~0.2.2",
     "grunt-contrib-cssmin": "~0.6.0"
+  },
+  "dependencies": {
+    "grunt-contrib-clean": "~0.4.1"
   }
 }
