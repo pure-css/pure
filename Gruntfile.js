@@ -23,6 +23,7 @@ grunt.initConfig({
     clean: {
         build    : ['build/'],
         build_res: ['build/*-r.css'],
+        release  : ['release/<%= pkg.version %>/'],
         base     : ['src/base/css/', 'src/base/tests/', 'src/base/LICENSE.md']
     },
 
@@ -157,6 +158,21 @@ grunt.initConfig({
         }
     },
 
+    // -- Compress Config ------------------------------------------------------
+
+    compress: {
+        release: {
+            options: {
+                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.zip'
+            },
+
+            expand : true,
+            flatten: true,
+            src    : 'build/*.css',
+            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
+        }
+    },
+
     // -- Contextualize Config -------------------------------------------------
 
     contextualize: {
@@ -178,6 +194,7 @@ grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
+grunt.loadNpmTasks('grunt-contrib-compress');
 
 grunt.registerTask('default', [
     'clean:build',
@@ -190,6 +207,12 @@ grunt.registerTask('default', [
 
 grunt.registerTask('import', [
     'import-normalize'
+]);
+
+grunt.registerTask('release', [
+    'default',
+    'clean:release',
+    'compress:release'
 ]);
 
 // -- Import Tasks -------------------------------------------------------------

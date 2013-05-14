@@ -1,5 +1,5 @@
 {
-  "name": "Kimono",
+  "name": "kimono",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
@@ -8,6 +8,7 @@
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0"
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-compress": "~0.5.0"
   }
 }
