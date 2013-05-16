@@ -1,6 +1,11 @@
 Pure Change History
 ===================
 
+NEXT
+----
+
+* Clean up manual test files, removing unnecessary CSS files and cruft.
+
 0.0.2 (2013-05-16)
 ------------------
 
