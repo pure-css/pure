@@ -210,7 +210,7 @@ grunt.initConfig({
             dest: 'src/base/css/normalize-context.css',
 
             options: {
-                prefix: '.k',
+                prefix: '.pure',
                 banner: '/* <%= BUILD_COMMENT %> */\n'
             }
         }
@@ -306,14 +306,15 @@ grunt.registerMultiTask('contextualize', 'Makes Contextualized CSS files.', func
                     var nextSelector = event.selectors[i + 1];
 
                     // If the selector does not contain the html selector, we
-                    // can go ahead and prepend .k in front of it.
+                    // can go ahead and prepend `prefix` in front of it.
                     if (selector.text.indexOf('html') === -1) {
                         contextual += prefix + ' ' + selector.text;
                     } else if (selector.text.indexOf('html') !== -1) {
-                        // If it contains `html`, replace the `html` with `.k`.
-                        // Replace multiple spaces with a single space. This is
-                        // for the case where `html input[type='button']` comes
-                        // through as `html    input[type='button']`.
+                        // If it contains `html`, replace the `html` with the
+                        // `prefix`. Replace multiple spaces with a single
+                        // space. This is for the case where
+                        // `html input[type='button']` comes through as
+                        // `html    input[type='button']`.
                         contextual += selector.text.replace('html', prefix).replace(/ +/g, ' ');
                     }
 
