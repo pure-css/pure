@@ -115,9 +115,9 @@ grunt.initConfig({
             ]
         },
 
-        kimono: {
+        all: {
             files: {
-                'build/kimono-min.css': [
+                'build/<%= pkg.name %>-min.css': [
                     'build/base-min.css',
                     'build/buttons-min.css',
                     'build/forms-min.css',
@@ -126,7 +126,7 @@ grunt.initConfig({
                     'build/tables-min.css'
                 ],
 
-                'build/kimono-nr-min.css': [
+                'build/<%= pkg.name %>-nr-min.css': [
                     'build/base-min.css',
                     'build/buttons-min.css',
                     'build/forms-nr-min.css',
@@ -182,17 +182,17 @@ grunt.initConfig({
 
             expand: true,
             cwd   : 'build/',
-            src   : ['base*.css', 'forms*.css', 'tables*.css', 'kimono*.css']
+            src   : ['base*.css', 'forms*.css', 'tables*.css', '<%= pkg.name %>*.css']
         },
 
         yahoo: {
             options: {
                 banner: [
                     '/*!',
-                    'Kimono <%= pkg.version %>',
+                    'Pure <%= pkg.version %>',
                     'Copyright 2013 Yahoo! Inc. All rights reserved.',
                     'Licensed under the BSD License.',
-                    'https://github.com/yui/kimono/blob/master/LICENSE.md',
+                    'https://github.com/yui/pure/blob/master/LICENSE.md',
                     '*/\n'
                 ].join('\n')
             },
@@ -231,7 +231,7 @@ grunt.registerTask('default', [
     'concat:build',
     'clean:build_res',
     'cssmin',
-    'concat:kimono',
+    'concat:all',
     'license'
 ]);
 
