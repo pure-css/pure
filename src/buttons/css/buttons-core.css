@@ -1,4 +1,4 @@
-.k-button {
+.pure-button {
     /* Structure */
     display: inline-block;
     *display: inline; /*IE 6/7*/
@@ -16,7 +16,7 @@
 
 
 /* Firefox: Get rid of the inner focus border */
-.k-button::-moz-focus-inner{
+.pure-button::-moz-focus-inner{
     padding: 0;
     border: 0;
 }
