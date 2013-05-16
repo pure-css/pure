@@ -6,7 +6,7 @@
 */
 
 /* foundational CSS */
-.k-table {
+.pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
     border-collapse: collapse;
     border-spacing: 0;
@@ -14,15 +14,15 @@
     border: 1px solid #cbcbcb;
 }
 
-.k-table caption {
+.pure-table caption {
     color: #000;
     font: italic 85%/1 arial, sans-serif;
     padding: 1em 0;
     text-align: center;
 }
 
-.k-table td,
-.k-table th {
+.pure-table td,
+.pure-table th {
     border-left: 1px solid #cbcbcb;/*  inner column border */
     border-width: 0 0 0 1px;
     font-size: inherit;
@@ -30,12 +30,12 @@
     overflow: visible; /*to make ths where the title is really long work*/
     padding: 6px 12px; /* cell padding */
 }
-.k-table td:first-child,
-.k-table th:first-child {
+.pure-table td:first-child,
+.pure-table th:first-child {
     border-left-width: 0;
 }
 
-.k-table thead {
+.pure-table thead {
     background: #e0e0e0;
     color: #000;
     text-align: left;
@@ -48,35 +48,35 @@ striping:
    even - #fff (white)
    odd  - #edf5ff (light blue)
 */
-.k-table td {
+.pure-table td {
     background-color: transparent;
 }
-.k-table-odd td {
+.pure-table-odd td {
     background-color: #f2f2f2;
 }
 
 /* nth-child selector for modern browsers */
-.k-table-striped tr:nth-child(2n-1) td {
+.pure-table-striped tr:nth-child(2n-1) td {
     background-color: #f2f2f2;
 }
 
 /* BORDERED TABLES */
-.k-table-bordered td {
+.pure-table-bordered td {
     border-bottom:1px solid #cbcbcb;
 }
-.k-table-bordered tbody > tr:last-child td,
-.k-table-horizontal tbody > tr:last-child td {
+.pure-table-bordered tbody > tr:last-child td,
+.pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;
 }
 
 
 /* HORIZONTAL BORDERED TABLES */
 
-.k-table-horizontal td,
-.k-table-horizontal th {
+.pure-table-horizontal td,
+.pure-table-horizontal th {
     border-width: 0 0 1px 0;
     border-bottom:1px solid #cbcbcb;
 }
-.k-table-horizontal tbody > tr:last-child td {
+.pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;
 }

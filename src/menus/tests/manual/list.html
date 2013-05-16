@@ -50,18 +50,18 @@
             margin: 10px;
         }
 
-        .k-menu {
+        .pure-menu {
             margin-bottom:15px;
         }
 
     </style>
 </head>
-<body class="k-skin-sam">
+<body class="pure-skin-sam">
 
     <div class="header y-u-1">
 
-        <h1 class="k-u-1">Kimono List CSS</h1>
-        <h2 class="k-u">Simple styling for HTML List elements.</h2>
+        <h1 class="pure-u-1">Pure List CSS</h1>
+        <h2 class="pure-u">Simple styling for HTML List elements.</h2>
 
     </div>
 
@@ -74,46 +74,46 @@
         <h2>Horizontal Menu</h2>
 
         <p>
-            You can mark the active list element by adding the <code>.k-menu-selected</code> class to the list element.
+            You can mark the active list element by adding the <code>.pure-menu-selected</code> class to the list element.
         </p>
 
-        <div class="k-menu k-menu-open k-menu-horizontal">
-            <a href="#" class="k-menu-heading">Site Title</a>
+        <div class="pure-menu pure-menu-open pure-menu-horizontal">
+            <a href="#" class="pure-menu-heading">Site Title</a>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li class="k-menu-selected"><a href="#">Flickr</a></li>
+                <li class="pure-menu-selected"><a href="#">Flickr</a></li>
                 <li><a href="#">Messenger</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Finance</a></li>
-                <li class="k-menu-disabled"><a href="#">Disabled</a></li>
+                <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
             </ul>
         </div>
 
         <h2>Vertical Menu</h2>
 
-        <div id="vertical-menu1" class="k-menu k-menu-open">
-            <a href="#" class="k-menu-heading">Site Title</a>
+        <div id="vertical-menu1" class="pure-menu pure-menu-open">
+            <a href="#" class="pure-menu-heading">Site Title</a>
             <ul>
-                <li class="k-menu-selected"><a href="#">Home</a></li>
+                <li class="pure-menu-selected"><a href="#">Home</a></li>
                 <li><a href="#">Flickr</a></li>
                 <li><a href="#">Messenger</a></li>
-                <li class="k-menu-heading">Yahoo! Sites</li>
+                <li class="pure-menu-heading">Yahoo! Sites</li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Finance</a></li>
-                <li class="k-menu-disabled"><a href="#">Disabled</a></li>
+                <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
             </ul>
         </div>
 
-        <div id="vertical-menu1" class="k-menu k-menu-open">
+        <div id="vertical-menu1" class="pure-menu pure-menu-open">
             <ul>
-                <li class="k-menu-heading">Site Title</li>
-                <li class="k-menu-selected"><a href="#">Home</a></li>
+                <li class="pure-menu-heading">Site Title</li>
+                <li class="pure-menu-selected"><a href="#">Home</a></li>
                 <li><a href="#">Flickr</a></li>
                 <li><a href="#">Messenger</a></li>
-                <li class="k-menu-heading">Yahoo! Sites</li>
+                <li class="pure-menu-heading">Yahoo! Sites</li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Finance</a></li>
-                <li class="k-menu-disabled"><a href="#">Disabled</a></li>
+                <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
             </ul>
         </div>
 
@@ -126,17 +126,17 @@
 
 
         <div id="horizontal-menu">
-            <a href="#" class="k-menu-heading">Site Title</a>
+            <a href="#" class="pure-menu-heading">Site Title</a>
             <ul id="std-menu-items">
-                <li class="k-menu-selected"><a href="#">Flickr</a></li>
+                <li class="pure-menu-selected"><a href="#">Flickr</a></li>
                 <li><a href="#">Messenger</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Finance</a></li>
                 <li>
                     <a href="#">Other</a>
                     <ul>
-                        <li class="k-menu-heading">More from Yahoo!</li>
-                        <li class="k-menu-separator"></li>
+                        <li class="pure-menu-heading">More from Yahoo!</li>
+                        <li class="pure-menu-separator"></li>
                         <li><a href="#">Autos</a></li>
                         <li><a href="#">Flickr</a></li>
                         <li><a href="#">Answers</a></li>
@@ -158,16 +158,16 @@
         <h2>Fixed Menus</h2>
 
         <p>
-            Fixed menus can be created by adding the <code>k-menu-fixed</code> class name to the wrapper. This will fix a menu to the top of the page.
+            Fixed menus can be created by adding the <code>pure-menu-fixed</code> class name to the wrapper. This will fix a menu to the top of the page.
         </p>
 
         <p>
-            <button class="k-button" id="showFixedMenuBtn">Toggle Fixed Menu</button>
+            <button class="pure-button" id="showFixedMenuBtn">Toggle Fixed Menu</button>
         </p>
 
-        <div id="fixed-menu" class="k-menu k-menu-horizontal k-menu-fixed">
+        <div id="fixed-menu" class="pure-menu pure-menu-horizontal pure-menu-fixed">
             <ul>
-                <li class="k-menu-selected"><a href="#">Flickr</a></li>
+                <li class="pure-menu-selected"><a href="#">Flickr</a></li>
                 <li><a href="#">Messenger</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Finance</a></li>
@@ -181,10 +181,10 @@
     <script>
     var Y = YUI({
         fetchCSS: false,
-        classNamePrefix: 'k'
+        classNamePrefix: 'pure'
     }).use('gallery-sm-menu', 'event-tap', 'node-base', function (Y) {
 
-        //Y.config.classNamePrefix = 'k';
+        //Y.config.classNamePrefix = 'pure';
 
         var horizontalMenu = new Y.Menu({
             container: '#horizontal-menu',
@@ -199,7 +199,7 @@
 
         Y.one('#showFixedMenuBtn').on('tap', function (e) {
             var fixedMenu = Y.one('#fixed-menu');
-            fixedMenu.toggleClass('k-menu-open');
+            fixedMenu.toggleClass('pure-menu-open');
         });
 
     });

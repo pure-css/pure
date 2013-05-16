@@ -2,11 +2,11 @@
 
 @media (max-width: 480px) {
 
-    .k-menu-horizontal {
+    .pure-menu-horizontal {
         width:100%;
     }
 
-    .k-menu-children li {
+    .pure-menu-children li {
         display: block;
         border-bottom:1px solid block;
     }

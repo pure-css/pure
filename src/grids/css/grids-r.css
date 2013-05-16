@@ -1,4 +1,4 @@
-.k-g-r {
+.pure-g-r {
     letter-spacing: -0.31em;
     *letter-spacing: normal;
     *word-spacing: -0.43em;
@@ -9,46 +9,46 @@
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.k-g-r {
+.pure-g-r {
     word-spacing: -0.43em;
 }
 
-.k-g-r img {
+.pure-g-r img {
     max-width: 100%;
 }
 
 @media (min-width:980px) {
-    .k-visible-phone {
+    .pure-visible-phone {
         display: none;
     }
-    .k-visible-tablet {
+    .pure-visible-tablet {
         display: none;
     }
-    .k-hidden-desktop {
+    .pure-hidden-desktop {
         display: none;
     }
 }
 @media (max-width:480px) {
-    .k-g-r > [class ^= "k-u"] {
+    .pure-g-r > [class ^= "pure-u"] {
         width: 100%;
     }
 }
 @media (max-width:767px) {
-    .k-g-r > [class ^= "k-u"] {
+    .pure-g-r > [class ^= "pure-u"] {
         width: 100%;
     }
-    .k-hidden-phone {
+    .pure-hidden-phone {
         display: none;
     }
-    .k-visible-desktop {
+    .pure-visible-desktop {
         display: none;
     }
 }
 @media (min-width:768px) and (max-width:979px) {
-    .k-hidden-tablet {
+    .pure-hidden-tablet {
         display: none;
     }
-    .k-visible-desktop {
+    .pure-visible-desktop {
         display: none;
     }
 }
