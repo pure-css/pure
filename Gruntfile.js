@@ -115,9 +115,9 @@ grunt.initConfig({
             ]
         },
 
-        kimono: {
+        all: {
             files: {
-                'build/kimono-min.css': [
+                'build/<%= pkg.name %>-min.css': [
                     'build/base-min.css',
                     'build/buttons-min.css',
                     'build/forms-min.css',
@@ -126,7 +126,7 @@ grunt.initConfig({
                     'build/tables-min.css'
                 ],
 
-                'build/kimono-nr-min.css': [
+                'build/<%= pkg.name %>-nr-min.css': [
                     'build/base-min.css',
                     'build/buttons-min.css',
                     'build/forms-nr-min.css',
@@ -182,17 +182,17 @@ grunt.initConfig({
 
             expand: true,
             cwd   : 'build/',
-            src   : ['base*.css', 'forms*.css', 'tables*.css', 'kimono*.css']
+            src   : ['base*.css', 'forms*.css', 'tables*.css', '<%= pkg.name %>*.css']
         },
 
         yahoo: {
             options: {
                 banner: [
                     '/*!',
-                    'Kimono <%= pkg.version %>',
+                    'Pure <%= pkg.version %>',
                     'Copyright 2013 Yahoo! Inc. All rights reserved.',
                     'Licensed under the BSD License.',
-                    'https://github.com/yui/kimono/blob/master/LICENSE.md',
+                    'https://github.com/yui/pure/blob/master/LICENSE.md',
                     '*/\n'
                 ].join('\n')
             },
@@ -210,7 +210,7 @@ grunt.initConfig({
             dest: 'src/base/css/normalize-context.css',
 
             options: {
-                prefix: '.k',
+                prefix: '.pure',
                 banner: '/* <%= BUILD_COMMENT %> */\n'
             }
         }
@@ -231,7 +231,7 @@ grunt.registerTask('default', [
     'concat:build',
     'clean:build_res',
     'cssmin',
-    'concat:kimono',
+    'concat:all',
     'license'
 ]);
 
@@ -306,14 +306,15 @@ grunt.registerMultiTask('contextualize', 'Makes Contextualized CSS files.', func
                     var nextSelector = event.selectors[i + 1];
 
                     // If the selector does not contain the html selector, we
-                    // can go ahead and prepend .k in front of it.
+                    // can go ahead and prepend `prefix` in front of it.
                     if (selector.text.indexOf('html') === -1) {
                         contextual += prefix + ' ' + selector.text;
                     } else if (selector.text.indexOf('html') !== -1) {
-                        // If it contains `html`, replace the `html` with `.k`.
-                        // Replace multiple spaces with a single space. This is
-                        // for the case where `html input[type='button']` comes
-                        // through as `html    input[type='button']`.
+                        // If it contains `html`, replace the `html` with the
+                        // `prefix`. Replace multiple spaces with a single
+                        // space. This is for the case where
+                        // `html input[type='button']` comes through as
+                        // `html    input[type='button']`.
                         contextual += selector.text.replace('html', prefix).replace(/ +/g, ' ');
                     }
 

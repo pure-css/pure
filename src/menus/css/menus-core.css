@@ -1,15 +1,15 @@
-.k-menu ul {
+.pure-menu ul {
     position: absolute;
     visibility: hidden;
 }
 
-.k-menu.k-menu-open {
+.pure-menu.pure-menu-open {
     visibility: visible;
     z-index: 2;
     width: 100%;
 }
 
-.k-menu ul {
+.pure-menu ul {
     left: -10000px;
     list-style: none;
     margin: 0;
@@ -18,17 +18,17 @@
     z-index: 1;
 }
 
-.k-menu > ul { position: relative; }
+.pure-menu > ul { position: relative; }
 
-.k-menu-open > ul {
+.pure-menu-open > ul {
     left: 0;
     top: 0;
     visibility: visible;
 }
 
-.k-menu li { position: relative; }
+.pure-menu li { position: relative; }
 
-.k-menu a, .k-menu .k-menu-heading {
+.pure-menu a, .pure-menu .pure-menu-heading {
     display: block;
     color: inherit;
     line-height: 1.5em;
@@ -37,23 +37,23 @@
     white-space: nowrap;
 }
 
-.k-menu.k-menu-horizontal > .k-menu-heading {
+.pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
     margin: 0;
     zoom: 1;
     *display: inline;
     vertical-align: middle;
 }
-.k-menu.k-menu-horizontal > ul {
+.pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
     zoom: 1;
     *display: inline;
     vertical-align: middle;
 }
 
-.k-menu li a { padding: 5px 20px; }
+.pure-menu li a { padding: 5px 20px; }
 
-.k-menu-can-have-children > .k-menu-label:after {
+.pure-menu-can-have-children > .pure-menu-label:after {
     content: '\25B8';
     float: right;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
@@ -61,11 +61,11 @@
     margin-top: -1px;
 }
 
-.k-menu-can-have-children > .k-menu-label {
+.pure-menu-can-have-children > .pure-menu-label {
     padding-right:30px;
 }
 
-.k-menu-separator {
+.pure-menu-separator {
     background-color: #dfdfdf;
     display: block;
     height: 1px;
@@ -74,10 +74,10 @@
     overflow: hidden;
 }
 
-.k-menu-hidden { display: none; }
+.pure-menu-hidden { display: none; }
 
 /* FIXED MENU */
-.k-menu-fixed {
+.pure-menu-fixed {
     position: fixed;
     top:0;
     left:0;
@@ -88,7 +88,7 @@
 /* HORIZONTAL MENU CODE */
 
 /* Initial menus should be inline-block so that they are horizontal */
-.k-menu-horizontal li {
+.pure-menu-horizontal li {
     display: inline-block;
     zoom: 1;
     *display: inline;
@@ -96,16 +96,16 @@
 }
 
 /* Submenus should still be display:block; */
-.k-menu-horizontal li li {
+.pure-menu-horizontal li li {
     display: block;
 }
 
 /* Content after should be down arrow */
-.k-menu-horizontal > .k-menu-children > .k-menu-can-have-children > .k-menu-label:after {
+.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
     content: "\25BE";
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
-.k-menu-horizontal > .k-menu-children > .k-menu-can-have-children > .k-menu-label {
+.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
     padding-right:30px;
 }
 

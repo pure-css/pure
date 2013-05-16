@@ -1,4 +1,4 @@
-/* This page has Normalize.css form-specific style rules applied to a .k-form context */
+/* This page has Normalize.css form-specific style rules applied to a .pure-form context */
 
 /* ==========
    Forms Core
@@ -8,7 +8,7 @@
  * Corrects margin displayed oddly in IE 6/7.
  */
 
-.k-form {
+.pure-form {
     margin: 0;
 }
 
@@ -16,7 +16,7 @@
  * Define consistent border, margin, and padding.
  */
 
-.k-form fieldset {
+.pure-form fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
@@ -28,7 +28,7 @@
  * 3. Corrects alignment displayed oddly in IE 6/7.
  */
 
-.k-form legend {
+.pure-form legend {
     border: 0; /* 1 */
     padding: 0;
     white-space: normal; /* 2 */
@@ -42,10 +42,10 @@
  * 3. Improves appearance and consistency in all browsers.
  */
 
-.k-form button,
-.k-form input,
-.k-form select,
-.k-form textarea {
+.pure-form button,
+.pure-form input,
+.pure-form select,
+.pure-form textarea {
     font-size: 100%; /* 1 */
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
@@ -57,8 +57,8 @@
  * the UA stylesheet.
  */
 
-.k-form button,
-.k-form input {
+.pure-form button,
+.pure-form input {
     line-height: normal;
 }
 
@@ -72,10 +72,10 @@
  *    Known issue: inner spacing remains in IE 6.
  */
 
-.k-form button,
-.k-form input[type="button"], /* 1 */
-.k-form input[type="reset"],
-.k-form input[type="submit"] {
+.pure-form button,
+.pure-form input[type="button"], /* 1 */
+.pure-form input[type="reset"],
+.pure-form input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
     *overflow: visible;  /* 4 */
@@ -85,8 +85,8 @@
  * Re-set default cursor for disabled elements.
  */
 
-.k-form button[disabled],
-.k-form input[disabled] {
+.pure-form button[disabled],
+.pure-form input[disabled] {
     cursor: default;
 }
 
@@ -97,8 +97,8 @@
  *    Known issue: excess padding remains in IE 6.
  */
 
-.k-form input[type="checkbox"],
-.k-form input[type="radio"] {
+.pure-form input[type="checkbox"],
+.pure-form input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
     *height: 13px; /* 3 */
@@ -111,7 +111,7 @@
  *    (include `-moz` to future-proof).
  */
 
-.k-form input[type="search"] {
+.pure-form input[type="search"] {
     -webkit-appearance: textfield; /* 1 */
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box; /* 2 */
@@ -123,8 +123,8 @@
  * on OS X.
  */
 
-.k-form input[type="search"]::-webkit-search-cancel-button,
-.k-form input[type="search"]::-webkit-search-decoration {
+.pure-form input[type="search"]::-webkit-search-cancel-button,
+.pure-form input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -132,8 +132,8 @@
  * Removes inner padding and border in Firefox 3+.
  */
 
-.k-form button::-moz-focus-inner,
-.k-form input::-moz-focus-inner {
+.pure-form button::-moz-focus-inner,
+.pure-form input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -143,7 +143,7 @@
  * 2. Improves readability and alignment in all browsers.
  */
 
-.k-form textarea {
+.pure-form textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
 }
