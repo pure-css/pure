@@ -1,2 +1,88 @@
+![Pure](http://f.cl.ly/items/281x142x250t0W3g1H14/pure.jpg)
+
 Pure
 ====
+
+A set of small, responsive CSS modules that you can use in every web project.
+
+Homepage: [http://www.purecss.io](http://www.purecss.io)
+Get it from CDN: `<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.0.2/pure-min.css">`
+
+
+## Features
+
+Pure is meant to be a starting point for every website or web app. We take care of all the CSS work that
+every site needs, without making it look cookie-cutter:
+
+* A responsive grid that can be customized to your needs
+* A solid base built on [normalize.css](http://necolas.github.io/normalize.css/) to fix cross-browser compatibility issues.
+* Consistently styled buttons
+* Styles for vertical and horizontal menus
+* Useful form alignments
+* Various common table styles
+* An extremely minimalist look that is super-easy to customize
+* Responsive by default, with a non-responsive option
+* Easy one-click customization with the [Skin Builder](http://yui.github.io/skinbuilder/?mode=pure)
+* Extremely small file size: ***< 5KB!***
+
+[Check out Pure today](http://www.purecss.io)
+
+## Get Started
+
+To get started using Pure, go to the [Pure CSS website](http://www.purecss.io). The website has extensive documentation and examples necessary to get you started using Pure.
+
+You can include the Pure CSS file in your project by fetching it from Yahoo's CDN:
+
+`<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.0.2/pure-min.css">`
+
+## Build from source
+
+Optionally, you can build Pure from it's source on Github. To do this, you'll need to have NodeJS and npm installed. We use Grunt to build Pure.
+
+```shell
+git clone git@github.com:yui/pure.git
+cd pure
+npm install
+grunt
+```
+
+Now, all Pure CSS files should be built into the `pure/build/` directory. All files that are in this build directory are also available on the CDN. The naming conventions of the built files follow these rules:
+
+* `[module]-nr.css`: Rollup of `-core.css` + `[module].css` + `-[feature].css`. This is the non-responsive version of a module.
+* `[module].css`: Rollup of `-nr.css` + `-r.css`. This is the responsive version of a module.
+* `*-min.css`: A minified file version of the files of the same name.
+* `kimono-min.css`: A rollup of all `[module].css` files. This is a responsive roll-up of everything.
+* `kimono-nr-min.css`: A Rollup of all modules without @media queries. This is a non-responsive roll-up of everything.
+
+### Building specific modules
+
+You can build a specific module by passing in its name into Grunt:
+
+```shell
+grunt grids
+```
+
+## Contributions and Code Standards
+
+Feel free to file bugs and submit pull requests on Github! When submitting a pull request, please checkout a new branch. Don't submit pull requests from your `master` branch. To do this:
+
+```shell
+git checkout -b my-pull-request
+git add .
+git commit -m 'done all my commits'
+git push origin my-pull-request
+```
+
+Submit a pull request from your `origin/my-pull-request` branch to `pure/master`.
+
+### Versioning
+
+Pure adheres to [Semantic Versioning 2.0](http://semver.org/).
+
+## License
+
+Copyright 2013 Yahoo! Inc. All rights reserved. Check the LICENSE.md for more information.
+
+
+
+
