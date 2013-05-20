@@ -1,2 +1,0 @@
-Grids Change History
-====================
