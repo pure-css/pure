@@ -37,7 +37,7 @@ every site needs, without making it look cookie-cutter:
 
 * Easy one-click customization with the [Skin Builder](http://yui.github.io/skinbuilder/?mode=pure)
 
-* Extremely small file size: *** 4.8KB minified + gzip***
+* Extremely small file size: ***4.8KB minified + gzip***
 
 [Check out Pure](http://purecss.io)
 
