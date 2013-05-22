@@ -1,31 +1,36 @@
 Pure
 ====
 
-![Pure](http://f.cl.ly/items/281x142x250t0W3g1H14/pure.jpg)
+[![Pure](http://f.cl.ly/items/281x142x250t0W3g1H14/pure.jpg)][Pure]
 
 A set of small, responsive CSS modules that you can use in every web project.
+[http://purecss.io/][Pure]
 
-**Homepage:** [http://purecss.io](http://purecss.io)
-
-**Get it from CDN:**
+**Use From the CDN:**
 
 ```html
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.0.2/pure-min.css">
 ```
 
 
-## Features
+[Pure]: http://purecss.io/
 
-Pure is meant to be a starting point for every website or web app. We take care of all the CSS work that
-every site needs, without making it look cookie-cutter:
+
+Features
+--------
+
+Pure is meant to be a starting point for every website or web app. We take care
+of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * A responsive grid that can be customized to your needs.
 
-* A solid base built on [normalize.css](http://necolas.github.io/normalize.css/) to fix cross-browser compatibility issues.
+* A solid base built on [Normalize.css][] to fix cross-browser compatibility
+  issues.
 
 * Consistently styled buttons that work with `<a>` and `<button>` elements.
 
-* Styles for vertical and horizontal menus, including support for dropdown menus.
+* Styles for vertical and horizontal menus, including support for dropdown
+  menus.
 
 * Useful form alignments that look great on all screen sizes.
 
@@ -35,25 +40,34 @@ every site needs, without making it look cookie-cutter:
 
 * Responsive by default, with a non-responsive option.
 
-* Easy one-click customization with the [Skin Builder](http://yui.github.io/skinbuilder/?mode=pure)
+* Easy one-click customization with the [Skin Builder][]
 
-* Extremely small file size: ***4.8KB minified + gzip***
+* Extremely small file size: **4.8KB minified + gzip**
 
-[Check out Pure](http://purecss.io)
 
-## Get Started
+[Normalize.css]: http://necolas.github.io/normalize.css/
+[Skin Builder]: http://yui.github.io/skinbuilder/?mode=pure
 
-To get started using Pure, go to the [Pure CSS website](http://purecss.io). The website has extensive documentation and examples necessary to get you started using Pure.
 
-You can include the Pure CSS file in your project by fetching it from Yahoo's CDN:
+Get Started
+-----------
+
+To get started using Pure, go to the [Pure CSS website][Pure]. The website has
+extensive documentation and examples necessary to get you started using Pure.
+
+You can include the Pure CSS file in your project by fetching it from Yahoo's
+CDN:
 
 ```html
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.0.2/pure-min.css">
 ```
 
-## Build from source
 
-Optionally, you can build Pure from it's source on Github. To do this, you'll need to have NodeJS and npm installed. We use Grunt to build Pure.
+Build From Source
+-----------------
+
+Optionally, you can build Pure from its source on Github. To do this, you'll
+need to have NodeJS and npm installed. We use Grunt to build Pure.
 
 ```shell
 $ git clone git@github.com:yui/pure.git
@@ -62,19 +76,26 @@ $ npm install
 $ grunt
 ```
 
-Now, all Pure CSS files should be built into the `pure/build/` directory. All files that are in this build directory are also available on the CDN. The naming conventions of the files in the `build/` directory follow these rules:
+Now, all Pure CSS files should be built into the `pure/build/` directory. All
+files that are in this build directory are also available on the CDN. The naming
+conventions of the files in the `build/` directory follow these rules:
 
-* `build/[module]-nr.css`: Rollup of `src/[module]-core.css` + `src/[module].css` + `src/[module]-[feature].css`. This is the non-responsive version of a module.
+* `[module]-nr.css`: Rollup of `[module]-core.css` + `[module].css` +
+  `[module]-[feature].css` from the `src/[module]/` dir. This is the
+  non-responsive version of a module.
 
-* `build/[module].css`: Rollup of `build/[module]-nr.css` + `src/[module]-r.css`. This is the responsive version of a module.
+* `[module].css`: Rollup of `[module]-nr.css` + `[module]-r.css` from the
+  `build/` dir. This is the responsive version of a module.
 
-* `build/*-min.css`: A minified file version of the files of the same name.
+* `*-min.css`: A minified file version of the files of the same name.
 
-* `build/pure-min.css`: A rollup of all `build/[module].css` files. This is a responsive roll-up of everything.
+* `pure-min.css`: A rollup of all `[module]-min.css` files in the `build/` dir.
+  This is a responsive roll-up of everything.
 
-* `build/pure-nr-min.css`: A Rollup of all modules without @media queries. This is a non-responsive roll-up of everything.
+* `pure-nr-min.css`: A Rollup of all modules without @media queries. This is a
+  non-responsive roll-up of everything.
 
-### Building specific modules
+### Building Specific Modules
 
 You can build a specific module by passing in its name into Grunt:
 
@@ -82,15 +103,23 @@ You can build a specific module by passing in its name into Grunt:
 $ grunt grids
 ```
 
-## Contributions and Code Standards
 
-Feel free to file bugs and submit pull requests on Github! When submitting a pull request, please checkout a new feature branch, and submit your pull request from it. Please do not submit pull requests from your `master` branch.
+Contributions and Code Standards
+--------------------------------
+
+Feel free to file bugs and submit pull requests on Github! When submitting a
+pull request, please checkout a new feature branch, and submit your pull request
+from it. Please do not submit pull requests from your `master` branch.
 
 ### Versioning
 
 Pure adheres to [Semantic Versioning 2.0](http://semver.org/).
 
-## License
+
+License
+-------
 
 This software is free to use under the Yahoo! Inc. BSD license.
-See the [LICENSE file](https://github.com/yui/pure/blob/master/LICENSE.md) for license text and copyright information.
+See the [LICENSE file][] for license text and copyright information.
+
+[LICENSE file]: https://github.com/yui/pure/blob/master/LICENSE.md
