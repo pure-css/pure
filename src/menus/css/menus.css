@@ -3,7 +3,6 @@
 .pure-menu.pure-menu-open,
 .pure-menu.pure-menu-horizontal li .pure-menu-children {
     background: #ffffff; /* Old browsers */
-    border-radius: 3px;
     border: 1px solid #b7b7b7;
 }
 
@@ -77,7 +76,6 @@
 
 /* FIXED MENU */
 .pure-menu.pure-menu-open.pure-menu-fixed {
-    border-radius: 0;
     border: none;
     border-bottom: 1px solid #b7b7b7;
 }
