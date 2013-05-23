@@ -6,7 +6,8 @@ module.exports = function (grunt) {
 
 grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
+    pkg      : grunt.file.readJSON('package.json'),
+    normalize: grunt.file.readJSON('src/base/bower.json'),
 
     // -- Constants ------------------------------------------------------------
 
@@ -18,7 +19,7 @@ grunt.initConfig({
         build    : ['build/'],
         build_res: ['build/*-r.css'],
         release  : ['release/<%= pkg.version %>/'],
-        base     : ['src/base/css/', 'src/base/LICENSE.md']
+        base     : ['src/base/css/', 'src/base/bower.json', 'src/base/LICENSE.md']
     },
 
     // -- Copy Config ----------------------------------------------------------
@@ -41,7 +42,7 @@ grunt.initConfig({
             expand : true,
             flatten: true,
             cwd    : 'bower_components/normalize-css/',
-            src    : '{LICENSE.md,normalize.css}',
+            src    : '{bower.json,LICENSE.md,normalize.css}',
             dest   : 'src/base/',
 
             rename: function (dest, file) {
@@ -170,7 +171,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'normalize.css v1.1.1 | MIT License | git.io/normalize',
+                    'normalize.css v<%= normalize.version %> | MIT License | git.io/normalize',
                     'Copyright (c) Nicolas Gallagher and Jonathan Neal',
                     '*/\n'
                 ].join('\n')
@@ -185,7 +186,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'Pure <%= pkg.version %>',
+                    'Pure v<%= pkg.version %>',
                     'Copyright 2013 Yahoo! Inc. All rights reserved.',
                     'Licensed under the BSD License.',
                     'https://github.com/yui/pure/blob/master/LICENSE.md',
