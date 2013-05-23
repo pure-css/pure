@@ -12,6 +12,8 @@
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
 
+    border-radius: 4px; /* non-prefixed border radius is supported for I
+
     /* Transitions */
     -webkit-transition: 0.1s linear -webkit-box-shadow;
     -moz-transition: 0.1s linear -moz-box-shadow;
