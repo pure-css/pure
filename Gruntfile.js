@@ -18,7 +18,7 @@ grunt.initConfig({
         build    : ['build/'],
         build_res: ['build/*-r.css'],
         release  : ['release/<%= pkg.version %>/'],
-        base     : ['src/base/css/', 'src/base/tests/', 'src/base/LICENSE.md']
+        base     : ['src/base/css/', 'src/base/LICENSE.md']
     },
 
     // -- Copy Config ----------------------------------------------------------
@@ -40,17 +40,13 @@ grunt.initConfig({
         normalize: {
             expand : true,
             flatten: true,
-            cwd    : '../normalize.css/',
-            src    : '{LICENSE.md,normalize.css,test.html}',
+            cwd    : 'bower_components/normalize-css/',
+            src    : '{LICENSE.md,normalize.css}',
             dest   : 'src/base/',
 
             rename: function (dest, file) {
                 if (grunt.file.isMatch('*.css', file)) {
                     return path.join(dest, 'css', file);
-                }
-
-                if (grunt.file.isMatch('*.html', file)) {
-                    return path.join(dest, 'tests', 'manual', file);
                 }
 
                 return path.join(dest, file);
@@ -236,6 +232,7 @@ grunt.registerTask('default', [
 ]);
 
 grunt.registerTask('import', [
+    'bower-install',
     'import-normalize'
 ]);
 
@@ -252,6 +249,17 @@ grunt.registerTask('import-normalize', [
     'copy:normalize',
     'contextualize:normalize'
 ]);
+
+// -- Bower Task ---------------------------------------------------------------
+
+grunt.registerTask('bower-install', 'Installs Bower dependencies.', function () {
+    var bower = require('bower'),
+        done  = this.async();
+
+    bower.commands.install()
+        .on('data', function (data) { grunt.log.write(data); })
+        .on('end', done);
+});
 
 // -- License Task -------------------------------------------------------------
 
