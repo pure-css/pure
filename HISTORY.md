@@ -4,7 +4,12 @@ Pure Change History
 NEXT
 ----
 
-* Clean up manual test files, removing unnecessary CSS files and cruft.
+* Upgraded Normalize.css to 1.1.2.
+
+* Integrated Bower into `grunt import` process.
+
+* Cleaned up manual test files, removing unnecessary CSS files and cruft.
+
 
 0.0.2 (2013-05-16)
 ------------------

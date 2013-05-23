@@ -6,7 +6,8 @@ module.exports = function (grunt) {
 
 grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
+    pkg      : grunt.file.readJSON('package.json'),
+    normalize: grunt.file.readJSON('src/base/bower.json'),
 
     // -- Constants ------------------------------------------------------------
 
@@ -18,7 +19,7 @@ grunt.initConfig({
         build    : ['build/'],
         build_res: ['build/*-r.css'],
         release  : ['release/<%= pkg.version %>/'],
-        base     : ['src/base/css/', 'src/base/tests/', 'src/base/LICENSE.md']
+        base     : ['src/base/css/', 'src/base/bower.json', 'src/base/LICENSE.md']
     },
 
     // -- Copy Config ----------------------------------------------------------
@@ -40,17 +41,13 @@ grunt.initConfig({
         normalize: {
             expand : true,
             flatten: true,
-            cwd    : '../normalize.css/',
-            src    : '{LICENSE.md,normalize.css,test.html}',
+            cwd    : 'bower_components/normalize-css/',
+            src    : '{bower.json,LICENSE.md,normalize.css}',
             dest   : 'src/base/',
 
             rename: function (dest, file) {
                 if (grunt.file.isMatch('*.css', file)) {
                     return path.join(dest, 'css', file);
-                }
-
-                if (grunt.file.isMatch('*.html', file)) {
-                    return path.join(dest, 'tests', 'manual', file);
                 }
 
                 return path.join(dest, file);
@@ -174,7 +171,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'normalize.css v1.1.1 | MIT License | git.io/normalize',
+                    'normalize.css v<%= normalize.version %> | MIT License | git.io/normalize',
                     'Copyright (c) Nicolas Gallagher and Jonathan Neal',
                     '*/\n'
                 ].join('\n')
@@ -189,7 +186,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'Pure <%= pkg.version %>',
+                    'Pure v<%= pkg.version %>',
                     'Copyright 2013 Yahoo! Inc. All rights reserved.',
                     'Licensed under the BSD License.',
                     'https://github.com/yui/pure/blob/master/LICENSE.md',
@@ -236,6 +233,7 @@ grunt.registerTask('default', [
 ]);
 
 grunt.registerTask('import', [
+    'bower-install',
     'import-normalize'
 ]);
 
@@ -252,6 +250,17 @@ grunt.registerTask('import-normalize', [
     'copy:normalize',
     'contextualize:normalize'
 ]);
+
+// -- Bower Task ---------------------------------------------------------------
+
+grunt.registerTask('bower-install', 'Installs Bower dependencies.', function () {
+    var bower = require('bower'),
+        done  = this.async();
+
+    bower.commands.install()
+        .on('data', function (data) { grunt.log.write(data); })
+        .on('end', done);
+});
 
 // -- License Task -------------------------------------------------------------
 
