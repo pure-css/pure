@@ -42,9 +42,7 @@
 .pure body {
     margin: 0;
 }
-.pure a:focus {
-    outline: thin dotted;
-}
+
 .pure a:active,
 .pure a:hover {
     outline: 0;
