@@ -10,13 +10,25 @@ NEXT
 
 * Cleaned up manual test files, removing unnecessary CSS files and cruft.
 
+### Buttons
+
+* Added `border-radius: 2px` to enhance the appearance the they are click-able.
+
+### Menus
+
+* Removed `border-radius` from vertical menus.
+
+* Replaced blue hover for menus with light grey (`#eee`)
+
+* Removed `font-weight: bold` from selected menu items.
+
 
 0.0.2 (2013-05-16)
 ------------------
 
-* (!) Rename to Pure.
+* (!) Renamed to Pure.
 
-* (!) Rename CSS classname prefix to `pure`.
+* (!) Renamed CSS classname prefix to `pure`.
 
 * Preview release (2).
 

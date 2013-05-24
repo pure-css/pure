@@ -10,8 +10,10 @@
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
     background-color: #E6E6E6;
     text-decoration: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     -webkit-font-smoothing: antialiased;
-
     /* Transitions */
     -webkit-transition: 0.1s linear -webkit-box-shadow;
     -moz-transition: 0.1s linear -moz-box-shadow;
