@@ -4,6 +4,13 @@ Pure Change History
 NEXT
 ----
 
+* Add border-radius of 2px to buttons.
+
+* Remove border-radius from menus.
+
+0.0.3
+-----
+
 * Clean up manual test files, removing unnecessary CSS files and cruft.
 
 0.0.2 (2013-05-16)
