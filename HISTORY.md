@@ -4,9 +4,13 @@ Pure Change History
 NEXT
 ----
 
-* Add border-radius of 2px to buttons.
+* Buttons: Add `border-radius: 2px`.
 
-* Remove border-radius from menus.
+* Menus: Remove `border-radius` from vertical menus.
+
+* Menus: Replace blue hover for menus with light grey (`#eee`)
+
+* Menus: Remove `font-weight: bold` from selected menu items.
 
 0.0.3
 -----
