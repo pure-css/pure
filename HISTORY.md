@@ -1,8 +1,10 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.1.0 (2013-05-24)
+------------------
+
+* (!) Initial public release.
 
 * Upgraded Normalize.css to 1.1.2.
 
