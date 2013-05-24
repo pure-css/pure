@@ -35,9 +35,7 @@
 
 /* HOVER STATES */
 .pure-menu li a:hover {
-    background: #46b9e3;
-    color: #fff;
-
+    background: #eee;
 }
 
 /* DISABLED STATES */
@@ -70,7 +68,6 @@
 
 /* ACTIVE MENU ITEM */
 .pure-menu .pure-menu-selected a {
-    font-weight: bold;
     color: #000;
 }
 
