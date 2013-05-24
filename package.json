@@ -1,6 +1,6 @@
 {
   "name": "pure",
-  "version": "0.1.0",
+  "version": "0.1.1-pre",
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.1",
