@@ -95,14 +95,6 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: A Rollup of all modules without @media queries. This is a
   non-responsive roll-up of everything.
 
-### Building Specific Modules
-
-You can build a specific module by passing in its name into Grunt:
-
-```shell
-$ grunt grids
-```
-
 
 Contributions and Code Standards
 --------------------------------
