@@ -4,7 +4,8 @@ Pure Change History
 NEXT
 ----
 
-
+* Fixed: Responsive grids fails to apply when another class precedes the unit
+  class in markup. [#44]
 
 
 0.1.0 (2013-05-24)
