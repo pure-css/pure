@@ -276,7 +276,7 @@ grunt.registerMultiTask('license', 'Stamps license banners on files.', function 
         });
     });
 
-    grunt.log.writeln('Stampped license on ' + String(tally).cyan + ' files.');
+    grunt.log.writeln('Stamped license on ' + String(tally).cyan + ' files.');
 });
 
 // -- Contextualize Task -------------------------------------------------------
