@@ -1,13 +1,14 @@
 /* MAIN MENU STYLING */
 
 .pure-menu.pure-menu-open,
-.pure-menu.pure-menu-horizontal li .pure-menu-children {
+.pure-menu-children {
     background: #ffffff; /* Old browsers */
     border: 1px solid #b7b7b7;
 }
 
 /* remove borders for horizontal menus */
-.pure-menu.pure-menu-horizontal, .pure-menu.pure-menu-horizontal .pure-menu-heading {
+.pure-menu.pure-menu-horizontal, 
+.pure-menu-heading {
     border: none;
 }
 
@@ -23,11 +24,11 @@
 }
 
 .pure-menu a,
-.pure-menu .pure-menu-can-have-children > li:after {
+.pure-menu-can-have-children > li:after {
     color: #777;
 }
 
-.pure-menu .pure-menu-can-have-children > li:hover:after {
+.pure-menu-can-have-children > li:hover:after {
     color: #fff;
 }
 
@@ -39,24 +40,24 @@
 }
 
 /* DISABLED STATES */
-.pure-menu li.pure-menu-disabled a:hover {
+.pure-menu-disabled a:hover {
     background: #fff;
     color: #bfbfbf;
 }
 
-.pure-menu .pure-menu-disabled > a {
+.pure-menu-disabled > a {
     background-image: none;
     border-color: transparent;
     cursor: default;
 }
 
 .pure-menu .pure-menu-disabled > a,
-.pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
+.pure-menu-can-have-children.pure-menu-disabled > a:after {
     color: #bfbfbf;
 }
 
 /* HEADINGS */
-.pure-menu .pure-menu-heading {
+.pure-menu-heading {
     color: #565d64;
     text-transform: uppercase;
     font-size:90%;
@@ -67,7 +68,7 @@
 }
 
 /* ACTIVE MENU ITEM */
-.pure-menu .pure-menu-selected a {
+.pure-menu-selected a {
     color: #000;
 }
 

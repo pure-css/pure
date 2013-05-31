@@ -72,8 +72,8 @@
 /* Sam */
 .pure-button-primary,
 .pure-button-selected,
-a.pure-button-primary,
-a.pure-button-selected {
+.pure-button-primary,
+.pure-button-selected {
     background-color: rgb(0, 120, 231);
     color: #fff;
 }
