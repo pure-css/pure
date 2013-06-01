@@ -103,14 +103,42 @@ Feel free to file bugs and submit pull requests on Github! When submitting a
 pull request, please checkout a new feature branch, and submit your pull request
 from it. Please do not submit pull requests from your `master` branch.
 
+### CLA
+
+Please [sign the CLA][] before submitting pull requests. We can't merge your pull 
+requests unless you have a signed CLA. It's super easy and can be done online. 
+For more information regarding the CLA, please visit the [Contribute][] page.
+
+[sign the CLA]: https://secure.echosign.com/public/hostedForm?formid=A9PFU5T58653A
+[Contribute]: http://yuilibrary.com/contribute/cla/
+
 ### Versioning
 
 Pure adheres to [Semantic Versioning 2.0](http://semver.org/).
 
 
+Browser Support and Testing
+---------------------------
+
+Pure is tested and works in:
+
+* IE7+
+
+* Latest Stable Firefox/Chrome/Safari
+
+* iOS6.x
+
+* Android 4.x 
+
+Before submitting pull requests, please ensure that you open the test HTML files in
+these environments. If you don't have access to all these environments, list the
+ones that you have tested in on the pull request description. That way, we know
+what's missing, and can help you out. 
+
+
 License
 -------
-
+ 
 This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][] for license text and copyright information.
 
