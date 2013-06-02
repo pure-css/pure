@@ -110,9 +110,16 @@
 }
 
 /* Adjusting separator for vertical menus */
-.pure-menu-horizontal .pure-menu-separator {
+.pure-menu-horizontal li.pure-menu-separator {
 	height: 20px;
 	width: 1px;
 	margin: 2px 7px;
+}
+
+/* Submenus should be horizontal separator again */
+.pure-menu-horizontal li li.pure-menu-separator {
+	height: 1px;
+	width: auto;
+	margin: 7px 2px;
 }
 
