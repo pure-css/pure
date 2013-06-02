@@ -109,3 +109,10 @@
     padding-right:30px;
 }
 
+/* Adjusting separator for vertical menus */
+.pure-menu-horizontal .pure-menu-separator {
+	height: 20px;
+	width: 1px;
+	margin: 2px 7px;
+}
+
