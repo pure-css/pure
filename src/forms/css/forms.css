@@ -1,5 +1,6 @@
 .pure-form input,
-.pure-form select {
+.pure-form select,
+.pure-form textarea {
   padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -18,7 +19,8 @@
 }
 
 .pure-form input:focus,
-.pure-form select:focus {
+.pure-form select:focus,
+.pure-form textarea:focus {
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
   border-color: #129FEA;
