@@ -23,8 +23,10 @@
 		margin: 1.5em 0 0 0;
 	}
 
+	/* note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */
 	.pure-form .pure-help-inline,
-	.pure-form .pure-help-block {
+	.pure-form-message-inline,
+	.pure-form-message {
 		display: block;
 		font-size: 80%;
 		padding: 0.2em 0 0.8em; /* increased bottom padding to make it group with its related input element */

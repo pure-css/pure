@@ -86,7 +86,8 @@
 .pure-form-aligned input,
 .pure-form-aligned textarea,
 .pure-form-aligned select,
-.pure-form-aligned .pure-help-inline {
+.pure-form-aligned .pure-help-inline, /* note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */
+.pure-form-message-inline {
   display: inline-block;
   *display: inline; /* IE7 inline-block hack */
   *zoom: 1;
@@ -158,7 +159,9 @@
 }
 
 /* Inline help for forms */
-.pure-form .pure-help-inline {
+/* Note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */
+.pure-form .pure-help-inline,
+.pure-form-message-inline {
   display: inline-block;
   padding-left: 0.3em;
   color: #666;
@@ -167,9 +170,8 @@
 }
 
 /* Block help for forms */
-.pure-form .pure-help-block {
+.pure-form-message {
   display: block;
-  margin: .5em 0 .2em;
   color: #666;
   font-size: 90%;
 }
