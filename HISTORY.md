@@ -9,6 +9,13 @@ NEXT
 
 * Fixed: textarea does not match input styling in forms. [#49]
 
+* (!) `.pure-help-inline` has been replaced with `.pure-form-message-inline`. We
+still support the older class name but it is deprecated and will be going away
+in a future release. [#32]
+
+* Added a new class called `.pure-form-message`. It works the same way as
+`.pure-form-message-inline` but is meant for block elements. [#32]
+
 
 0.1.0 (2013-05-24)
 ------------------
