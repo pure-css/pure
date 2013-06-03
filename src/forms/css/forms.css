@@ -167,3 +167,11 @@
   vertical-align: middle;
   font-size: 90%;
 }
+
+/* Block help for forms */
+.pure-form .pure-help-block {
+  display: block;
+  margin: .5em 0 .2em;
+  color: #666;
+  font-size: 90%;
+}
