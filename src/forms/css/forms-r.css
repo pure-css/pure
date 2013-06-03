@@ -3,7 +3,9 @@
 		margin: 0.7em 0 0;
 	}
 
-	.pure-form input[type='text'], .pure-form button, .pure-form label {
+	.pure-form input[type='text'], 
+	.pure-form button, 
+	.pure-form label {
 		margin-bottom: 0.3em;
 		display: block;
 	}
@@ -12,18 +14,18 @@
 		margin-bottom: 0;
 	}
 
-	.pure-form-aligned .pure-control-group label {
+	.pure-control-group label {
 		margin-bottom: 0.3em;
 		text-align: left;
 		display: block;
 		width: 100%;
 	}
 
-	.pure-form-aligned .pure-controls {
+	.pure-controls {
 		margin: 1.5em 0 0 0;
 	}
 
-	.pure-form .pure-help-inline {
+	.pure-help-inline {
 		display: block;
 		font-size: 80%;
 		padding: 0.2em 0 0.8em; /* increased bottom padding to make it group with its related input element */

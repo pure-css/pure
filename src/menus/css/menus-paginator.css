@@ -10,16 +10,17 @@
     *zoom: 1;
     margin: 0 -0.35em 0 0;
 }
-.pure-paginator .pure-button {
+.pure-button {
     border-radius: 0;
     padding: 0.8em 1.4em;
     vertical-align: top;
     height: 1.1em;
 }
-.pure-paginator .pure-button:focus {
+.pure-button:focus {
     outline-style: none;
 }
-.pure-paginator .prev, .pure-paginator .next {
+.pure-paginator .prev, 
+.pure-paginator .next {
     color: #C0C1C3;
     text-shadow: 0px -1px 0px rgba(0,0,0, 0.45);
 }

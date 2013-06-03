@@ -28,7 +28,7 @@
 
 .pure-menu li { position: relative; }
 
-.pure-menu a, .pure-menu .pure-menu-heading {
+.pure-menu a, .pure-menu-heading {
     display: block;
     color: inherit;
     line-height: 1.5em;
@@ -37,7 +37,7 @@
     white-space: nowrap;
 }
 
-.pure-menu.pure-menu-horizontal > .pure-menu-heading {
+.pure-menu-heading {
     display: inline-block;
     margin: 0;
     zoom: 1;
@@ -53,7 +53,7 @@
 
 .pure-menu li a { padding: 5px 20px; }
 
-.pure-menu-can-have-children > .pure-menu-label:after {
+.pure-menu-label:after {
     content: '\25B8';
     float: right;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
@@ -61,7 +61,7 @@
     margin-top: -1px;
 }
 
-.pure-menu-can-have-children > .pure-menu-label {
+.pure-menu-label {
     padding-right:30px;
 }
 
@@ -101,11 +101,11 @@
 }
 
 /* Content after should be down arrow */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
+.pure-menu-label:after {
     content: "\25BE";
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
+.pure-menu-label {
     padding-right:30px;
 }
 
