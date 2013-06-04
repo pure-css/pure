@@ -14,6 +14,9 @@ NEXT
   `.pure-form-message-inline` but is meant for block elements. (Issue #32)
   (dannytatom)
 
+* Added focus styles for file, radio, and checkbox `<input>`s to improve
+  accessibility. (Issue #42) (codepb)
+
 * `<textarea>`s now have the same styling as `<input>`s. (Issue #49) (rcbdev)
 
 ### Grids
@@ -22,6 +25,11 @@ NEXT
   Before units were targeted using the `^=` ("starts with") selector, which
   meant that if another classname preceded the unit classname, then the rule
   would not apply. (Issue #44)
+
+### Menus
+
+* Added `pure-menu-separator-vertical` classname that can be used to visually
+  separate horizonal menu items. (Issue #53) (codepb, mseri)
 
 
 0.1.0 (2013-05-24)
