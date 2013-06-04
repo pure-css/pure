@@ -49,6 +49,7 @@
     zoom: 1;
     *display: inline;
     vertical-align: middle;
+    height: 2.4em;
 }
 
 .pure-menu li a { padding: 5px 20px; }
@@ -111,7 +112,7 @@
 
 /* Adjusting separator for vertical menus */
 .pure-menu-horizontal li.pure-menu-separator {
-	height: 20px;
+	height: 50%;
 	width: 1px;
 	margin: 2px 7px;
 }
