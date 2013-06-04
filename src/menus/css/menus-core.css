@@ -114,7 +114,7 @@
 .pure-menu-horizontal li.pure-menu-separator {
 	height: 50%;
 	width: 1px;
-	margin: 2px 7px;
+	margin: 0 7px;
 }
 
 /* Submenus should be horizontal separator again */
