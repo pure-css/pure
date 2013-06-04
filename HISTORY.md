@@ -4,17 +4,24 @@ Pure Change History
 NEXT
 ----
 
-* Fixed: Responsive grids fails to apply when another class precedes the unit
-  class in markup. [#44]
-
-* Fixed: textarea does not match input styling in forms. [#49]
+### Forms
 
 * (!) `.pure-help-inline` has been replaced with `.pure-form-message-inline`. We
-still support the older class name but it is deprecated and will be going away
-in a future release. [#32]
+  still support the older classname but it is deprecated and will be going away
+  in a future release. (Issue #32) (dannytatom)
 
 * Added a new class called `.pure-form-message`. It works the same way as
-`.pure-form-message-inline` but is meant for block elements. [#32]
+  `.pure-form-message-inline` but is meant for block elements. (Issue #32)
+  (dannytatom)
+
+* `<textarea>`s now have the same styling as `<input>`s. (Issue #49) (rcbdev)
+
+### Grids
+
+* Adding a classname before the responsive grid's unit classname now works.
+  Before units were targeted using the `^=` ("starts with") selector, which
+  meant that if another classname preceded the unit classname, then the rule
+  would not apply. (Issue #44)
 
 
 0.1.0 (2013-05-24)
