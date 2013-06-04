@@ -25,6 +25,12 @@
   outline: thin dotted \9; /* IE6-9 */
   border-color: #129FEA;
 }
+.pure-form input[type="file"]:focus,
+.pure-form input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 1px auto #129FEA;    
+}
 .pure-form .pure-checkbox,
 .pure-form .pure-radio {
   margin: 0.5em 0;
@@ -51,6 +57,11 @@
 .pure-form textarea:focus:invalid:focus,
 .pure-form select:focus:invalid:focus {
   border-color: #e9322d;
+}
+.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus {
+  outline-color: #e9322d;
 }
 .pure-form select {
   border: 1px solid #ccc;
