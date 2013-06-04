@@ -49,6 +49,7 @@
     zoom: 1;
     *display: inline;
     vertical-align: middle;
+    height: 2.4em;
 }
 
 .pure-menu li a { padding: 5px 20px; }
@@ -107,5 +108,19 @@
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
 .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
     padding-right:30px;
+}
+
+/* Adjusting separator for vertical menus */
+.pure-menu-horizontal li.pure-menu-separator {
+	height: 50%;
+	width: 1px;
+	margin: 0 7px;
+}
+
+/* Submenus should be horizontal separator again */
+.pure-menu-horizontal li li.pure-menu-separator {
+	height: 1px;
+	width: auto;
+	margin: 7px 2px;
 }
 
