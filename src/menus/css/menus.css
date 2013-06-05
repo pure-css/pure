@@ -1,3 +1,6 @@
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 /* MAIN MENU STYLING */
 
 .pure-menu.pure-menu-open,
@@ -7,7 +10,8 @@
 }
 
 /* remove borders for horizontal menus */
-.pure-menu.pure-menu-horizontal, .pure-menu.pure-menu-horizontal .pure-menu-heading {
+.pure-menu.pure-menu-horizontal,
+.pure-menu.pure-menu-horizontal .pure-menu-heading {
     border: none;
 }
 
