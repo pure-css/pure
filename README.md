@@ -98,6 +98,13 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: A Rollup of all modules without @media queries. This is a
   non-responsive roll-up of everything.
 
+**Note:** To save your fingers from The Developer Konami Code: ⌘⇥ ⌃C ↑ ⏎ use
+the `grunt watch` task:
+
+```shell
+$ grunt watch
+```
+
 
 [Grunt]: http://gruntjs.com/
 
