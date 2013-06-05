@@ -1,3 +1,5 @@
+/*csslint box-model:false*/
+
 .pure-paginator {
     list-style: none;
     margin: 0;
