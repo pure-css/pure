@@ -14,14 +14,8 @@
     user-select: none;
 }
 
-
 /* Firefox: Get rid of the inner focus border */
 .pure-button::-moz-focus-inner{
     padding: 0;
     border: 0;
 }
-
-a:focus {
-    outline: none;
-}
-
