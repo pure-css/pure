@@ -70,7 +70,7 @@ Build From Source
 -----------------
 
 Optionally, you can build Pure from its source on Github. To do this, you'll
-need to have NodeJS and npm installed. We use Grunt to build Pure.
+need to have NodeJS and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
 $ git clone git@github.com:yui/pure.git
@@ -99,12 +99,25 @@ conventions of the files in the `build/` directory follow these rules:
   non-responsive roll-up of everything.
 
 
+[Grunt]: http://gruntjs.com/
+
+
 Contributions and Code Standards
 --------------------------------
 
 Feel free to file bugs and submit pull requests on Github! When submitting a
 pull request, please checkout a new feature branch, and submit your pull request
 from it. Please do not submit pull requests from your `master` branch.
+
+### Testing
+
+We use [CSSLint][] for basic testing to make sure we're shipping valid CSS which
+compiles with standard best practices and rules. To run Pure's test use
+[Grunt][]:
+
+```shell
+$ grunt test
+```
 
 ### Docs and Website
 
@@ -123,6 +136,7 @@ online. For more information regarding the CLA, please visit the
 Pure adheres to [Semantic Versioning 2.0](http://semver.org/).
 
 
+[CSSLint]: https://github.com/stubbornella/csslint
 [pure-site]: https://github.com/yui/pure-site
 [sign the CLA]: https://secure.echosign.com/public/hostedForm?formid=A9PFU5T58653A
 [Contribute]: http://yuilibrary.com/contribute/cla/
