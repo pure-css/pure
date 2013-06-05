@@ -135,6 +135,22 @@ grunt.initConfig({
         }
     },
 
+    // -- CSSLint Config -------------------------------------------------------
+
+    csslint: {
+        options: {
+            csslintrc: '.csslintrc'
+        },
+
+        src: {
+            src: [
+                'src/**/css/*.css',
+                '!src/base/css/*',
+                '!src/forms/css/forms-core.css'
+            ]
+        }
+    },
+
     // -- CSSMin Config --------------------------------------------------------
 
     cssmin: {
@@ -219,6 +235,7 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.loadNpmTasks('grunt-contrib-csslint');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 
@@ -237,7 +254,12 @@ grunt.registerTask('import', [
     'import-normalize'
 ]);
 
+grunt.registerTask('test', [
+    'csslint'
+]);
+
 grunt.registerTask('release', [
+    'test',
     'default',
     'clean:release',
     'compress:release'
