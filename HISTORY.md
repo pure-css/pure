@@ -4,6 +4,9 @@ Pure Change History
 NEXT
 ----
 
+* Fixed accessability mistake by removing `a:focus {outline: none;}` rule from
+  `buttons-core.css`.
+
 ### Forms
 
 * (!) `.pure-help-inline` has been replaced with `.pure-form-message-inline`. We
