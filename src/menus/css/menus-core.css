@@ -1,3 +1,5 @@
+/*csslint adjoining-classes:false*/
+
 .pure-menu ul {
     position: absolute;
     visibility: hidden;
