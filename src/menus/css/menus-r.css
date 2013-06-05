@@ -8,7 +8,7 @@
 
     .pure-menu-children li {
         display: block;
-        border-bottom:1px solid block;
+        border-bottom: 1px solid black;
     }
 
 }

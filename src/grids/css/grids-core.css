@@ -16,7 +16,8 @@
 
 .pure-u {
     display: inline-block;
-    zoom: 1; *display: inline; /* IE < 8: fake inline-block */
+    *display: inline; /* IE < 8: fake inline-block */
+    zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
