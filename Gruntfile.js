@@ -227,6 +227,19 @@ grunt.initConfig({
                 banner: '/* <%= BUILD_COMMENT %> */\n'
             }
         }
+    },
+
+    // -- Watch Config ---------------------------------------------------------
+
+    watch: {
+        src: {
+            files: 'src/**/css/*.css',
+            tasks: ['test', 'default'],
+
+            options: {
+                interrupt: true
+            }
+        }
     }
 });
 
@@ -238,6 +251,7 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-csslint');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
+grunt.loadNpmTasks('grunt-contrib-watch');
 
 grunt.registerTask('default', [
     'clean:build',
