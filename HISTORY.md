@@ -4,8 +4,20 @@ Pure Change History
 NEXT
 ----
 
-* Fixed accessability mistake by removing `a:focus {outline: none;}` rule from
+* Fixed accessibility mistake by removing `a:focus {outline: none;}` rule from
   `buttons-core.css`.
+
+* Added improvements to developer workflow:
+
+    * Added basic Tests using CSSLint via `grunt test` (Issue #25)
+
+    * Integrated Travis CI which runs `grunt test` on pushes to `master` and for
+      pull requests.
+
+    * Added `grunt watch` task which runs tests and build.
+
+    * Added support to `pure-site` for serving `pure` locally during
+      development. (Issue #46, yui/pure-site#111)
 
 ### Forms
 
