@@ -22,6 +22,10 @@ NEXT
 * `.pure-form input` rules are now more specific, targetting only "texty" inputs.
   This prevents input styles from affecting "buttony" inputs. (Issue #54)
 
+* `<input>`s and `<textarea>`s are no longer `display:block` for stacked forms.
+  Only labels are `display: block`. This fix allows inline messages to work
+  as expected.
+
 ### Grids
 
 * Adding a classname before the responsive grid's unit classname now works.
