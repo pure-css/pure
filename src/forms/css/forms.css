@@ -130,8 +130,6 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.pure-form-stacked input,
-.pure-form-stacked select,
 .pure-form-stacked label {
   display: block;
 }
