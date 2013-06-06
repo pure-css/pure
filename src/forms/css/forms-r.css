@@ -1,15 +1,15 @@
 @media only screen and (max-width : 480px) {
-	.pure-form button[type='submit'] {
+	.pure-form button[type="submit"] {
 		margin: 0.7em 0 0;
 	}
 
-	.pure-form input[type='text'],
+	.pure-form input[type="text"],
     .pure-form label {
 		margin-bottom: 0.3em;
 		display: block;
 	}
 
-	.pure-group input[type='text'] {
+	.pure-group input[type="text"] {
 		margin-bottom: 0;
 	}
 
