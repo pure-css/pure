@@ -5,7 +5,7 @@
 
 .pure-menu.pure-menu-open,
 .pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: #ffffff; /* Old browsers */
+    background: #fff; /* Old browsers */
     border: 1px solid #b7b7b7;
 }
 
@@ -35,6 +35,10 @@
     color: #fff;
 }
 
+/* Focus style for a dropdown menu-item when the parent has been opened */
+.pure-menu .pure-menu-open {
+    background: #dedede;
+}
 
 
 /* HOVER STATES */

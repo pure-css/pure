@@ -1,4 +1,4 @@
-/*csslint adjoining-classes:false*/
+/*csslint adjoining-classes:false, outline-none:false*/
 /*TODO: Remove this lint rule override after a refactor of this code.*/
 
 .pure-menu ul {
@@ -27,6 +27,10 @@
     left: 0;
     top: 0;
     visibility: visible;
+}
+
+.pure-menu-open > ul:focus {
+    outline: none;
 }
 
 .pure-menu li { position: relative; }

@@ -50,6 +50,9 @@ NEXT
 * Added `pure-menu-separator-vertical` classname that can be used to visually
   separate horizonal menu items. (Issue #53) (codepb, mseri)
 
+* Focused menus have an `outline: none` by default. Instead, menu-items that
+  have been opened to display children (in a drop-down menu) get a slight
+  background (`#dedede`) for accessibility. (Issue #22)
 
 0.1.0 (2013-05-24)
 ------------------
