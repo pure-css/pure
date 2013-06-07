@@ -13,13 +13,3 @@
 .pure-g {
     word-spacing: -0.43em;
 }
-
-.pure-u {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-}
