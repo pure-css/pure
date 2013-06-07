@@ -229,12 +229,12 @@ grunt.initConfig({
         }
     },
 
-    // -- Watch Config ---------------------------------------------------------
+    // -- Watch/Observe Config -------------------------------------------------
 
-    watch: {
+    observe: {
         src: {
             files: 'src/**/css/*.css',
-            tasks: ['test', 'default'],
+            tasks: ['test', 'suppress', 'default'],
 
             options: {
                 interrupt: true
@@ -263,13 +263,17 @@ grunt.registerTask('default', [
     'license'
 ]);
 
+grunt.registerTask('test', [
+    'csslint'
+]);
+
+// Makes the `watch` task run a build first.
+grunt.renameTask('watch', 'observe');
+grunt.registerTask('watch', ['default', 'observe']);
+
 grunt.registerTask('import', [
     'bower-install',
     'import-normalize'
-]);
-
-grunt.registerTask('test', [
-    'csslint'
 ]);
 
 grunt.registerTask('release', [
@@ -278,6 +282,26 @@ grunt.registerTask('release', [
     'clean:release',
     'compress:release'
 ]);
+
+// -- Suppress Task ------------------------------------------------------------
+
+grunt.registerTask('suppress', function () {
+    var allowed = ['success', 'fail', 'warn', 'error'];
+
+    grunt.util.hooker.hook(grunt.log, {
+        passName: true,
+
+        pre: function (name) {
+            if (allowed.indexOf(name) === -1) {
+                grunt.log.muted = true;
+            }
+        },
+
+        post: function () {
+            grunt.log.muted = false;
+        }
+    });
+});
 
 // -- Import Tasks -------------------------------------------------------------
 
