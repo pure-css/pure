@@ -19,6 +19,10 @@ NEXT
     * Added support to `pure-site` for serving `pure` locally during
       development. (Issue #46, yui/pure-site#111)
 
+* Removed vendor prefixes for `box-shadow`, `text-shadow`, `border-radius`. According
+  to caniuse.com, all modern browsers support the unprefixed versions of these properties.
+  (Issue #23)
+
 ### Forms
 
 * (!) `.pure-help-inline` has been replaced with `.pure-form-message-inline`. We
