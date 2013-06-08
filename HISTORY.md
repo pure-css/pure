@@ -19,8 +19,8 @@ NEXT
     * Added support to `pure-site` for serving `pure` locally during
       development. (Issue #46, yui/pure-site#111)
 
-* Removed vendor prefixes for `box-shadow`, `text-shadow`, `border-radius`. According
-  to caniuse.com, all modern browsers support the unprefixed versions of these properties.
+* Removed vendor prefixes for `box-shadow`, `text-shadow`, `border-radius`. All
+  modern browsers support the non-prefixed versions of these properties.
   (Issue #23)
 
 ### Forms
@@ -38,9 +38,9 @@ NEXT
 
 * `<textarea>`s now have the same styling as `<input>`s. (Issue #49) (rcbdev)
 
-* `.pure-form input` rules are now more specific, targetting only "texty" inputs.
-  This prevents input styles from affecting "buttony" inputs. (Issue #54)
-
+* `.pure-form input` rules are now more specific by targetting only "texty"
+  `<inputs>`. This prevents these styles from affecting "buttony" `<input>`s.
+  (Issue #54)
 
 ### Grids
 
@@ -52,11 +52,12 @@ NEXT
 ### Menus
 
 * Added `pure-menu-separator-vertical` classname that can be used to visually
-  separate horizonal menu items. (Issue #53) (codepb, mseri)
+  separate horizontal menu items. (Issue #53) (codepb, mseri)
 
 * Focused menus have an `outline: none` by default. Instead, menu-items that
   have been opened to display children (in a drop-down menu) get a slight
   background (`#dedede`) for accessibility. (Issue #22)
+
 
 0.1.0 (2013-05-24)
 ------------------
