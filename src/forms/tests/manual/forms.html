@@ -4,6 +4,7 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width = device-width">
     <title>Forms CSS Manual Test</title>
+    <link rel="stylesheet" type="text/css" href="../../../../build/base-min.css">
     <link rel="stylesheet" type="text/css" href="../../../../build/grids-min.css">
     <link rel="stylesheet" type="text/css" href="../../../../build/forms-min.css">
     <link rel="stylesheet" type="text/css" href="../../../../build/buttons-min.css">
@@ -50,8 +51,8 @@
         <input type="text">
        </div>
        <div class='pure-u-1-3'>
-        <label>Last Name</label>
-        <input type="text">
+        <label>Password</label>
+        <input type="password">
        </div>
        <div class='pure-u-1-3'>
         <label>E-Mail</label>
@@ -78,6 +79,7 @@
        <input type="checkbox"> I've read the terms and conditions
       </label>
       <button type="submit" class='pure-button'>Submit</button>
+      <button type="reset" class='pure-button'>Reset</button>
       </fieldset>
      </form>
 
@@ -92,13 +94,15 @@
      <legend>Legend</legend>
      <label>First Name</label>
      <input type="text">
-     <label>Last Name</label>
-     <input type="text">
+     <label>Password</label>
+     <input type="password">
      <label>E-Mail</label>
      <input type="email" required>
      <aside class='pure-help-inline'>This is a required field.</aside>
      <label>City</label>
      <input type="text">
+     <aside class='pure-form-message'>This is another required field.</aside>
+
      <label>State</label>
      <select class='pure-input-medium'>
       <option>AL</option>
@@ -111,6 +115,8 @@
       <input type="checkbox"> I've read the terms and conditions
      </label>
      <button type="submit" class='pure-button notice'>Submit</button>
+     <button type="reset" class='pure-button'>Reset</button>
+
      </fieldset>
     </form>
 
@@ -135,6 +141,10 @@
       <div class="pure-control-group">
        <label>Email Address</label>
        <input type="text" placeholder="Email Address">
+      </div>
+      <div class="pure-control-group">
+       <label>Here's a button</label>
+       <input type="button" value="Button" class="pure-button">
       </div>
 
       <div class="pure-control-group">
@@ -297,6 +307,18 @@
         <aside class="pure-form-message">Block help text</aside>
       </fieldset>
      </form>
+    </div>
+
+    <div class= "pure-g-r">
+      <div class= "pure-u-1">
+        <form class="pure-form">
+          <a class="pure-button pure-button-primary">Anchor</a>
+          <button class="pure-button pure-button-primary">Button</button>
+          <input type="submit" class="pure-button pure-button-primary" value="Submit" />
+          <input type="button" class="pure-button pure-button-primary" value="Input Button" />
+          <input type="reset" class="pure-button pure-button-primary" value="Reset" />
+        </form>
+      </div>
     </div>
 </body>
 </html>

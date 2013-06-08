@@ -38,6 +38,10 @@ NEXT
 
 * `<textarea>`s now have the same styling as `<input>`s. (Issue #49) (rcbdev)
 
+* `.pure-form input` rules are now more specific, targetting only "texty" inputs.
+  This prevents input styles from affecting "buttony" inputs. (Issue #54)
+
+
 ### Grids
 
 * Adding a classname before the responsive grid's unit classname now works.

@@ -1,4 +1,17 @@
-.pure-form input,
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
 .pure-form select,
 .pure-form textarea {
   padding: 0.5em 0.6em;
@@ -18,13 +31,27 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.pure-form input:focus,
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
 .pure-form select:focus,
 .pure-form textarea:focus {
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
   border-color: #129FEA;
 }
+
 .pure-form input[type="file"]:focus,
 .pure-form input[type="radio"]:focus,
 .pure-form input[type="checkbox"]:focus {
@@ -36,7 +63,20 @@
   margin: 0.5em 0;
   display: block;
 }
-.pure-form input[disabled],
+.pure-form input[type="text"][disabled],
+.pure-form input[type="password"][disabled],
+.pure-form input[type="email"][disabled],
+.pure-form input[type="url"][disabled],
+.pure-form input[type="date"][disabled],
+.pure-form input[type="month"][disabled],
+.pure-form input[type="time"][disabled],
+.pure-form input[type="datetime"][disabled],
+.pure-form input[type="datetime-local"][disabled],
+.pure-form input[type="week"][disabled],
+.pure-form input[type="number"][disabled],
+.pure-form input[type="search"][disabled],
+.pure-form input[type="tel"][disabled],
+.pure-form input[type="color"][disabled],
 .pure-form select[disabled],
 .pure-form textarea[disabled],
 .pure-form input[readonly],
@@ -90,7 +130,20 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.pure-form-stacked input[type='text'],
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
 .pure-form-stacked select,
 .pure-form-stacked label {
   display: block;
@@ -99,7 +152,8 @@
 .pure-form-aligned input,
 .pure-form-aligned textarea,
 .pure-form-aligned select,
-.pure-form-aligned .pure-help-inline, /* note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */
+/* note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */
+.pure-form-aligned .pure-help-inline,
 .pure-form-message-inline {
   display: inline-block;
   *display: inline; /* IE7 inline-block hack */
