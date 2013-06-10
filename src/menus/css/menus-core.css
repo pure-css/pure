@@ -35,7 +35,8 @@
 
 .pure-menu li { position: relative; }
 
-.pure-menu a, .pure-menu .pure-menu-heading {
+.pure-menu a,
+.pure-menu .pure-menu-heading {
     display: block;
     color: inherit;
     line-height: 1.5em;
@@ -64,7 +65,8 @@
 .pure-menu-can-have-children > .pure-menu-label:after {
     content: '\25B8';
     float: right;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
+    /* These specific fonts have the Unicode char we need. */
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
     margin-right: -20px;
     margin-top: -1px;
 }
@@ -89,8 +91,8 @@
 /* FIXED MENU */
 .pure-menu-fixed {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -105,7 +107,7 @@
     vertical-align: middle;
 }
 
-/* Submenus should still be display:block; */
+/* Submenus should still be display: block; */
 .pure-menu-horizontal li li {
     display: block;
 }
@@ -116,7 +118,7 @@
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
 .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
 /* Adjusting separator for vertical menus */
