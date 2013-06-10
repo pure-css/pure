@@ -33,7 +33,7 @@ Building and Testing Pure
 Pure uses [Grunt][], a JavaScript task runner that runs on [Node.js][], for
 building and testing. You'll need Node.js and Grunt installed to work on Pure.
 Once installed, clone the `pure` repo (either the main repo or your fork) and
-install  Pure's gruntplugins via npm:
+install Pure's gruntplugins via npm:
 
 ```shell
 $ git clone git://github.com/yui/pure.git
