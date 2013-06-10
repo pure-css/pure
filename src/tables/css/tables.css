@@ -80,3 +80,8 @@ striping:
 .pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;
 }
+
+/* HOVER HIGHLIGHT TABLES */
+.pure-table-highlight tr:hover td {
+    background-color: #f2f2f2;
+}
