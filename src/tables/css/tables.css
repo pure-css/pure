@@ -1,11 +1,3 @@
-/*
-* CSS TABLES
-* ==========
-* Simple CSS for HTML Tables
-* Author: tilomitra
-*/
-
-/* foundational CSS */
 .pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
     border-collapse: collapse;
@@ -46,7 +38,7 @@
 /*
 striping:
    even - #fff (white)
-   odd  - #edf5ff (light blue)
+   odd  - #f2f2f2 (light gray)
 */
 .pure-table td {
     background-color: transparent;
@@ -62,7 +54,7 @@ striping:
 
 /* BORDERED TABLES */
 .pure-table-bordered td {
-    border-bottom:1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
 }
 .pure-table-bordered tbody > tr:last-child td,
 .pure-table-horizontal tbody > tr:last-child td {
@@ -75,7 +67,7 @@ striping:
 .pure-table-horizontal td,
 .pure-table-horizontal th {
     border-width: 0 0 1px 0;
-    border-bottom:1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
 }
 .pure-table-horizontal tbody > tr:last-child td {
     border-bottom-width: 0;

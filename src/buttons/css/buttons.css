@@ -22,12 +22,9 @@
     transition: 0.1s linear box-shadow;
 }
 
-
 .pure-button-hover,
 .pure-button:hover {
-
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=0);
-
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.05)));
     background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
     background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.05));
@@ -57,7 +54,7 @@
 }
 
 .pure-button-hidden {
-    display:none;
+    display: none;
 }
 
 /* Firefox: Get rid of the inner focus border */
