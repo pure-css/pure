@@ -40,13 +40,14 @@
 }
 
 
-/* HOVER STATES */
-.pure-menu li a:hover {
+.pure-menu li a:hover,
+.pure-menu li a:focus {
     background: #eee;
 }
 
 /* DISABLED STATES */
-.pure-menu li.pure-menu-disabled a:hover {
+.pure-menu li.pure-menu-disabled a:hover,
+.pure-menu li.pure-menu-disabled a:focus {
     background: #fff;
     color: #bfbfbf;
 }

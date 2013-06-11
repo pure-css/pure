@@ -4,8 +4,11 @@ Pure Change History
 NEXT
 ----
 
-* Fixed accessibility mistake by removing `a:focus {outline: none;}` rule from
-  `buttons-core.css`.
+* (!) Fixed accessibility mistake by removing `a:focus {outline: none;}` rule
+  from `buttons-core.css`.
+
+* Improved `:focus` styles by applying the same rules that are used by `:hover`
+  styles.
 
 * Added improvements to developer workflow:
 
