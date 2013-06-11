@@ -7,8 +7,9 @@ NEXT
 * (!) Fixed accessibility mistake by removing `a:focus {outline: none;}` rule
   from `buttons-core.css`.
 
-* Improved `:focus` styles by applying the same rules that are used by `:hover`
-  styles.
+* (!) Improved `:focus` styles by applying the same rules that are used by
+  `:hover` styles. When overriding Pure's `:hover` styles, be sure to include
+  `:focus` selectors as well.
 
 * Added improvements to developer workflow:
 
@@ -47,10 +48,10 @@ NEXT
 
 ### Grids
 
-* Adding a classname before the responsive grid's unit classname now works.
-  Before units were targeted using the `^=` ("starts with") selector, which
-  meant that if another classname preceded the unit classname, then the rule
-  would not apply. (Issue #44)
+* Elements with classnames before the responsive grid's unit classnames now
+  works correctly. Before units were targeted using the `^=` ("starts with")
+  selector, which meant that if another classname preceded the unit classname,
+  then the rule would not apply. (Issue #44)
 
 ### Menus
 
