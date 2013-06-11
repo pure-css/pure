@@ -40,8 +40,8 @@
 }
 
 
-/* HOVER STATES */
-.pure-menu li a:hover {
+.pure-menu li a:hover,
+.pure-menu li a:focus {
     background: #eee;
 }
 
