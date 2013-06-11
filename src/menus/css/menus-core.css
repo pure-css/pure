@@ -30,7 +30,7 @@
 }
 
 .pure-menu-open > ul:focus {
-    outline: none;
+    outline: 0;
 }
 
 .pure-menu li { position: relative; }
