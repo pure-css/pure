@@ -49,7 +49,7 @@
     -khtml-opacity: 0.40;
     -moz-opacity: 0.40;
     opacity: 0.40;
-    cursor: not-allowed;
+    cursor: default;
     box-shadow: none;
 }
 
