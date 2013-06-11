@@ -1,8 +1,8 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.2.0 (2013-06-11)
+------------------
 
 * (!) Fixed accessibility mistake by removing `a:focus {outline: none;}` rule
   from `buttons-core.css`.
