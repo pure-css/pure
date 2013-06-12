@@ -6,14 +6,17 @@ Pure
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
+[![Build Status](https://travis-ci.org/yui/pure.png?branch=master)][Build Status]
+
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
 ```
 
 
 [Pure]: http://purecss.io/
+[Build Status]: https://travis-ci.org/yui/pure
 
 
 Features
@@ -42,7 +45,7 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Easy one-click customization with the [Skin Builder][].
 
-* Extremely small file size: **4.8KB minified + gzip**.
+* Extremely small file size: **4.2KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
@@ -59,7 +62,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
 ```
 
 
@@ -67,7 +70,7 @@ Build From Source
 -----------------
 
 Optionally, you can build Pure from its source on Github. To do this, you'll
-need to have NodeJS and npm installed. We use Grunt to build Pure.
+need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
 $ git clone git@github.com:yui/pure.git
@@ -76,9 +79,14 @@ $ npm install
 $ grunt
 ```
 
+### Build Files
+
 Now, all Pure CSS files should be built into the `pure/build/` directory. All
 files that are in this build directory are also available on the CDN. The naming
 conventions of the files in the `build/` directory follow these rules:
+
+* `[module]-core.css`: The minimal set of styles, ususally structural, that
+  provide the base on which the rest of the module's styles build.
 
 * `[module]-nr.css`: Rollup of `[module]-core.css` + `[module].css` +
   `[module]-[feature].css` from the `src/[module]/` dir. This is the
@@ -96,33 +104,7 @@ conventions of the files in the `build/` directory follow these rules:
   non-responsive roll-up of everything.
 
 
-Contributions and Code Standards
---------------------------------
-
-Feel free to file bugs and submit pull requests on Github! When submitting a
-pull request, please checkout a new feature branch, and submit your pull request
-from it. Please do not submit pull requests from your `master` branch.
-
-### Docs and Website
-
-Pure's website is also open source, so please file any issues or pull requests
-for the docs or website over at the [`pure-site`][pure-site] repo.
-
-### CLA
-
-Please [sign the CLA][] before submitting pull requests. We can't merge your
-pull requests unless you have a signed CLA. It's super easy and can be done
-online. For more information regarding the CLA, please visit the
-[Contribute][] page.
-
-### Versioning
-
-Pure adheres to [Semantic Versioning 2.0](http://semver.org/).
-
-
-[pure-site]: https://github.com/yui/pure-site
-[sign the CLA]: https://secure.echosign.com/public/hostedForm?formid=A9PFU5T58653A
-[Contribute]: http://yuilibrary.com/contribute/cla/
+[Grunt]: http://gruntjs.com/
 
 
 Browser Support and Testing
@@ -131,14 +113,29 @@ Browser Support and Testing
 Pure is tested and works in:
 
 * IE 7+
-* Latest Stable Firefox/Chrome/Safari
+* Latest Stable: Firefox, Chrome, Safari
 * iOS 6.x
 * Android 4.x
 
-Before submitting pull requests, please ensure that you open the test HTML files
-in these environments. If you don't have access to all these environments, list
-the ones that you have tested in on the pull request description. That way, we
-know what's missing, and can help you out.
+
+Docs and Website
+----------------
+
+[Pure's website][Pure] is also open source, so please open any issues or pull
+requests for the docs and website over at the [`pure-site`][pure-site]
+repository.
+
+
+[pure-site]: https://github.com/yui/pure-site
+
+
+Contributing
+------------
+
+See the [CONTRIBUTING file][] for information on how to contribute to Pure.
+
+
+[CONTRIBUTING file]: https://github.com/yui/pure/blob/master/CONTRIBUTING.md
 
 
 License
@@ -146,5 +143,6 @@ License
 
 This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][] for license text and copyright information.
+
 
 [LICENSE file]: https://github.com/yui/pure/blob/master/LICENSE.md

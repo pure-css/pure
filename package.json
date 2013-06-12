@@ -1,7 +1,8 @@
 {
   "name": "pure",
-  "version": "0.1.1-pre",
+  "version": "0.2.1-pre",
   "private": true,
+  "repository": "git://github.com/yui/pure.git",
   "devDependencies": {
     "grunt": "~0.4.1",
     "parserlib": "~0.2.2",
@@ -10,6 +11,8 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-compress": "~0.5.0",
-    "bower": "~0.9.2"
+    "bower": "~0.9.2",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-watch": "~0.4.4"
   }
 }

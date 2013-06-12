@@ -2,20 +2,11 @@
 <html>
 <head>
     <title>Button Manual Tests</title>
-    <link rel="stylesheet" type="text/css" href="../../../../build/pure-min.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome-ie7.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../build/pure-min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome-ie7.css">
 
     <style>
-        body {
-            padding: 30px;
-            text-align: center;
-        }
-
-        a {
-            color: blue;
-        }
-
         .pure-button-green {
             text-transform: uppercase;
             font-weight:bold;
@@ -34,7 +25,6 @@
             text-shadow: 1px 1px 1px rgb(170, 46, 23);
             border: 3px solid rgb(131, 2, 2);
             border-radius: 20px;
-
         }
 
         .pure-button-yellow {
@@ -44,40 +34,45 @@
             text-shadow: -1px 1px 1px white;
         }
 
-        .pure-button-wedding:hover {
+        .pure-button-wedding:hover,
+        .pure-button-wedding:focus {
             background: #555;
             color: #eee;
         }
-
         .pure-button-wedding:active {
             background: #222;
             color: #fff;
             box-shadow: none;
         }
     </style>
-    <script type="text/javascript" src="//use.typekit.net/ajf8ggy.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body>
-    <h2>Regular Buttons</h2>
-    <button class="pure-button">A Regular Button</button>
-    <a class="pure-button" href="#">An anchor Button</a>
 
+<body>
+    <h1>Test Button Styles</h1>
+
+    <h2>Regular Buttons</h2>
+    <p>
+        <button class="pure-button">A Regular Button</button>
+        <a class="pure-button" href="#">An anchor Button</a>
+    </p>
 
     <h2>Disabled Buttons</h2>
-        <button class="pure-button pure-button-disabled">A Regular Button</button>
+    <p>
+        <button class="pure-button pure-button-disabled" disabled>A Regular Button</button>
         <a class="pure-button pure-button-disabled" href="#">An anchor Button</a>
-
+    </p>
 
     <h2>Active Buttons</h2>
-    <button class="pure-button pure-button-active">A Regular Button</button>
-    <a class="pure-button pure-button-active" href="#">An anchor Button</a>
-
+    <p>
+        <button class="pure-button pure-button-active">A Regular Button</button>
+        <a class="pure-button pure-button-active" href="#">An anchor Button</a>
+    </p>
 
     <h2>Primary/Selected Buttons</h2>
-    <button class="pure-button pure-button-primary">A Regular Button</button>
-    <a class="pure-button pure-button-primary" href="#">An anchor Button</a>
-
+    <p>
+        <button class="pure-button pure-button-primary">A Regular Button</button>
+        <a class="pure-button pure-button-primary" href="#">An anchor Button</a>
+    </p>
 
     <h2>Customizing Buttons</h2>
     <p>
@@ -88,7 +83,6 @@
         <button class="pure-button pure-button-red">Another custom Button</button>
         <a class="pure-button pure-button-red" href="#">Custom Button</a>
     </p>
-
     <p>
         <button class="pure-button pure-button-yellow">Another custom Button</button>
         <a class="pure-button pure-button-yellow" href="#">Custom Button</a>
@@ -106,26 +100,13 @@
         </a>
     </p>
 
-
+    <h2>Primary Form Buttons</h2>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation <a href="#">ullamco laboris nisi ut aliquip</a> ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat <a href="#">nulla pariatur</a>. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <a class="pure-button pure-button-primary" href="#">Anchor</a>
+        <button class="pure-button pure-button-primary">Button</button>
+        <input type="submit" class="pure-button pure-button-primary" value="Submit">
+        <input type="button" class="pure-button pure-button-primary" value="Input Button">
+        <input type="reset" class="pure-button pure-button-primary" value="Reset">
     </p>
-
-    <div class= "pure-g-r">
-      <div class= "pure-u-1">
-        <form class="pure-form">
-          <a class="pure-button pure-button-primary">Anchor</a>
-          <button class="pure-button pure-button-primary">Button</button>
-          <input type="submit" class="pure-button pure-button-primary" value="Submit" />
-          <input type="button" class="pure-button pure-button-primary" value="Input Button" />
-          <input type="reset" class="pure-button pure-button-primary" value="Reset" />
-        </form>
-      </div>
-    </div>
 </body>
 </html>

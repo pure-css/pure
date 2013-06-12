@@ -1,3 +1,5 @@
+/*csslint regex-selectors:false, unqualified-attributes:false*/
+
 .pure-g-r {
     letter-spacing: -0.31em;
     *letter-spacing: normal;
@@ -17,7 +19,7 @@
     max-width: 100%;
 }
 
-@media (min-width:980px) {
+@media (min-width: 980px) {
     .pure-visible-phone {
         display: none;
     }
@@ -28,13 +30,15 @@
         display: none;
     }
 }
-@media (max-width:480px) {
+
+@media (max-width: 480px) {
     .pure-g-r > .pure-u,
     .pure-g-r > [class *= "pure-u-"] {
         width: 100%;
     }
 }
-@media (max-width:767px) {
+
+@media (max-width: 767px) {
     .pure-g-r > .pure-u,
     .pure-g-r > [class *= "pure-u-"] {
         width: 100%;
@@ -46,7 +50,8 @@
         display: none;
     }
 }
-@media (min-width:768px) and (max-width:979px) {
+
+@media (min-width: 768px) and (max-width: 979px) {
     .pure-hidden-tablet {
         display: none;
     }

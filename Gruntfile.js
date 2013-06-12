@@ -135,6 +135,22 @@ grunt.initConfig({
         }
     },
 
+    // -- CSSLint Config -------------------------------------------------------
+
+    csslint: {
+        options: {
+            csslintrc: '.csslintrc'
+        },
+
+        src: {
+            src: [
+                'src/**/css/*.css',
+                '!src/base/css/*',
+                '!src/forms/css/forms-core.css'
+            ]
+        }
+    },
+
     // -- CSSMin Config --------------------------------------------------------
 
     cssmin: {
@@ -211,6 +227,19 @@ grunt.initConfig({
                 banner: '/* <%= BUILD_COMMENT %> */\n'
             }
         }
+    },
+
+    // -- Watch/Observe Config -------------------------------------------------
+
+    observe: {
+        src: {
+            files: 'src/**/css/*.css',
+            tasks: ['test', 'suppress', 'default'],
+
+            options: {
+                interrupt: true
+            }
+        }
     }
 });
 
@@ -219,8 +248,10 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.loadNpmTasks('grunt-contrib-csslint');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
+grunt.loadNpmTasks('grunt-contrib-watch');
 
 grunt.registerTask('default', [
     'clean:build',
@@ -232,16 +263,45 @@ grunt.registerTask('default', [
     'license'
 ]);
 
+grunt.registerTask('test', [
+    'csslint'
+]);
+
+// Makes the `watch` task run a build first.
+grunt.renameTask('watch', 'observe');
+grunt.registerTask('watch', ['default', 'observe']);
+
 grunt.registerTask('import', [
     'bower-install',
     'import-normalize'
 ]);
 
 grunt.registerTask('release', [
+    'test',
     'default',
     'clean:release',
     'compress:release'
 ]);
+
+// -- Suppress Task ------------------------------------------------------------
+
+grunt.registerTask('suppress', function () {
+    var allowed = ['success', 'fail', 'warn', 'error'];
+
+    grunt.util.hooker.hook(grunt.log, {
+        passName: true,
+
+        pre: function (name) {
+            if (allowed.indexOf(name) === -1) {
+                grunt.log.muted = true;
+            }
+        },
+
+        post: function () {
+            grunt.log.muted = false;
+        }
+    });
+});
 
 // -- Import Tasks -------------------------------------------------------------
 

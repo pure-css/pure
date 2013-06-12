@@ -1,3 +1,6 @@
+/*csslint adjoining-classes:false, outline-none:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 .pure-menu ul {
     position: absolute;
     visibility: hidden;
@@ -26,9 +29,14 @@
     visibility: visible;
 }
 
+.pure-menu-open > ul:focus {
+    outline: 0;
+}
+
 .pure-menu li { position: relative; }
 
-.pure-menu a, .pure-menu .pure-menu-heading {
+.pure-menu a,
+.pure-menu .pure-menu-heading {
     display: block;
     color: inherit;
     line-height: 1.5em;
@@ -39,15 +47,15 @@
 
 .pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
-    margin: 0;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
+    margin: 0;
     vertical-align: middle;
 }
 .pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
     height: 2.4em;
 }
@@ -57,13 +65,14 @@
 .pure-menu-can-have-children > .pure-menu-label:after {
     content: '\25B8';
     float: right;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
+    /* These specific fonts have the Unicode char we need. */
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
     margin-right: -20px;
     margin-top: -1px;
 }
 
 .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
 .pure-menu-separator {
@@ -75,13 +84,15 @@
     overflow: hidden;
 }
 
-.pure-menu-hidden { display: none; }
+.pure-menu-hidden {
+    display: none;
+}
 
 /* FIXED MENU */
 .pure-menu-fixed {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -91,12 +102,12 @@
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-menu-horizontal li {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
 }
 
-/* Submenus should still be display:block; */
+/* Submenus should still be display: block; */
 .pure-menu-horizontal li li {
     display: block;
 }
@@ -107,7 +118,7 @@
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
 .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
 /* Adjusting separator for vertical menus */

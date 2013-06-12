@@ -1,16 +1,19 @@
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 /* MAIN MENU STYLING */
 
 .pure-menu.pure-menu-open,
 .pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: #ffffff; /* Old browsers */
+    background: #fff; /* Old browsers */
     border: 1px solid #b7b7b7;
 }
 
 /* remove borders for horizontal menus */
-.pure-menu.pure-menu-horizontal, .pure-menu.pure-menu-horizontal .pure-menu-heading {
+.pure-menu.pure-menu-horizontal,
+.pure-menu.pure-menu-horizontal .pure-menu-heading {
     border: none;
 }
-
 
 
 /* LINK STYLES */
@@ -31,15 +34,20 @@
     color: #fff;
 }
 
+/* Focus style for a dropdown menu-item when the parent has been opened */
+.pure-menu .pure-menu-open {
+    background: #dedede;
+}
 
 
-/* HOVER STATES */
-.pure-menu li a:hover {
+.pure-menu li a:hover,
+.pure-menu li a:focus {
     background: #eee;
 }
 
 /* DISABLED STATES */
-.pure-menu li.pure-menu-disabled a:hover {
+.pure-menu li.pure-menu-disabled a:hover,
+.pure-menu li.pure-menu-disabled a:focus {
     background: #fff;
     color: #bfbfbf;
 }
@@ -59,8 +67,8 @@
 .pure-menu .pure-menu-heading {
     color: #565d64;
     text-transform: uppercase;
-    font-size:90%;
-    margin-top:0.5em;
+    font-size: 90%;
+    margin-top: 0.5em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #dfdfdf;
