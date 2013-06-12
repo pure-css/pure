@@ -118,7 +118,7 @@ the Pure Project and such contributions could be covered under intellectual
 property laws, you must submit a Contributor License Agreement (CLA) prior to
 making your contribution:
 
-1. Review Pures's BSD license. All of Pure's code is issued under this license,
+1. Review Pure's BSD license. All of Pure's code is issued under this license,
    and contributions you make to the library will be subject to this license.
    **Note:** that the BSD license is very liberal; it allows for reuse and
    adaptation in commercial projects.
