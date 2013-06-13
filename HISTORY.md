@@ -61,7 +61,7 @@ NEXT
 
 ### Menus
 
-* Added `pure-menu-separator-vertical` classname that can be used to visually
+* Added `pure-menu-separator` classname that can be used to visually
   separate horizontal menu items. (Issue #53) (codepb, mseri)
 
 * Focused menus have an `outline: none` by default. Instead, menu-items that
