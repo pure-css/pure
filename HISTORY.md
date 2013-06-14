@@ -4,7 +4,7 @@ Pure Change History
 NEXT
 ----
 
-
+* Apply `.pure-form-group input` styling to all text-ish `input` elements.
 
 
 0.2.0 (2013-06-11)
