@@ -78,14 +78,17 @@
 .pure-form input[type="tel"][disabled],
 .pure-form input[type="color"][disabled],
 .pure-form select[disabled],
-.pure-form textarea[disabled],
-.pure-form input[readonly],
-.pure-form select[readonly],
-.pure-form textarea[readonly] {
+.pure-form textarea[disabled] {
     cursor: not-allowed;
     background-color: #eaeded;
     color: #cad2d3;
     border-color: transparent;
+}
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
+    cursor: not-allowed;
+    color: #777;
 }
 .pure-form input:focus:invalid,
 .pure-form textarea:focus:invalid,
