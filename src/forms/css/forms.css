@@ -145,7 +145,8 @@
 .pure-form-stacked input[type="tel"],
 .pure-form-stacked input[type="color"],
 .pure-form-stacked select,
-.pure-form-stacked label {
+.pure-form-stacked label,
+.pure-form-stacked textarea {
     display: block;
 }
 
