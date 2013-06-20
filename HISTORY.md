@@ -7,7 +7,7 @@ NEXT
 * Apply `.pure-form-group input` styling to all text-ish `input` elements.
 
 * Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
-  alignment issue for following elements (Issue #90)
+  alignment issue for subsequent elements (Issue #90)
 
 
 0.2.0 (2013-06-11)
