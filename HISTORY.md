@@ -4,6 +4,8 @@ Pure Change History
 NEXT
 ----
 
+* Fix class `.pure-u-1-6` to change width from 16.656% to 16.666%
+
 * Apply `.pure-form-group input` styling to all text-ish `input` elements.
 
 * Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
