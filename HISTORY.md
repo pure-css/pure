@@ -4,6 +4,8 @@ Pure Change History
 NEXT
 ----
 
+* Removed the gray color of forms' labels. Fix for issue [#89](https://github.com/yui/pure/issues/89)
+
 * Fix class `.pure-u-1-6` to change width from 16.656% to 16.666%
 
 * Apply `.pure-form-group input` styling to all text-ish `input` elements.
