@@ -4,12 +4,14 @@ Pure Change History
 NEXT
 ----
 
+* Removed `white-space: nowrap` from `.pure-table thead` to fix issue [#95](https://github.com/yui/pure/issues/95)
+
 * Fix class `.pure-u-1-6` to change width from 16.656% to 16.666%
 
 * Apply `.pure-form-group input` styling to all text-ish `input` elements.
 
 * Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
-  alignment issue for subsequent elements (Issue #90)
+  alignment issue for subsequent elements (Issue [#90](https://github.com/yui/pure/issues/90))
 
 
 0.2.0 (2013-06-11)
