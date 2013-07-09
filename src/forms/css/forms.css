@@ -82,14 +82,20 @@
     cursor: not-allowed;
     background-color: #eaeded;
     color: #cad2d3;
-    border-color: transparent;
 }
 .pure-form input[readonly],
 .pure-form select[readonly],
-.pure-form textarea[readonly] {
+.pure-form textarea[readonly],
+.pure-form input[readonly]:focus,
+.pure-form select[readonly]:focus,
+.pure-form textarea[readonly]:focus {
     cursor: not-allowed;
-    color: #777;
+    background: #f3f3f3;
+    color: #888;
+    border-color: #ccc;
 }
+
+
 .pure-form input:focus:invalid,
 .pure-form textarea:focus:invalid,
 .pure-form select:focus:invalid {
