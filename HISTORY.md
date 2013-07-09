@@ -15,6 +15,8 @@ NEXT
 * Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
   alignment issue for subsequent elements (Issue [#90](https://github.com/yui/pure/issues/90))
 
+* Active Paginator buttons no longer have a broken inner box-shadow on the
+right-side. (Issue [#127](https://github.com/yui/pure/issues/127))
 
 0.2.0 (2013-06-11)
 ------------------
