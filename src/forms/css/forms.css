@@ -89,7 +89,6 @@
 .pure-form input[readonly]:focus,
 .pure-form select[readonly]:focus,
 .pure-form textarea[readonly]:focus {
-    cursor: not-allowed;
     background: #f3f3f3;
     color: #888;
     border-color: #ccc;
