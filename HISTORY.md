@@ -15,6 +15,8 @@ NEXT
 * Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
   alignment issue for subsequent elements (Issue [#90](https://github.com/yui/pure/issues/90))
 
+* Pure Buttons no longer inherit from `a:visited` style rules on a page.
+  (Issue [#87](https://github.com/yui/pure/issues/87))
 
 0.2.0 (2013-06-11)
 ------------------
