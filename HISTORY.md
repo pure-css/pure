@@ -4,6 +4,8 @@ Pure Change History
 NEXT
 ----
 
+* Added `.pure-form input.pure-input-rounded` in forms.css to have more specificity for `<input>`s [#109](https://github.com/yui/pure/issues/109)
+
 * Removed `white-space: nowrap` from `.pure-table thead` to fix issue [#95](https://github.com/yui/pure/issues/95)
 
 * Removed the gray color of forms' labels. Fix for issue [#89](https://github.com/yui/pure/issues/89)
