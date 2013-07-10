@@ -147,6 +147,7 @@
 .pure-form-stacked label,
 .pure-form-stacked textarea {
     display: block;
+    margin: 0.25em 0;
 }
 
 .pure-form-aligned input,
