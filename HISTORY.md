@@ -18,6 +18,10 @@ NEXT
 * Grid unit `pure-u-1` is now `{ display: inline-block; width: 100%; }` instead
   of `{ display: block; }` (Issue [#94](https://github.com/yui/pure/issues/94))
 
+* Pure Buttons no longer inherit from `a:visited` style rules on a page.
+  (Issue [#87](https://github.com/yui/pure/issues/87))
+
+
 0.2.0 (2013-06-11)
 ------------------
 
