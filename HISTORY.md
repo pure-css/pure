@@ -4,22 +4,33 @@ Pure Change History
 NEXT
 ----
 
-* Removed `white-space: nowrap` from `.pure-table thead` to fix issue [#95](https://github.com/yui/pure/issues/95)
+!!TODO: This needs a lot of work: Missing issue numbers, and more details,
+written in past tense.
 
-* Removed the gray color of forms' labels. Fix for issue [#89](https://github.com/yui/pure/issues/89)
+* Removed `white-space: nowrap` from `.pure-table thead`. ([#95][])
 
-* Fix class `.pure-u-1-6` to change width from 16.656% to 16.666%
+* Removed the gray color of forms' labels. ([#89][])
+
+* Fix class `.pure-u-1-6` to change width from 16.656% to 16.666%. (Issue #?)
 
 * Apply `.pure-form-group input` styling to all text-ish `input` elements.
+  (Issue #?)
 
 * Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
-  alignment issue for subsequent elements (Issue [#90](https://github.com/yui/pure/issues/90))
+  alignment issue for subsequent elements ([#90][])
 
 * Grid unit `pure-u-1` is now `{ display: inline-block; width: 100%; }` instead
-  of `{ display: block; }` (Issue [#94](https://github.com/yui/pure/issues/94))
+  of `{ display: block; }` ([#94][])
 
 * Pure Buttons no longer inherit from `a:visited` style rules on a page.
-  (Issue [#87](https://github.com/yui/pure/issues/87))
+  ([#87][])
+
+
+[#87]: https://github.com/yui/pure/issues/87
+[#89]: https://github.com/yui/pure/issues/89
+[#90]: https://github.com/yui/pure/issues/90
+[#94]: https://github.com/yui/pure/issues/94
+[#95]: https://github.com/yui/pure/issues/95
 
 
 0.2.0 (2013-06-11)
@@ -34,7 +45,7 @@ NEXT
 
 * Added improvements to developer workflow:
 
-    * Added basic Tests using CSSLint via `grunt test` (Issue #25)
+    * Added basic Tests using CSSLint via `grunt test` ([#25][])
 
     * Integrated Travis CI which runs `grunt test` on pushes to `master` and for
       pull requests.
@@ -42,46 +53,60 @@ NEXT
     * Added `grunt watch` task which runs tests and build.
 
     * Added support to `pure-site` for serving `pure` locally during
-      development. (Issue #46, yui/pure-site#111)
+      development. ([#46][], [yui/pure-site#111][])
 
 * Removed vendor prefixes for `box-shadow`, `text-shadow`, `border-radius`. All
   modern browsers support the non-prefixed versions of these properties.
-  (Issue #23)
+  ([#23][])
 
 ### Forms
 
 * (!) `.pure-help-inline` has been replaced with `.pure-form-message-inline`. We
   still support the older classname but it is deprecated and will be going away
-  in a future release. (Issue #32) (dannytatom)
+  in a future release. ([#32][]: @dannytatom)
 
 * Added a new class called `.pure-form-message`. It works the same way as
-  `.pure-form-message-inline` but is meant for block elements. (Issue #32)
-  (dannytatom)
+  `.pure-form-message-inline` but is meant for block elements.
+  ([#32][]: @dannytatom)
 
 * Added focus styles for file, radio, and checkbox `<input>`s to improve
-  accessibility. (Issue #42) (codepb)
+  accessibility. ([#42][]: @codepb)
 
-* `<textarea>`s now have the same styling as `<input>`s. (Issue #49) (rcbdev)
+* `<textarea>`s now have the same styling as `<input>`s. ([#49][]: @rcbdev)
 
 * `.pure-form input` rules are now more specific by targetting only "texty"
   `<inputs>`. This prevents these styles from affecting "buttony" `<input>`s.
-  (Issue #54)
+  ([#54][])
 
 ### Grids
 
 * Elements with classnames before the responsive grid's unit classnames now
   works correctly. Before units were targeted using the `^=` ("starts with")
   selector, which meant that if another classname preceded the unit classname,
-  then the rule would not apply. (Issue #44)
+  then the rule would not apply. ([#44][])
 
 ### Menus
 
 * Added `pure-menu-separator` classname that can be used to visually
-  separate horizontal menu items. (Issue #53) (codepb, mseri)
+  separate horizontal menu items. ([#53][]: @codepb, @mseri)
 
 * Focused menus have an `outline: none` by default. Instead, menu-items that
   have been opened to display children (in a drop-down menu) get a slight
-  background (`#dedede`) for accessibility. (Issue #22)
+  background (`#dedede`) for accessibility. ([#22][])
+
+
+[#22]: https://github.com/yui/pure/issues/22
+[#23]: https://github.com/yui/pure/issues/23
+[#25]: https://github.com/yui/pure/issues/25
+[#32]: https://github.com/yui/pure/issues/32
+[#42]: https://github.com/yui/pure/issues/42
+[#44]: https://github.com/yui/pure/issues/44
+[#46]: https://github.com/yui/pure/issues/46
+[#49]: https://github.com/yui/pure/issues/49
+[#53]: https://github.com/yui/pure/issues/53
+[#54]: https://github.com/yui/pure/issues/54
+
+[yui/pure-site#111]: https://github.com/yui/pure-site/issues/111
 
 
 0.1.0 (2013-05-24)
