@@ -32,6 +32,8 @@ written in past tense.
 [#94]: https://github.com/yui/pure/issues/94
 [#95]: https://github.com/yui/pure/issues/95
 
+* `[readonly]` inputs look visually different to `[disabled]` inputs and
+  regular inputs. `[readonly]` inputs do not have any `:focus` styles. (Issue [#102](https://github.com/yui/pure/issues/102)) (jaseg)
 
 0.2.0 (2013-06-11)
 ------------------
