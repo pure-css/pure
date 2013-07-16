@@ -5,16 +5,19 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+    *letter-spacing: normal; /* reset IE < 8 */
+    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
 .pure-paginator li {
     display: inline-block;
     *display: inline;
     zoom: 1;
-    margin: 0 -0.25em 0 0;
 }
 .pure-paginator .pure-button {
     border-radius: 0;
-    padding: 0.8em 1.4em;
+    padding: 0.8em 1.4em 0.8em 1.2em;
     vertical-align: top;
     height: 1.1em;
 }
