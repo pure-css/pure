@@ -89,8 +89,8 @@
 .pure-form input[readonly]:focus,
 .pure-form select[readonly]:focus,
 .pure-form textarea[readonly]:focus {
-    background: #f3f3f3;
-    color: #888;
+    background: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
     border-color: #ccc;
 }
 
