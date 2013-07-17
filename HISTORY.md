@@ -4,18 +4,11 @@ Pure Change History
 NEXT
 ----
 
-!!TODO: This needs a lot of work: Missing issue numbers, and more details,
-written in past tense.
+### Forms
 
 * Added `.pure-form input.pure-input-rounded` in forms.css to have more specificity for `<input>`s [#109](https://github.com/yui/pure/issues/109)
 
-* Removed `white-space: nowrap` from `.pure-table thead` to fix issue [#95](https://github.com/yui/pure/issues/95)
-
-* Removed `white-space: nowrap` from `.pure-table thead`. ([#95][])
-
 * Removed the gray color of forms' labels. ([#89][])
-
-* Fix class `.pure-u-1-6` to change width from 16.656% to 16.666%. (Issue #?)
 
 * Apply `.pure-form-group input` styling to all text-ish `input` elements.
   (Issue #?)
@@ -23,14 +16,31 @@ written in past tense.
 * Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
   alignment issue for subsequent elements ([#90][])
 
+* `[readonly]` inputs look visually different to `[disabled]` inputs and
+  regular inputs. `[readonly]` inputs do not have any `:focus` styles. (Issue [#102](https://github.com/yui/pure/issues/102)) (jaseg)
+
+### Tables
+
+* Removed `white-space: nowrap` from `.pure-table thead` to fix issue [#95](https://github.com/yui/pure/issues/95)
+
+* Removed `white-space: nowrap` from `.pure-table thead`. ([#95][])
+
+### Grids
+
+* Fix class `.pure-u-1-6` to change width from 16.656% to 16.666%. (Issue #?)
+
 * Grid unit `pure-u-1` is now `{ display: inline-block; width: 100%; }` instead
   of `{ display: block; }` ([#94][])
+
+### Buttons
 
 * Pure Buttons no longer inherit from `a:visited` style rules on a page.
   ([#87][])
 
-* `[readonly]` inputs look visually different to `[disabled]` inputs and
-  regular inputs. `[readonly]` inputs do not have any `:focus` styles. (Issue [#102](https://github.com/yui/pure/issues/102)) (jaseg)
+### Menus
+
+* Active Paginator buttons no longer have a broken inner box-shadow on the
+  right-side. (Issue [#127](https://github.com/yui/pure/issues/127))
 
 
 [#87]: https://github.com/yui/pure/issues/87
@@ -39,8 +49,6 @@ written in past tense.
 [#94]: https://github.com/yui/pure/issues/94
 [#95]: https://github.com/yui/pure/issues/95
 
-* Active Paginator buttons no longer have a broken inner box-shadow on the
-right-side. (Issue [#127](https://github.com/yui/pure/issues/127))
 
 0.2.0 (2013-06-11)
 ------------------
