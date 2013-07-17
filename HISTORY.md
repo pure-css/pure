@@ -32,7 +32,7 @@ NEXT
 ### Grids
 
 * (!) Changed `.pure-u-1` grid unit to now use `width: 100%` instead of
-  `display: block` to acheive taking up the full width of its container. This
+  `display: block` to achieve taking up the full width of its container. This
   makes it easier to override and align since it's using `display: inline-block`
   like the other grid units. ([#94][])
 
