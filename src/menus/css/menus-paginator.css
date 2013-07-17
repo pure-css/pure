@@ -14,10 +14,12 @@
     display: inline-block;
     *display: inline;
     zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
 }
 .pure-paginator .pure-button {
     border-radius: 0;
-    padding: 0.8em 1.4em 0.8em 1.2em;
+    padding: 0.8em 1.4em;
     vertical-align: top;
     height: 1.1em;
 }
