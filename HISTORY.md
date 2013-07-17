@@ -4,11 +4,6 @@ Pure Change History
 NEXT
 ----
 
-### Buttons
-
-* `<a>` buttons no longer inherit default `a:visited` styles. This prevents the
-  button's foreground `color` from changing after the URL is visited. ([#87][])
-
 ### Forms
 
 * (!) Made `[readonly]` `<input>`s look visually different to `[disabled]` and
