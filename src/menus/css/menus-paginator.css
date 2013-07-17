@@ -1,21 +1,33 @@
 /*csslint box-model:false*/
 /*TODO: Remove this lint rule override after a refactor of this code.*/
 
+/* `pure-g` Grid styles */
 .pure-paginator {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
     text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
+.opera-only :-o-prefocus,
+.pure-paginator {
+    word-spacing: -0.43em;
+}
+
+/* `pure-u` Grid styles */
 .pure-paginator li {
     display: inline-block;
-    *display: inline;
+    *display: inline; /* IE < 8: fake inline-block */
     zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.pure-paginator {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .pure-paginator .pure-button {
     border-radius: 0;
