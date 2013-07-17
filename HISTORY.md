@@ -6,44 +6,49 @@ NEXT
 
 ### Buttons
 
-* Pure Buttons no longer inherit from `a:visited` style rules on a page.
-  ([#87][])
+* `<a>` buttons no longer inherit default `a:visited` styles. This prevents the
+  button's foreground `color` from changing after the URL is visited. ([#87][])
 
 ### Forms
 
-* Added `.pure-form input.pure-input-rounded` in forms.css to have more
-  specificity for `<input>`s. ([#109][]: @AurelioDeRosa)
-
-* Removed the gray color of forms' labels. ([#89][]: @AurelioDeRosa)
+* (!) Made `[readonly]` `<input>`s look visually different to `[disabled]` and
+  regular `<input>`s. ([#102][]: @jaseg)
 
 * Fixed copy/paste bug that mapped text inputs to `.pure-form` instead of
   `.pure-group`. The `.pure-form-group input` styles are now applied to all
-  text-ish `input` elements. ([#96][])
+  text-ish `<input>` elements. ([#96][])
 
-* Added `display: block` to `textarea` in `.pure-form-stacked` to fix an
-  alignment issue for subsequent elements. ([#90][]: @AurelioDeRosa)
+* Fixed `.pure-input-rounded` styles to now apply correctly. The change to use
+  more specific selectors for text-ish inputs in v0.2.0 caused the
+  `.pure-input-rounded` selector to not apply because it was less specific. This
+  selector now has right specificity. ([#109][]: @AurelioDeRosa)
 
-* `[readonly]` inputs look visually different to `[disabled]` inputs and
-  regular inputs. `[readonly]` inputs do not have any `:focus` styles.
-  ([#102][]: @jaseg)
+* Added `display: block` to `<textarea>`s in `.pure-form-stacked` `<form>`s to
+  fix an alignment issue for subsequent elements. ([#90][]: @AurelioDeRosa)
+
+* Removed the gray `color` from `.pure-form label`. This allows `<label>`s to
+  inherit their foreground color. ([#89][]: @AurelioDeRosa)
 
 ### Grids
+
+* (!) Changed `.pure-u-1` grid unit to now use `width: 100%` instead of
+  `display: block` to acheive taking up the full width of its container. This
+  makes it easier to override and align since it's using `display: inline-block`
+  like the other grid units. ([#94][])
 
 * Fixed `width` value typo in `.pure-u-1-6`, changed it from `16.656%` to
   `16.666%`. ([#115][]: @chilts)
 
-* Grid unit `.pure-u-1` is now `{ display: inline-block; width: 100%; }` instead
-  of `{ display: block; }` ([#94][])
-
 ### Menus
 
-* Active Paginator buttons no longer have a broken inner box-shadow on the
-  right-side. ([#127][])
+* (!) Fixed broken styling of active paginator items by using Grids CSS rules to
+  layout items horizontally; this makes sure the active item isn't overlapped.
+  ([#127][])
 
 ### Tables
 
-* Removed `white-space: nowrap` from `.pure-table thead`.
-  ([#95][]: @AurelioDeRosa)
+* Removed `white-space: nowrap` from `.pure-table thead`. This fixes issues
+  where tables inside of grids would break the grid. ([#95][]: @AurelioDeRosa)
 
 
 [#87]: https://github.com/yui/pure/issues/87
