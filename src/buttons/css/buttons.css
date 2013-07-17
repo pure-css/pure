@@ -1,7 +1,6 @@
 /*csslint unqualified-attributes:false, outline-none:false*/
 
-.pure-button,
-.pure-button:visited {
+.pure-button {
     font-size: 100%;
     *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
     *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
