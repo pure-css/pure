@@ -262,10 +262,14 @@
      <h2>Rounded Form</h2>
      <p>Add the pure-input-rounded classname to any form control.</p>
 
-     <form class="pure-form">
-       <input type="text" class="pure-input-rounded">
-       <button type="submit" class='pure-button'>Search</button>
-     </form>
+    <form class="pure-form pure-form-stacked">
+       <label>Subject</label>
+       <input type="text" class="pure-input-rounded" placeholder="Subject" />
+       <label>Message</label>
+       <textarea class="pure-input-rounded" rows="5" cols="40" placeholder="Message..."></textarea>
+       <button type="submit" class="pure-button pure-input-rounded">Search</button>
+       <input type="reset" class="pure-button pure-input-rounded" value="Reset" />
+    </form>
 
 
      <h2>Selects</h2>

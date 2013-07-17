@@ -7,6 +7,10 @@ NEXT
 !!TODO: This needs a lot of work: Missing issue numbers, and more details,
 written in past tense.
 
+* Added `.pure-form input.pure-input-rounded` in forms.css to have more specificity for `<input>`s [#109](https://github.com/yui/pure/issues/109)
+
+* Removed `white-space: nowrap` from `.pure-table thead` to fix issue [#95](https://github.com/yui/pure/issues/95)
+
 * Removed `white-space: nowrap` from `.pure-table thead`. ([#95][])
 
 * Removed the gray color of forms' labels. ([#89][])
@@ -25,6 +29,9 @@ written in past tense.
 * Pure Buttons no longer inherit from `a:visited` style rules on a page.
   ([#87][])
 
+* `[readonly]` inputs look visually different to `[disabled]` inputs and
+  regular inputs. `[readonly]` inputs do not have any `:focus` styles. (Issue [#102](https://github.com/yui/pure/issues/102)) (jaseg)
+
 
 [#87]: https://github.com/yui/pure/issues/87
 [#89]: https://github.com/yui/pure/issues/89
@@ -32,8 +39,6 @@ written in past tense.
 [#94]: https://github.com/yui/pure/issues/94
 [#95]: https://github.com/yui/pure/issues/95
 
-* `[readonly]` inputs look visually different to `[disabled]` inputs and
-  regular inputs. `[readonly]` inputs do not have any `:focus` styles. (Issue [#102](https://github.com/yui/pure/issues/102)) (jaseg)
 
 0.2.0 (2013-06-11)
 ------------------

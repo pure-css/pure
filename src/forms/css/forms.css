@@ -155,6 +155,7 @@
 .pure-form-stacked label,
 .pure-form-stacked textarea {
     display: block;
+    margin: 0.25em 0;
 }
 
 .pure-form-aligned input,
@@ -185,9 +186,10 @@
 }
 
 /* Rounded Inputs */
+.pure-form input.pure-input-rounded,
 .pure-form .pure-input-rounded {
-    border-radius: 20px;
-    padding-left: 1em;
+    border-radius: 2em;
+    padding: 0.5em 1em;
 }
 
 /* Grouped Inputs */
