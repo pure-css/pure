@@ -14,9 +14,12 @@ A set of small, responsive CSS modules that you can use in every web project.
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
 ```
 
+Alternatively, you can [customize how you use Pure][customize].
+
 
 [Pure]: http://purecss.io/
 [Build Status]: https://travis-ci.org/yui/pure
+[customize]: http://purecss.io/customize/
 
 
 Features
