@@ -103,8 +103,16 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-min.css`: A rollup of all `[module]-min.css` files in the `build/` dir.
   This is a responsive roll-up of everything.
 
-* `pure-nr-min.css`: A Rollup of all modules without @media queries. This is a
+* `pure-context-min.css`: A rollup of all `[module]-min.css` files in the
+  `build/` dir with base-context-min.css instead of base-min.css. This is a
+   responsive roll-up of everything.
+
+* `pure-nr-min.css`: A rollup of all modules without @media queries. This is a
   non-responsive roll-up of everything.
+
+* `pure-context-nr-min.css`: A rollup of all modules without @media queries with
+  base-context-min.css instead of base-min.css. This is a non-responsive roll-up
+  of everything.
 
 
 [Grunt]: http://gruntjs.com/

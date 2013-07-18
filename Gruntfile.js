@@ -123,8 +123,26 @@ grunt.initConfig({
                     'build/tables-min.css'
                 ],
 
+                'build/<%= pkg.name %>-context-min.css': [
+                    'build/base-context-min.css',
+                    'build/buttons-min.css',
+                    'build/forms-min.css',
+                    'build/grids-min.css',
+                    'build/menus-min.css',
+                    'build/tables-min.css'
+                ],
+
                 'build/<%= pkg.name %>-nr-min.css': [
                     'build/base-min.css',
+                    'build/buttons-min.css',
+                    'build/forms-nr-min.css',
+                    'build/grids-nr-min.css',
+                    'build/menus-nr-min.css',
+                    'build/tables-min.css'
+                ],
+
+                'build/<%= pkg.name %>-context-nr-min.css': [
+                    'build/base-context-min.css',
                     'build/buttons-min.css',
                     'build/forms-nr-min.css',
                     'build/grids-nr-min.css',
