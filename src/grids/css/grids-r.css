@@ -1,5 +1,15 @@
 /*csslint regex-selectors:false, unqualified-attributes:false*/
 
+/*
+ * Right after 480px, the tablet rules kick in,
+ * forcing the elements to update to these widths,
+ * as they take precedence over default-* rules.
+ *
+ * There is no upper-limit on the width set here. This
+ * allows the user to not specify a desktop-* rule
+ * unless they explicitly want something different
+ * to happen.
+*/
 @media (min-width: 481px) {
     .tablet-1 {
         width: 100%;
@@ -114,7 +124,11 @@
     }
 }
 
-
+/*
+ * Right after 980px, the desktop rules kick in,
+ * forcing the elements to update to these widths,
+ * as they take precedence over default-* rules.
+*/
 @media (min-width: 981px) {
     .desktop-1 {
         width: 100%;
