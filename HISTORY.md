@@ -46,7 +46,6 @@ NEXT
   where tables inside of grids would break the grid. ([#95][]: @AurelioDeRosa)
 
 
-[#87]: https://github.com/yui/pure/issues/87
 [#89]: https://github.com/yui/pure/issues/89
 [#90]: https://github.com/yui/pure/issues/90
 [#94]: https://github.com/yui/pure/issues/94
