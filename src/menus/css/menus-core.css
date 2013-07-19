@@ -1,44 +1,20 @@
-/*csslint adjoining-classes:false, outline-none:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-
-.pure-menu ul {
-    position: absolute;
-    visibility: hidden;
+/*csslint adjoining-classes: false, box-model:false*/
+.pure-menu ul, .pure-menu li {
+    position: relative;
 }
-
-.pure-menu.pure-menu-open {
-    visibility: visible;
-    z-index: 2;
-    width: 100%;
-}
-
 .pure-menu ul {
-    left: -10000px;
     list-style: none;
     margin: 0;
     padding: 0;
-    top: -10000px;
-    z-index: 1;
 }
-
-.pure-menu > ul { position: relative; }
-
-.pure-menu-open > ul {
-    left: 0;
-    top: 0;
-    visibility: visible;
+.pure-menu li {
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
-
-.pure-menu-open > ul:focus {
-    outline: 0;
-}
-
-.pure-menu li { position: relative; }
-
 .pure-menu a,
 .pure-menu .pure-menu-heading {
     display: block;
-    color: inherit;
     line-height: 1.5em;
     padding: 5px 20px;
     text-decoration: none;
@@ -52,40 +28,17 @@
     margin: 0;
     vertical-align: middle;
 }
-.pure-menu.pure-menu-horizontal > ul {
+.pure-menu-horizontal > ul {
     display: inline-block;
     *display: inline;
     zoom: 1;
     vertical-align: middle;
-    height: 2.4em;
 }
 
 .pure-menu li a { padding: 5px 20px; }
 
-.pure-menu-can-have-children > .pure-menu-label:after {
-    content: '\25B8';
-    float: right;
-    /* These specific fonts have the Unicode char we need. */
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
-    margin-right: -20px;
-    margin-top: -1px;
-}
-
 .pure-menu-can-have-children > .pure-menu-label {
     padding-right: 30px;
-}
-
-.pure-menu-separator {
-    background-color: #dfdfdf;
-    display: block;
-    height: 1px;
-    font-size: 0;
-    margin: 7px 2px;
-    overflow: hidden;
-}
-
-.pure-menu-hidden {
-    display: none;
 }
 
 /* FIXED MENU */
@@ -97,7 +50,12 @@
 }
 
 
-/* HORIZONTAL MENU CODE */
+/* HORIZONTAL MENU */
+.pure-menu-horizontal {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+}
 
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-menu-horizontal li {
@@ -112,26 +70,50 @@
     display: block;
 }
 
-/* Content after should be down arrow */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
-    content: "\25BE";
-}
-/*Add extra padding to elements that have the arrow so that the hover looks nice */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
-    padding-right: 30px;
-}
-
 /* Adjusting separator for vertical menus */
-.pure-menu-horizontal li.pure-menu-separator {
-	height: 50%;
-	width: 1px;
-	margin: 0 7px;
+.pure-menu-horizontal .pure-menu-separator {
+    height: 50%;
+    width: 1px;
+    margin: 0 7px;
 }
 
 /* Submenus should be horizontal separator again */
-.pure-menu-horizontal li li.pure-menu-separator {
-	height: 1px;
-	width: auto;
-	margin: 7px 2px;
+.pure-menu-horizontal li .pure-menu-separator {
+    height: 1px;
+    width: auto;
+    margin: 7px 2px;
 }
 
+/* RESPONSIVE MENUS */
+/* Hide the toggle button by default. It will show on small screen sizes */
+.pure-menu-responsive .pure-menu-toggle {
+    float: right;
+    text-transform: uppercase;
+    font-size: 80%;
+    display: none;
+}
+
+/* If the menu is open, and the viewport is larger than 767px, we
+   still want the toggle button to show.
+*/
+.pure-menu-responsive.pure-menu-active .pure-menu-toggle {
+    display: block;
+}
+
+.pure-menu-responsive .pure-menu-toggle:after {
+    content: "\25BE";
+    float: right;
+    /* These specific fonts have the Unicode char we need. */
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
+    margin-right: -15px;
+    margin-top: -1px;
+}
+
+.pure-menu-responsive.pure-menu-active ul, .pure-menu-responsive.pure-menu-active li {
+    display: block;
+}
+
+.pure-menu-responsive.pure-menu-active .pure-menu-separator {
+    width: auto;
+    height: 1px;
+}

@@ -1,10 +1,16 @@
-@media (max-width: 480px) {
-    .pure-menu-horizontal {
-        width: 100%;
+/*adjoining-classes: false*/
+@media (max-width: 767px) {
+    .pure-menu-responsive .pure-menu-toggle {
+        display: block;
+    }
+    .pure-menu-responsive ul {
+        display: none;
+    }
+    .pure-menu-responsive.pure-menu.active ul {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        vertical-align: middle;
     }
 
-    .pure-menu-children li {
-        display: block;
-        border-bottom: 1px solid black;
-    }
 }

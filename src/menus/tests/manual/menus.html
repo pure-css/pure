@@ -41,6 +41,32 @@
             margin-bottom:15px;
         }
 
+        .pure-menu-custom {
+            background: red;
+            border:1px solid black;
+        }
+
+        .pure-menu-custom a {
+            color: white;
+        }
+
+        .pure-menu-custom a:hover {
+            color: orange;
+        }
+        .pure-menu-custom .pure-menu-disabled a,
+        .pure-menu-custom .pure-menu-disabled a:hover
+         {
+            color: yellow;
+        }
+
+        .pure-menu-custom .pure-menu-heading {
+            color: blue;
+        }
+
+        .pure-menu-custom .pure-menu-selected {
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body class="pure-skin-sam">
@@ -60,7 +86,7 @@
             You can mark the active menu element by adding the <code>.pure-menu-selected</code> class to the list item.
         </p>
 
-        <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <div class="pure-menu pure-menu-horizontal">
             <a href="#" class="pure-menu-heading">Site Title</a>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -74,7 +100,7 @@
 
         <h2>Vertical Menu</h2>
 
-        <div id="vertical-menu1" class="pure-menu pure-menu-open">
+        <div id="vertical-menu1" class="pure-menu">
             <a href="#" class="pure-menu-heading">Site Title</a>
             <ul>
                 <li class="pure-menu-selected"><a href="#">Home</a></li>
@@ -87,7 +113,7 @@
             </ul>
         </div>
 
-        <div id="vertical-menu1" class="pure-menu pure-menu-open">
+        <div id="vertical-menu1" class="pure-menu">
             <ul>
                 <li class="pure-menu-heading">Site Title</li>
                 <li class="pure-menu-selected"><a href="#">Home</a></li>
@@ -97,44 +123,6 @@
                 <li><a href="#">Sports</a></li>
                 <li><a href="#">Finance</a></li>
                 <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
-            </ul>
-        </div>
-
-
-        <h2>Add Dropdowns to Menus</h2>
-
-        <p>
-            Adding dropdowns to menus requires the use of JavaScript. The <code>Y.Menu</code> module adds dropdown functionality and the ability to create JavaScript menus. It uses <code>csslist</code> to style these menus, so they look identical.
-        </p>
-
-
-        <div id="horizontal-menu">
-            <a href="#" class="pure-menu-heading">Site Title</a>
-            <ul id="std-menu-items">
-                <li class="pure-menu-selected"><a href="#">Flickr</a></li>
-                <li><a href="#">Messenger</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Finance</a></li>
-                <li class="pure-menu-separator"></li>
-                <li>
-                    <a href="#">Other</a>
-                    <ul>
-                        <li class="pure-menu-heading">More from Yahoo!</li>
-                        <li class="pure-menu-separator"></li>
-                        <li><a href="#">Autos</a></li>
-                        <li><a href="#">Flickr</a></li>
-                        <li><a href="#">Answers</a></li>
-                        <li>
-                            <a href="#">Even More</a>
-                            <ul>
-                                <li><a href="#">Horoscopes</a></li>
-                                <li><a href="#">Games</a></li>
-                                <li><a href="#">Jobs</a></li>
-                                <li><a href="#">OMG</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </div>
 
@@ -158,6 +146,39 @@
             </ul>
         </div>
 
+        <h2>Responsive Menu</h2>
+
+        <div class="pure-menu pure-menu-horizontal pure-menu-2 pure-menu-responsive">
+            <a href="#" class="pure-menu-heading">Site Title</a>
+            <a href="#" class="pure-menu-toggle">Open</a>
+            <ul>
+                <li class="pure-menu-selected"><a href="#">Home</a></li>
+                <li><a href="#">Flickr</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li class="pure-menu-separator">&nbsp;</li>
+                <li class="pure-menu-disabled"><a href="#">Sports</a></li>
+                <li><a href="#">Finance</a></li>
+            </ul>
+        </div>
+
+        <h2>Customizing Menu</h2>
+
+
+        <div class="pure-menu pure-menu-horizontal pure-menu-custom pure-menu-responsive">
+            <a href="#" class="pure-menu-heading">Site Title</a>
+            <a href="#" class="pure-menu-toggle">Open</a>
+            <ul>
+                <li class="pure-menu-selected"><a href="#">Home</a></li>
+                <li><a href="#">Flickr</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li class="pure-menu-separator">&nbsp;</li>
+                <li class="pure-menu-disabled"><a href="#">Sports</a></li>
+                <li><a href="#">Finance</a></li>
+            </ul>
+        </div>
+
+
+
         <h2>Paginator</h2>
 
         <ul class="pure-paginator">
@@ -173,29 +194,28 @@
     </div>
     <script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
     <script>
-    var Y = YUI({
-        fetchCSS: false,
+    YUI({
         classNamePrefix: 'pure'
-    }).use('gallery-sm-menu', 'event-tap', 'node-base', function (Y) {
+    }).use('node-base', function (Y) {
+        var toggle = Y.all(".pure-menu-toggle"),
+            i = 0,
+            ACTIVE = 'pure-menu-active';
 
-        //Y.config.classNamePrefix = 'pure';
+        for (; i < toggle.size(); i++) {
 
-        var horizontalMenu = new Y.Menu({
-            container: '#horizontal-menu',
-            sourceNode: '#std-menu-items',
-            orientation: 'horizontal',
-            hideOnOutsideClick: false
-        });
+            toggle.item(i).on('click', function (e) {
+                var parent = e.currentTarget.get('parentNode');
 
-        horizontalMenu.render();
-        horizontalMenu.show();
-
-
-        Y.one('#showFixedMenuBtn').on('tap', function (e) {
-            var fixedMenu = Y.one('#fixed-menu');
-            fixedMenu.toggleClass('pure-menu-open');
-        });
-
+                e.preventDefault();
+                parent.toggleClass(ACTIVE);
+                if (parent.hasClass(ACTIVE)) {
+                    e.currentTarget.set('text', 'Close');
+                }
+                else {
+                    e.currentTarget.set('text', 'Open')
+                }
+            });
+        }
     });
     </script>
 </body>
