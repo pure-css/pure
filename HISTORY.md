@@ -4,8 +4,11 @@ Pure Change History
 NEXT
 ----
 
+ * Add horizontal button groups: They can be created by wrapping a collection of
+   `.pure-button` elements within a `.pure-button-group` element. ([#126][])
 
 
+[#126](https://github.com/yui/pure/issues/126)
 
 0.2.1 (2013-07-17)
 ------------------
