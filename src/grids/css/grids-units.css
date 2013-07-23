@@ -1,111 +1,112 @@
+/*csslint duplicate-properties:false; */
 .default-1 {
-    width: 100%;
-}
+  width: 100%;
+  *width: 99.969%; }
 
 .default-1-2 {
-    width: 50%;
-}
+  width: 50%;
+  *width: 49.969%; }
 
 .default-1-3 {
-    width: 33.33%;
-}
+  width: 33.33%;
+  *width: 33.299%; }
 
 .default-2-3 {
-    width: 66.67%;
-}
+  width: 66.67%;
+  *width: 66.639%; }
 
 .default-1-4 {
-    width: 25%;
-}
+  width: 25%;
+  *width: 24.969%; }
 
 .default-3-4 {
-    width: 75%;
-}
+  width: 75%;
+  *width: 74.969%; }
 
 .default-1-5 {
-    width: 20%;
-}
+  width: 20%;
+  *width: 19.969%; }
 
 .default-2-5 {
-    width: 40%;
-}
+  width: 40%;
+  *width: 39.969%; }
 
 .default-3-5 {
-    width: 60%;
-}
+  width: 60%;
+  *width: 59.969%; }
 
 .default-4-5 {
-    width: 80%;
-}
+  width: 80%;
+  *width: 79.969%; }
 
 .default-1-6 {
-    width: 16.66%;
-}
+  width: 16.66%;
+  *width: 16.629%; }
 
 .default-5-6 {
-    width: 83.33%;
-}
+  width: 83.33%;
+  *width: 83.299%; }
 
 .default-1-8 {
-    width: 12.5%;
-}
+  width: 12.5%;
+  *width: 12.469%; }
 
 .default-3-8 {
-    width: 37.5%;
-}
+  width: 37.5%;
+  *width: 37.469%; }
 
 .default-5-8 {
-    width: 62.5%;
-}
+  width: 62.5%;
+  *width: 62.469%; }
 
 .default-7-8 {
-    width: 87.5%;
-}
+  width: 87.5%;
+  *width: 87.469%; }
 
 .default-1-12 {
-    width: 8.33%;
-}
+  width: 8.33%;
+  *width: 8.299%; }
 
 .default-5-12 {
-    width: 41.67%;
-}
+  width: 41.67%;
+  *width: 41.639%; }
 
 .default-7-12 {
-    width: 58.33%;
-}
+  width: 58.33%;
+  *width: 58.299%; }
 
 .default-11-12 {
-    width: 91.67%;
-}
+  width: 91.67%;
+  *width: 91.639%; }
 
 .default-1-24 {
-    width: 4.17%;
-}
+  width: 4.17%;
+  *width: 4.139%; }
 
 .default-5-24 {
-    width: 20.83%;
-}
+  width: 20.83%;
+  *width: 20.799%; }
 
 .default-7-24 {
-    width: 29.17%;
-}
+  width: 29.17%;
+  *width: 29.139%; }
 
 .default-11-24 {
-    width: 45.83%;
-}
+  width: 45.83%;
+  *width: 45.799%; }
 
 .default-13-24 {
-    width: 54.17%;
-}
+  width: 54.17%;
+  *width: 54.139%; }
 
 .default-17-24 {
-    width: 70.83%;
-}
+  width: 70.83%;
+  *width: 70.799%; }
 
 .default-19-24 {
-    width: 79.17%;
-}
+  width: 79.17%;
+  *width: 79.139%; }
 
 .default-23-24 {
-    width: 95.83%;
-}
+  width: 95.83%;
+  *width: 95.799%; }

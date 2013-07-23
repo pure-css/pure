@@ -3,6 +3,7 @@
     *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
     text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+    font-size: 0;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -22,6 +23,8 @@
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
+    font-size: 1rem;
+    *font-size: 14px;
 }
 
 .unit img {
