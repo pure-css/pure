@@ -1,61 +1,196 @@
 /*csslint regex-selectors:false, unqualified-attributes:false*/
-
-.pure-g-r {
-    letter-spacing: -0.31em;
-    *letter-spacing: normal;
-    *word-spacing: -0.43em;
-}
-
-/* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
+/*
+ * Right after 480px, the tablet rules kick in,
+ * forcing the elements to update to these widths,
+ * as they take precedence over default-* rules.
+ *
+ * There is no upper-limit on the width set here. This
+ * allows the user to not specify a desktop-* rule
+ * unless they explicitly want something different
+ * to happen.
 */
-.opera-only :-o-prefocus,
-.pure-g-r {
-    word-spacing: -0.43em;
-}
+@media (min-width: 480px) {
+  .tablet-1 {
+    width: 100%; }
 
-.pure-g-r img {
-    max-width: 100%;
-}
+  .tablet-1-2 {
+    width: 50%; }
 
+  .tablet-1-3 {
+    width: 33.33%; }
+
+  .tablet-2-3 {
+    width: 66.67%; }
+
+  .tablet-1-4 {
+    width: 25%; }
+
+  .tablet-3-4 {
+    width: 75%; }
+
+  .tablet-1-5 {
+    width: 20%; }
+
+  .tablet-2-5 {
+    width: 40%; }
+
+  .tablet-3-5 {
+    width: 60%; }
+
+  .tablet-4-5 {
+    width: 80%; }
+
+  .tablet-1-6 {
+    width: 16.66%; }
+
+  .tablet-5-6 {
+    width: 83.33%; }
+
+  .tablet-1-8 {
+    width: 12.5%; }
+
+  .tablet-3-8 {
+    width: 37.5%; }
+
+  .tablet-5-8 {
+    width: 62.5%; }
+
+  .tablet-7-8 {
+    width: 87.5%; }
+
+  .tablet-1-12 {
+    width: 8.33%; }
+
+  .tablet-5-12 {
+    width: 41.67%; }
+
+  .tablet-7-12 {
+    width: 58.33%; }
+
+  .tablet-11-12 {
+    width: 91.67%; }
+
+  .tablet-1-24 {
+    width: 4.17%; }
+
+  .tablet-5-24 {
+    width: 20.83%; }
+
+  .tablet-7-24 {
+    width: 29.17%; }
+
+  .tablet-11-24 {
+    width: 45.83%; }
+
+  .tablet-13-24 {
+    width: 54.17%; }
+
+  .tablet-17-24 {
+    width: 70.83%; }
+
+  .tablet-19-24 {
+    width: 79.17%; }
+
+  .tablet-23-24 {
+    width: 95.83%; } }
+/*
+ * Right after 980px, the desktop rules kick in,
+ * forcing the elements to update to these widths,
+ * as they take precedence over default-* rules.
+*/
 @media (min-width: 980px) {
-    .pure-visible-phone {
-        display: none;
-    }
-    .pure-visible-tablet {
-        display: none;
-    }
-    .pure-hidden-desktop {
-        display: none;
-    }
-}
+  .desktop-1 {
+    width: 100%; }
 
-@media (max-width: 480px) {
-    .pure-g-r > .pure-u,
-    .pure-g-r > [class *= "pure-u-"] {
-        width: 100%;
-    }
-}
+  .desktop-1-2 {
+    width: 50%; }
 
+  .desktop-1-3 {
+    width: 33.33%; }
+
+  .desktop-2-3 {
+    width: 66.67%; }
+
+  .desktop-1-4 {
+    width: 25%; }
+
+  .desktop-3-4 {
+    width: 75%; }
+
+  .desktop-1-5 {
+    width: 20%; }
+
+  .desktop-2-5 {
+    width: 40%; }
+
+  .desktop-3-5 {
+    width: 60%; }
+
+  .desktop-4-5 {
+    width: 80%; }
+
+  .desktop-1-6 {
+    width: 16.66%; }
+
+  .desktop-5-6 {
+    width: 83.33%; }
+
+  .desktop-1-8 {
+    width: 12.5%; }
+
+  .desktop-3-8 {
+    width: 37.5%; }
+
+  .desktop-5-8 {
+    width: 62.5%; }
+
+  .desktop-7-8 {
+    width: 87.5%; }
+
+  .desktop-1-12 {
+    width: 8.33%; }
+
+  .desktop-5-12 {
+    width: 41.67%; }
+
+  .desktop-7-12 {
+    width: 58.33%; }
+
+  .desktop-11-12 {
+    width: 91.67%; }
+
+  .desktop-1-24 {
+    width: 4.17%; }
+
+  .desktop-5-24 {
+    width: 20.83%; }
+
+  .desktop-7-24 {
+    width: 29.17%; }
+
+  .desktop-11-24 {
+    width: 45.83%; }
+
+  .desktop-13-24 {
+    width: 54.17%; }
+
+  .desktop-17-24 {
+    width: 70.83%; }
+
+  .desktop-19-24 {
+    width: 79.17%; }
+
+  .desktop-23-24 {
+    width: 95.83%; } }
 @media (max-width: 767px) {
-    .pure-g-r > .pure-u,
-    .pure-g-r > [class *= "pure-u-"] {
-        width: 100%;
-    }
-    .pure-hidden-phone {
-        display: none;
-    }
-    .pure-visible-desktop {
-        display: none;
-    }
-}
+  .pure-hidden-phone {
+    display: none; }
 
+  .pure-visible-desktop {
+    display: none; } }
 @media (min-width: 768px) and (max-width: 979px) {
-    .pure-hidden-tablet {
-        display: none;
-    }
-    .pure-visible-desktop {
-        display: none;
-    }
-}
+  .pure-hidden-tablet {
+    display: none; }
+
+  .pure-visible-desktop {
+    display: none; } }
