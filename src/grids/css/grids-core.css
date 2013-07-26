@@ -15,7 +15,7 @@
     word-spacing: -0.43em;
 }
 
-.unit {
+.pure-unit {
     display: inline-block;
     *display: inline; /* IE < 8: fake inline-block */
     zoom: 1;
@@ -23,11 +23,11 @@
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
-    font-size; 1rem; /* to fix https://github.com/yui/pure/issues/41 */
-    *font-size: 14px; /* backup where rem isn't supported */
+    font-size: 1rem; /* to fix https://github.com/yui/pure/issues/41 */
+    *font-size: 16px; /* backup where rem isn't supported */
 }
 
-.unit img {
+.pure-r-img {
     max-width: 100%;
     height: auto; /* preserves aspect ratio */
 }
