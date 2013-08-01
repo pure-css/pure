@@ -23,3 +23,10 @@
     vertical-align: top;
     text-rendering: auto;
 }
+
+.pure-fr {
+    /* Fix for github.com/yui/pure/issues/41/
+     * Can't just say `sans-serif` since that doesn't default to a font on Linux
+     */
+    font-family: "Helvetica", "Arial", sans-serif;
+}
