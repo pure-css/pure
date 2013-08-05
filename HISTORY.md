@@ -4,8 +4,11 @@ Pure Change History
 NEXT
 ----
 
+### Forms
 
+* Added `:focus` styles to `[readonly]` `<input>` elements. ([#143][])
 
+[#143]: https://github.com/yui/pure/issues/143
 
 0.2.1 (2013-07-17)
 ------------------
