@@ -85,15 +85,11 @@
 }
 .pure-form input[readonly],
 .pure-form select[readonly],
-.pure-form textarea[readonly],
-.pure-form input[readonly]:focus,
-.pure-form select[readonly]:focus,
-.pure-form textarea[readonly]:focus {
+.pure-form textarea[readonly] {
     background: #eee; /* menu hover bg color */
     color: #777; /* menu text color */
     border-color: #ccc;
 }
-
 
 .pure-form input:focus:invalid,
 .pure-form textarea:focus:invalid,
