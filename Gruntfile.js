@@ -91,7 +91,8 @@ grunt.initConfig({
 
                 {'build/grids-nr.css': [
                     'build/grids-core.css',
-                    'build/grids-units.css'
+                    'build/grids-units.css',
+                    'build/grids-offsets.css'
                 ]},
 
                 {'build/grids.css': [
