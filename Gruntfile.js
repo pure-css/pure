@@ -6,8 +6,7 @@ module.exports = function (grunt) {
 
 grunt.initConfig({
 
-    pkg      : grunt.file.readJSON('package.json'),
-    normalize: grunt.file.readJSON('src/base/bower.json'),
+    pkg: grunt.file.readJSON('package.json'),
 
     // -- Constants ------------------------------------------------------------
 
@@ -18,8 +17,7 @@ grunt.initConfig({
     clean: {
         build    : ['build/'],
         build_res: ['build/*-r.css'],
-        release  : ['release/<%= pkg.version %>/'],
-        base     : ['src/base/css/', 'src/base/bower.json', 'src/base/LICENSE.md']
+        release  : ['release/<%= pkg.version %>/']
     },
 
     // -- Copy Config ----------------------------------------------------------
@@ -28,43 +26,20 @@ grunt.initConfig({
         build: {
             expand : true,
             flatten: true,
-            src    : 'src/**/css/*.css',
             dest   : 'build/',
+
+            src: [
+                'bower_components/normalize-css/normalize.css',
+                'src/**/css/*.css'
+            ],
 
             rename: function (dest, src) {
                 // normalize -> base
-                src = src.replace(/^normalize(-.+\.css|\.css)$/, 'base$1');
+                if (src === 'normalize.css') {
+                    src = 'base.css';
+                }
+
                 return path.join(dest, src);
-            }
-        },
-
-        normalize: {
-            expand : true,
-            flatten: true,
-            cwd    : 'bower_components/normalize-css/',
-            src    : '{bower.json,LICENSE.md,normalize.css}',
-            dest   : 'src/base/',
-
-            rename: function (dest, file) {
-                if (grunt.file.isMatch('*.css', file)) {
-                    return path.join(dest, 'css', file);
-                }
-
-                return path.join(dest, file);
-            },
-
-            options: {
-                processContent: function (content, file) {
-                    var comment = grunt.config('BUILD_COMMENT');
-
-                    if (grunt.file.isMatch({matchBase: true}, '*.css', file)) {
-                        content = '/* ' + comment + ' */\n' + content;
-                    } else if (grunt.file.isMatch({matchBase: true}, '*.html', file)) {
-                        content = '<!-- ' + comment + ' -->\n' + content;
-                    }
-
-                    return content;
-                }
             }
         }
     },
@@ -80,7 +55,6 @@ grunt.initConfig({
                 ]},
 
                 {'build/forms-nr.css': [
-                    'build/forms-core.css',
                     'build/forms.css'
                 ]},
 
@@ -143,11 +117,7 @@ grunt.initConfig({
         },
 
         src: {
-            src: [
-                'src/**/css/*.css',
-                '!src/base/css/*',
-                '!src/forms/css/forms-core.css'
-            ]
+            src: 'src/**/css/*.css'
         }
     },
 
@@ -175,8 +145,12 @@ grunt.initConfig({
 
             expand : true,
             flatten: true,
-            src    : 'build/*.css',
-            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
+            dest   : '<%= pkg.name %>/<%= pkg.version %>/',
+
+            src: [
+                '{bower.json,LICENSE.md,README.md,HISTORY.md}',
+                'build/*.css'
+            ]
         }
     },
 
@@ -187,7 +161,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'normalize.css v<%= normalize.version %> | MIT License | git.io/normalize',
+                    'normalize.css v1.1.2 | MIT License | git.io/normalize',
                     'Copyright (c) Nicolas Gallagher and Jonathan Neal',
                     '*/\n'
                 ].join('\n')
@@ -219,12 +193,11 @@ grunt.initConfig({
 
     contextualize: {
         normalize: {
-            src : 'src/base/css/normalize.css',
-            dest: 'src/base/css/normalize-context.css',
+            src : 'bower_components/normalize-css/normalize.css',
+            dest: 'build/base-context.css',
 
             options: {
-                prefix: '.pure',
-                banner: '/* <%= BUILD_COMMENT %> */\n'
+                prefix: '.pure'
             }
         }
     },
@@ -234,7 +207,7 @@ grunt.initConfig({
     observe: {
         src: {
             files: 'src/**/css/*.css',
-            tasks: ['test', 'suppress', 'default'],
+            tasks: ['test', 'suppress', 'build'],
 
             options: {
                 interrupt: true
@@ -253,9 +226,13 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 
-grunt.registerTask('default', [
+grunt.registerTask('default', ['import', 'test', 'build']);
+grunt.registerTask('import', ['bower-install']);
+grunt.registerTask('test', ['csslint']);
+grunt.registerTask('build', [
     'clean:build',
     'copy:build',
+    'contextualize:normalize',
     'concat:build',
     'clean:build_res',
     'cssmin',
@@ -263,21 +240,11 @@ grunt.registerTask('default', [
     'license'
 ]);
 
-grunt.registerTask('test', [
-    'csslint'
-]);
-
 // Makes the `watch` task run a build first.
 grunt.renameTask('watch', 'observe');
 grunt.registerTask('watch', ['default', 'observe']);
 
-grunt.registerTask('import', [
-    'bower-install',
-    'import-normalize'
-]);
-
 grunt.registerTask('release', [
-    'test',
     'default',
     'clean:release',
     'compress:release'
@@ -303,14 +270,6 @@ grunt.registerTask('suppress', function () {
     });
 });
 
-// -- Import Tasks -------------------------------------------------------------
-
-grunt.registerTask('import-normalize', [
-    'clean:base',
-    'copy:normalize',
-    'contextualize:normalize'
-]);
-
 // -- Bower Task ---------------------------------------------------------------
 
 grunt.registerTask('bower-install', 'Installs Bower dependencies.', function () {
@@ -318,8 +277,17 @@ grunt.registerTask('bower-install', 'Installs Bower dependencies.', function () 
         done  = this.async();
 
     bower.commands.install()
-        .on('data', function (data) { grunt.log.write(data); })
-        .on('end', done);
+    .on('log', function (data) {
+        if (data.id !== 'install') { return; }
+        grunt.log.writeln('bower ' + data.id.cyan + ' ' + data.message);
+    })
+    .on('end', function (results) {
+        if (!Object.keys(results).length) {
+            grunt.log.writeln('No bower packages to install.');
+        }
+
+        done();
+    });
 });
 
 // -- License Task -------------------------------------------------------------
@@ -355,6 +323,11 @@ grunt.registerMultiTask('contextualize', 'Makes Contextualized CSS files.', func
     }
 
     this.files.forEach(function (filePair) {
+        if (!filePair.src.length) {
+            processing += 1;
+            return oneDone();
+        }
+
         filePair.src.forEach(function (file) {
             var src        = grunt.file.read(file),
                 contextual = banner,
