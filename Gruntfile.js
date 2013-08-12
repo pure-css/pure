@@ -6,7 +6,8 @@ module.exports = function (grunt) {
 
 grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
+    pkg  : grunt.file.readJSON('package.json'),
+    bower: grunt.file.readJSON('bower.json'),
 
     // -- Clean Config ---------------------------------------------------------
 
@@ -157,7 +158,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'normalize.css v1.1.2 | MIT License | git.io/normalize',
+                    'normalize.css v<%= bower.devDependencies["normalize-css"] %> | MIT License | git.io/normalize',
                     'Copyright (c) Nicolas Gallagher and Jonathan Neal',
                     '*/\n'
                 ].join('\n')
@@ -266,7 +267,7 @@ grunt.registerTask('suppress', function () {
     });
 });
 
-// -- Bower Task ---------------------------------------------------------------
+// -- Bower Tasks --------------------------------------------------------------
 
 grunt.registerTask('bower-install', 'Installs Bower dependencies.', function () {
     var bower = require('bower'),
