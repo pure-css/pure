@@ -41,108 +41,135 @@
 
 .pure-u-1-2 {
     width: 50%;
+    *width: 49.969%;
 }
 
 .pure-u-1-3 {
-    width: 33.33333%;
+    width: 33.3333%;
+    *width: 33.3023%;
 }
 
 .pure-u-2-3 {
-    width: 66.66666%;
+    width: 66.6667%;
+    *width: 66.6357%;
 }
 
 .pure-u-1-4 {
     width: 25%;
+    *width: 24.969%;
 }
 
 .pure-u-3-4 {
     width: 75%;
+    *width: 74.969%;
 }
 
 .pure-u-1-5 {
     width: 20%;
+    *width: 19.969%;
 }
 
 .pure-u-2-5 {
     width: 40%;
+    *width: 39.969%;
 }
 
 .pure-u-3-5 {
     width: 60%;
+    *width: 59.969%;
 }
 
 .pure-u-4-5 {
     width: 80%;
+    *width: 79.969%;
 }
 
 .pure-u-1-6 {
-    width: 16.666%;
+    width: 16.6667%;
+    *width: 16.6357%;
 }
 
 .pure-u-5-6 {
-    width: 83.33%;
+    width: 83.3333%;
+    *width: 83.3023%;
 }
 
 .pure-u-1-8 {
     width: 12.5%;
+    *width: 12.469%;
 }
 
 .pure-u-3-8 {
     width: 37.5%;
+    *width: 37.469%;
 }
 
 .pure-u-5-8 {
     width: 62.5%;
+    *width: 62.469%;
 }
 
 .pure-u-7-8 {
     width: 87.5%;
+    *width: 87.469%;
 }
 
 .pure-u-1-12 {
     width: 8.3333%;
+    *width: 8.3023%;
 }
 
 .pure-u-5-12 {
-    width: 41.6666%;
+    width: 41.6667%;
+    *width: 41.6357%;
 }
 
 .pure-u-7-12 {
     width: 58.3333%;
+    *width: 58.3023%;
 }
 
 .pure-u-11-12 {
-    width: 91.6666%;
+    width: 91.6667%;
+    *width: 91.6357%;
 }
 
 .pure-u-1-24 {
-    width: 4.1666%;
+    width: 4.1667%;
+    *width: 4.1357%;
 }
 
 .pure-u-5-24 {
     width: 20.8333%;
+    *width: 20.8023%;
 }
 
 .pure-u-7-24 {
-    width: 29.1666%;
+    width: 29.1667%;
+    *width: 29.1357%;
 }
 
 .pure-u-11-24 {
     width: 45.8333%;
+    *width: 45.8023%;
 }
 
 .pure-u-13-24 {
-    width: 54.1666%;
+    width: 54.1667%;
+    *width: 54.1357%;
 }
 
 .pure-u-17-24 {
     width: 70.8333%;
+    *width: 70.8023%;
 }
 
 .pure-u-19-24 {
-    width: 79.1666%;
+    width: 79.1667%;
+    *width: 79.1357%;
 }
 
 .pure-u-23-24 {
     width: 95.8333%;
+    *width: 95.8023%;
 }
