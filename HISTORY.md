@@ -8,7 +8,15 @@ NEXT
 
 * Added `:focus` styles to `[readonly]` `<input>` elements. ([#143][])
 
+### Grids
+
+* Prevented grid units from falling to a new line on IE6 and IE7. Grid units now
+  have a separate `*width` value for oldIEs. This value is `0.005%` less than
+  the standard `width` value. This fix does not affect modern browsers. ([#154][])
+
+
 [#143]: https://github.com/yui/pure/issues/143
+[#154]: https://github.com/yui/pure/issues/154
 
 0.2.1 (2013-07-17)
 ------------------
