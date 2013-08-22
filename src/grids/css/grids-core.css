@@ -1,8 +1,16 @@
+/*csslint regex-selectors:false*/
+
 .pure-g {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
     text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+
+    /*
+    Sets the font stack to fonts known to work properly with the above
+    letter and word spacings.
+    */
+    font-family: Helvetica, Arial, "DejaVu Sans", sans-serif;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -22,4 +30,12 @@
     word-spacing: normal;
     vertical-align: top;
     text-rendering: auto;
+}
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+.pure-g [class *= "pure-u"] {
+    font-family: sans-serif;
 }
