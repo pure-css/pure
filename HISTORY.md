@@ -20,6 +20,8 @@ NEXT
   have a separate `*width` value for oldIEs. This value is `0.005%` less than
   the standard `width` value. This fix does not affect modern browsers. ([#154][])
 
+* Added a `height: auto` rule to images within a `.pure-g-r` so that their aspect
+  ratios are maintained when the page is resized. ([#172][]: @dchest)
 
 [#143]: https://github.com/yui/pure/issues/143
 [#154]: https://github.com/yui/pure/issues/154
@@ -80,6 +82,7 @@ NEXT
 [#109]: https://github.com/yui/pure/issues/109
 [#115]: https://github.com/yui/pure/issues/115
 [#127]: https://github.com/yui/pure/issues/127
+[#172]: https://github.com/yui/pure/pull/172
 
 
 0.2.0 (2013-06-11)
