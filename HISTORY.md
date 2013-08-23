@@ -4,6 +4,12 @@ Pure Change History
 NEXT
 ----
 
+### Buttons
+
+* Removed `-webkit-font-smoothing: antialiased` rule from Buttons. Pure should not
+  dictate sub-pixel font rendering, that should be left to the person's browser
+  settings and/or the developer. ([#170][] @dchest)
+
 ### Forms
 
 * Added `:focus` styles to `[readonly]` `<input>` elements. ([#143][])
@@ -17,6 +23,8 @@ NEXT
 
 [#143]: https://github.com/yui/pure/issues/143
 [#154]: https://github.com/yui/pure/issues/154
+[#170]: https://github.com/yui/pure/issues/170
+
 
 0.2.1 (2013-07-17)
 ------------------
