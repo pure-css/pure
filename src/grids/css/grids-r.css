@@ -17,6 +17,7 @@
 
 .pure-g-r img {
     max-width: 100%;
+    height: auto;
 }
 
 @media (min-width: 980px) {
