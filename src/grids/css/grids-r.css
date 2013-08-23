@@ -4,6 +4,12 @@
     letter-spacing: -0.31em;
     *letter-spacing: normal;
     *word-spacing: -0.43em;
+
+    /*
+    Sets the font stack to fonts known to work properly with the above
+    letter and word spacings.
+    */
+    font-family: Helvetica, Arial, "DejaVu Sans", sans-serif;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -13,6 +19,14 @@
 .opera-only :-o-prefocus,
 .pure-g-r {
     word-spacing: -0.43em;
+}
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+.pure-g-r [class *= "pure-u"] {
+    font-family: sans-serif;
 }
 
 .pure-g-r img {
