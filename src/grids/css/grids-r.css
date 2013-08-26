@@ -8,8 +8,25 @@
     /*
     Sets the font stack to fonts known to work properly with the above
     letter and word spacings.
+    See https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grid work on all known environments.
+
+    * "Bitstream Charter": Chromebook Pixel running Ubuntu 13.04.
+
+    * Tinos: Chromebook Pixel running Chrome OS. Tinos has to be defined
+    before `Helvetica, Arial` to get picked up by the browser, even though
+    Helvetica or Arial isn't available in that environment.
+
+    * "Droid Sans": Arch Linux with Chromium 29.x.
+
+    * "DejaVu Sans": A common font available on Ubuntu and other environments
+    that acts as a nice fallback
+
+    * Helvetica, Arial, sans-serif: Common font stack on OSX and Windows.
+
     */
-    font-family: Helvetica, Arial, "DejaVu Sans", sans-serif;
+    font-family: "Bitstream Charter", Tinos, "Droid Sans", "DejaVu Sans", Helvetica, Arial, sans-serif;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
