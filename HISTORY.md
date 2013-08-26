@@ -12,6 +12,7 @@ NEXT
 
 ### Forms
 
+* Added `vertical-align: top;` to `<textarea>`s in `.pure-form-aligned` `<form>`s to fix an alignment issue where its label was aligned to the middle. ([#174][])
 * Added `:focus` styles to `[readonly]` `<input>` elements. ([#143][])
 
 ### Grids
