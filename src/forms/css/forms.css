@@ -166,6 +166,10 @@
     vertical-align: middle;
 }
 
+.pure-form-aligned textarea {
+    vertical-align: top;
+}
+
 /* Aligned Forms */
 .pure-form-aligned .pure-control-group {
     margin-bottom: 0.5em;
