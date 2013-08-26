@@ -14,9 +14,34 @@ NEXT
   have a separate `*width` value for oldIEs. This value is `0.005%` less than
   the standard `width` value. This fix does not affect modern browsers. ([#154][])
 
+* (!) Added the following font stack to `.pure-g, .pure-g-r` in order to prevent
+  grids from breaking in various target environments:
 
+  ```css
+  font-family: "Bitstream Charter", Tinos, "Droid Sans", "DejaVu Sans",
+                Helvetica, Arial, sans-serif;
+  ```
+
+  This is a *breaking* change. If you are using any non-default font in your project,
+  you will need to modify your CSS and add a `font-family` to the grid unit classes:
+
+  ```css
+  .pure-g [class *= "pure-u"],
+  .pure-g-r [class *= "pure-u"] {
+
+    /* Add your font in here, whether it's a custom font or a normal font */
+    font-family: "Times New Roman", serif;
+
+  }
+  ```
+
+  Refer to the [Grids Documentation]() for more details on using non-default fonts with
+  Pure Grids. ([#41][] @dannyfritz, @pandeiro, and many others!)
+
+[#41]: https://github.com/yui/pure/issues/41
 [#143]: https://github.com/yui/pure/issues/143
 [#154]: https://github.com/yui/pure/issues/154
+[Grids Documentation]: http://purecss.io/grids/
 
 0.2.1 (2013-07-17)
 ------------------
