@@ -1,484 +1,511 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../../../build/grids-min.css">
+    <meta charset="utf-8">
     <title>Responsive Grids Test</title>
+
+    <link rel="stylesheet" href="../../../../build/base.css">
+    <link rel="stylesheet" href="../../../../build/grids.css">
 
     <style>
         .content {
-            position: relative;
             text-align: center;
-            border:solid #999;
-            border-width:1px;
-            color:#000;
-            margin: 15px 10px 15px 0; /*10px 10px 0 0; "column" gutters */
-            padding:5px 2px;
-            background: url(../assets/cssgrids/images/grid_text.png) repeat-x #F9F9F4;
-            z-index: 1;
-        }
-        .content label {
-            margin: 0 auto;
-            padding: 1px 6px;
-            font-weight: bold;
-            font-family: courier;
-            z-index: 2;
+            border: 1px solid #999;
+            margin: 10px; /*10px 10px 0 0; "column" gutters */
+            padding: 5px;
+            font-family: "Lucida Console", Monaco, monospace;
         }
     </style>
 </head>
-<body class="pure-skin-sam">
 
+<body>
     <h1>Base Grid</h1>
+
     <div class="pure-g">
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
     </div>
 
     <div class="pure-g">
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-3-4">
-            <div class="content"><label>3/4</label></div>
+            <div class="content">3/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
         <div class="pure-u-2-3">
-            <div class="content"><label>2/3</label></div>
+            <div class="content">2/3</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-5">
-            <div class="content"><label>1/5</label></div>
+            <div class="content">1/5</div>
         </div>
         <div class="pure-u-2-5">
-            <div class="content"><label>2/5</label></div>
+            <div class="content">2/5</div>
         </div>
         <div class="pure-u-2-5">
-            <div class="content"><label>2/5</label></div>
+            <div class="content">2/5</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-3-5">
-            <div class="content"><label>3/5</label></div>
+            <div class="content">3/5</div>
         </div>
         <div class="pure-u-2-5">
-            <div class="content"><label>2/5</label></div>
+            <div class="content">2/5</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-5-6">
-            <div class="content"><label>5/6</label></div>
+            <div class="content">5/6</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
         <div class="pure-u-3-8">
-            <div class="content"><label>3/8</label></div>
+            <div class="content">3/8</div>
         </div>
         <div class="pure-u-3-8">
-            <div class="content"><label>3/8</label></div>
+            <div class="content">3/8</div>
         </div>
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-3-8">
-            <div class="content"><label>3/8</label></div>
+            <div class="content">3/8</div>
         </div>
         <div class="pure-u-5-8">
-            <div class="content"><label>5/8</label></div>
+            <div class="content">5/8</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-7-8">
-            <div class="content"><label>7/8</label></div>
+            <div class="content">7/8</div>
         </div>
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
 
     <div class="pure-g">
         <div class="pure-u-1-12">
-            <div class="content"><label>1/12</label></div>
+            <div class="content">1/12</div>
         </div>
         <div class="pure-u-5-12">
-            <div class="content"><label>5/12</label></div>
-        </div>
-        <div class="pure-u-5-12">
-            <div class="content"><label>5/12</label></div>
+            <div class="content">5/12</div>
         </div>
         <div class="pure-u-1-12">
-            <div class="content"><label>1/12</label></div>
+            <div class="content">1/12</div>
+        </div>
+        <div class="pure-u-5-12">
+            <div class="content">5/12</div>
         </div>
     </div>
 
     <div class="pure-g">
         <div class="pure-u-7-12">
-            <div class="content"><label>7/12</label></div>
+            <div class="content">7/12</div>
         </div>
         <div class="pure-u-5-12">
-            <div class="content"><label>5/12</label></div>
+            <div class="content">5/12</div>
         </div>
     </div>
 
     <div class="pure-g">
-        <div class="pure-u-11-12">
-            <div class="content"><label>11/12</label></div>
-        </div>
         <div class="pure-u-1-12">
-            <div class="content"><label>1/12</label></div>
+            <div class="content">1/12</div>
+        </div>
+        <div class="pure-u-11-12">
+            <div class="content">11/12</div>
         </div>
     </div>
 
     <div class="pure-g">
         <div class="pure-u-1-24">
-            <div class="content"><label>1/24</label></div>
+            <div class="content">1/24</div>
         </div>
         <div class="pure-u-5-24">
-            <div class="content"><label>5/24</label></div>
+            <div class="content">5/24</div>
         </div>
         <div class="pure-u-7-24">
-            <div class="content"><label>7/24</label></div>
+            <div class="content">7/24</div>
         </div>
         <div class="pure-u-11-24">
-            <div class="content"><label>11/24</label></div>
+            <div class="content">11/24</div>
         </div>
     </div>
 
     <div class="pure-g">
         <div class="pure-u-17-24">
-            <div class="content"><label>17/24</label></div>
+            <div class="content">17/24</div>
         </div>
         <div class="pure-u-7-24">
-            <div class="content"><label>7/24</label></div>
+            <div class="content">7/24</div>
         </div>
     </div>
+
     <div class="pure-g">
         <div class="pure-u-19-24">
-            <div class="content"><label>19/24</label></div>
+            <div class="content">19/24</div>
         </div>
         <div class="pure-u-5-24">
-            <div class="content"><label>5/24</label></div>
+            <div class="content">5/24</div>
         </div>
     </div>
+
     <div class="pure-g">
-        <div class="pure-u-23-24">
-            <div class="content"><label>23/24</label></div>
-        </div>
         <div class="pure-u-1-24">
-            <div class="content"><label>1/24</label></div>
+            <div class="content">1/24</div>
+        </div>
+        <div class="pure-u-23-24">
+            <div class="content">23/24</div>
         </div>
     </div>
+
 
     <h1>Responsive Grid</h1>
+
     <div class="pure-g-r">
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-3-4">
-            <div class="content"><label>3/4</label></div>
+            <div class="content">3/4</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-3">
-            <div class="content"><label>1/3</label></div>
+            <div class="content">1/3</div>
         </div>
         <div class="pure-u-2-3">
-            <div class="content"><label>2/3</label></div>
+            <div class="content">2/3</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-5">
-            <div class="content"><label>1/5</label></div>
+            <div class="content">1/5</div>
         </div>
         <div class="pure-u-2-5">
-            <div class="content"><label>2/5</label></div>
+            <div class="content">2/5</div>
         </div>
         <div class="pure-u-2-5">
-            <div class="content"><label>2/5</label></div>
+            <div class="content">2/5</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-3-5">
-            <div class="content"><label>3/5</label></div>
+            <div class="content">3/5</div>
         </div>
         <div class="pure-u-2-5">
-            <div class="content"><label>2/5</label></div>
+            <div class="content">2/5</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-6">
-            <div class="content"><label>1/6</label></div>
+            <div class="content">1/6</div>
         </div>
         <div class="pure-u-5-6">
-            <div class="content"><label>5/6</label></div>
+            <div class="content">5/6</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
         <div class="pure-u-3-8">
-            <div class="content"><label>3/8</label></div>
+            <div class="content">3/8</div>
         </div>
         <div class="pure-u-3-8">
-            <div class="content"><label>3/8</label></div>
+            <div class="content">3/8</div>
         </div>
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-3-8">
-            <div class="content"><label>3/8</label></div>
+            <div class="content">3/8</div>
         </div>
         <div class="pure-u-5-8">
-            <div class="content"><label>5/8</label></div>
+            <div class="content">5/8</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-7-8">
-            <div class="content"><label>7/8</label></div>
+            <div class="content">7/8</div>
         </div>
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">1/2</div>
         </div>
         <div class="pure-u-1-8">
-            <div class="content"><label>1/8</label></div>
+            <div class="content">1/8</div>
         </div>
         <div class="pure-u-1-4">
-            <div class="content"><label>1/4</label></div>
+            <div class="content">1/4</div>
         </div>
     </div>
 
     <div class="pure-g-r">
         <div class="pure-u-1-12">
-            <div class="content"><label>1/12</label></div>
+            <div class="content">1/12</div>
         </div>
         <div class="pure-u-5-12">
-            <div class="content"><label>5/12</label></div>
-        </div>
-        <div class="pure-u-5-12">
-            <div class="content"><label>5/12</label></div>
+            <div class="content">5/12</div>
         </div>
         <div class="pure-u-1-12">
-            <div class="content"><label>1/12</label></div>
+            <div class="content">1/12</div>
+        </div>
+        <div class="pure-u-5-12">
+            <div class="content">5/12</div>
         </div>
     </div>
 
     <div class="pure-g-r">
         <div class="pure-u-7-12">
-            <div class="content"><label>7/12</label></div>
+            <div class="content">7/12</div>
         </div>
         <div class="pure-u-5-12">
-            <div class="content"><label>5/12</label></div>
+            <div class="content">5/12</div>
         </div>
     </div>
 
     <div class="pure-g-r">
-        <div class="pure-u-11-12">
-            <div class="content"><label>11/12</label></div>
-        </div>
         <div class="pure-u-1-12">
-            <div class="content"><label>1/12</label></div>
+            <div class="content">1/12</div>
+        </div>
+        <div class="pure-u-11-12">
+            <div class="content">11/12</div>
         </div>
     </div>
 
     <div class="pure-g-r">
         <div class="pure-u-1-24">
-            <div class="content"><label>1/24</label></div>
+            <div class="content">1/24</div>
         </div>
         <div class="pure-u-5-24">
-            <div class="content"><label>5/24</label></div>
+            <div class="content">5/24</div>
         </div>
         <div class="pure-u-7-24">
-            <div class="content"><label>7/24</label></div>
+            <div class="content">7/24</div>
         </div>
         <div class="pure-u-11-24">
-            <div class="content"><label>11/24</label></div>
+            <div class="content">11/24</div>
         </div>
     </div>
 
     <div class="pure-g-r">
         <div class="pure-u-17-24">
-            <div class="content"><label>17/24</label></div>
+            <div class="content">17/24</div>
         </div>
         <div class="pure-u-7-24">
-            <div class="content"><label>7/24</label></div>
+            <div class="content">7/24</div>
         </div>
     </div>
+
     <div class="pure-g-r">
         <div class="pure-u-19-24">
-            <div class="content"><label>19/24</label></div>
+            <div class="content">19/24</div>
         </div>
         <div class="pure-u-5-24">
-            <div class="content"><label>5/24</label></div>
+            <div class="content">5/24</div>
         </div>
     </div>
+
     <div class="pure-g-r">
-        <div class="pure-u-23-24">
-            <div class="content"><label>23/24</label></div>
-        </div>
         <div class="pure-u-1-24">
-            <div class="content"><label>1/24</label></div>
+            <div class="content">1/24</div>
+        </div>
+        <div class="pure-u-23-24">
+            <div class="content">23/24</div>
         </div>
     </div>
+
+
+    <h1>Images Grid</h1>
 
     <div class="pure-g-r">
         <div class="pure-u-1-3">
@@ -491,23 +518,41 @@
             <img src="http://lorempixel.com/800/300/">
         </div>
     </div>
+
 
     <h1>Nested Grid</h1>
+
     <div class="pure-g-r">
         <div class="pure-u-1-2">
             <div class="content">
                 <div class="pure-g">
                     <div class="pure-u-1-2">
-                        <div class="content"><label>Nested 1/2</label></div>
+                        <div class="content">Nested 1/2</div>
                     </div>
                     <div class="pure-u-1-2">
-                        <div class="content"><label>Nested 1/2</label></div>
+                        <div class="content">Nested 1/2</div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="pure-u-1-2">
-            <div class="content"><label>1/2</label></div>
+            <div class="content">
+                <div class="pure-g-r">
+                    <div class="pure-u-1-4">
+                        <div class="content">r1/4</div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="content">r1/4</div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="content">r1/4</div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="content">r1/4</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
