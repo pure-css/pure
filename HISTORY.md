@@ -4,10 +4,25 @@ Pure Change History
 NEXT
 ----
 
+* (!) Pure now requires the Base module (which is Normalize.css) to be on the
+  page. Pure has essentially always required the styles provided by
+  Normalize.css via the Base module, and this now makes it a firm requirement.
+  The `pure-min.css` and `pure-nr-min.css` rollup files already include the Base
+  module.
+
+  **Note:** When using a [custom subset][Customize] of Pure, be sure to include
+  the Base module.
+
 * Added non-minified rollup files: `pure.css` and `pure-nr.css`. These files are
   created in addition to the minified rollups: `pure-min.css` and
   `pure-nr-min.css`. The minified rollups _should_ be used in production.
   ([#171][] @omeid)
+
+### Base
+
+* (!) Removed Normalize.css from checked-in `src/`. Bower is now used to
+  programmatically import Normalize.css into `bower_components/` if it's not
+  already installed. ([#160][])
 
 ### Buttons
 
@@ -16,6 +31,10 @@ NEXT
   settings and/or the developer. ([#170][] @dchest)
 
 ### Forms
+
+* (!) Removed `forms-core.css`. This was a copy of Normalize.css' form related
+  styles. Now that Pure requires the Base module (which is Normalize.css) to be
+  on the page, the Forms Core submodule is no longer needed. ([#160][])
 
 * Added `:focus` styles to `[readonly]` `<input>` elements. ([#143][])
 
@@ -50,16 +69,19 @@ NEXT
   }
   ```
 
-  Refer to the [Grids Documentation]() for more details on using non-default fonts with
-  Pure Grids. ([#41][] @dannyfritz, @pandeiro, and many others!)
+  Refer to the [Grids Documentation][Grids] for more details on using
+  non-default fonts with Pure Grids.
+  ([#41][] @dannyfritz, @pandeiro, and many others!)
 
 
 [#41]: https://github.com/yui/pure/issues/41
 [#143]: https://github.com/yui/pure/issues/143
 [#154]: https://github.com/yui/pure/issues/154
+[#160]: https://github.com/yui/pure/issues/160
 [#170]: https://github.com/yui/pure/issues/170
 [#171]: https://github.com/yui/pure/issues/171
-[Grids Documentation]: http://purecss.io/grids/
+[Customize]: http://purecss.io/customize/
+[Grids]: http://purecss.io/grids/
 
 
 0.2.1 (2013-07-17)
