@@ -114,6 +114,14 @@ grunt.initConfig({
 
         all: {
             files: {
+                'build/<%= pkg.name %>.css': [
+                    'build/base.css',
+                    'build/buttons.css',
+                    'build/forms.css',
+                    'build/grids.css',
+                    'build/menus.css',
+                    'build/tables.css'
+                ],
                 'build/<%= pkg.name %>-min.css': [
                     'build/base-min.css',
                     'build/buttons-min.css',

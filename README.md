@@ -100,6 +100,9 @@ conventions of the files in the `build/` directory follow these rules:
 
 * `*-min.css`: A minified file version of the files of the same name.
 
+* `pure.css`: A rollup of all `[module].css` files in the `build/` dir.
+  This is a responsive roll-up of everything.
+
 * `pure-min.css`: A rollup of all `[module]-min.css` files in the `build/` dir.
   This is a responsive roll-up of everything.
 
