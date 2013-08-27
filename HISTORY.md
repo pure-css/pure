@@ -4,6 +4,11 @@ Pure Change History
 NEXT
 ----
 
+* Added non-minified rollup files: `pure.css` and `pure-nr.css`. These files are
+  created in addition to the minified rollups: `pure-min.css` and
+  `pure-nr-min.css`. The minified rollups _should_ be used in production.
+  ([#171][] @omeid)
+
 ### Buttons
 
 * Removed `-webkit-font-smoothing: antialiased` rule from Buttons. Pure should not
@@ -48,10 +53,12 @@ NEXT
   Refer to the [Grids Documentation]() for more details on using non-default fonts with
   Pure Grids. ([#41][] @dannyfritz, @pandeiro, and many others!)
 
+
 [#41]: https://github.com/yui/pure/issues/41
 [#143]: https://github.com/yui/pure/issues/143
 [#154]: https://github.com/yui/pure/issues/154
 [#170]: https://github.com/yui/pure/issues/170
+[#171]: https://github.com/yui/pure/issues/171
 [Grids Documentation]: http://purecss.io/grids/
 
 
