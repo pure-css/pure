@@ -108,38 +108,28 @@ grunt.initConfig({
                 {'build/menus.css': [
                     'build/menus-nr.css',
                     'build/menus-r.css'
-                ]}
-            ]
-        },
+                ]},
 
-        all: {
-            files: {
-                'build/<%= pkg.name %>.css': [
+                // Rollups
+
+                {'build/<%= pkg.name %>.css': [
                     'build/base.css',
                     'build/buttons.css',
                     'build/forms.css',
                     'build/grids.css',
                     'build/menus.css',
                     'build/tables.css'
-                ],
-                'build/<%= pkg.name %>-min.css': [
-                    'build/base-min.css',
-                    'build/buttons-min.css',
-                    'build/forms-min.css',
-                    'build/grids-min.css',
-                    'build/menus-min.css',
-                    'build/tables-min.css'
-                ],
+                ]},
 
-                'build/<%= pkg.name %>-nr-min.css': [
-                    'build/base-min.css',
-                    'build/buttons-min.css',
-                    'build/forms-nr-min.css',
-                    'build/grids-nr-min.css',
-                    'build/menus-nr-min.css',
-                    'build/tables-min.css'
-                ]
-            }
+                {'build/<%= pkg.name %>-nr.css': [
+                    'build/base.css',
+                    'build/buttons.css',
+                    'build/forms-nr.css',
+                    'build/grids-nr.css',
+                    'build/menus-nr.css',
+                    'build/tables.css'
+                ]}
+            ]
         }
     },
 
@@ -267,7 +257,6 @@ grunt.registerTask('default', [
     'concat:build',
     'clean:build_res',
     'cssmin',
-    'concat:all',
     'license'
 ]);
 
