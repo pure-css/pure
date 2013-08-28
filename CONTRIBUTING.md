@@ -47,7 +47,7 @@ Building Pure is easy, run `grunt`:
 $ grunt
 ```
 
-Pure use [CSSLint][] for basic testing to make sure we're shipping valid CSS
+Pure uses [CSSLint][] for basic testing to make sure we're shipping valid CSS
 which complies with standard best practices. To run Pure's tests, run
 `grunt test`:
 
