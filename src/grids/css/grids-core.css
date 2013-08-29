@@ -19,12 +19,10 @@
     Arial` to get picked up by the browser, even though Helvetica or Arial
     isn't available in that environment.
 
-    * Droid Sans: Arch Linux with Chromium 29.x.
-
     * Helvetica, Arial, sans-serif: Common font stack on OSX and Windows.
 
     */
-    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    font-family: FreeSans, Arimo, Helvetica, Arial, sans-serif;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
