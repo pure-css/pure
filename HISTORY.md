@@ -52,8 +52,7 @@ NEXT
   grids from breaking in various target environments:
 
   ```css
-  font-family: "Bitstream Charter", Tinos, "Droid Sans", "DejaVu Sans",
-                Helvetica, Arial, sans-serif;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
   ```
 
   This is a *breaking* change. If you are using any non-default font in your project,
