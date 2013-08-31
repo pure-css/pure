@@ -26,9 +26,9 @@ NEXT
 
 ### Buttons
 
-* Removed `-webkit-font-smoothing: antialiased` rule from Buttons. Pure should not
-  dictate sub-pixel font rendering, that should be left to the person's browser
-  settings and/or the developer. ([#170][] @dchest)
+* Removed `-webkit-font-smoothing: antialiased` rule from Buttons and Forms.
+  Pure should not dictate sub-pixel font rendering, that should be left to
+  the person's browser settings and/or the developer. ([#170][] @dchest)
 
 ### Forms
 
