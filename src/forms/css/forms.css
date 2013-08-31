@@ -28,7 +28,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
 }
 
 .pure-form input[type="text"]:focus,
