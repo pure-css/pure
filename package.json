@@ -4,7 +4,7 @@
   "private": true,
   "repository": "git://github.com/yui/pure.git",
   "devDependencies": {
-    "bower": "~1.1.0",
+    "bower": "~1.2.5",
     "grunt": "~0.4.1",
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-contrib-clean": "~0.5.0",
@@ -12,7 +12,7 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-compress": "~0.5.0",
     "grunt-contrib-csslint": "~0.1.2",
-    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-watch": "~0.5.3",
     "parserlib": "~0.2.2"
   }
 }
