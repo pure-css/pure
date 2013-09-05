@@ -1,4 +1,4 @@
-/*csslint regex-selectors:false*/
+/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
 
 .pure-g-r {
     letter-spacing: -0.31em;
