@@ -23,9 +23,11 @@
     */
     font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 
-    /* Use flexbox when possible to avoid letter-spacing side-effects.
-       NOTE: Firefox (as of 25) does not currently support flex-wrap,
-       so the -moz- version is omitted.
+    /*
+    Use flexbox when possible to avoid `letter-spacing` side-effects.
+
+    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    `-moz-` prefix version is omitted.
     */
 
     display: -webkit-flex;
