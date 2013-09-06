@@ -45,13 +45,17 @@ NEXT
 
 ### Grids
 
-* __[!]__ Improved Grids support with non-default fonts. This fixes issues with
-  custom fonts set either in a person's browser settings or by the developer
-  causing grids to break to a new line or overlap. The fix uses a specific font
-  stack on `.pure-g` and `.pure-g-r` classes to ensure the greatest OS/browser
-  compatibility. Now, by default grid units will now have
-  `font-family: sans-serif;` applied — this is the default font stack Pure's
-  Base module (Normalize.css) applies to the `<body>`.
+* __[!]__ Improved support for Grids across OS/browser combinations, and its
+  ability to withstand the use of non-default fonts when set by either the
+  person in their browser settings or by the developer using custom fonts.
+
+  Grids now uses CSS3 Flexbox when possible to avoid the side-effects of setting
+  a negative `letter-spacing` — the fallback for older browsers. Grids also now
+  uses a specific font stack on `.pure-g` and `.pure-g-r` classes to ensure the
+  greatest OS/browser compatibility when non-default fonts are being used. By
+  default grid units will now have `font-family: sans-serif;` applied — this is
+  the default font stack Pure's Base module (Normalize.css) applies to the
+  `<body>`.
 
   This is a **breaking change** if you are using any non-default fonts in your
   web project. Fortunately, it's quite easy to make sure your custom font stacks
