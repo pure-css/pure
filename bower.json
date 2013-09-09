@@ -1,6 +1,6 @@
 {
   "name": "pure",
-  "version": "0.3.0-rc-3",
+  "version": "0.3.0",
   "devDependencies": {
     "normalize-css": "1.1.2"
   }

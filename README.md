@@ -11,7 +11,7 @@ A set of small, responsive CSS modules that you can use in every web project.
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
 ```
 
 Alternatively, you can [customize how you use Pure][customize].
@@ -65,7 +65,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
 ```
 
 

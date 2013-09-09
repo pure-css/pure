@@ -1,8 +1,8 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.3.0 (2013-09-09)
+------------------
 
 * __[!]__ Pure now requires the Base module (which is Normalize.css) to be on
   the page. Pure has essentially always required the styles provided by
