@@ -20,6 +20,11 @@
         .serif .content {
             font-family: Georgia, Times, "Times New Roman", serif;
         }
+
+        .monospace,
+        .monospace .content {
+            font-family: "Courier New", Courier, monospace;
+        }
     </style>
 </head>
 
@@ -563,10 +568,52 @@
         </div>
     </div>
 
+
+    <h2>Custom Font and Grids</h2>
+
     <div class="serif">
-        <h2>Custom Font and Grids</h2>
         <p>
             Grids with a serif font stack.
+        </p>
+
+        <div class="pure-g-r">
+            <div class="pure-u-1-2">
+                <div class="content">
+                    <div class="pure-g">
+                        <div class="pure-u-1-2">
+                            <div class="content">Nested 1/2</div>
+                        </div>
+                        <div class="pure-u-1-2">
+                            <div class="content">Nested 1/2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div class="content">
+                    <div class="pure-g-r">
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="monospace">
+        <p>
+            Grids with a monospace font stack.
         </p>
 
         <div class="pure-g-r">
