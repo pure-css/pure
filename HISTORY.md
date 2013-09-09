@@ -72,7 +72,8 @@ NEXT
     ```
 
   Refer to the [Grids Documentation][Grids-fonts] for more details on using
-  non-default fonts with Pure Grids. ([#41][] @adapterik @dannyfritz, @pandeiro)
+  non-default fonts with Pure Grids.
+  ([#41][], [#162][], [#166][], [#189][]: @adapterik @dannyfritz, @pandeiro)
 
 * Fixed grid units from falling to a new line on IE 6 and IE 7. Grid units now
   have a separate `*width` value for these older versions of IE. This value is
@@ -87,10 +88,13 @@ NEXT
 [#143]: https://github.com/yui/pure/issues/143
 [#154]: https://github.com/yui/pure/issues/154
 [#160]: https://github.com/yui/pure/issues/160
+[#162]: https://github.com/yui/pure/issues/162
+[#166]: https://github.com/yui/pure/issues/166
 [#170]: https://github.com/yui/pure/issues/170
 [#171]: https://github.com/yui/pure/issues/171
 [#172]: https://github.com/yui/pure/issues/172
 [#185]: https://github.com/yui/pure/issues/185
+[#189]: https://github.com/yui/pure/issues/189
 
 [Customize]: http://purecss.io/customize/
 [Grids-fonts]: http://purecss.io/grids/#using-grids-with-custom-fonts
