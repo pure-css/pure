@@ -48,7 +48,7 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Easy one-click customization with the [Skin Builder][].
 
-* Extremely small file size: **4.3KB minified + gzip**.
+* Extremely small file size: **4.4KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
