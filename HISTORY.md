@@ -24,6 +24,9 @@ NEXT
   `pure-nr-min.css`. The minified rollups _should_ be used in production.
   ([#171][] @omeid)
 
+* updated `...css/buttons.css` to fix non-uniform padding in the .pure-buttons css class.
+  ([#191][] @achalv)
+
 ### Base
 
 * __[!]__ Removed Normalize.css from checked-in `src/`. Bower is now used to
