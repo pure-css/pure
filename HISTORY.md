@@ -4,9 +4,6 @@ Pure Change History
 NEXT
 ----
 
-
-
-
 0.3.0 (2013-09-09)
 ------------------
 
@@ -36,6 +33,9 @@ NEXT
 * Removed `-webkit-font-smoothing: antialiased` rule from Buttons. Pure should
   not dictate sub-pixel font rendering, that should be left to the person's
   browser settings and/or the developer. ([#170][] @dchest)
+
+* updated css/buttons.css to fix non-uniform padding in the `.pure-buttons` 
+  css class. ([#193][]: achalv)
 
 ### Forms
 
