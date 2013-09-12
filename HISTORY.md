@@ -35,7 +35,7 @@ NEXT
   browser settings and/or the developer. ([#170][] @dchest)
 
 * updated css/buttons.css to fix non-uniform padding in the `.pure-buttons` 
-  css class. ([#193][])
+  css class. ([#193][] achalv)
 
 ### Forms
 
