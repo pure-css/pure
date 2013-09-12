@@ -4,7 +4,11 @@ Pure Change History
 NEXT
 ----
 
+0.3.0 (2013-09-12)
+------------------
 
+* updated `...css/buttons.css` to fix non-uniform padding in the .pure-buttons css class.
+  ([#191][] @achalv)
 
 
 0.3.0 (2013-09-09)
