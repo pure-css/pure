@@ -6,8 +6,9 @@ NEXT
 
 0.3.0 (2013-09-12)
 ------------------
+###Buttons
 
-* updated `...css/buttons.css` to fix non-uniform padding in the .pure-buttons css class.
+* updated `css/buttons.css` to fix non-uniform padding in the .pure-buttons css class.
   ([#191][] @achalv)
 
 
