@@ -25,7 +25,7 @@ NEXT
   ([#171][] @omeid)
 
 * updated `...css/buttons.css` to fix non-uniform padding in the .pure-buttons css class.
-  ([#171][] @omeid)
+  ([#191][] @omeid)
 
 ### Base
 
