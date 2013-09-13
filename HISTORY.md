@@ -4,8 +4,9 @@ Pure Change History
 NEXT
 ----
 
+### Buttons
 
-
+* Updated `...css/buttons.css` to fix issue #191 in yui/pure. ([#195][] @achalv)
 
 0.3.0 (2013-09-09)
 ------------------
