@@ -7,7 +7,7 @@ NEXT
 ### Buttons
 
 * updated css/buttons.css to fix non-uniform padding in the `.pure-buttons` 
-  css class. ([#193][]: achalv)
+  css class. ([#194][]: achalv)
 
 0.3.0 (2013-09-09)
 ------------------
