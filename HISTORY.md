@@ -4,7 +4,10 @@ Pure Change History
 NEXT
 ----
 
+### Base
 
+* The `body` selector in the `base-context` module is now replaced with `.pure`,
+  like the `html` selector.
 
 
 0.3.0 (2013-09-09)
