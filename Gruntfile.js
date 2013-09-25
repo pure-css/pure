@@ -184,15 +184,15 @@ grunt.initConfig({
         }
     },
 
-    // -- Contextualize Config -------------------------------------------------
+    // -- CSS Selectors Config -------------------------------------------------
 
-    contextualize: {
-        normalize: {
-            src : 'bower_components/normalize-css/normalize.css',
+    css_selectors: {
+        base: {
+            src : 'build/base.css',
             dest: 'build/base-context.css',
 
             options: {
-                prefix: '.pure'
+                mutations: [{prefix: '.pure'}]
             }
         }
     },
@@ -220,6 +220,7 @@ grunt.loadNpmTasks('grunt-contrib-csslint');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-css-selectors');
 
 grunt.registerTask('default', ['import', 'test', 'build']);
 grunt.registerTask('import', ['bower-install']);
@@ -227,7 +228,7 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'contextualize:normalize',
+    'css_selectors:base',
     'concat:build',
     'clean:build_res',
     'cssmin',
@@ -299,89 +300,6 @@ grunt.registerMultiTask('license', 'Stamps license banners on files.', function 
     });
 
     grunt.log.writeln('Stamped license on ' + String(tally).cyan + ' files.');
-});
-
-// -- Contextualize Task -------------------------------------------------------
-
-grunt.registerMultiTask('contextualize', 'Makes Contextualized CSS files.', function () {
-    var Parser     = require('parserlib').css.Parser,
-        done       = this.async(),
-        options    = this.options({banner: ''}),
-        banner     = grunt.template.process(options.banner),
-        processing = 0;
-
-    function oneDone() {
-        if (!(processing -= 1)) {
-            done();
-        }
-    }
-
-    this.files.forEach(function (filePair) {
-        if (!filePair.src.length) {
-            processing += 1;
-            return oneDone();
-        }
-
-        filePair.src.forEach(function (file) {
-            var src        = grunt.file.read(file),
-                contextual = banner,
-                parser     = new Parser();
-
-            parser.addListener('endstylesheet', function () {
-                grunt.file.write(filePair.dest, contextual);
-                grunt.log.writeln('File "' + filePair.dest + '" created.');
-                oneDone();
-            });
-
-            // Fired right before CSS properties are parsed for a certain rule.
-            // Go through and add all the selectors to the `css` string.
-            parser.addListener('startrule', function (event) {
-                var prefix = options.prefix;
-
-                event.selectors.forEach(function (selector, i) {
-                    var nextSelector = event.selectors[i + 1];
-
-                    // If the selector does not contain the html selector, we
-                    // can go ahead and prepend `prefix` in front of it.
-                    if (selector.text.indexOf('html') === -1) {
-                        contextual += prefix + ' ' + selector.text;
-                    } else if (selector.text.indexOf('html') !== -1) {
-                        // If it contains `html`, replace the `html` with the
-                        // `prefix`. Replace multiple spaces with a single
-                        // space. This is for the case where
-                        // `html input[type='button']` comes through as
-                        // `html    input[type='button']`.
-                        contextual += selector.text.replace('html', prefix).replace(/ +/g, ' ');
-                    }
-
-                    // If theres another selector, add a comma.
-                    if (nextSelector) {
-                        contextual += ',\n';
-                    } else {
-                        // Otherwise, add an opening bracket for properties
-                        contextual += ' {\n';
-                    }
-                });
-            });
-
-            // Fired right after CSS properties are parsed for a certain rule.
-            // Add the closing bracket to end the CSS Rule.
-            parser.addListener('endrule', function (event) {
-                contextual += '}\n';
-            });
-
-            // Fired for each property that the parser encounters. Add these
-            // properties to the `css` string with 4 spaces.
-            parser.addListener('property', function (event) {
-                // Add 4 spaces tab.
-                contextual += '    ' + event.property + ': ' + event.value + ';\n';
-            });
-
-            // Do the parsing.
-            processing += 1;
-            parser.parse(src);
-        });
-    });
 });
 
 };

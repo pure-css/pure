@@ -13,6 +13,6 @@
     "grunt-contrib-compress": "~0.5.0",
     "grunt-contrib-csslint": "~0.1.2",
     "grunt-contrib-watch": "~0.5.3",
-    "parserlib": "~0.2.2"
+    "grunt-css-selectors": "~0.1.0"
   }
 }
