@@ -4,7 +4,7 @@
   "private": true,
   "repository": "git://github.com/yui/pure.git",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt test"
   },
   "devDependencies": {
     "bower": "~1.2.5",
