@@ -9,6 +9,12 @@
 .pure-u-3-5,
 .pure-u-4-5,
 .pure-u-1-6,
+.pure-u-1-7,
+.pure-u-2-7,
+.pure-u-3-7,
+.pure-u-4-7,
+.pure-u-5-7,
+.pure-u-6-7,
 .pure-u-5-6,
 .pure-u-1-8,
 .pure-u-3-8,
@@ -82,6 +88,36 @@
 .pure-u-4-5 {
     width: 80%;
     *width: 79.969%;
+}
+
+.pure-u-1-7 {
+    width: 14.2857%;
+    *width: 14.2547%;
+}
+
+.pure-u-2-7 {
+    width: 28.5714%;
+    *width: 28.5404%;
+}
+
+.pure-u-3-7 {
+    width: 42.8571%;
+    *width: 42.8261%;
+}
+
+.pure-u-4-7 {
+    width: 57.1429%;
+    *width: 57.1119%;
+}
+
+.pure-u-5-7 {
+    width: 71.4286%;
+    *width: 71.3976%;
+}
+
+.pure-u-6-7 {
+    width: 85.7143%;
+    *width: 85.6833%;
 }
 
 .pure-u-1-6 {
