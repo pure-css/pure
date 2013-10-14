@@ -9,6 +9,13 @@ NEXT
 * The `body` selector in the `base-context` module is now replaced with `.pure`,
   like the `html` selector.
 
+### Buttons
+
+* Removed all the occurrences of `-ms-linear-gradient()` from Buttons since it has
+  never been in the final version of IE 10. ([#200][]: @AurelioDeRosa)
+
+
+[#200]: https://github.com/yui/pure/issues/200
 
 0.3.0 (2013-09-09)
 ------------------
