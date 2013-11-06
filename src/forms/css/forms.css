@@ -164,6 +164,9 @@
     *zoom: 1;
     vertical-align: middle;
 }
+.pure-form-aligned textarea {
+    vertical-align: top;
+}
 
 /* Aligned Forms */
 .pure-form-aligned .pure-control-group {
