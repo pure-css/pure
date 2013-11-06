@@ -1,251 +1,239 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="../../../../build/tables-min.css">
-  <style>
+    <meta charset="utf-8">
+    <title>Tables Tests</title>
 
-    table {
-      width:480px;
-    }
-
-  </style>
+    <link rel="stylesheet" href="../../../../build/base.css">
+    <link rel="stylesheet" href="../../../../build/tables.css">
 </head>
+
 <body>
-  <div class="intro">
-    <h1>Pure Table CSS</h1>
-    <h2>
-      Simple CSS for HTML Tables
-    </h2>
-  </div>
+    <h1>Tables Tests</h1>
 
-  <h2>Default Table</h2>
+    <h2>Default Table</h2>
 
-  <p>Add the <code>pure-table</code> classname to a table to style an HTML table This class adds appropriate padding and borders to table elements, and increases the emphasis on the header.</p>
-  <table class="pure-table">
-      <thead>
-          <tr>
-            <th>#</th>
-            <th>Make</th>
-            <th>Model</th>
-            <th>Year</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-            <td>1</td>
-            <td>Honda</td>
-            <td>Accord</td>
-            <td>2009</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Toyota</td>
-            <td>Camry</td>
-            <td>2012</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Hyundai</td>
-            <td>Elantra</td>
-            <td>2010</td>
-          </tr>
-      </tbody>
-  </table>
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
 
-  <h2>Bordered Table</h2>
-  <p>To add horizontal and vertical borders to all cells, add the <code>pure-table-bordered</code> classname to the <code>table</code> element.</p>
-  <table class="pure-table pure-table-bordered">
-    <thead>
-        <tr>
-          <th>#</th>
-          <th>Make</th>
-          <th>Model</th>
-          <th>Year</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>1</td>
-          <td>Honda</td>
-          <td>Accord</td>
-          <td>2009</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Toyota</td>
-          <td>Camry</td>
-          <td>2012</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Hyundai</td>
-          <td>Elantra</td>
-          <td>2010</td>
-        </tr>
-    </tbody>
-  </table>
+    <h2>Bordered Table</h2>
 
-  <h2>Table with Horizontal Borders</h2>
-  <p>If you prefer to just have horizontal lines, add the <code>pure-table-horizontal</code> classname to the <code>table</code> element.</p>
-  <table class="pure-table pure-table-horizontal">
-    <thead>
-        <tr>
-          <th>#</th>
-          <th>Make</th>
-          <th>Model</th>
-          <th>Year</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>1</td>
-          <td>Honda</td>
-          <td>Accord</td>
-          <td>2009</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Toyota</td>
-          <td>Camry</td>
-          <td>2012</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Hyundai</td>
-          <td>Elantra</td>
-          <td>2010</td>
-        </tr>
-    </tbody>
-  </table>
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
 
-  <h2>Striped Table</h2>
-  <p>Large tables are easier to parse visually if rows are easily distinguishable. Adding the <code>pure-table-odd</code> class name to every other <code>tr</code> element changes the background of the row and creates a zebra-styled effect.</p>
-  <table class="pure-table">
-    <thead>
-        <tr>
-          <th>#</th>
-          <th>Make</th>
-          <th>Model</th>
-          <th>Year</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class='pure-table-odd'>
-          <td>1</td>
-          <td>Honda</td>
-          <td>Accord</td>
-          <td>2009</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Toyota</td>
-          <td>Camry</td>
-          <td>2012</td>
-        </tr>
-        <tr class='pure-table-odd'>
-          <td>3</td>
-          <td>Hyundai</td>
-          <td>Elantra</td>
-          <td>2010</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Ford</td>
-          <td>Focus</td>
-          <td>2008</td>
-        </tr>
-        <tr class='pure-table-odd'>
-          <td>5</td>
-          <td>Nissan</td>
-          <td>Sentra</td>
-          <td>2011</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>BMW</td>
-          <td>M3</td>
-          <td>2009</td>
-        </tr>
-        <tr class='pure-table-odd'>
-          <td>7</td>
-          <td>Honda</td>
-          <td>Civic</td>
-          <td>2010</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Kia</td>
-          <td>Soul</td>
-          <td>2010</td>
-        </tr>
-    </tbody>
-  </table>
+    <h2>Table with Horizontal Borders</h2>
 
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
 
+    <h2>Striped Table</h2>
 
-  <h3>Nth Child Selector Styling</h3>
-  <p>Here's a striped table that's zebra-styled using <code>nth-child</code> selectors.</p>
-  <table class="pure-table pure-table-striped">
-    <thead>
-        <tr>
-          <th>#</th>
-          <th>Make</th>
-          <th>Model</th>
-          <th>Year</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>1</td>
-          <td>Honda</td>
-          <td>Accord</td>
-          <td>2009</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Toyota</td>
-          <td>Camry</td>
-          <td>2012</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Hyundai</td>
-          <td>Elantra</td>
-          <td>2010</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Ford</td>
-          <td>Focus</td>
-          <td>2008</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Nissan</td>
-          <td>Sentra</td>
-          <td>2011</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>BMW</td>
-          <td>M3</td>
-          <td>2009</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Honda</td>
-          <td>Civic</td>
-          <td>2010</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Kia</td>
-          <td>Soul</td>
-          <td>2010</td>
-        </tr>
-    </tbody>
-  </table>
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="pure-table-odd">
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ford</td>
+                <td>Focus</td>
+                <td>2008</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>5</td>
+                <td>Nissan</td>
+                <td>Sentra</td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>BMW</td>
+                <td>M3</td>
+                <td>2009</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>7</td>
+                <td>Honda</td>
+                <td>Civic</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Kia</td>
+                <td>Soul</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
 
+    <h3>Nth Child Selector Styling</h3>
+
+    <table class="pure-table pure-table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ford</td>
+                <td>Focus</td>
+                <td>2008</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Nissan</td>
+                <td>Sentra</td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>BMW</td>
+                <td>M3</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Honda</td>
+                <td>Civic</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Kia</td>
+                <td>Soul</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
