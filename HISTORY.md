@@ -11,11 +11,17 @@ NEXT
 
 ### Buttons
 
-* Removed all the occurrences of `-ms-linear-gradient()` from Buttons since it has
-  never been in the final version of IE 10. ([#200][]: @AurelioDeRosa)
+* Removed all the occurrences of `-ms-linear-gradient()` from Buttons since it
+  has never been in the final version of IE 10. ([#200][]: @AurelioDeRosa)
+
+* `<input>` Buttons now have the same height as non-input buttons.
+  `font-family: inherit;` has been added to the `.pure-button` selector to
+  normalize the difference in height. ([#221][] @narcis-radu)
 
 
 [#200]: https://github.com/yui/pure/issues/200
+[#221]: https://github.com/yui/pure/issues/221
+
 
 0.3.0 (2013-09-09)
 ------------------
