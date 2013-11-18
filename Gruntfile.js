@@ -184,6 +184,13 @@ grunt.initConfig({
         }
     },
 
+    // -- Grid Units Config ----------------------------------------------------
+
+    grid_units: {
+        dest : 'build/grids-units.css',
+        units: 24
+    },
+
     // -- CSS Selectors Config -------------------------------------------------
 
     css_selectors: {
@@ -233,6 +240,7 @@ grunt.registerTask('build', [
     'clean:build',
     'copy:build',
     'css_selectors:base',
+    'grid_units',
     'concat:build',
     'clean:build_res',
     'cssmin',
