@@ -188,7 +188,7 @@ grunt.initConfig({
 
     grid_units: {
         dest : 'build/grids-units.css',
-        units: 24
+        units: [5, 24]
     },
 
     // -- CSS Selectors Config -------------------------------------------------
