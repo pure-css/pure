@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="../../../../build/base.css">
     <link rel="stylesheet" href="../../../../build/buttons.css">
     <link rel="stylesheet" href="../../../../build/menus.css">
+
+    <style>
+        #menu-1 {
+            border: 1px solid;
+        }
+
+        #menu-1 li a {
+            padding: 10px 20px;
+            background:  rgb(150, 209, 255);
+        }
+    </style>
 </head>
 
 <body>
@@ -16,6 +27,20 @@
     <h2>Horizontal Menu</h2>
 
     <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <a href="#" class="pure-menu-heading">Site Title</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="pure-menu-selected"><a href="#">Flickr</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Finance</a></li>
+            <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
+        </ul>
+    </div>
+
+    <h2>Horizontal Menu (Custom)</h2>
+
+    <div id="menu-1" class="pure-menu pure-menu-open pure-menu-horizontal">
         <a href="#" class="pure-menu-heading">Site Title</a>
         <ul>
             <li><a href="#">Home</a></li>
