@@ -184,6 +184,13 @@ grunt.initConfig({
         }
     },
 
+    // -- Grid Units Config ----------------------------------------------------
+
+    grid_units: {
+        dest : 'build/grids-units.css',
+        units: [5, 24]
+    },
+
     // -- CSS Selectors Config -------------------------------------------------
 
     css_selectors: {
@@ -213,6 +220,7 @@ grunt.initConfig({
 
 // -- Main Tasks ---------------------------------------------------------------
 
+// npm tasks.
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-concat');
@@ -222,13 +230,17 @@ grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
 
+// Local tasks.
+grunt.loadTasks('tasks/');
+
 grunt.registerTask('default', ['import', 'test', 'build']);
-grunt.registerTask('import', ['bower-install']);
+grunt.registerTask('import', ['bower_install']);
 grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
     'css_selectors:base',
+    'grid_units',
     'concat:build',
     'clean:build_res',
     'cssmin',
@@ -244,62 +256,5 @@ grunt.registerTask('release', [
     'clean:release',
     'compress:release'
 ]);
-
-// -- Suppress Task ------------------------------------------------------------
-
-grunt.registerTask('suppress', function () {
-    var allowed = ['success', 'fail', 'warn', 'error'];
-
-    grunt.util.hooker.hook(grunt.log, {
-        passName: true,
-
-        pre: function (name) {
-            if (allowed.indexOf(name) === -1) {
-                grunt.log.muted = true;
-            }
-        },
-
-        post: function () {
-            grunt.log.muted = false;
-        }
-    });
-});
-
-// -- Bower Tasks --------------------------------------------------------------
-
-grunt.registerTask('bower-install', 'Installs Bower dependencies.', function () {
-    var bower = require('bower'),
-        done  = this.async();
-
-    bower.commands.install()
-        .on('log', function (data) {
-            if (data.id !== 'install') { return; }
-            grunt.log.writeln('bower ' + data.id.cyan + ' ' + data.message);
-        })
-        .on('end', function (results) {
-            if (!Object.keys(results).length) {
-                grunt.log.writeln('No bower packages to install.');
-            }
-
-            done();
-        });
-});
-
-// -- License Task -------------------------------------------------------------
-
-grunt.registerMultiTask('license', 'Stamps license banners on files.', function () {
-    var options = this.options({banner: ''}),
-        banner  = grunt.template.process(options.banner),
-        tally   = 0;
-
-    this.files.forEach(function (filePair) {
-        filePair.src.forEach(function (file) {
-            grunt.file.write(file, banner + grunt.file.read(file));
-            tally += 1;
-        });
-    });
-
-    grunt.log.writeln('Stamped license on ' + String(tally).cyan + ' files.');
-});
 
 };
