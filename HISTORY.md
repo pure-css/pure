@@ -18,6 +18,9 @@ NEXT
   `font-family: inherit;` has been added to the `.pure-button` selector to
   normalize the difference in height. ([#221][] @narcis-radu)
 
+* Buttons now have visually uniform default `padding` on all four sides. The
+  left/right padding is 2x the top/bottom padding. ([#191][] @achalv)
+
 ### Forms
 
 * Added `vertical-align: top;` to `<textarea>`s within `.pure-form-aligned`
@@ -30,6 +33,7 @@ NEXT
 
 [#164]: https://github.com/yui/pure/issues/164
 [#174]: https://github.com/yui/pure/issues/174
+[#191]: https://github.com/yui/pure/issues/191
 [#200]: https://github.com/yui/pure/issues/200
 [#221]: https://github.com/yui/pure/issues/221
 
