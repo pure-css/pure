@@ -24,7 +24,11 @@ NEXT
   Forms to fix an alignment issue where its label was aligned to the middle.
   ([#174][] @rictorres, @ItsAsbreuk)
 
+### Menus
 
+* Removed hard-coded height for horizontal menus. ([#164][])
+
+[#164]: https://github.com/yui/pure/issues/164
 [#174]: https://github.com/yui/pure/issues/174
 [#200]: https://github.com/yui/pure/issues/200
 [#221]: https://github.com/yui/pure/issues/221
