@@ -18,7 +18,8 @@ NEXT
   `font-family: inherit;` has been added to the `.pure-button` selector to
   normalize the difference in height. ([#221][] @narcis-radu)
 
-* Buttons now have uniform `padding` on all four sides. ([#191][] @achalv)
+* Buttons now have visually uniform default `padding` on all four sides. The
+  left/right padding is 2x the top/bottom padding. ([#191][] @achalv)
 
 ### Forms
 
