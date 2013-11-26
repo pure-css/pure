@@ -32,7 +32,7 @@ NEXT
 * Added all non-reduced fractions to Grids default 5ths- and 24ths-based units.
   There are now styles specified for `.pure-u-1-24` – `.pure-u-24-24`. All 5ths-
   based units and reduced factions still remain; e.g., both `.pure-u-12-24` and
-  `.pure-u-1-2` exist. ([#144][])
+  `.pure-u-1-2` exist. ([#144][] @mike-engel)
 
 * Removed `grids-units.css` from `src/`, this file is now generated via a Grunt
   task. The units generation is done via the new
