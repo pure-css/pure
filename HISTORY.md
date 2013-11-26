@@ -27,15 +27,32 @@ NEXT
   Forms to fix an alignment issue where its label was aligned to the middle.
   ([#174][] @rictorres, @ItsAsbreuk)
 
+### Grids
+
+* Added all non-reduced fractions to Grids default 5ths- and 24ths-based units.
+  There are now styles specified for `.pure-u-1-24` – `.pure-u-24-24`. All 5ths-
+  based units and reduced factions still remain; e.g., both `.pure-u-12-24` and
+  `.pure-u-1-2` exist. ([#144][])
+
+* Removed `grids-units.css` from `src/`, this file is now generated via a Grunt
+  task. The units generation is done via the new
+  [`rework-pure-grids`][rework-pure-grids] [Rework][] plugin, and it can be used
+  to create any custom nth-based units for Pure's Grids system.
+
 ### Menus
 
 * Removed hard-coded height for horizontal menus. ([#164][])
 
+
+[#144]: https://github.com/yui/pure/issues/144
 [#164]: https://github.com/yui/pure/issues/164
 [#174]: https://github.com/yui/pure/issues/174
 [#191]: https://github.com/yui/pure/issues/191
 [#200]: https://github.com/yui/pure/issues/200
 [#221]: https://github.com/yui/pure/issues/221
+
+[rework-pure-grids]: https://github.com/ericf/rework-pure-grids
+[Rework]: https://github.com/visionmedia/rework
 
 
 0.3.0 (2013-09-09)
