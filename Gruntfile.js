@@ -21,23 +21,10 @@ grunt.initConfig({
 
     copy: {
         build: {
-            expand : true,
-            flatten: true,
+            src    : 'src/**/css/*.css',
             dest   : 'build/',
-
-            src: [
-                'bower_components/normalize-css/normalize.css',
-                'src/**/css/*.css'
-            ],
-
-            rename: function (dest, src) {
-                // normalize -> base
-                if (src === 'normalize.css') {
-                    src = 'base.css';
-                }
-
-                return path.join(dest, src);
-            }
+            expand : true,
+            flatten: true
         }
     },
 
@@ -46,6 +33,11 @@ grunt.initConfig({
     concat: {
         build: {
             files: [
+                {'build/base.css': [
+                    'bower_components/normalize-css/normalize.css',
+                    'build/base.css'
+                ]},
+
                 {'build/buttons.css': [
                     'build/buttons-core.css',
                     'build/buttons.css'
@@ -242,10 +234,10 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'css_selectors:base',
     'grid_units',
     'concat:build',
     'clean:build_res',
+    'css_selectors:base',
     'cssmin',
     'license'
 ]);
