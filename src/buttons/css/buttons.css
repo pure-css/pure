@@ -56,10 +56,6 @@
     box-shadow: none;
 }
 
-.pure-button-hidden {
-    display: none;
-}
-
 .pure-button-primary,
 .pure-button-selected,
 a.pure-button-primary,

@@ -21,6 +21,7 @@
     border: 0;
 }
 
-.pure-button[hidden] {
+.pure-button[hidden],
+.pure-button-hidden {
     display: none;
 }
