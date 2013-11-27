@@ -111,9 +111,12 @@ grunt.initConfig({
             csslintrc: '.csslintrc'
         },
 
-        src: {
-            src: 'src/**/css/*.css'
-        }
+        base   : ['src/base/css/*.css'],
+        buttons: ['src/buttons/css/*.css'],
+        forms  : ['src/forms/css/*.css'],
+        grids  : ['src/grids/css/*.css'],
+        menus  : ['src/menus/css/*.css'],
+        tables : ['src/tables/css/*.css']
     },
 
     // -- CSSMin Config --------------------------------------------------------
