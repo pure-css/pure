@@ -21,6 +21,10 @@
         margin-bottom: 0.3em;
         display: block;
     }
+    .pure-form input[hidden],
+    .pure-form label[hidden] {
+        display: none;
+    }
 
     .pure-group input[type="text"],
     .pure-group input[type="password"],
@@ -45,6 +49,9 @@
         display: block;
         width: 100%;
     }
+    .pure-form-aligned .pure-control-group label[hidden] {
+        display: none;
+    }
 
     .pure-form-aligned .pure-controls {
         margin: 1.5em 0 0 0;
@@ -58,5 +65,10 @@
         font-size: 80%;
         /* Increased bottom padding to make it group with its related input element. */
         padding: 0.2em 0 0.8em;
+    }
+    .pure-form .pure-help-inline[hidden],
+    .pure-form-message-inline[hidden],
+    .pure-form-message[hidden] {
+        display: none;
     }
 }

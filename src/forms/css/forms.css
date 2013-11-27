@@ -30,6 +30,12 @@
     box-sizing: border-box;
 }
 
+.pure-form input[hidden],
+.pure-form select[hidden],
+.pure-form textarea[hidden] {
+    display: none;
+}
+
 .pure-form input[type="text"]:focus,
 .pure-form input[type="password"]:focus,
 .pure-form input[type="email"]:focus,
@@ -57,11 +63,18 @@
     outline: thin dotted #333;
     outline: 1px auto #129FEA;
 }
+
 .pure-form .pure-checkbox,
 .pure-form .pure-radio {
     margin: 0.5em 0;
     display: block;
 }
+
+.pure-form .pure-checkbox[hidden],
+.pure-form .pure-radio[hidden] {
+    display: none;
+}
+
 .pure-form input[type="text"][disabled],
 .pure-form input[type="password"][disabled],
 .pure-form input[type="email"][disabled],
@@ -131,6 +144,9 @@
     color: #333;
     border-bottom: 1px solid #e5e5e5;
 }
+.pure-form legend[hidden] {
+    display: none;
+}
 
 .pure-form-stacked input[type="text"],
 .pure-form-stacked input[type="password"],
@@ -153,6 +169,13 @@
     margin: 0.25em 0;
 }
 
+.pure-form-stacked input[hidden],
+.pure-form-stacked select[hidden],
+.pure-form-stacked label[hidden],
+.pure-form-stacked textarea[hidden] {
+    display: none;
+}
+
 .pure-form-aligned input,
 .pure-form-aligned textarea,
 .pure-form-aligned select,
@@ -164,6 +187,15 @@
     *zoom: 1;
     vertical-align: middle;
 }
+.pure-form-aligned input[hidden],
+.pure-form-aligned textarea[hidden],
+.pure-form-aligned select[hidden],
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form-aligned .pure-help-inline[hidden],
+.pure-form-message-inline[hidden] {
+    display: none;
+}
+
 .pure-form-aligned textarea {
     vertical-align: top;
 }
@@ -178,6 +210,9 @@
     vertical-align: middle;
     width: 10em;
     margin: 0 1em 0 0;
+}
+.pure-form-aligned .pure-control-group label[hidden] {
+    display: none;
 }
 .pure-form-aligned .pure-controls {
     margin: 1.5em 0 0 10em;
@@ -201,6 +236,9 @@
     border-radius: 0;
     position: relative;
     top: -1px;
+}
+.pure-form .pure-group input[hidden] {
+    display: none;
 }
 .pure-form .pure-group input:focus {
     z-index: 2;
@@ -243,10 +281,17 @@
     vertical-align: middle;
     font-size: 90%;
 }
+.pure-form .pure-help-inline[hidden],
+.pure-form-message-inline[hidden] {
+    display: none;
+}
 
 /* Block help for forms */
 .pure-form-message {
     display: block;
     color: #666;
     font-size: 90%;
+}
+.pure-form-message[hidden] {
+    display: none;
 }

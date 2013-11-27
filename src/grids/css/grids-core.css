@@ -48,6 +48,10 @@
     word-spacing: -0.43em;
 }
 
+.pure-g[hidden] {
+    display: none;
+}
+
 .pure-u {
     display: inline-block;
     *display: inline; /* IE < 8: fake inline-block */
@@ -64,4 +68,8 @@ this the same font stack that Normalize.css sets for the `body`.
 */
 .pure-g [class *= "pure-u"] {
     font-family: sans-serif;
+}
+
+.pure-g [class *= "pure-u"][hidden] {
+    display: none;
 }

@@ -1,5 +1,6 @@
 {
     "box-sizing"               : false,
     "display-property-grouping": false,
-    "star-property-hack"       : false
+    "star-property-hack"       : false,
+    "unqualified-attributes"   : false
 }

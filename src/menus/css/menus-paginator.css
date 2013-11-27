@@ -30,7 +30,9 @@
     vertical-align: top;
     text-rendering: auto;
 }
-
+.pure-paginator li[hidden] {
+    display: none;
+}
 
 .pure-paginator .pure-button {
     border-radius: 0;
