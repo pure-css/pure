@@ -68,6 +68,10 @@ CDN:
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
 ```
 
+You can also install it using [Bower](http://bower.io/), with the following command:
+
+    bower install --save pure
+
 
 Build From Source
 -----------------
