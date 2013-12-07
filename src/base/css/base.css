@@ -7,3 +7,11 @@
 /**
  * Extra rules that Pure adds on top of Normalize.css
  */
+
+/**
+ * Always hide an element when it has the `hidden` HTML attribute.
+ */
+
+[hidden] {
+    display: none !important;
+}

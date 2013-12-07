@@ -6,8 +6,17 @@ NEXT
 
 ### Base
 
-* The `body` selector in the `base-context` module is now replaced with `.pure`,
-  like the `html` selector.
+* Elements that have Pure classnames which set a `display` declaration _and_ use
+  the `hidden` HTML attribute will now properly be hidden. With these changes,
+  the following button will be hidden from view:
+
+    ```html
+    <button class="pure-button" hidden>No showy</button>
+    ```
+
+  A new rule for the `[hidden]` selector has been added with the declaration:
+  `display: none !important;`. This is a time where it's appropriate for a
+  project like Pure to use `!important`. ([#177][])
 
 ### Buttons
 
@@ -47,6 +56,7 @@ NEXT
 [#144]: https://github.com/yui/pure/issues/144
 [#164]: https://github.com/yui/pure/issues/164
 [#174]: https://github.com/yui/pure/issues/174
+[#177]: https://github.com/yui/pure/issues/177
 [#191]: https://github.com/yui/pure/issues/191
 [#200]: https://github.com/yui/pure/issues/200
 [#221]: https://github.com/yui/pure/issues/221
