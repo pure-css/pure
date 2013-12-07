@@ -47,6 +47,10 @@
     word-spacing: -0.43em;
 }
 
+.pure-g-r[hidden] {
+    display: none;
+}
+
 /*
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.

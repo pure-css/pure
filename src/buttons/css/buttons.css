@@ -1,4 +1,4 @@
-/*csslint unqualified-attributes:false, outline-none:false*/
+/*csslint outline-none:false*/
 
 .pure-button {
     font-family: inherit;
@@ -54,16 +54,6 @@
     opacity: 0.40;
     cursor: not-allowed;
     box-shadow: none;
-}
-
-.pure-button-hidden {
-    display: none;
-}
-
-/* Firefox: Get rid of the inner focus border */
-.pure-button::-moz-focus-inner{
-    padding: 0;
-    border: 0;
 }
 
 .pure-button-primary,

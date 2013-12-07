@@ -65,3 +65,8 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-g [class *= "pure-u"] {
     font-family: sans-serif;
 }
+
+.pure-g[hidden],
+.pure-g [class *= "pure-u"][hidden] {
+    display: none;
+}

@@ -44,6 +44,10 @@
     text-decoration: none;
     white-space: nowrap;
 }
+.pure-menu a[hidden],
+.pure-menu .pure-menu-heading[hidden] {
+    display: none;
+}
 
 .pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
@@ -52,11 +56,17 @@
     margin: 0;
     vertical-align: middle;
 }
+.pure-menu.pure-menu-horizontal > .pure-menu-heading[hidden] {
+    display: none;
+}
 .pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
     *display: inline;
     zoom: 1;
     vertical-align: middle;
+}
+.pure-menu.pure-menu-horizontal > ul[hidden] {
+    display: none;
 }
 
 .pure-menu li a { padding: 5px 20px; }
@@ -82,6 +92,9 @@
     margin: 7px 2px;
     overflow: hidden;
 }
+.pure-menu-separator[hidden] {
+    display: none;
+}
 
 .pure-menu-hidden {
     display: none;
@@ -105,10 +118,16 @@
     zoom: 1;
     vertical-align: middle;
 }
+.pure-menu-horizontal li[hidden] {
+    display: none;
+}
 
 /* Submenus should still be display: block; */
 .pure-menu-horizontal li li {
     display: block;
+}
+.pure-menu-horizontal li li[hidden] {
+    display: none;
 }
 
 /* Content after should be down arrow */

@@ -7,4 +7,7 @@
         display: block;
         border-bottom: 1px solid black;
     }
+    .pure-menu-children li[hidden] {
+        display: none;
+    }
 }

@@ -20,3 +20,8 @@
     padding: 0;
     border: 0;
 }
+
+.pure-button[hidden],
+.pure-button-hidden {
+    display: none;
+}
