@@ -21,23 +21,10 @@ grunt.initConfig({
 
     copy: {
         build: {
-            expand : true,
-            flatten: true,
+            src    : 'src/**/css/*.css',
             dest   : 'build/',
-
-            src: [
-                'bower_components/normalize-css/normalize.css',
-                'src/**/css/*.css'
-            ],
-
-            rename: function (dest, src) {
-                // normalize -> base
-                if (src === 'normalize.css') {
-                    src = 'base.css';
-                }
-
-                return path.join(dest, src);
-            }
+            expand : true,
+            flatten: true
         }
     },
 
@@ -46,6 +33,11 @@ grunt.initConfig({
     concat: {
         build: {
             files: [
+                {'build/base.css': [
+                    'bower_components/normalize-css/normalize.css',
+                    'build/base.css'
+                ]},
+
                 {'build/buttons.css': [
                     'build/buttons-core.css',
                     'build/buttons.css'
@@ -85,18 +77,18 @@ grunt.initConfig({
 
                 {'build/<%= pkg.name %>.css': [
                     'build/base.css',
+                    'build/grids.css',
                     'build/buttons.css',
                     'build/forms.css',
-                    'build/grids.css',
                     'build/menus.css',
                     'build/tables.css'
                 ]},
 
                 {'build/<%= pkg.name %>-nr.css': [
                     'build/base.css',
+                    'build/grids-nr.css',
                     'build/buttons.css',
                     'build/forms-nr.css',
-                    'build/grids-nr.css',
                     'build/menus-nr.css',
                     'build/tables.css'
                 ]}
@@ -111,9 +103,12 @@ grunt.initConfig({
             csslintrc: '.csslintrc'
         },
 
-        src: {
-            src: 'src/**/css/*.css'
-        }
+        base   : ['src/base/css/*.css'],
+        buttons: ['src/buttons/css/*.css'],
+        forms  : ['src/forms/css/*.css'],
+        grids  : ['src/grids/css/*.css'],
+        menus  : ['src/menus/css/*.css'],
+        tables : ['src/tables/css/*.css']
     },
 
     // -- CSSMin Config --------------------------------------------------------
@@ -239,10 +234,10 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'css_selectors:base',
     'grid_units',
     'concat:build',
     'clean:build_res',
+    'css_selectors:base',
     'cssmin',
     'license'
 ]);
