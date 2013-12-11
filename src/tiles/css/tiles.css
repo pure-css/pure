@@ -33,6 +33,7 @@
     border: none rgba(0, 0, 0, 0); /*IE8 + everything else*/
     background-color: rgb(0, 120, 231);
     color: #fff;
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
     text-decoration: none; /* Transitions */
     -webkit-transition: 0.1s linear -webkit-box-shadow;
     -moz-transition: 0.1s linear -moz-box-shadow;
