@@ -102,14 +102,14 @@
 {
     width: 159px;
     height: 159px;
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .pure-tile-medium
 {
     width: 336px;
     height: 336px;
-    font-size: 8.5em;
+    font-size: 10em;
 }
 
 .pure-tile-icon
@@ -126,7 +126,8 @@
     display: table-cell;
     text-align: left;
     vertical-align: middle;
-    font-size: 0.5em;
+    font-size: 0.6em;
+    font-family: sans-serif;
     width: auto;
 }
 
@@ -135,4 +136,5 @@
     display: table-footer-group;
     line-height: 8px;
     font-size: medium;
+    font-family: sans-serif;
 }
