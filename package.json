@@ -18,6 +18,6 @@
     "grunt-contrib-csslint": "~0.1.2",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-css-selectors": "~0.1.0",
-    "rework-pure-grids": "0.0.2"
+    "rework-pure-grids": "0.1.0"
   }
 }
