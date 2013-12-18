@@ -3,6 +3,7 @@
         margin: 0.7em 0 0;
     }
 
+    .pure-form input:not([type]),
     .pure-form input[type="text"],
     .pure-form input[type="password"],
     .pure-form input[type="email"],
@@ -22,6 +23,7 @@
         display: block;
     }
 
+    .pure-group input:not([type]),
     .pure-group input[type="text"],
     .pure-group input[type="password"],
     .pure-group input[type="email"],

@@ -1,3 +1,4 @@
+.pure-form input:not([type]),
 .pure-form input[type="text"],
 .pure-form input[type="password"],
 .pure-form input[type="email"],
@@ -30,6 +31,7 @@
     box-sizing: border-box;
 }
 
+.pure-form input:not([type]):focus,
 .pure-form input[type="text"]:focus,
 .pure-form input[type="password"]:focus,
 .pure-form input[type="email"]:focus,
@@ -62,6 +64,7 @@
     margin: 0.5em 0;
     display: block;
 }
+.pure-form input:not([type])[disabled],
 .pure-form input[type="text"][disabled],
 .pure-form input[type="password"][disabled],
 .pure-form input[type="email"][disabled],
@@ -132,6 +135,7 @@
     border-bottom: 1px solid #e5e5e5;
 }
 
+.pure-form-stacked input:not([type]),
 .pure-form-stacked input[type="text"],
 .pure-form-stacked input[type="password"],
 .pure-form-stacked input[type="email"],
