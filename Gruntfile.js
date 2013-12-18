@@ -73,6 +73,10 @@ grunt.initConfig({
                     'build/menus-r.css'
                 ]},
 
+                {'build/tiles.css': [
+                    'build/tiles.css'
+                ]},
+
                 // Rollups
 
                 {'build/<%= pkg.name %>.css': [
@@ -81,7 +85,8 @@ grunt.initConfig({
                     'build/buttons.css',
                     'build/forms.css',
                     'build/menus.css',
-                    'build/tables.css'
+                    'build/tables.css',
+                    'build/tiles.css'
                 ]},
 
                 {'build/<%= pkg.name %>-nr.css': [
@@ -90,7 +95,8 @@ grunt.initConfig({
                     'build/buttons.css',
                     'build/forms-nr.css',
                     'build/menus-nr.css',
-                    'build/tables.css'
+                    'build/tables.css',
+                    'build/tiles.css'
                 ]}
             ]
         }
@@ -108,7 +114,8 @@ grunt.initConfig({
         forms  : ['src/forms/css/*.css'],
         grids  : ['src/grids/css/*.css'],
         menus  : ['src/menus/css/*.css'],
-        tables : ['src/tables/css/*.css']
+        tables : ['src/tables/css/*.css'],
+        tiles  : ['src/tiles/css/*.css']
     },
 
     // -- CSSMin Config --------------------------------------------------------
