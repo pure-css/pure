@@ -36,6 +36,8 @@ NEXT
   Forms to fix an alignment issue where its label was aligned to the middle.
   ([#174][] @rictorres, @ItsAsbreuk)
 
+* Added styling for `<input>` elements that don't have a `type` attribute. ([#261][] @dougdavies)
+
 ### Grids
 
 * Added all non-reduced fractions to Grids default 5ths- and 24ths-based units.
@@ -60,6 +62,7 @@ NEXT
 [#191]: https://github.com/yui/pure/issues/191
 [#200]: https://github.com/yui/pure/issues/200
 [#221]: https://github.com/yui/pure/issues/221
+[#261]: https://github.com/yui/pure/issues/261
 
 [rework-pure-grids]: https://github.com/ericf/rework-pure-grids
 [Rework]: https://github.com/visionmedia/rework
