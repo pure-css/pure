@@ -15,3 +15,12 @@
 [hidden] {
     display: none !important;
 }
+
+/**
+ * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+ * aspect ratio.
+ */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
