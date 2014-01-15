@@ -21,11 +21,6 @@
     font-size: 0.8em;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
-    -webkit-transition: 0.3s linear border;
-    -moz-transition: 0.3s linear border;
-    -ms-transition: 0.3s linear border;
-    -o-transition: 0.3s linear border;
-    transition: 0.3s linear border;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
