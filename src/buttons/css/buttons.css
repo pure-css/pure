@@ -14,12 +14,6 @@
     background-color: #E6E6E6;
     text-decoration: none;
     border-radius: 2px;
-    /* Transitions */
-    -webkit-transition: 0.1s linear -webkit-box-shadow;
-    -moz-transition: 0.1s linear -moz-box-shadow;
-    -ms-transition: 0.1s linear box-shadow;
-    -o-transition: 0.1s linear box-shadow;
-    transition: 0.1s linear box-shadow;
 }
 
 .pure-button-hover,
