@@ -167,7 +167,7 @@ grunt.initConfig({
                 banner: [
                     '/*!',
                     'Pure v<%= pkg.version %>',
-                    'Copyright 2013 Yahoo! Inc. All rights reserved.',
+                    'Copyright 2014 Yahoo! Inc. All rights reserved.',
                     'Licensed under the BSD License.',
                     'https://github.com/yui/pure/blob/master/LICENSE.md',
                     '*/\n'
