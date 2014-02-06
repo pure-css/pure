@@ -1,8 +1,8 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.4.0 (2014-02-06)
+------------------
 
 ### Base
 
@@ -36,7 +36,8 @@ NEXT
   Forms to fix an alignment issue where its label was aligned to the middle.
   ([#174][] @rictorres, @ItsAsbreuk)
 
-* Added styling for `<input>` elements that don't have a `type` attribute. ([#261][] @dougdavies)
+* Added styling for `<input>` elements that don't have a `type` attribute.
+  ([#261][] @dougdavies)
 
 ### Grids
 
