@@ -25,6 +25,10 @@ grunt.initConfig({
             dest   : 'build/',
             expand : true,
             flatten: true
+        },
+        release: {
+            src    : '{LICENSE.md,README.md,HISTORY.md}',
+            dest   : 'build/'
         }
     },
 
@@ -135,12 +139,8 @@ grunt.initConfig({
 
             expand : true,
             flatten: true,
-            dest   : '<%= pkg.name %>/<%= pkg.version %>/',
-
-            src: [
-                '{bower.json,LICENSE.md,README.md,HISTORY.md}',
-                'build/*.css'
-            ]
+            src    : 'build/*',
+            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
         }
     },
 
@@ -249,6 +249,8 @@ grunt.registerTask('watch', ['default', 'observe']);
 grunt.registerTask('release', [
     'default',
     'clean:release',
+    'copy:release',
+    'bower_json',
     'compress:release'
 ]);
 
