@@ -1,6 +1,6 @@
 {
   "name": "pure",
-  "version": "0.4.1",
+  "version": "0.4.2-pre",
   "private": true,
   "repository": "git://github.com/yui/pure.git",
   "scripts": {
