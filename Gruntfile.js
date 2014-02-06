@@ -9,8 +9,16 @@ grunt.initConfig({
     pkg  : grunt.file.readJSON('package.json'),
     bower: grunt.file.readJSON('bower.json'),
 
-    // -- Clean Config ---------------------------------------------------------
+    // -- bower.json Config ---------------------------------------------------------
 
+    bower_json: {
+        release: {
+            main: 'pure.css'
+        }
+    },
+
+    // -- Clean Config ---------------------------------------------------------
+    
     clean: {
         build    : ['build/'],
         build_res: ['build/*-r.css'],
