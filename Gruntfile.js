@@ -130,7 +130,7 @@ grunt.initConfig({
     compress: {
         release: {
             options: {
-                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.zip'
+                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.tar.gz'
             },
 
             expand : true,
