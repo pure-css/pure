@@ -26,7 +26,8 @@
 }
 
 /*
-Need to separate out the :not() selector from the rest of the CSS 2.1 selectors since IE8 won't execute CSS that contains a CSS3 selector.
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
 */
 .pure-form input:not([type]) {
     padding: 0.5em 0.6em;
@@ -64,7 +65,8 @@ Need to separate out the :not() selector from the rest of the CSS 2.1 selectors 
 }
 
 /*
-Need to separate out the :not() selector from the rest of the CSS 2.1 selectors since IE8 won't execute CSS that contains a CSS3 selector.
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
 */
 .pure-form input:not([type]):focus {
     outline: 0;
@@ -106,7 +108,8 @@ Need to separate out the :not() selector from the rest of the CSS 2.1 selectors 
 }
 
 /*
-Need to separate out the :not() selector from the rest of the CSS 2.1 selectors since IE8 won't execute CSS that contains a CSS3 selector.
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
 */
 .pure-form input:not([type])[disabled] {
     cursor: not-allowed;
@@ -185,7 +188,8 @@ Need to separate out the :not() selector from the rest of the CSS 2.1 selectors 
 }
 
 /*
-Need to separate out the :not() selector from the rest of the CSS 2.1 selectors since IE8 won't execute CSS that contains a CSS3 selector.
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
 */
 .pure-form-stacked input:not([type]) {
     display: block;
