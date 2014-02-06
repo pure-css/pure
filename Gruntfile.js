@@ -115,7 +115,7 @@ grunt.initConfig({
 
     cssmin: {
         options: {
-            // report: 'gzip'
+            noAdvanced: true
         },
 
         files: {

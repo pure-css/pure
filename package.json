@@ -10,7 +10,7 @@
     "bower": "~1.2.5",
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.9",
-    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-cssmin": "~0.6.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
