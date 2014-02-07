@@ -13,12 +13,16 @@ grunt.initConfig({
 
     bower_json: {
         release: {
-            main: 'pure.css'
+            values: {
+                main: 'pure.css'
+            },
+
+            dest: 'build/'
         }
     },
 
     // -- Clean Config ---------------------------------------------------------
-    
+
     clean: {
         build    : ['build/'],
         build_res: ['build/*-r.css'],
@@ -34,9 +38,10 @@ grunt.initConfig({
             expand : true,
             flatten: true
         },
+
         release: {
-            src    : '{LICENSE.md,README.md,HISTORY.md}',
-            dest   : 'build/'
+            src : '{LICENSE.md,README.md,HISTORY.md}',
+            dest: 'build/'
         }
     },
 
@@ -258,7 +263,7 @@ grunt.registerTask('release', [
     'default',
     'clean:release',
     'copy:release',
-    'bower_json',
+    'bower_json:release',
     'compress:release'
 ]);
 
