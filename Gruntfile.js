@@ -9,8 +9,16 @@ grunt.initConfig({
     pkg  : grunt.file.readJSON('package.json'),
     bower: grunt.file.readJSON('bower.json'),
 
-    // -- Clean Config ---------------------------------------------------------
+    // -- bower.json Config ---------------------------------------------------------
 
+    bower_json: {
+        release: {
+            main: 'pure.css'
+        }
+    },
+
+    // -- Clean Config ---------------------------------------------------------
+    
     clean: {
         build    : ['build/'],
         build_res: ['build/*-r.css'],
@@ -25,6 +33,10 @@ grunt.initConfig({
             dest   : 'build/',
             expand : true,
             flatten: true
+        },
+        release: {
+            src    : '{LICENSE.md,README.md,HISTORY.md}',
+            dest   : 'build/'
         }
     },
 
@@ -135,12 +147,8 @@ grunt.initConfig({
 
             expand : true,
             flatten: true,
-            dest   : '<%= pkg.name %>/<%= pkg.version %>/',
-
-            src: [
-                '{bower.json,LICENSE.md,README.md,HISTORY.md}',
-                'build/*.css'
-            ]
+            src    : 'build/*',
+            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
         }
     },
 
@@ -249,6 +257,8 @@ grunt.registerTask('watch', ['default', 'observe']);
 grunt.registerTask('release', [
     'default',
     'clean:release',
+    'copy:release',
+    'bower_json',
     'compress:release'
 ]);
 
