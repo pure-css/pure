@@ -4,7 +4,12 @@ Pure Change History
 NEXT
 ----
 
+### Forms
 
+* Improve how `<input type="color">` elements look in Chrome by fixing paddings. ([#283][] @jpetto)
+
+
+[#283]: https://github.com/yui/pure/issues/283
 
 
 0.4.1 (2014-02-06)
