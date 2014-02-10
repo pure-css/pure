@@ -8,7 +8,9 @@ NEXT
 
 * Improve how `<input type="color">` elements look in Chrome by fixing paddings. ([#283][] @jpetto)
 
+* Remove `font-size` rules from `<input>`, `<legend>`, and `<fieldset>` elements within `.pure-form`. Font sizes are now inherited from your application's CSS file. ([#265][])
 
+[#265]: https://github.com/yui/pure/issues/265
 [#283]: https://github.com/yui/pure/issues/283
 
 
