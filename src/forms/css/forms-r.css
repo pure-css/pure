@@ -57,7 +57,7 @@
     .pure-form-message-inline,
     .pure-form-message {
         display: block;
-        font-size: 80%;
+        font-size: 0.75em;
         /* Increased bottom padding to make it group with its related input element. */
         padding: 0.2em 0 0.8em;
     }

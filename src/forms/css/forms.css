@@ -285,12 +285,12 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding-left: 0.3em;
     color: #666;
     vertical-align: middle;
-    font-size: 90%;
+    font-size: 0.875em;
 }
 
 /* Block help for forms */
 .pure-form-message {
     display: block;
     color: #666;
-    font-size: 90%;
+    font-size: 0.875em;
 }
