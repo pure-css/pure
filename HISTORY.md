@@ -10,9 +10,11 @@ NEXT
 
 * Remove `font-size` rules from `<input>`, `<legend>`, and `<fieldset>` elements within `.pure-form`. Font sizes are now inherited from your application's CSS file. ([#265][])
 
+* Invalid `<input>` elements within a Pure Form do not explicitly set a `border-width` anymore. ([#295][] @kwando)
+
 [#265]: https://github.com/yui/pure/issues/265
 [#283]: https://github.com/yui/pure/issues/283
-
+[#295]: https://github.com/yui/pure/pull/295
 
 0.4.1 (2014-02-06)
 ------------------
