@@ -1,8 +1,8 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.4.2 (2014-02-13)
+------------------
 
 * Added `main` to Pure's `bower.json` file to allow easier integration with
   build processes and tooling. ([#286][] @stevenvachon)
