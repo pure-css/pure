@@ -4,17 +4,27 @@ Pure Change History
 NEXT
 ----
 
+* Added `main` to Pure's `bower.json` file to allow easier integration with
+  build processes and tooling. ([#286][] @stevenvachon)
+
 ### Forms
 
-* Improve how `<input type="color">` elements look in Chrome by fixing paddings. ([#283][] @jpetto)
+* Improved how `<input type="color">` elements look in Chrome by fixing
+  paddings. ([#283][] @jpetto)
 
-* Remove `font-size` rules from `<input>`, `<legend>`, and `<fieldset>` elements within `.pure-form`. Font sizes are now inherited from your application's CSS file. ([#265][])
+* Removed `font-size` rules from `<input>`, `<legend>`, and `<fieldset>`
+  elements within `.pure-form`. Font sizes are now inherited from the
+  application's CSS file. ([#265][])
 
-* Invalid `<input>` elements within a Pure Form do not explicitly set a `border-width` anymore. ([#295][] @kwando)
+* Invalid `<input>` elements within a Pure Form no longer explicitly set a
+  `border-width`. ([#295][] @kwando)
+
 
 [#265]: https://github.com/yui/pure/issues/265
 [#283]: https://github.com/yui/pure/issues/283
-[#295]: https://github.com/yui/pure/pull/295
+[#286]: https://github.com/yui/pure/issues/286
+[#295]: https://github.com/yui/pure/issues/295
+
 
 0.4.1 (2014-02-06)
 ------------------
