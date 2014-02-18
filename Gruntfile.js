@@ -190,11 +190,16 @@ grunt.initConfig({
         }
     },
 
-    // -- Grid Units Config ----------------------------------------------------
+    // -- Pure Grids Units Config ----------------------------------------------
 
-    grid_units: {
-        dest : 'build/grids-units.css',
-        units: [5, 24]
+    pure_grids: {
+        default_units: {
+            dest: 'build/grids-units.css',
+
+            options: {
+                units: [5, 24]
+            }
+        }
     },
 
     // -- CSS Selectors Config -------------------------------------------------
@@ -235,6 +240,7 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
+grunt.loadNpmTasks('grunt-pure-grids');
 
 // Local tasks.
 grunt.loadTasks('tasks/');
@@ -245,7 +251,7 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'grid_units',
+    'pure_grids',
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
