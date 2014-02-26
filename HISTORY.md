@@ -4,7 +4,8 @@ Pure Change History
 NEXT
 ----
 
-
+* Switched cell padding in Tables from `px` to `em` units, and also increased
+  the amount of padding to `padding: 0.5em 1em`.
 
 
 0.4.2 (2014-02-13)
