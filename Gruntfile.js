@@ -181,22 +181,9 @@ grunt.initConfig({
 
     // -- Grid Units Config ----------------------------------------------------
 
-    pure_grids: {
-        main: {
-            dest : 'build/grids-units.css',
-            units: [5, 24]
-        },
-        responsive: {
-            dest: 'build/grids-responsive.css',
-            options: {
-                mediaQueries: {
-                    sm : 'screen and (min-width: 35.5em)',  // 568px
-                    md: 'screen and (min-width: 48em)',    // 768px
-                    lg: 'screen and (min-width: 64em)',   // 1024px
-                    xl : 'screen and (min-width: 75em)'  // 1200px
-                }
-            }
-        }
+    grid_units: {
+        dest : 'build/grids-units.css',
+        units: [5, 24]
     },
 
     // -- CSS Selectors Config -------------------------------------------------
@@ -237,8 +224,6 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
-grunt.loadNpmTasks('grunt-pure-grids');
-
 
 // Local tasks.
 grunt.loadTasks('tasks/');
@@ -249,7 +234,7 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'pure_grids',
+    'grid_units',
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
