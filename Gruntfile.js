@@ -1,5 +1,3 @@
-var path = require('path');
-
 module.exports = function (grunt) {
 
 // -- Config -------------------------------------------------------------------
@@ -8,6 +6,18 @@ grunt.initConfig({
 
     pkg  : grunt.file.readJSON('package.json'),
     bower: grunt.file.readJSON('bower.json'),
+
+    // -- bower.json Config ---------------------------------------------------------
+
+    bower_json: {
+        release: {
+            values: {
+                main: 'pure.css'
+            },
+
+            dest: 'build/'
+        }
+    },
 
     // -- Clean Config ---------------------------------------------------------
 
@@ -25,6 +35,11 @@ grunt.initConfig({
             dest   : 'build/',
             expand : true,
             flatten: true
+        },
+
+        release: {
+            src : '{LICENSE.md,README.md,HISTORY.md}',
+            dest: 'build/'
         }
     },
 
@@ -115,7 +130,7 @@ grunt.initConfig({
 
     cssmin: {
         options: {
-            // report: 'gzip'
+            noAdvanced: true
         },
 
         files: {
@@ -130,17 +145,13 @@ grunt.initConfig({
     compress: {
         release: {
             options: {
-                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.zip'
+                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.tar.gz'
             },
 
             expand : true,
             flatten: true,
-            dest   : '<%= pkg.name %>/<%= pkg.version %>/',
-
-            src: [
-                '{bower.json,LICENSE.md,README.md,HISTORY.md}',
-                'build/*.css'
-            ]
+            src    : 'build/*',
+            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
         }
     },
 
@@ -167,7 +178,7 @@ grunt.initConfig({
                 banner: [
                     '/*!',
                     'Pure v<%= pkg.version %>',
-                    'Copyright 2013 Yahoo! Inc. All rights reserved.',
+                    'Copyright 2014 Yahoo! Inc. All rights reserved.',
                     'Licensed under the BSD License.',
                     'https://github.com/yui/pure/blob/master/LICENSE.md',
                     '*/\n'
@@ -179,11 +190,16 @@ grunt.initConfig({
         }
     },
 
-    // -- Grid Units Config ----------------------------------------------------
+    // -- Pure Grids Units Config ----------------------------------------------
 
-    grid_units: {
-        dest : 'build/grids-units.css',
-        units: [5, 24]
+    pure_grids: {
+        default_units: {
+            dest: 'build/grids-units.css',
+
+            options: {
+                units: [5, 24]
+            }
+        }
     },
 
     // -- CSS Selectors Config -------------------------------------------------
@@ -224,6 +240,7 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
+grunt.loadNpmTasks('grunt-pure-grids');
 
 // Local tasks.
 grunt.loadTasks('tasks/');
@@ -234,7 +251,7 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'grid_units',
+    'pure_grids',
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
@@ -249,6 +266,8 @@ grunt.registerTask('watch', ['default', 'observe']);
 grunt.registerTask('release', [
     'default',
     'clean:release',
+    'copy:release',
+    'bower_json:release',
     'compress:release'
 ]);
 

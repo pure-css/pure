@@ -1,6 +1,6 @@
 {
   "name": "pure",
-  "version": "0.3.1-pre",
+  "version": "0.4.3-pre",
   "private": true,
   "repository": "git://github.com/yui/pure.git",
   "scripts": {
@@ -12,12 +12,12 @@
     "grunt-cli": "~0.1.9",
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-compress": "~0.5.0",
-    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-compress": "~0.6.0",
+    "grunt-contrib-csslint": "~0.2.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-css-selectors": "~0.1.0",
-    "rework-pure-grids": "0.1.0"
+    "grunt-css-selectors": "~1.0.0",
+    "grunt-pure-grids": "0.0.1"
   }
 }

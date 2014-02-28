@@ -1,4 +1,3 @@
-.pure-form input:not([type]),
 .pure-form input[type="text"],
 .pure-form input[type="password"],
 .pure-form input[type="email"],
@@ -18,20 +17,36 @@
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
-    font-size: 0.8em;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
-    -webkit-transition: 0.3s linear border;
-    -moz-transition: 0.3s linear border;
-    -ms-transition: 0.3s linear border;
-    -o-transition: 0.3s linear border;
-    transition: 0.3s linear border;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.pure-form input:not([type]):focus,
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.pure-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
 .pure-form input[type="text"]:focus,
 .pure-form input[type="password"]:focus,
 .pure-form input[type="email"]:focus,
@@ -53,6 +68,16 @@
     border-color: #129FEA;
 }
 
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]):focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: #129FEA;
+}
+
 .pure-form input[type="file"]:focus,
 .pure-form input[type="radio"]:focus,
 .pure-form input[type="checkbox"]:focus {
@@ -64,7 +89,7 @@
     margin: 0.5em 0;
     display: block;
 }
-.pure-form input:not([type])[disabled],
+
 .pure-form input[type="text"][disabled],
 .pure-form input[type="password"][disabled],
 .pure-form input[type="email"][disabled],
@@ -85,6 +110,16 @@
     background-color: #eaeded;
     color: #cad2d3;
 }
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
 .pure-form input[readonly],
 .pure-form select[readonly],
 .pure-form textarea[readonly] {
@@ -97,7 +132,7 @@
 .pure-form textarea:focus:invalid,
 .pure-form select:focus:invalid {
     color: #b94a48;
-    border: 1px solid #ee5f5b;
+    border-color: #ee5f5b;
 }
 .pure-form input:focus:invalid:focus,
 .pure-form textarea:focus:invalid:focus,
@@ -118,7 +153,6 @@
 }
 .pure-form label {
     margin: 0.5em 0 0.2em;
-    font-size: 90%;
 }
 .pure-form fieldset {
     margin: 0;
@@ -130,12 +164,10 @@
     width: 100%;
     padding: 0.3em 0;
     margin-bottom: 0.3em;
-    font-size: 125%;
     color: #333;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.pure-form-stacked input:not([type]),
 .pure-form-stacked input[type="text"],
 .pure-form-stacked input[type="password"],
 .pure-form-stacked input[type="email"],
@@ -157,6 +189,14 @@
     margin: 0.25em 0;
 }
 
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
 .pure-form-aligned input,
 .pure-form-aligned textarea,
 .pure-form-aligned select,
@@ -245,12 +285,12 @@
     padding-left: 0.3em;
     color: #666;
     vertical-align: middle;
-    font-size: 90%;
+    font-size: 0.875em;
 }
 
 /* Block help for forms */
 .pure-form-message {
     display: block;
     color: #666;
-    font-size: 90%;
+    font-size: 0.875em;
 }
