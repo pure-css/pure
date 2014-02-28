@@ -67,14 +67,9 @@ grunt.initConfig({
                     'build/forms-r.css'
                 ]},
 
-                {'build/grids-nr.css': [
+                {'build/grids.css': [
                     'build/grids-core.css',
                     'build/grids-units.css'
-                ]},
-
-                {'build/grids.css': [
-                    'build/grids-nr.css',
-                    'build/grids-r.css'
                 ]},
 
                 {'build/menus-nr.css': [
@@ -101,7 +96,7 @@ grunt.initConfig({
 
                 {'build/<%= pkg.name %>-nr.css': [
                     'build/base.css',
-                    'build/grids-nr.css',
+                    'build/grids.css',
                     'build/buttons.css',
                     'build/forms-nr.css',
                     'build/menus-nr.css',
