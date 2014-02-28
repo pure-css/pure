@@ -19,8 +19,5 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-css-selectors": "~0.1.0",
     "rework-pure-grids": "0.1.0"
-  },
-  "dependencies": {
-    "grunt-pure-grids": "0.0.1"
   }
 }
