@@ -4,9 +4,33 @@ Pure Change History
 NEXT
 ----
 
+### Base
+
+* Added the `.pure-img` class name for make images scale with the viewport in
+  fluid layouts.
+
+### Grids
+
+* __[!]__ Removed `.pure-g-r` from core, in favor of a mobile-first responsive
+  grid system. ([#24][], [#267][])
+
+  To use the mobile-first grid system, you need to pull in `pure.css`, along with `grids-responsive.css`:
+
+    ```html
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css">
+    ```
+
+  Find out more about the new grid system at [http://purecss.io/grids/][Grids].
+
+### Tables
+
 * Switched cell padding in Tables from `px` to `em` units, and also increased
   the amount of padding to `padding: 0.5em 1em`.
 
+[#24]: https://github.com/yui/pure/issues/24
+[#267]: https://github.com/yui/pure/pull/267
+[Grids]: http://purecss.io/grids/
 
 0.4.2 (2014-02-13)
 ------------------
