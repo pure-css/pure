@@ -253,6 +253,10 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     top: 1px;
     border-radius: 4px 4px 0 0;
 }
+.pure-form .pure-group input:first-child:last-child {
+    border-radius: 4px;
+    top: 1px;
+}
 .pure-form .pure-group input:last-child {
     top: -2px;
     border-radius: 0 0 4px 4px;
