@@ -210,6 +210,18 @@ grunt.initConfig({
         }
     },
 
+    // -- Strip Media Queries Config -------------------------------------------
+
+    stripmq: {
+        all: {
+            files: {
+                //follows the pattern 'destination': ['source']
+                'build/grids-responsive-old-ie.css':
+                    ['build/grids-responsive.css']
+            }
+        }
+    },
+
     // -- CSS Selectors Config -------------------------------------------------
 
     css_selectors: {
@@ -249,6 +261,7 @@ grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
 grunt.loadNpmTasks('grunt-pure-grids');
+grunt.loadNpmTasks('grunt-stripmq');
 
 // Local tasks.
 grunt.loadTasks('tasks/');
@@ -260,6 +273,7 @@ grunt.registerTask('build', [
     'clean:build',
     'copy:build',
     'pure_grids',
+    'stripmq',
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
