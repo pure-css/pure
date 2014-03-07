@@ -14,11 +14,18 @@ NEXT
 * __[!]__ Removed `.pure-g-r` from core, in favor of a mobile-first responsive
   grid system. ([#24][], [#267][])
 
-  To use the mobile-first grid system, you need to pull in `pure.css`, along with `grids-responsive.css`:
+  To use the mobile-first grid system, you need to pull in `pure.css`, along with `grids-responsive.css`. We also have a `grids-responsive-old-ie.css`
+  that you can serve to IE < 9 users so that they can view a desktop-version
+  of your website:
 
     ```html
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css">
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css">
+    <!--<![endif]-->
     ```
 
   Find out more about the new grid system at [http://purecss.io/grids/][Grids].
