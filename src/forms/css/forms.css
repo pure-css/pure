@@ -302,9 +302,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     border: 1px solid transparent;
     margin-bottom: 20px;
 }
-.pure-wise h4 {
+.pure-wise strong {
     color: inherit;
-    margin: 0 0 5px; 
+    font-weight: bold; 
 }
 .pure-wise p {
     color: inherit;
