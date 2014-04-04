@@ -301,32 +301,33 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding: 10px;
     border: 1px solid transparent;
     margin-bottom: 20px;
+    border-radius: 4px;
 }
 .pure-wise strong {
     color: inherit;
-    font-weight: bold; 
+    font-weight: bold;
 }
 .pure-wise p {
     color: inherit;
     margin: 0;
 }
 .pure-wise-success {
-    color: #70883e;
-    background-color:#d0deb2;
-    border-color: #aec284; 
+    color: #158c31;
+    background-color: #f0fdf3;
+    border-color: #adf3be;
 }
 .pure-wise-info {
-    color: #5f7c89;
-    background-color:#d0dbe0;
-    border-color: #a6c2ce; 
+    color: #24a1c8;
+    background-color: white;
+    border-color: #eff9fc;
 }
 .pure-wise-warn {
-    color: #aca155;
-    background-color:#f1ebc1;
-    border-color: #d5cd99; 
+    color: #b05c10;
+    background-color: white;
+    border-color: #fadec5;
 }
 .pure-wise-error {
-    color: #bb7b63;
-    background-color:#f1d9d0;
-    border-color: #d5ac9d; 
+    color: #a62d2d;
+    background-color: white;
+    border-color: #f6dcdc;
 }
