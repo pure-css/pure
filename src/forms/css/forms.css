@@ -317,17 +317,17 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     border-color: #adf3be;
 }
 .pure-wise-info {
-    color: #24a1c8;
-    background-color: white;
-    border-color: #eff9fc;
+    color: #186d87;
+    background-color: #eff9fc;
+    border-color: #aee1f0;
 }
 .pure-wise-warn {
-    color: #b05c10;
-    background-color: white;
-    border-color: #fadec5;
+    color: #d67013;
+    background-color: #fef9f4;
+    border-color: #f8d4b2;
 }
 .pure-wise-error {
-    color: #a62d2d;
-    background-color: white;
-    border-color: #f6dcdc;
+    color: #c63636;
+    background-color: #fdf8f8;
+    border-color: #f0c8c8;
 }
