@@ -1,8 +1,8 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.5.0 (2014-05-27)
+------------------
 
 ### Base
 
@@ -30,7 +30,7 @@ NEXT
     <!--<![endif]-->
     ```
 
-  Find out more about the new grid system at <http://stage.purecss.io/grids/>.
+  Find out more about the new grid system at <http://purecss.io/grids/>.
 
 ### Tables
 
