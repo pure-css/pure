@@ -170,3 +170,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Float block */
+.pull-block {
+  float: left !important;
+}
+.push-block {
+  float: right !important;
+}
