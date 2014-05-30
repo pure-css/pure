@@ -163,3 +163,10 @@
 .text-right {
   text-align: right;
 }
+
+/* Center Block */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
