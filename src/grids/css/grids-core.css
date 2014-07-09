@@ -37,6 +37,10 @@
     /* IE10 uses display: flexbox */
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
+    
+     /* Modern browsers flexbox */
+    display: flex;
+    flex-flow: row wrap;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
