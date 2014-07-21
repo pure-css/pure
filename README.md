@@ -125,6 +125,12 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: Minified version of `pure-nr.css` that should be used in
   production.
 
+* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which 
+  includes @media queries.
+
+* `grids-responsive-min.css`: Minified version of `grids-responsive.css` that
+  should be used in production.
+
 
 [Grunt]: http://gruntjs.com/
 
