@@ -55,8 +55,7 @@ striping:
 .pure-table-bordered td {
     border-bottom: 1px solid #cbcbcb;
 }
-.pure-table-bordered tbody > tr:last-child td,
-.pure-table-horizontal tbody > tr:last-child td {
+.pure-table-bordered tbody > tr:last-child > td {
     border-bottom-width: 0;
 }
 
@@ -68,6 +67,6 @@ striping:
     border-width: 0 0 1px 0;
     border-bottom: 1px solid #cbcbcb;
 }
-.pure-table-horizontal tbody > tr:last-child td {
+.pure-table-horizontal tbody > tr:last-child > td {
     border-bottom-width: 0;
 }
