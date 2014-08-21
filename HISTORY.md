@@ -1,6 +1,9 @@
 Pure Change History
 ===================
 
+
+* Upgraded Normalize.css to 3.0.1.
+
 0.5.0 (2014-05-27)
 ------------------
 
