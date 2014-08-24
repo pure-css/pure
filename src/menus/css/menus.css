@@ -1,55 +1,15 @@
-/*csslint adjoining-classes: false, duplicate-properties:false*/
-
-/* MENUS STYLING */
-/* Focus style for a dropdown menu-item when the parent has been opened */
-.pure-menu {
-    background: #fff; /* need this to make menus stand out from page background */
-    border: 1px solid #eee;
-}
-.pure-menu a {
-    color: #666;
-}
-/* Hover and focus styles */
-.pure-menu li a:hover,
-.pure-menu li a:focus {
-    background: #dedede;
-    *background: #dedede;
-    background: rgba(0,0,0,0.15);
-}
-
-/* DISABLED STATES */
-/* need the .pure-menu prefix so that people over-riding `a` don't over-ride pure-menu-disabled too */
-.pure-menu .pure-menu-disabled a,
-.pure-menu .pure-menu-disabled a:hover,
-.pure-menu .pure-menu-disabled a:focus {
-    color: #bababa;
-    *color: #bababa;
-    color: rgba(0,0,0, 0.5);
-    background: transparent;
-}
-
-
 .pure-menu-heading {
-    color: #565d64;
-    text-transform: uppercase;
-    font-size: 90%;
-    margin-top: 0.5em;
-    border-bottom: 1px solid #eee;
+    font-weight: bold;
 }
 
-.pure-menu-horizontal .pure-menu-heading {
-    border-bottom: none;
+.pure-menu-responsive-toggle {
+    float: right;
 }
 
-/* ACTIVE MENU ITEM */
-.pure-menu .pure-menu-selected a {
-    color: #000;
+.pure-menu-link {
+    padding: 0.3em 0.5em;
 }
 
-/* FIXED MENU */
-.pure-menu-fixed {
-    border: none;
-    border-bottom: 1px solid #b7b7b7;
-    *border-bottom: 1px solid #b7b7b7;
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+.pure-menu-is-active .pure-menu-children {
+    padding-left: 0.5em;
 }

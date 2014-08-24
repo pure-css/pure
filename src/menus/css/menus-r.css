@@ -1,16 +1,8 @@
-/*adjoining-classes: false*/
-@media (max-width: 767px) {
-    .pure-menu-responsive .pure-menu-toggle {
-        display: block;
+@media (min-width: 48em) {
+    .pure-menu-responsive .pure-menu-list {
+        display: inline-block;
     }
-    .pure-menu-responsive ul {
+    .pure-menu-responsive-toggle {
         display: none;
     }
-    .pure-menu-responsive.pure-menu.active ul {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        vertical-align: middle;
-    }
-
 }

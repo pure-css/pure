@@ -7,216 +7,115 @@
     <link rel="stylesheet" type="text/css" href="../../../../build/base-min.css">
     <link rel="stylesheet" type="text/css" href="../../../../build/buttons-min.css">
     <link rel="stylesheet" type="text/css" href="../../../../build/menus-min.css">
-
+    <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
     <style>
+        h1 {
+            font-size: 15px;
+            font-weight: normal;
+        }
         body {
-            font-family: sans-serif;
-            color: #333;
-            margin-bottom: 30px;
+            padding: 2em;
         }
-
-        .content {
-            padding:0 30px;
-        }
-
-        .content h2 {
-            color:#2B474F;
-            margin:50px 0 20px 0;
-            font-weight:bold;
-        }
-
-        #menu-1 {
-            width:120px;
-        }
-
-        #vertical-menu1, #vertical-menu2, #vertical-menu3 {
-            width:40%;
-        }
-
-        #vertical-menu3 {
-            margin: 10px;
-        }
-
-        .pure-menu {
-            margin-bottom:15px;
-        }
-
-        .pure-menu-custom {
-            background: red;
-            border:1px solid black;
-        }
-
-        .pure-menu-custom a {
-            color: white;
-        }
-
-        .pure-menu-custom a:hover {
-            color: orange;
-        }
-        .pure-menu-custom .pure-menu-disabled a,
-        .pure-menu-custom .pure-menu-disabled a:hover
-         {
-            color: yellow;
-        }
-
-        .pure-menu-custom .pure-menu-heading {
-            color: blue;
-        }
-
-        .pure-menu-custom .pure-menu-selected {
-            font-weight: bold;
-        }
-
     </style>
 </head>
-<body class="pure-skin-sam">
-
-    <div class="header y-u-1">
-
-        <h1 class="pure-u-1">Pure Menus CSS</h1>
-        <h2 class="pure-u">Simple styling for HTML List elements as menus.</h2>
-
-    </div>
-
-    <div class="content">
-
-        <h2>Horizontal Menu</h2>
-
-        <p>
-            You can mark the active menu element by adding the <code>.pure-menu-selected</code> class to the list item.
-        </p>
-
-        <div class="pure-menu pure-menu-horizontal">
-            <a href="#" class="pure-menu-heading">Site Title</a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li class="pure-menu-selected"><a href="#">Flickr</a></li>
-                <li><a href="#">Messenger</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Finance</a></li>
-                <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
-            </ul>
-        </div>
-
-        <h2>Vertical Menu</h2>
-
-        <div id="vertical-menu1" class="pure-menu">
-            <a href="#" class="pure-menu-heading">Site Title</a>
-            <ul>
-                <li class="pure-menu-selected"><a href="#">Home</a></li>
-                <li><a href="#">Flickr</a></li>
-                <li><a href="#">Messenger</a></li>
-                <li class="pure-menu-heading">Yahoo! Sites</li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Finance</a></li>
-                <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
-            </ul>
-        </div>
-
-        <div id="vertical-menu1" class="pure-menu">
-            <ul>
-                <li class="pure-menu-heading">Site Title</li>
-                <li class="pure-menu-selected"><a href="#">Home</a></li>
-                <li><a href="#">Flickr</a></li>
-                <li><a href="#">Messenger</a></li>
-                <li class="pure-menu-heading">Yahoo! Sites</li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Finance</a></li>
-                <li class="pure-menu-disabled"><a href="#">Disabled</a></li>
-            </ul>
-        </div>
-
-
-        <h2>Fixed Menus</h2>
-
-        <p>
-            Fixed menus can be created by adding the <code>pure-menu-fixed</code> class name to the wrapper. This will fix a menu to the top of the page.
-        </p>
-
-        <p>
-            <button class="pure-button" id="showFixedMenuBtn">Toggle Fixed Menu</button>
-        </p>
-
-        <div id="fixed-menu" class="pure-menu pure-menu-horizontal pure-menu-fixed">
-            <ul>
-                <li class="pure-menu-selected"><a href="#">Flickr</a></li>
-                <li><a href="#">Messenger</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Finance</a></li>
-            </ul>
-        </div>
-
-        <h2>Responsive Menu</h2>
-
-        <div class="pure-menu pure-menu-horizontal pure-menu-2 pure-menu-responsive">
-            <a href="#" class="pure-menu-heading">Site Title</a>
-            <a href="#" class="pure-menu-toggle">Open</a>
-            <ul>
-                <li class="pure-menu-selected"><a href="#">Home</a></li>
-                <li><a href="#">Flickr</a></li>
-                <li><a href="#">Messenger</a></li>
-                <li class="pure-menu-separator">&nbsp;</li>
-                <li class="pure-menu-disabled"><a href="#">Sports</a></li>
-                <li><a href="#">Finance</a></li>
-            </ul>
-        </div>
-
-        <h2>Customizing Menu</h2>
-
-
-        <div class="pure-menu pure-menu-horizontal pure-menu-custom pure-menu-responsive">
-            <a href="#" class="pure-menu-heading">Site Title</a>
-            <a href="#" class="pure-menu-toggle">Open</a>
-            <ul>
-                <li class="pure-menu-selected"><a href="#">Home</a></li>
-                <li><a href="#">Flickr</a></li>
-                <li><a href="#">Messenger</a></li>
-                <li class="pure-menu-separator">&nbsp;</li>
-                <li class="pure-menu-disabled"><a href="#">Sports</a></li>
-                <li><a href="#">Finance</a></li>
-            </ul>
-        </div>
-
-
-
-        <h2>Paginator</h2>
-
-        <ul class="pure-paginator">
-            <li><a class="pure-button prev" href="#">&#171;</a></li>
-            <li><a class="pure-button" href="#">1</a></li>
-            <li><a class="pure-button pure-button-active" href="#">2</a></li>
-            <li><a class="pure-button" href="#">3</a></li>
-            <li><a class="pure-button" href="#">4</a></li>
-            <li><a class="pure-button" href="#">5</a></li>
-            <li><a class="pure-button next" href="#">&#187;</a></li>
+<body>
+    
+    <h1>div.pure-menu.pure-menu-horizontal</h1>
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
         </ul>
-
     </div>
-    <script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
+
+
+    <h1>div.pure-menu</h1>
+    <div class="pure-menu">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu, with nested children</h1>
+    <div class="pure-menu">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item pure-menu-can-have-children pure-menu-has-children">
+                <a href="#" class="pure-menu-link">Blog</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Dust Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/react">React Mixins</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="/javascript">Intl Message Format</a></li>
+                </ul>
+            </li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-horizontal.pure-menu-responsive</h1>
+    <div class="pure-menu pure-menu-horizontal pure-menu-responsive">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <a href="#" class="pure-menu-responsive-toggle">Toggle</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+
+    <h1>div.pure-menu.pure-menu-horizontal.pure-menu-responsive, with nested children</h1>
+    <div class="pure-menu pure-menu-horizontal pure-menu-responsive">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <a href="#" class="pure-menu-responsive-toggle">Toggle</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item pure-menu-can-have-children pure-menu-has-children">
+                <a href="#" class="pure-menu-link">Blog</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Dust Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/react">React Mixins</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/javascript">Intl Message Format</a></li>
+                </ul>
+            </li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
     <script>
-    YUI({
-        classNamePrefix: 'pure'
-    }).use('node-base', function (Y) {
-        var toggle = Y.all(".pure-menu-toggle"),
-            i = 0,
-            ACTIVE = 'pure-menu-active';
 
-        for (; i < toggle.size(); i++) {
+        YUI().use('node', function (Y) {
+            var toggle = Y.one('.pure-menu-responsive-toggle');
 
-            toggle.item(i).on('click', function (e) {
-                var parent = e.currentTarget.get('parentNode');
-
+            Y.one('document').delegate('click', function (e) {
                 e.preventDefault();
-                parent.toggleClass(ACTIVE);
-                if (parent.hasClass(ACTIVE)) {
-                    e.currentTarget.set('text', 'Close');
-                }
-                else {
-                    e.currentTarget.set('text', 'Open')
-                }
-            });
-        }
-    });
+                e.target.get('parentNode').toggleClass('pure-menu-is-active');
+            }, '.pure-menu-responsive-toggle');
+        });
     </script>
+
 </body>
 </html>

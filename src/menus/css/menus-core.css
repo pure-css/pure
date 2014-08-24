@@ -1,22 +1,24 @@
 /*csslint adjoining-classes: false, box-model:false*/
-.pure-menu ul, .pure-menu li {
+.pure-menu-list,
+.pure-menu-item {
     position: relative;
 }
-.pure-menu ul {
+.pure-menu-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: inline-block;
 }
-.pure-menu li {
+.pure-menu-item {
     padding: 0;
     margin: 0;
     height: 100%;
+    text-align: left;
 }
-.pure-menu a,
-.pure-menu .pure-menu-heading {
+.pure-menu-link,
+.pure-menu-heading,
+.pure-menu-responsive-toggle {
     display: block;
-    line-height: 1.5em;
-    padding: 5px 20px;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -28,18 +30,7 @@
     margin: 0;
     vertical-align: middle;
 }
-.pure-menu-horizontal > ul {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    vertical-align: middle;
-}
 
-.pure-menu li a { padding: 5px 20px; }
-
-.pure-menu-can-have-children > .pure-menu-label {
-    padding-right: 30px;
-}
 
 /* FIXED MENU */
 .pure-menu-fixed {
@@ -58,7 +49,8 @@
 }
 
 /* Initial menus should be inline-block so that they are horizontal */
-.pure-menu-horizontal li {
+.pure-menu-horizontal .pure-menu-item,
+.pure-menu-horizontal .pure-menu-heading {
     display: inline-block;
     *display: inline;
     zoom: 1;
@@ -66,54 +58,34 @@
 }
 
 /* Submenus should still be display: block; */
-.pure-menu-horizontal li li {
+.pure-menu-item .pure-menu-item {
     display: block;
-}
-
-/* Adjusting separator for vertical menus */
-.pure-menu-horizontal .pure-menu-separator {
-    height: 50%;
-    width: 1px;
-    margin: 0 7px;
-}
-
-/* Submenus should be horizontal separator again */
-.pure-menu-horizontal li .pure-menu-separator {
-    height: 1px;
-    width: auto;
-    margin: 7px 2px;
 }
 
 /* RESPONSIVE MENUS */
 /* Hide the toggle button by default. It will show on small screen sizes */
-.pure-menu-responsive .pure-menu-toggle {
-    float: right;
-    text-transform: uppercase;
-    font-size: 80%;
+.pure-menu-responsive .pure-menu-list {
     display: none;
 }
 
-/* If the menu is open, and the viewport is larger than 767px, we
-   still want the toggle button to show.
-*/
-.pure-menu-responsive.pure-menu-active .pure-menu-toggle {
+.pure-menu-responsive-toggle {
     display: block;
 }
 
-.pure-menu-responsive .pure-menu-toggle:after {
+.pure-menu-responsive-toggle:after {
     content: "\25BE";
     float: right;
-    /* These specific fonts have the Unicode char we need. */
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
     margin-right: -15px;
     margin-top: -1px;
 }
 
-.pure-menu-responsive.pure-menu-active ul, .pure-menu-responsive.pure-menu-active li {
+.pure-menu-is-active .pure-menu-list,
+.pure-menu-is-active .pure-menu-item {
     display: block;
 }
 
-.pure-menu-responsive.pure-menu-active .pure-menu-separator {
+.pure-menu-is-active .pure-menu-separator {
     width: auto;
     height: 1px;
 }
