@@ -1,4 +1,9 @@
 /*csslint adjoining-classes: false, box-model:false*/
+.pure-menu {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 .pure-menu-list,
 .pure-menu-item {
     position: relative;
