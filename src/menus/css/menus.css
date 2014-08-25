@@ -2,6 +2,10 @@
     font-weight: bold;
 }
 
+.pure-menu-children {
+    background: white;
+}
+
 .pure-menu-responsive-toggle {
     float: right;
 }
