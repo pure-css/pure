@@ -14,8 +14,44 @@
             font-weight: normal;
         }
         body {
-            padding: 2em;
+            padding: 2em 2em 8em;
         }
+
+        .pure-menu-custom,
+        .children-custom {
+            background: #111;
+        }
+
+        .pure-menu-custom {
+            padding: 0.8em;
+            border-radius: 5px;
+        }
+
+        .heading-custom {
+            color: white;
+        }
+
+        .link-custom {
+            color: #ddd;
+            transition: color 0.5s;
+        }
+
+        .link-custom:hover {
+            color: #40a4ff;
+        }
+
+        .children-custom > .pure-menu-item {
+            padding-top: 0.8em;
+        }
+
+        .toggle-custom {
+            margin-top: 6px;
+            margin-right: 15px;
+            color: white;
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -53,7 +89,7 @@
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-            <li class="pure-menu-item pure-menu-can-have-children pure-menu-has-children">
+            <li class="pure-menu-item pure-menu-has-children">
                 <a href="#" class="pure-menu-link">Blog</a>
                 <ul class="pure-menu-children">
                     <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
@@ -90,7 +126,7 @@
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-            <li class="pure-menu-item pure-menu-can-have-children pure-menu-has-children">
+            <li class="pure-menu-item pure-menu-has-children">
                 <a href="#" class="pure-menu-link">Blog</a>
                 <ul class="pure-menu-children">
                     <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
@@ -102,6 +138,29 @@
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+
+    <h1>div.pure-menu.pure-menu-horizontal.pure-menu-responsive, with nested children, customized</h1>
+    <div class="pure-menu pure-menu-horizontal pure-menu-responsive pure-menu-custom">
+        <a href="#" class="heading-custom pure-menu-link pure-menu-heading">Title</a>
+        <a href="#" class="toggle-custom pure-menu-responsive-toggle">Toggle</a>
+        <ul class="list-custom pure-menu-list">
+            <li class="item-custom pure-menu-item"><a href="#" class="link-custom pure-menu-link">Home</a></li>
+            <li class="item-custom pure-menu-item"><a href="#" class="link-custom pure-menu-link">About</a></li>
+            <li class="item-custom pure-menu-item pure-menu-has-children">
+                <a href="#" class="link-custom pure-menu-link">Blog</a>
+                <ul class="children-custom pure-menu-children">
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/dust">Dust Helpers</a></li>
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/react">React Mixins</a></li>
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/javascript">Intl Message Format</a></li>
+                </ul>
+            </li>
+            <li class="pure-menu-item"><a href="#" class="link-custom pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="link-custom pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="link-custom pure-menu-link">Twitter</a></li>
         </ul>
     </div>
 
