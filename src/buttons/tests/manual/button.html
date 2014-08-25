@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Button Manual Tests</title>
-    <link rel="stylesheet" href="../../../../build/pure-min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome-ie7.css">
+    <meta charset="utf-8">
+    <title>Buttons Tests</title>
+
+    <link rel="stylesheet" href="../../../../build/base.css">
+    <link rel="stylesheet" href="../../../../build/buttons.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome-ie7.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <style>
         .pure-button-green {
@@ -44,11 +48,15 @@
             color: #fff;
             box-shadow: none;
         }
+        
+        .custom-fonts {
+            font-family: 'Open Sans', sans-serif;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Test Button Styles</h1>
+    <h1>Buttons Tests</h1>
 
     <h2>Regular Buttons</h2>
     <p>
@@ -89,13 +97,13 @@
     </p>
 
     <p>
-        <button class="pure-button pure-button-wedding" href="#">
-            <i class="icon-film"></i>
+        <button class="pure-button pure-button-wedding">
+            <i class="fa fa-film"></i>
             Start Playing Movie
         </button>
 
         <a class="pure-button pure-button-wedding" href="#">
-            <i class="icon-film"></i>
+            <i class="fa fa-film"></i>
             Start Playing Movie
         </a>
     </p>
@@ -108,5 +116,14 @@
         <input type="button" class="pure-button pure-button-primary" value="Input Button">
         <input type="reset" class="pure-button pure-button-primary" value="Reset">
     </p>
+
+    <h2>Primary Form Buttons (Custom Fonts)</h2>
+    <p class="custom-fonts">
+        <a class="pure-button pure-button-primary" href="#">Anchor</a>
+        <button class="pure-button pure-button-primary">Button</button>
+        <input type="submit" class="pure-button pure-button-primary" value="Submit">
+        <input type="button" class="pure-button pure-button-primary" value="Input Button">
+        <input type="reset" class="pure-button pure-button-primary" value="Reset">
+    </p>    
 </body>
 </html>

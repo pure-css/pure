@@ -4,22 +4,26 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .pure-menu-list,
 .pure-menu-item {
     position: relative;
 }
+
 .pure-menu-list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: inline-block;
 }
+
 .pure-menu-item {
     padding: 0;
     margin: 0;
     height: 100%;
     text-align: left;
 }
+
 .pure-menu-link,
 .pure-menu-heading,
 .pure-menu-responsive-toggle {
@@ -36,7 +40,6 @@
     vertical-align: middle;
 }
 
-
 /* FIXED MENU */
 .pure-menu-fixed {
     position: fixed;
@@ -44,7 +47,6 @@
     left: 0;
     width: 100%;
 }
-
 
 /* HORIZONTAL MENU */
 .pure-menu-horizontal {
