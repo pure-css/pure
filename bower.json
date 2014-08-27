@@ -3,6 +3,6 @@
   "version": "0.5.0",
   "main": "build/pure.css",
   "devDependencies": {
-    "normalize-css": "3.0.1"
+    "normalize-css": "^3.0"
   }
 }
