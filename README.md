@@ -6,7 +6,7 @@ Pure
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
-[![Build Status](https://travis-ci.org/yui/pure.png?branch=master)][Build Status]
+[![Build Status](https://travis-ci.org/yahoo/pure.png?branch=master)][Build Status]
 
 **Use From the CDN:**
 
@@ -25,7 +25,7 @@ $ bower install --save pure
 
 [Pure]: http://purecss.io/
 [Bower]: http://bower.io/
-[Build Status]: https://travis-ci.org/yui/pure
+[Build Status]: https://travis-ci.org/yahoo/pure
 [customize]: http://purecss.io/customize/
 
 
@@ -89,7 +89,7 @@ Optionally, you can build Pure from its source on Github. To do this, you'll
 need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
-$ git clone git@github.com:yui/pure.git
+$ git clone git@github.com:yahoo/pure.git
 $ cd pure
 $ npm install
 $ grunt
@@ -154,7 +154,7 @@ requests for the docs and website over at the [`pure-site`][pure-site]
 repository.
 
 
-[pure-site]: https://github.com/yui/pure-site
+[pure-site]: https://github.com/yahoo/pure-site
 
 
 Contributing
@@ -163,7 +163,7 @@ Contributing
 See the [CONTRIBUTING file][] for information on how to contribute to Pure.
 
 
-[CONTRIBUTING file]: https://github.com/yui/pure/blob/master/CONTRIBUTING.md
+[CONTRIBUTING file]: https://github.com/yahoo/pure/blob/master/CONTRIBUTING.md
 
 
 License
@@ -173,4 +173,4 @@ This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][] for license text and copyright information.
 
 
-[LICENSE file]: https://github.com/yui/pure/blob/master/LICENSE.md
+[LICENSE file]: https://github.com/yahoo/pure/blob/master/LICENSE.md
