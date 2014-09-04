@@ -6,7 +6,7 @@ Pure
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
-[![Build Status](https://travis-ci.org/yahoo/pure.png?branch=master)][Build Status]
+[![Build Status](https://travis-ci.org/yahoo/pure.svg?branch=master)][Build Status]
 
 **Use From the CDN:**
 
