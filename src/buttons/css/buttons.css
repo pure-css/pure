@@ -16,9 +16,9 @@
     border-radius: 2px;
 }
 
-.pure-button-hover .pure-button-highlight,
-.pure-button:hover .pure-button-highlight,
-.pure-button:focus .pure-button-highlight {
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
     filter: alpha(opacity=90);
     -khtml-opacity: 0.90;
     -moz-opacity: 0.90;
