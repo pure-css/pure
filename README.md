@@ -1,5 +1,6 @@
 Pure
 ====
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/yahoo/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Pure](http://f.cl.ly/items/2y0M0E2Q3a2H0z1N1Y19/pure-banner.png)][Pure]
 
