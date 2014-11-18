@@ -65,3 +65,18 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-g [class *= "pure-u"] {
     font-family: sans-serif;
 }
+
+.pure-pad {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.pure-pad:first-of-type {
+    padding-left:0px;
+}
+
+.pure-pad:last-of-type {
+    padding-right:0px;
+}
