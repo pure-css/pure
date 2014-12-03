@@ -1,7 +1,7 @@
 Pure
 ====
 
-[![Pure](https://cloud.githubusercontent.com/assets/449779/5288909/04f19b24-7aee-11e4-8c69-a838713c6de0.png)][Pure]
+[![Pure](https://cloud.githubusercontent.com/assets/449779/5291099/1b554cca-7b03-11e4-9157-53a12d91b34a.png)][Pure]
 
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
