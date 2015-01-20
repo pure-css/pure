@@ -86,6 +86,7 @@ will show on small screen sizes. */
 .pure-menu-is-active .pure-menu-item {
     display: block;
 }
+
 .pure-menu-is-active .pure-menu-list {
     position: absolute;
     right: 0;
@@ -97,9 +98,7 @@ will show on small screen sizes. */
     height: 1px;
 }
 
-
-/* misc minimal styling */
-
+/* misc default styling */
 .pure-menu-heading {
     font-weight: bold;
 }
@@ -111,6 +110,14 @@ will show on small screen sizes. */
 .pure-menu-link,
 .pure-menu-disabled {
     padding: 0.3em 0.5em;
+}
+
+.pure-menu-disabled {
+    opacity: 0.5;
+}
+
+.pure-menu-disabled .pure-menu-link:hover {
+    background-color: transparent;
 }
 
 .pure-menu-is-active .pure-menu-children {
@@ -125,12 +132,4 @@ will show on small screen sizes. */
 .pure-menu-selected .pure-menu-link,
 .pure-menu-selected .pure-menu-link:visited {
     color: #000;
-}
-
-.pure-menu-disabled {
-    opacity: 0.5;
-}
-
-.pure-menu-disabled .pure-menu-link:hover {
-    background-color: transparent;
 }

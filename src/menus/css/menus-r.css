@@ -1,15 +1,20 @@
 @media (min-width: 48em) {
+
     .pure-menu-responsive .pure-menu-list {
         display: inline-block;
     }
+
     .pure-menu-responsive-toggle {
         display: none;
     }
+
     .pure-menu-is-active .pure-menu-list {
         position: static;
     }
+
     .pure-menu-is-active .pure-menu-list,
     .pure-menu-is-active .pure-menu-item {
         display: inline-block;
     }
+
 }
