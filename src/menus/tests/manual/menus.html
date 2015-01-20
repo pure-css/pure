@@ -17,42 +17,46 @@
             padding: 2em 2em 8em;
         }
 
-        /* Update background on menu. */        
+        /* Update background on menu. */
         .menu-custom,
-        .children-custom {
+        .children-custom,
+        .menu-custom .pure-menu-list {
             background: #111;
             padding: 0.8em;
             border-radius: 5px;
         }
-    
+
         /* Make the heading white */
         .heading-custom {
             color: white;
         }
-        
+        .heading-custom:hover {
+            background-color: transparent;
+        }
+
         /* Make links light-gray with a transition */
         .link-custom {
             color: #ddd;
             transition: color 0.5s;
         }
-        
+
         /* Color links blue on hover and focus */
         .link-custom:hover,
         .link-custom:focus {
             color: #40a4ff;
+            background-color: transparent;
         }
-    
-        /* Update the positioning of the toggle button 
+
+        /* Update the positioning of the toggle button
         because we are modifying the menu's padding, and change its color. */
         .toggle-custom {
-            margin-top: 6px;
             margin-right: 15px;
             color: white;
         }
     </style>
 </head>
 <body>
-    
+
     <h1>div.pure-menu.pure-menu-horizontal</h1>
     <div class="pure-menu pure-menu-horizontal">
         <a href="#" class="pure-menu-link pure-menu-heading">Title</a>

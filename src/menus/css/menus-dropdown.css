@@ -33,6 +33,7 @@
 .pure-menu-has-children > .pure-menu-link:after {
     padding-left: 0.5em;
     content: "\25B8";
+    font-size: small;
 }
 
 /* Horizontal Menus - show the dropdown arrow */
