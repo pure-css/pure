@@ -5,4 +5,11 @@
     .pure-menu-responsive-toggle {
         display: none;
     }
+    .pure-menu-is-active .pure-menu-list {
+        position: static;
+    }
+    .pure-menu-is-active .pure-menu-list,
+    .pure-menu-is-active .pure-menu-item {
+        display: inline-block;
+    }
 }

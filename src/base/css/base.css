@@ -12,6 +12,7 @@
  * Always hide an element when it has the `hidden` HTML attribute.
  */
 
+.hidden,
 [hidden] {
     display: none !important;
 }

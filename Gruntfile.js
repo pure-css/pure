@@ -74,8 +74,7 @@ grunt.initConfig({
 
                 {'build/menus-nr.css': [
                     'build/menus-core.css',
-                    'build/menus-dropdown.css',
-                    'build/menus.css'
+                    'build/menus-dropdown.css'
                 ]},
 
                 {'build/menus.css': [

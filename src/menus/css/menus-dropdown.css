@@ -18,13 +18,14 @@
 
 /* Horizontal Menus - when an item is interacted with, show the children */
 .pure-menu-horizontal .pure-menu-item:hover > .pure-menu-children,
-.pure-menu-horizontal .pure-menu-item:focus > .pure-menu-children {
+.pure-menu-horizontal .pure-menu-item a:focus > .pure-menu-children {
     top: 100%;
     left: 0;
     width: inherit;
 }
 
-.pure-menu-is-active .pure-menu-children {
+.pure-menu-is-active .pure-menu-children,
+.pure-menu-responsive-toggle:hover .pure-menu-children {
     display: block;
     position: static;
 }
