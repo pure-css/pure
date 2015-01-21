@@ -1,0 +1,41 @@
+/* By default, don't show the .pure-menu-children. */
+.pure-menu-children {
+    display: none;
+    position: absolute; /* absolute positioned inside a relative container */
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+/* Vertical Menus - when an item is interacted with, show the children */
+.pure-menu-item:hover > .pure-menu-children,
+.pure-menu-item:focus > .pure-menu-children {
+    display: block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+}
+
+/* Horizontal Menus - when an item is interacted with, show the children */
+.pure-menu-horizontal .pure-menu-item:hover > .pure-menu-children,
+.pure-menu-horizontal .pure-menu-item:focus > .pure-menu-children {
+    top: 100%;
+    left: 0;
+    width: inherit;
+}
+
+.pure-menu-is-active .pure-menu-children {
+    display: block;
+    position: static;
+}
+
+/* Regular Menus - show the dropdown arrow */
+.pure-menu-has-children > .pure-menu-link:after {
+    padding-left: 0.5em;
+    content: "\25B8";
+}
+
+/* Horizontal Menus - show the dropdown arrow */
+.pure-menu-horizontal .pure-menu-has-children > .pure-menu-link:after {
+    content: "\25BE";
+}

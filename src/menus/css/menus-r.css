@@ -1,10 +1,8 @@
-@media (max-width: 480px) {
-    .pure-menu-horizontal {
-        width: 100%;
+@media (min-width: 48em) {
+    .pure-menu-responsive .pure-menu-list {
+        display: inline-block;
     }
-
-    .pure-menu-children li {
-        display: block;
-        border-bottom: 1px solid black;
+    .pure-menu-responsive-toggle {
+        display: none;
     }
 }
