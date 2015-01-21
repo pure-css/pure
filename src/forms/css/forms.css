@@ -123,7 +123,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form input[readonly],
 .pure-form select[readonly],
 .pure-form textarea[readonly] {
-    background: #eee; /* menu hover bg color */
+    background-color: #eee; /* menu hover bg color */
     color: #777; /* menu text color */
     border-color: #ccc;
 }
