@@ -1,7 +1,8 @@
 /*csslint adjoining-classes:false, outline-none:false*/
 /*TODO: Remove this lint rule override after a refactor of this code.*/
 
-.pure-menu ul {
+.pure-menu ul,
+.pure-menu menu {
     position: absolute;
     visibility: hidden;
 }
@@ -12,7 +13,8 @@
     width: 100%;
 }
 
-.pure-menu ul {
+.pure-menu ul,
+.pure-menu menu {
     left: -10000px;
     list-style: none;
     margin: 0;
@@ -21,15 +23,20 @@
     z-index: 1;
 }
 
-.pure-menu > ul { position: relative; }
+.pure-menu > ul,
+.pure-menu > menu {
+    position: relative;
+}
 
-.pure-menu-open > ul {
+.pure-menu-open > ul,
+.pure-menu-open > menu {
     left: 0;
     top: 0;
     visibility: visible;
 }
 
-.pure-menu-open > ul:focus {
+.pure-menu-open > ul:focus,
+.pure-menu-open > menu:focus {
     outline: 0;
 }
 
@@ -52,7 +59,8 @@
     margin: 0;
     vertical-align: middle;
 }
-.pure-menu.pure-menu-horizontal > ul {
+.pure-menu.pure-menu-horizontal > ul,
+.pure-menu.pure-menu-horizontal > menu {
     display: inline-block;
     *display: inline;
     zoom: 1;
@@ -133,4 +141,3 @@
 	width: auto;
 	margin: 7px 2px;
 }
-
