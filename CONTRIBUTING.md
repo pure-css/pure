@@ -12,7 +12,7 @@ contributions along with all other developers who use Pure.
 
 
 [Contributor License Agreement]: #contributor-license-agreement
-[open issues]: https://github.com/yui/pure/issues
+[open issues]: https://github.com/yahoo/pure/issues
 
 
 Docs and Website
@@ -24,7 +24,7 @@ repository.
 
 
 [Pure]: http://purecss.io/
-[pure-site]: https://github.com/yui/pure-site
+[pure-site]: https://github.com/yahoo/pure-site
 
 
 Building and Testing Pure
@@ -36,7 +36,7 @@ Once installed, clone the `pure` repo (either the main repo or your fork) and
 install Pure's gruntplugins via npm:
 
 ```shell
-$ git clone git://github.com/yui/pure.git
+$ git clone git://github.com/yahoo/pure.git
 $ cd pure/
 $ npm install
 ```
@@ -101,8 +101,8 @@ naming conventions, along with examples of how to extend the library.
 Contributor License Agreement
 -----------------------------
 
-Please [sign Pure's CLA][CLA] before sending pull requests. We can't merge your
-pull requests unless you have a signed CLA.
+Please [sign the Yahoo CLA][CLA] after sending pull requests. We can't merge
+your pull requests unless you have a signed CLA.
 
 The CLA ensures that everyone who submits a work of authorship to Pure is
 contributing work that is their own or for which they can authoritatively speak.
@@ -123,9 +123,8 @@ making your contribution:
    **Note:** that the BSD license is very liberal; it allows for reuse and
    adaptation in commercial projects.
 
-2. [Sign the Pure CLA online][CLA]. You will receive confirmation of your CLA
-   submission via the email address provided on the CLA form. If you have
-   questions about the CLA, you can address them to yui-cla@yahoo-inc.com.
+2. [Sign the Yahoo CLA][CLA] online. If you have questions about the CLA, you
+   can address them to opensource-cla@yahoo-inc.com.
 
 
-[CLA]: https://secure.echosign.com/public/hostedForm?formid=A9PFU5T58653A
+[CLA]: https://yahoocla.herokuapp.com/
