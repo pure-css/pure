@@ -21,39 +21,45 @@
     padding: 0;
     margin: 0;
     height: 100%;
-    text-align: left;
+}
+
+.pure-menu-separator {
+    background-color: #ccc;
+    height: 1px;
+    margin: 0.3em 0;
 }
 
 .pure-menu-link,
-.pure-menu-heading,
-.pure-menu-responsive-toggle {
+.pure-menu-heading {
     display: block;
     text-decoration: none;
     white-space: nowrap;
 }
 
-.pure-menu.pure-menu-horizontal > .pure-menu-heading {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    margin: 0;
-    vertical-align: middle;
-}
-
 /* HORIZONTAL MENU */
 .pure-menu-horizontal {
     width: 100%;
-    border-left: none;
-    border-right: none;
+    white-space: nowrap;
+}
+
+.pure-menu-horizontal .pure-menu-list {
+    display: inline-block;
 }
 
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-menu-horizontal .pure-menu-item,
-.pure-menu-horizontal .pure-menu-heading {
+.pure-menu-horizontal .pure-menu-heading,
+.pure-menu-horizontal .pure-menu-separator {
     display: inline-block;
     *display: inline;
     zoom: 1;
     vertical-align: middle;
+}
+
+.pure-menu-horizontal .pure-menu-separator {
+    width: 1px;
+    height: 1.3em;
+    margin: 0 0.3em ;
 }
 
 /* Submenus should still be display: block; */
@@ -61,46 +67,43 @@
     display: block;
 }
 
-/* RESPONSIVE MENUS */
-/* Hide the list and display the toggle by default. With menus-r it
-will show on small screen sizes. */
-.pure-menu-responsive .pure-menu-list {
-    display: none;
-}
-
-.pure-menu-responsive-toggle {
+.pure-menu-active .pure-menu-list {
     display: block;
-    float: right;
-    padding: 0.3em 0.5em;
-}
-
-.pure-menu-responsive-toggle:after {
-    content: "\25BE";
-    float: right;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
-    margin-right: -15px;
-    margin-top: -1px;
-}
-
-.pure-menu-is-active .pure-menu-list,
-.pure-menu-is-active .pure-menu-item {
-    display: block;
-}
-
-.pure-menu-is-active .pure-menu-list {
     position: absolute;
     right: 0;
     background-color: #fff;
 }
 
-.pure-menu-is-active .pure-menu-separator {
-    width: auto;
-    height: 1px;
+/* scrollable menus */
+.pure-menu-scrollable {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.pure-menu-scrollable .pure-menu-list {
+    display: block;
+}
+
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+    display: inline-block;
+}
+
+.pure-menu-horizontal.pure-menu-scrollable {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+    display: none;
 }
 
 /* misc default styling */
 .pure-menu-heading {
-    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .pure-menu-children {
@@ -108,7 +111,8 @@ will show on small screen sizes. */
 }
 
 .pure-menu-link,
-.pure-menu-disabled {
+.pure-menu-disabled,
+.pure-menu-heading {
     padding: 0.3em 0.5em;
 }
 
@@ -118,10 +122,6 @@ will show on small screen sizes. */
 
 .pure-menu-disabled .pure-menu-link:hover {
     background-color: transparent;
-}
-
-.pure-menu-is-active .pure-menu-children {
-    padding-left: 0.5em;
 }
 
 .pure-menu-link:hover,

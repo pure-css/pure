@@ -1,35 +1,24 @@
-/* By default, don't show the .pure-menu-children. */
 .pure-menu-children {
     display: none;
-    position: absolute; /* absolute positioned inside a relative container */
+    position: absolute;
+    left: 100%;
+    top: 0;
     margin: 0;
     padding: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
-/* Vertical Menus - when an item is interacted with, show the children */
-.pure-menu-item:hover > .pure-menu-children,
-.pure-menu-item:focus > .pure-menu-children {
-    display: block;
-    top: 0;
-    left: 100%;
-}
-
-/* Horizontal Menus - when an item is interacted with, show the children */
-.pure-menu-horizontal .pure-menu-item:hover > .pure-menu-children,
-.pure-menu-horizontal .pure-menu-item a:focus > .pure-menu-children {
-    top: 100%;
+.pure-menu-horizontal .pure-menu-children {
     left: 0;
+    top: auto;
     width: inherit;
 }
 
-.pure-menu-is-active .pure-menu-children,
-.pure-menu-responsive-toggle:hover .pure-menu-children {
+.pure-menu-active .pure-menu-children {
     display: block;
-    position: static;
 }
 
-/* Regular Menus - show the dropdown arrow */
+/* Vertical Menus - show the dropdown arrow */
 .pure-menu-has-children > .pure-menu-link:after {
     padding-left: 0.5em;
     content: "\25B8";
