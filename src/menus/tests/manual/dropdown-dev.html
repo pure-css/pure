@@ -3,15 +3,184 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width = device-width">
-    <title>Dropdown Menu JS Dev</title>
-    <link rel="stylesheet" type="text/css" href="../../../../build/base-min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../build/buttons-min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../build/menus-min.css">
-    <style>
+    <title>Menu JS Dev</title>
+    <link rel="stylesheet" type="text/css" href="../../../../build/pure-min.css">
+<style>
+.pure-menu-custom-wrapper {
+    background-color: #808080;
+    margin-bottom: 2.5em;
+}
 
-    </style>
+.pure-menu-custom {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.pure-menu-custom .pure-menu-link,
+.pure-menu-custom .pure-menu-heading {
+    color: white;
+}
+
+.pure-menu-custom .pure-menu-link:hover,
+.pure-menu-custom .pure-menu-heading:hover {
+    background-color: transparent;
+}
+
+.pure-menu-custom-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.pure-menu-custom-brand {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.pure-menu-custom-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.pure-menu-custom-toggle .bar {
+    background-color: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.pure-menu-custom-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.pure-menu-custom-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.pure-menu-custom-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+.pure-menu-custom-screen {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 50em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.pure-menu-custom-tucked .pure-menu-custom-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+
+@media (max-width: 50em) {
+
+    .pure-menu-custom {
+        display: block;
+    }
+
+    .pure-menu-custom-toggle {
+        display: block;
+    }
+
+    .pure-menu-custom-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid white;
+    }
+
+    .pure-menu-custom-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .pure-menu-custom-bottom.pure-menu-custom-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+    }
+
+    .pure-menu-custom-tucked {
+        z-index: -1;
+        top: -44px;
+        position: absolute;
+        opacity: 0;
+    }
+
+    .pure-menu-custom-screen {
+        display: block;
+    }
+
+}
+</style>
 </head>
 <body>
+    <div class="pure-menu-custom-wrapper">
+        <div class="pure-menu pure-menu-custom pure-menu-custom-top">
+            <a href="#" class="pure-menu-heading pure-menu-custom-brand">Brand</a>
+            <a href="#" class="pure-menu-custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+        </div>
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable pure-menu-custom pure-menu-custom-bottom pure-menu-custom-tucked" id="tuckedMenu">
+            <div class="pure-menu-custom-screen"></div>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Apple</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Google</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Microsoft</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Yahoo</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">W3C</a></li>
+            </ul>
+        </div>
+    </div>
 
     <h1>div.pure-menu, with nested children</h1>
     <div class="pure-menu">
@@ -54,8 +223,12 @@
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
         </ul>
     </div>
-
-    <script src="http://10.73.144.35:5000/js/menus.js"></script>
-
+<script src="http://localhost:5000/js/menus.js"></script>
+<script>
+document.getElementById('toggle').addEventListener('click', function (e) {
+    document.getElementById('tuckedMenu').classList.toggle('pure-menu-custom-tucked');
+    document.getElementById('toggle').classList.toggle('x');
+});
+</script>
 </body>
 </html>

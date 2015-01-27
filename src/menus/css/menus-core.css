@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+.pure-menu-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
 .pure-menu-list,
 .pure-menu-item {
     position: relative;
@@ -14,7 +21,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    display: inline-block;
 }
 
 .pure-menu-item {
@@ -91,7 +97,8 @@
 .pure-menu-horizontal.pure-menu-scrollable {
     white-space: nowrap;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
+    -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -104,6 +111,11 @@
 /* misc default styling */
 .pure-menu-heading {
     text-transform: uppercase;
+    color: #565d64;
+}
+
+.pure-menu-link {
+    color: #777;
 }
 
 .pure-menu-children {
@@ -113,7 +125,7 @@
 .pure-menu-link,
 .pure-menu-disabled,
 .pure-menu-heading {
-    padding: 0.3em 0.5em;
+    padding: 0.5em 1em;
 }
 
 .pure-menu-disabled {
