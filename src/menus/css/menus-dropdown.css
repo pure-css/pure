@@ -1,3 +1,8 @@
+/* Submenus should still be display: block; */
+.pure-menu-item .pure-menu-item {
+    display: block;
+}
+
 .pure-menu-children {
     display: none;
     position: absolute;
@@ -17,6 +22,7 @@
 .pure-menu-allow-hover:hover > .pure-menu-children,
 .pure-menu-active > .pure-menu-children {
     display: block;
+    position: absolute;
 }
 
 /* Vertical Menus - show the dropdown arrow */

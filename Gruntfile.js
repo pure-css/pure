@@ -72,14 +72,12 @@ grunt.initConfig({
                     'build/grids-units.css'
                 ]},
 
-                {'build/menus-nr.css': [
-                    'build/menus-core.css',
-                    'build/menus-dropdown.css'
-                ]},
-
                 {'build/menus.css': [
-                    'build/menus-nr.css',
-                    'build/menus-r.css'
+                    'build/menus-core.css',
+                    'build/menus-horizontal.css',
+                    'build/menus-dropdown.css',
+                    'build/menus-scrollable.css',
+                    'build/menus-skin.css',
                 ]},
 
                 // Rollups
@@ -98,7 +96,7 @@ grunt.initConfig({
                     'build/grids.css',
                     'build/buttons.css',
                     'build/forms-nr.css',
-                    'build/menus-nr.css',
+                    'build/menus.css',
                     'build/tables.css'
                 ]}
             ]
