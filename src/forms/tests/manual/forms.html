@@ -174,7 +174,40 @@
         <fieldset class="pure-group">
             <input type="text" class="pure-input-1-3" placeholder="Another Group">
             <input type="text" class="pure-input-1-3" placeholder="More Stuff">
+            <input type="text" class="pure-input-1-3" placeholder="Even More Stuff">
+            <input type="text" class="pure-input-1-3" placeholder="Last Item">
             <button type="submit" class="pure-button pure-input-1-3">Sign in</button>
+        </fieldset>
+    </form>
+
+
+    <h2>Dynamic Grouped Inputs</h2>
+
+    <form class="pure-form" onsubmit="return false">
+        <script type="text/javascript">
+        function testDynamicGroupAdd() {
+            var g = document.getElementById('test-dynamic-group'),
+                newNode = g.getElementsByTagName("input")[0].cloneNode();
+
+            g.appendChild(newNode);
+        }
+        function testDynamicGroupRemove() {
+            var g = document.getElementById('test-dynamic-group'),
+                nodeCount = g.getElementsByTagName("input").length;
+
+            if (nodeCount > 1) {
+                g.removeChild(g.lastChild);
+            }
+        }
+        </script>
+
+        <fieldset class="pure-group">
+            <button type="submit" class="pure-button" onclick="testDynamicGroupAdd()">Add field</button>
+            <button type="submit" class="pure-button" onclick="testDynamicGroupRemove()">Remove field</button>
+        </fieldset>
+
+        <fieldset class="pure-group" id="test-dynamic-group">
+            <input type="text" class="pure-input-1-3" placeholder="Add or remove fields to test">
         </fieldset>
     </form>
 
