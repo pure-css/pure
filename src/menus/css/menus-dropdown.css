@@ -1,0 +1,20 @@
+/* CSS-only drop-down menu */
+
+.pure-menu ul li:hover > ul,
+.pure-menu menu li:hover > ul,
+.pure-menu ul li:hover > menu,
+.pure-menu menu li:hover > menu {
+    display: block;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+}
+
+/* first sub-menu rolls under parent one for hirizonval view */
+.pure-menu.pure-menu-horizontal > ul > li:hover > ul,
+.pure-menu.pure-menu-horizontal > menu > li:hover > ul,
+.pure-menu.pure-menu-horizontal > ul > li:hover > menu,
+.pure-menu.pure-menu-horizontal > menu > li:hover > menu {
+    top: 100%;
+    left: 0;
+}
