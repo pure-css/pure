@@ -30,6 +30,7 @@
     NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
     `-moz-` prefix version is omitted.
     */
+    display: flex;
 
     display: -webkit-flex;
     -webkit-flex-flow: row wrap;
