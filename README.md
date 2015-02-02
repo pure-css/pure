@@ -141,7 +141,7 @@ Browser Support and Testing
 
 Pure is tested and works in:
 
-* IE 7+
+* IE 8+
 * Latest Stable: Firefox, Chrome, Safari
 * iOS 6.x, 7.x
 * Android 4.x
