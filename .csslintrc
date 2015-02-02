@@ -3,5 +3,5 @@
     "display-property-grouping": false,
     "star-property-hack"       : false,
     "unqualified-attributes"   : false,
-    "adjoining-classes"		   : false
+    "adjoining-classes"        : false
 }
