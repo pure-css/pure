@@ -1,8 +1,32 @@
 Pure Change History
 ===================
 
+0.6.0 (2015-02-07)
+------------------
 
-* Upgraded Normalize.css to 3.0.1.
+* Upgraded Normalize.css to 3.0.2.
+
+* Dropped IE7 support.
+
+* Refactored Menus.
+
+### Menus
+
+* Implemented flatter, low-specificity selectors, not attached to HTML elements,
+  for easier customization.
+* Removed pure-menu-open class.
+* Added pure-menu-scrollable capability, to allow for scrollable menus when
+  restricted by width or height.
+* Added pure-menu-allow-hover to reveal dropdowns on hover.
+* Removed various default styling properties, making menus a bit more bare-bones,
+a bit less opinionated, a bit easier to customize on top.
+* Broke Menu up into files for core, horizontal, dropdowns, scrollable, and skin,
+  again for improved optimization and ease of customization: take only what you
+  need.
+* Removed Paginator.
+* While not part of the Pure repo itself, the accompanying Pure website now
+  features additional menu examples and an example script for enabling dropdowns
+  and improved accessiblity.
 
 0.5.0 (2014-05-27)
 ------------------
