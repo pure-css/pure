@@ -241,7 +241,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form .pure-group fieldset {
     margin-bottom: 10px;
 }
-.pure-form .pure-group input {
+.pure-form .pure-group input,
+.pure-form .pure-group textarea {
     display: block;
     padding: 10px;
     margin: 0 0 -1px;
@@ -249,20 +250,24 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     position: relative;
     top: -1px;
 }
-.pure-form .pure-group input:focus {
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
     z-index: 2;
 }
-.pure-form .pure-group input:first-child {
+.pure-form .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child {
     top: 1px;
     border-radius: 4px 4px 0 0;
     margin: 0;
 }
-.pure-form .pure-group input:first-child:last-child {
+.pure-form .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child {
     top: 1px;
     border-radius: 4px;
     margin: 0;
 }
-.pure-form .pure-group input:last-child {
+.pure-form .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child {
     top: -2px;
     border-radius: 0 0 4px 4px;
     margin: 0;
