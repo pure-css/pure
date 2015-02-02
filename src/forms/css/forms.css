@@ -27,6 +27,7 @@ so we can ignore the csslint warning.
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
+    vertical-align: middle;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -147,7 +148,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 .pure-form select {
     /* Normalizes the height; padding is not sufficient. */
-    height: 2.15em;
+    height: 2.25em;
     border: 1px solid #ccc;
     background-color: white;
 }
