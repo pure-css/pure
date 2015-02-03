@@ -186,6 +186,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form-stacked input[type="search"],
 .pure-form-stacked input[type="tel"],
 .pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
 .pure-form-stacked select,
 .pure-form-stacked label,
 .pure-form-stacked textarea {
