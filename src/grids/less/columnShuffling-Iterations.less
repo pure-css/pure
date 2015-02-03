@@ -1,11 +1,11 @@
 .baseOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class $= "-@{colNum}-@{colTotal}"].start-@{count} {
+		[class *= "-@{colNum}-@{colTotal}"].start-@{count} {
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class $= "-@{colNum}-@{colTotal}"].end-@{count} {
+		[class *= "-@{colNum}-@{colTotal}"].end-@{count} {
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
@@ -22,12 +22,12 @@
 
 .smOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class $= "-@{colNum}-@{colTotal}"].start-sm-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].start-sm-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class $= "-@{colNum}-@{colTotal}"].end-sm-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].end-sm-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
@@ -44,12 +44,12 @@
 
 .mdOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class $= "-@{colNum}-@{colTotal}"].start-md-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].start-md-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class $= "-@{colNum}-@{colTotal}"].end-md-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].end-md-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
@@ -65,12 +65,12 @@
 }
 .lgOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class $= "-@{colNum}-@{colTotal}"].start-lg-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].start-lg-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class $= "-@{colNum}-@{colTotal}"].end-lg-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].end-lg-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
@@ -86,12 +86,12 @@
 }
 .xlOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class $= "-@{colNum}-@{colTotal}"].start-xl-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].start-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class $= "-@{colNum}-@{colTotal}"].end-xl-@{count}{
+		[class *= "-@{colNum}-@{colTotal}"].end-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
