@@ -1,11 +1,11 @@
 .baseOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class *= "-@{colNum}-@{colTotal}"].start-@{count} {
+		[class *= "u-@{colNum}-@{colTotal}"].start-@{count} {
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class *= "-@{colNum}-@{colTotal}"].end-@{count} {
+		[class *= "u-@{colNum}-@{colTotal}"].end-@{count} {
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
@@ -15,90 +15,251 @@
 	.baseOffset(@colTotal, @colNum, @count + 1);
 }
 // Small Stuff
-.smMediaOffsets(@n, @i: 1) when (@i < @n){
-	.smOffset(@n, @i); // Sm Grid
-	.smMediaOffsets(@n, @i + 1);
+.smMediaOffsetsXl(@n, @i: 1) when (@i < @n){
+	.xlSmOffset(@n, @i); // Sm Grid
+	.smMediaOffsetsXl(@n, @i + 1);
+}
+.smMediaOffsetsLg(@n, @i: 1) when (@i < @n){
+	.lgSmOffset(@n, @i); // Sm Grid
+	.smMediaOffsetsLg(@n, @i + 1);
+}
+.smMediaOffsetsMd(@n, @i: 1) when (@i < @n){
+	.mdSmOffset(@n, @i); // Sm Grid
+	.smMediaOffsetsMd(@n, @i + 1);
+}
+.smMediaOffsetsSm(@n, @i: 1) when (@i < @n){
+	.smSmOffset(@n, @i); // Sm Grid
+	.smMediaOffsetsSm(@n, @i + 1);
 }
 
-.smOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+.xlSmOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class *= "-@{colNum}-@{colTotal}"].start-sm-@{count}{
+		.pure-u-xl-@{colNum}-@{colTotal}.start-sm-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.start-md-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.start-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class *= "-@{colNum}-@{colTotal}"].end-sm-@{count}{
+		.pure-u-xl-@{colNum}-@{colTotal}.end-sm-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.end-md-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.end-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
 		}
 	}
 	.checkVal();
-	.smOffset(@colTotal, @colNum, @count + 1);
+	.xlSmOffset(@colTotal, @colNum, @count + 1);
+}
+.lgSmOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+	.checkVal() when ((@count + @colNum) =< @colTotal){
+		.pure-u-lg-@{colNum}-@{colTotal}.start-sm-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.start-md-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.start-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			left: ~"@{p}%";
+		}
+		.pure-u-lg-@{colNum}-@{colTotal}.end-sm-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.end-md-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.end-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			right: ~"@{p}%";
+		}
+	}
+	.checkVal();
+	.lgSmOffset(@colTotal, @colNum, @count + 1);
+}
+.mdSmOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+	.checkVal() when ((@count + @colNum) =< @colTotal){
+		.pure-u-md-@{colNum}-@{colTotal}.start-sm-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.start-md-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.start-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			left: ~"@{p}%";
+		}
+		.pure-u-md-@{colNum}-@{colTotal}.end-sm-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.end-md-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.end-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			right: ~"@{p}%";
+		}
+	}
+	.checkVal();
+	.mdSmOffset(@colTotal, @colNum, @count + 1);
+}
+.smSmOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+	.checkVal() when ((@count + @colNum) =< @colTotal){
+		.pure-u-sm-@{colNum}-@{colTotal}.start-sm-@{count},
+		.pure-u-sm-@{colNum}-@{colTotal}.start-md-@{count},
+		.pure-u-sm-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-sm-@{colNum}-@{colTotal}.start-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			left: ~"@{p}%";
+		}
+		.pure-u-sm-@{colNum}-@{colTotal}.end-sm-@{count},
+		.pure-u-sm-@{colNum}-@{colTotal}.end-md-@{count},
+		.pure-u-sm-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-sm-@{colNum}-@{colTotal}.end-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			right: ~"@{p}%";
+		}
+	}
+	.checkVal();
+	.smSmOffset(@colTotal, @colNum, @count + 1);
 }
 // Medium Stuff
-.mdMediaOffsets(@n, @i: 1) when (@i < @n){
-	.mdOffset(@n, @i); // Sm Grid
-	.mdMediaOffsets(@n, @i + 1);
+.mdMediaOffsetsXl(@n, @i: 1) when (@i < @n){
+	.xlMdOffset(@n, @i); // Sm Grid
+	.mdMediaOffsetsXl(@n, @i + 1);
+}
+.mdMediaOffsetsLg(@n, @i: 1) when (@i < @n){
+	.lgMdOffset(@n, @i); // Sm Grid
+	.mdMediaOffsetsLg(@n, @i + 1);
+}
+.mdMediaOffsetsMd(@n, @i: 1) when (@i < @n){
+	.mdMdOffset(@n, @i); // Sm Grid
+	.mdMediaOffsetsMd(@n, @i + 1);
 }
 
-.mdOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+.xlMdOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class *= "-@{colNum}-@{colTotal}"].start-md-@{count}{
+		.pure-u-xl-@{colNum}-@{colTotal}.start-md-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.start-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class *= "-@{colNum}-@{colTotal}"].end-md-@{count}{
+		.pure-u-xl-@{colNum}-@{colTotal}.end-md-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.end-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
 		}
 	}
 	.checkVal();
-	.mdOffset(@colTotal, @colNum, @count + 1);
+	.xlMdOffset(@colTotal, @colNum, @count + 1);
+}
+.lgMdOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+	.checkVal() when ((@count + @colNum) =< @colTotal){
+		.pure-u-lg-@{colNum}-@{colTotal}.start-md-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.start-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			left: ~"@{p}%";
+		}
+		.pure-u-lg-@{colNum}-@{colTotal}.end-md-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.end-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			right: ~"@{p}%";
+		}
+	}
+	.checkVal();
+	.lgMdOffset(@colTotal, @colNum, @count + 1);
+}
+.mdMdOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+	.checkVal() when ((@count + @colNum) =< @colTotal){
+		.pure-u-md-@{colNum}-@{colTotal}.start-md-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.start-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			left: ~"@{p}%";
+		}
+		.pure-u-md-@{colNum}-@{colTotal}.end-md-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-md-@{colNum}-@{colTotal}.end-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			right: ~"@{p}%";
+		}
+	}
+	.checkVal();
+	.mdMdOffset(@colTotal, @colNum, @count + 1);
 }
 // Large Stuff
-.lgMediaOffsets(@n, @i: 1) when (@i < @n){
-	.lgOffset(@n, @i); // Sm Grid
-	.lgMediaOffsets(@n, @i + 1);
+.lgMediaOffsetsXl(@n, @i: 1) when (@i < @n){
+	.xlLgOffset(@n, @i); // Sm Grid
+	.lgMediaOffsetsXl(@n, @i + 1);
 }
-.lgOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+.lgMediaOffsetsLg(@n, @i: 1) when (@i < @n){
+	.lgLgOffset(@n, @i); // Sm Grid
+	.lgMediaOffsetsLg(@n, @i + 1);
+}
+.xlLgOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class *= "-@{colNum}-@{colTotal}"].start-lg-@{count}{
+		.pure-u-xl-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.start-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class *= "-@{colNum}-@{colTotal}"].end-lg-@{count}{
+
+		.pure-u-xl-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-xl-@{colNum}-@{colTotal}.end-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
 		}
 	}
 	.checkVal();
-	.lgOffset(@colTotal, @colNum, @count + 1);
+	.xlLgOffset(@colTotal, @colNum, @count + 1);
+}
+.lgLgOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+	.checkVal() when ((@count + @colNum) =< @colTotal){
+		.pure-u-lg-@{colNum}-@{colTotal}.start-lg-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.start-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			left: ~"@{p}%";
+		}
+		.pure-u-lg-@{colNum}-@{colTotal}.end-lg-@{count},
+		.pure-u-lg-@{colNum}-@{colTotal}.end-xl-@{count}{
+			@p: round(@count / @colTotal * 100, 4);
+			position: relative;
+			right: ~"@{p}%";
+		}
+	}
+	.checkVal();
+	.lgLgOffset(@colTotal, @colNum, @count + 1);
 }
 // XL-Large Stuff
 .xlMediaOffsets(@n, @i: 1) when (@i < @n){
-	.xlOffset(@n, @i);
+	.xlXlOffset(@n, @i);
 	.xlMediaOffsets(@n, @i + 1);
 }
-.xlOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
+.xlXlOffset(@colTotal, @colNum, @count: 1) when (@count < @colTotal){
 	.checkVal() when ((@count + @colNum) =< @colTotal){
-		[class *= "-@{colNum}-@{colTotal}"].start-xl-@{count}{
+		.pure-u-xl-@{colNum}-@{colTotal}.start-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			left: ~"@{p}%";
 		}
-		[class *= "-@{colNum}-@{colTotal}"].end-xl-@{count}{
+		.pure-u-xl-@{colNum}-@{colTotal}.end-xl-@{count}{
 			@p: round(@count / @colTotal * 100, 4);
 			position: relative;
 			right: ~"@{p}%";
 		}
 	}
 	.checkVal();
-	.xlOffset(@colTotal, @colNum, @count + 1);
+	.xlXlOffset(@colTotal, @colNum, @count + 1);
 }
 
 .regOffsets(@n, @i: 1) when (@i < @n){
