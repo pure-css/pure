@@ -143,7 +143,7 @@ Pure is tested and works in:
 
 * IE 8+
 * Latest Stable: Firefox, Chrome, Safari
-* iOS 6.x, 7.x
+* iOS 6-8
 * Android 4.x
 
 
