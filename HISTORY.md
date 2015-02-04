@@ -5,10 +5,9 @@ Pure Change History
 ------------------
 
 * Upgraded Normalize.css to 3.0.2.
-
 * Dropped IE7 support.
-
 * Refactored Menus.
+* Numerous minor bug fixes.
 
 ### Menus
 
