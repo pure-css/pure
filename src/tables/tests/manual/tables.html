@@ -6,6 +6,12 @@
 
     <link rel="stylesheet" href="../../../../build/base.css">
     <link rel="stylesheet" href="../../../../build/tables.css">
+    <style>
+        body {
+            /* adding a little margin so we can see the borders better */
+            margin: 1em;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,6 +73,68 @@
                 <td>Toyota</td>
                 <td>Camry</td>
                 <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Bordered Table with rowspan</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Bordered Table with colspan</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td colspan="3">[ redacted ]</td>
             </tr>
             <tr>
                 <td>3</td>
