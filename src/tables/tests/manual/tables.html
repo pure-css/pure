@@ -11,6 +11,12 @@
             /* adding a little margin so we can see the borders better */
             margin: 1em;
         }
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 24px;
+            background-color: gray;
+        }
     </style>
 </head>
 
@@ -46,6 +52,39 @@
                 <td>Hyundai</td>
                 <td>Elantra</td>
                 <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Checking alignment</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+            </tr>
+            <tr>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+            </tr>
+            <tr>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
             </tr>
         </tbody>
     </table>
