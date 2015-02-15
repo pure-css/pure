@@ -7,12 +7,31 @@
 
     <link rel="stylesheet" href="../../../../build/base.css">
     <link rel="stylesheet" href="../../../../build/grids.css">
+    <link rel="stylesheet" href="../../../../build/grids-responsive.css">
     <link rel="stylesheet" href="../../../../build/buttons.css">
     <link rel="stylesheet" href="../../../../build/forms.css">
 </head>
 
 <body>
     <h1>Forms Tests</h1>
+
+    <h2>Input normalization</h2>
+
+    <form class="pure-form">
+        <fieldset>
+            <legend>An inline form. Check for alignment and input/select sizing.</legend>
+
+            <input type="text" placeholder="text input">
+            <input type="search" placeholder="search input">
+            <select name="fooselect">
+                <option value="CA">CA</option>
+                <option value="NY">NY</option>
+            <select>
+
+
+            <button type="submit" class="pure-button">Sign in</button>
+        </fieldset>
+    </form>
 
     <h2>Default Form</h2>
 
@@ -38,24 +57,24 @@
         <fieldset>
             <legend>Legend</legend>
 
-            <div class="pure-g-r">
-                <div class="pure-u-1-3">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-3">
                     <label>First Name</label>
                     <input type="text">
                 </div>
-                <div class="pure-u-1-3">
+                <div class="pure-u-1 pure-u-md-1-3">
                     <label>Password</label>
                     <input type="password">
                 </div>
-                <div class="pure-u-1-3">
+                <div class="pure-u-1 pure-u-md-1-3">
                     <label>E-Mail</label>
                     <input type="email" required>
                 </div>
-                <div class="pure-u-1-3">
+                <div class="pure-u-1 pure-u-md-1-3">
                     <label>City</label>
                     <input type="text">
                 </div>
-                <div class="pure-u-1-3">
+                <div class="pure-u-1 pure-u-md-1-3">
                     <label>State</label>
                     <select class="pure-input-medium">
                         <option>AL</option>
@@ -105,6 +124,9 @@
                 <option>MD</option>
                 <option>NY</option>
             </select>
+
+            <label>Color</label>
+            <input type="color">
 
             <label class="pure-checkbox">
                 <input type="checkbox"> I've read the terms and conditions
@@ -169,8 +191,41 @@
 
         <fieldset class="pure-group">
             <input type="text" class="pure-input-1-3" placeholder="Another Group">
-            <input type="text" class="pure-input-1-3" placeholder="More Stuff">
-            <button type="submit" class="pure-button pure-input-1-3">Sign in</button>
+            <textarea class="pure-input-1-3" placeholder="Textareas can work here too"></textarea>
+            <input type="text" class="pure-input-1-3" placeholder="Even More Stuff">
+            <input type="text" class="pure-input-1-3" placeholder="Last Item">
+        </fieldset>
+        <button type="submit" class="pure-button pure-input-1-3">Sign in</button>
+    </form>
+
+
+    <h2>Dynamic Grouped Inputs</h2>
+
+    <form class="pure-form" onsubmit="return false">
+        <script type="text/javascript">
+        function testDynamicGroupAdd() {
+            var g = document.getElementById('test-dynamic-group'),
+                newNode = g.getElementsByTagName("input")[0].cloneNode();
+
+            g.appendChild(newNode);
+        }
+        function testDynamicGroupRemove() {
+            var g = document.getElementById('test-dynamic-group'),
+                nodeCount = g.getElementsByTagName("input").length;
+
+            if (nodeCount > 1) {
+                g.removeChild(g.lastChild);
+            }
+        }
+        </script>
+
+        <fieldset class="pure-group">
+            <button type="submit" class="pure-button" onclick="testDynamicGroupAdd()">Add field</button>
+            <button type="submit" class="pure-button" onclick="testDynamicGroupRemove()">Remove field</button>
+        </fieldset>
+
+        <fieldset class="pure-group" id="test-dynamic-group">
+            <input type="text" class="pure-input-1-3" placeholder="Add or remove fields to test">
         </fieldset>
     </form>
 

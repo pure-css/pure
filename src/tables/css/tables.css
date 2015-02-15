@@ -20,15 +20,18 @@
     font-size: inherit;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
-    padding: 6px 12px; /* cell padding */
+    padding: 0.5em 1em; /* cell padding */
 }
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
 .pure-table td:first-child,
 .pure-table th:first-child {
     border-left-width: 0;
 }
 
 .pure-table thead {
-    background: #e0e0e0;
+    background-color: #e0e0e0;
     color: #000;
     text-align: left;
     vertical-align: bottom;
@@ -55,8 +58,7 @@ striping:
 .pure-table-bordered td {
     border-bottom: 1px solid #cbcbcb;
 }
-.pure-table-bordered tbody > tr:last-child td,
-.pure-table-horizontal tbody > tr:last-child td {
+.pure-table-bordered tbody > tr:last-child > td {
     border-bottom-width: 0;
 }
 
@@ -68,6 +70,6 @@ striping:
     border-width: 0 0 1px 0;
     border-bottom: 1px solid #cbcbcb;
 }
-.pure-table-horizontal tbody > tr:last-child td {
+.pure-table-horizontal tbody > tr:last-child > td {
     border-bottom-width: 0;
 }

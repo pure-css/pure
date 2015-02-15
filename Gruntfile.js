@@ -1,5 +1,3 @@
-var path = require('path');
-
 module.exports = function (grunt) {
 
 // -- Config -------------------------------------------------------------------
@@ -8,6 +6,18 @@ grunt.initConfig({
 
     pkg  : grunt.file.readJSON('package.json'),
     bower: grunt.file.readJSON('bower.json'),
+
+    // -- bower.json Config ---------------------------------------------------------
+
+    bower_json: {
+        release: {
+            values: {
+                main: 'pure.css'
+            },
+
+            dest: 'build/'
+        }
+    },
 
     // -- Clean Config ---------------------------------------------------------
 
@@ -25,6 +35,11 @@ grunt.initConfig({
             dest   : 'build/',
             expand : true,
             flatten: true
+        },
+
+        release: {
+            src : '{LICENSE.md,README.md,HISTORY.md}',
+            dest: 'build/'
         }
     },
 
@@ -52,25 +67,17 @@ grunt.initConfig({
                     'build/forms-r.css'
                 ]},
 
-                {'build/grids-nr.css': [
+                {'build/grids.css': [
                     'build/grids-core.css',
                     'build/grids-units.css'
                 ]},
 
-                {'build/grids.css': [
-                    'build/grids-nr.css',
-                    'build/grids-r.css'
-                ]},
-
-                {'build/menus-nr.css': [
-                    'build/menus-core.css',
-                    'build/menus.css',
-                    'build/menus-paginator.css'
-                ]},
-
                 {'build/menus.css': [
-                    'build/menus-nr.css',
-                    'build/menus-r.css'
+                    'build/menus-core.css',
+                    'build/menus-horizontal.css',
+                    'build/menus-dropdown.css',
+                    'build/menus-scrollable.css',
+                    'build/menus-skin.css',
                 ]},
 
                 // Rollups
@@ -86,10 +93,10 @@ grunt.initConfig({
 
                 {'build/<%= pkg.name %>-nr.css': [
                     'build/base.css',
-                    'build/grids-nr.css',
+                    'build/grids.css',
                     'build/buttons.css',
                     'build/forms-nr.css',
-                    'build/menus-nr.css',
+                    'build/menus.css',
                     'build/tables.css'
                 ]}
             ]
@@ -115,7 +122,7 @@ grunt.initConfig({
 
     cssmin: {
         options: {
-            // report: 'gzip'
+            noAdvanced: true
         },
 
         files: {
@@ -130,17 +137,13 @@ grunt.initConfig({
     compress: {
         release: {
             options: {
-                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.zip'
+                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.tar.gz'
             },
 
             expand : true,
             flatten: true,
-            dest   : '<%= pkg.name %>/<%= pkg.version %>/',
-
-            src: [
-                '{bower.json,LICENSE.md,README.md,HISTORY.md}',
-                'build/*.css'
-            ]
+            src    : 'build/*',
+            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
         }
     },
 
@@ -167,9 +170,9 @@ grunt.initConfig({
                 banner: [
                     '/*!',
                     'Pure v<%= pkg.version %>',
-                    'Copyright 2013 Yahoo! Inc. All rights reserved.',
+                    'Copyright 2014 Yahoo! Inc. All rights reserved.',
                     'Licensed under the BSD License.',
-                    'https://github.com/yui/pure/blob/master/LICENSE.md',
+                    'https://github.com/yahoo/pure/blob/master/LICENSE.md',
                     '*/\n'
                 ].join('\n')
             },
@@ -179,11 +182,41 @@ grunt.initConfig({
         }
     },
 
-    // -- Grid Units Config ----------------------------------------------------
+    // -- Pure Grids Units Config ----------------------------------------------
 
-    grid_units: {
-        dest : 'build/grids-units.css',
-        units: [5, 24]
+    pure_grids: {
+        default_units: {
+            dest: 'build/grids-units.css',
+
+            options: {
+                units: [5, 24]
+            }
+        },
+
+        responsive: {
+            dest: 'build/grids-responsive.css',
+
+            options: {
+                mediaQueries: {
+                    sm: 'screen and (min-width: 35.5em)',   // 568px
+                    md: 'screen and (min-width: 48em)',     // 768px
+                    lg: 'screen and (min-width: 64em)',     // 1024px
+                    xl: 'screen and (min-width: 80em)'      // 1280px
+                }
+            }
+        }
+    },
+
+    // -- Strip Media Queries Config -------------------------------------------
+
+    stripmq: {
+        all: {
+            files: {
+                //follows the pattern 'destination': ['source']
+                'build/grids-responsive-old-ie.css':
+                    ['build/grids-responsive.css']
+            }
+        }
     },
 
     // -- CSS Selectors Config -------------------------------------------------
@@ -224,6 +257,8 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
+grunt.loadNpmTasks('grunt-pure-grids');
+grunt.loadNpmTasks('grunt-stripmq');
 
 // Local tasks.
 grunt.loadTasks('tasks/');
@@ -234,7 +269,8 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'grid_units',
+    'pure_grids',
+    'stripmq',
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
@@ -249,6 +285,8 @@ grunt.registerTask('watch', ['default', 'observe']);
 grunt.registerTask('release', [
     'default',
     'clean:release',
+    'copy:release',
+    'bower_json:release',
     'compress:release'
 ]);
 

@@ -1,8 +1,100 @@
 Pure Change History
 ===================
 
-NEXT
-----
+0.6.0 (2015-02-07)
+------------------
+
+* Upgraded Normalize.css to 3.0.2.
+* Dropped IE7 support.
+* Refactored Menus.
+* Numerous minor bug fixes.
+
+### Menus
+
+* Implemented flatter, low-specificity selectors, not attached to HTML elements,
+  for easier customization.
+* Removed pure-menu-open class.
+* Added pure-menu-scrollable capability, to allow for scrollable menus when
+  restricted by width or height.
+* Added pure-menu-allow-hover to reveal dropdowns on hover.
+* Removed various default styling properties, making menus a bit more bare-bones,
+a bit less opinionated, a bit easier to customize on top.
+* Broke Menu up into files for core, horizontal, dropdowns, scrollable, and skin,
+  again for improved optimization and ease of customization: take only what you
+  need.
+* Removed Paginator.
+* While not part of the Pure repo itself, the accompanying Pure website now
+  features additional menu examples and an example script for enabling dropdowns
+  and improved accessiblity.
+
+0.5.0 (2014-05-27)
+------------------
+
+### Base
+
+* Added the `.pure-img` class name for make images scale with the viewport in
+  fluid layouts.
+
+### Grids
+
+* __[!]__ Removed `.pure-g-r` from core, in favor of a mobile-first responsive
+  grid system. ([#24][], [#267][])
+
+  To use the mobile-first grid system, you need to pull in `pure.css`, along
+  with `grids-responsive.css`. We also have `grids-responsive-old-ie.css` that
+  you can serve to IE < 9 users so that they can view a desktop-version of your
+  website:
+
+    ```html
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css">
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css">
+    <!--<![endif]-->
+    ```
+
+  Find out more about the new grid system at <http://purecss.io/grids/>.
+
+### Tables
+
+* Switched cell padding in Tables from `px` to `em` units, and also increased
+  the amount of padding to `padding: 0.5em 1em`.
+
+
+[#24]: https://github.com/yahoo/pure/issues/24
+[#267]: https://github.com/yahoo/pure/pull/267
+
+
+0.4.2 (2014-02-13)
+------------------
+
+* Added `main` to Pure's `bower.json` file to allow easier integration with
+  build processes and tooling. ([#286][] @stevenvachon)
+
+### Forms
+
+* Improved how `<input type="color">` elements look in Chrome by fixing
+  paddings. ([#283][] @jpetto)
+
+* Removed `font-size` rules from `<input>`, `<legend>`, and `<fieldset>`
+  elements within `.pure-form`. Font sizes are now inherited from the
+  application's CSS file. ([#265][])
+
+* Invalid `<input>` elements within a Pure Form no longer explicitly set a
+  `border-width`. ([#295][] @kwando)
+
+
+[#265]: https://github.com/yahoo/pure/issues/265
+[#283]: https://github.com/yahoo/pure/issues/283
+[#286]: https://github.com/yahoo/pure/issues/286
+[#295]: https://github.com/yahoo/pure/issues/295
+
+
+0.4.1 (2014-02-06)
+------------------
 
 ### Base
 
@@ -36,6 +128,9 @@ NEXT
   Forms to fix an alignment issue where its label was aligned to the middle.
   ([#174][] @rictorres, @ItsAsbreuk)
 
+* Added styling for `<input>` elements that don't have a `type` attribute.
+  ([#261][] @dougdavies)
+
 ### Grids
 
 * Added all non-reduced fractions to Grids default 5ths- and 24ths-based units.
@@ -53,16 +148,23 @@ NEXT
 * Removed hard-coded height for horizontal menus. ([#164][])
 
 
-[#144]: https://github.com/yui/pure/issues/144
-[#164]: https://github.com/yui/pure/issues/164
-[#174]: https://github.com/yui/pure/issues/174
-[#177]: https://github.com/yui/pure/issues/177
-[#191]: https://github.com/yui/pure/issues/191
-[#200]: https://github.com/yui/pure/issues/200
-[#221]: https://github.com/yui/pure/issues/221
+[#144]: https://github.com/yahoo/pure/issues/144
+[#164]: https://github.com/yahoo/pure/issues/164
+[#174]: https://github.com/yahoo/pure/issues/174
+[#177]: https://github.com/yahoo/pure/issues/177
+[#191]: https://github.com/yahoo/pure/issues/191
+[#200]: https://github.com/yahoo/pure/issues/200
+[#221]: https://github.com/yahoo/pure/issues/221
+[#261]: https://github.com/yahoo/pure/issues/261
 
 [rework-pure-grids]: https://github.com/ericf/rework-pure-grids
 [Rework]: https://github.com/visionmedia/rework
+
+
+0.4.0 (2014-02-06)
+------------------
+
+* __[!]__ Corrupted release build, use `0.4.1`.
 
 
 0.3.0 (2013-09-09)
@@ -148,17 +250,17 @@ NEXT
   aspect ratios are maintained when the page is resized. ([#172][]: @dchest)
 
 
-[#41]: https://github.com/yui/pure/issues/41
-[#143]: https://github.com/yui/pure/issues/143
-[#154]: https://github.com/yui/pure/issues/154
-[#160]: https://github.com/yui/pure/issues/160
-[#162]: https://github.com/yui/pure/issues/162
-[#166]: https://github.com/yui/pure/issues/166
-[#170]: https://github.com/yui/pure/issues/170
-[#171]: https://github.com/yui/pure/issues/171
-[#172]: https://github.com/yui/pure/issues/172
-[#185]: https://github.com/yui/pure/issues/185
-[#189]: https://github.com/yui/pure/issues/189
+[#41]: https://github.com/yahoo/pure/issues/41
+[#143]: https://github.com/yahoo/pure/issues/143
+[#154]: https://github.com/yahoo/pure/issues/154
+[#160]: https://github.com/yahoo/pure/issues/160
+[#162]: https://github.com/yahoo/pure/issues/162
+[#166]: https://github.com/yahoo/pure/issues/166
+[#170]: https://github.com/yahoo/pure/issues/170
+[#171]: https://github.com/yahoo/pure/issues/171
+[#172]: https://github.com/yahoo/pure/issues/172
+[#185]: https://github.com/yahoo/pure/issues/185
+[#189]: https://github.com/yahoo/pure/issues/189
 
 [Customize]: http://purecss.io/customize/
 [Grids-fonts]: http://purecss.io/grids/#using-grids-with-custom-fonts
@@ -209,16 +311,16 @@ NEXT
   where tables inside of grids would break the grid. ([#95][]: @AurelioDeRosa)
 
 
-[#89]: https://github.com/yui/pure/issues/89
-[#90]: https://github.com/yui/pure/issues/90
-[#94]: https://github.com/yui/pure/issues/94
-[#95]: https://github.com/yui/pure/issues/95
-[#96]: https://github.com/yui/pure/issues/96
-[#102]: https://github.com/yui/pure/issues/102
-[#109]: https://github.com/yui/pure/issues/109
-[#115]: https://github.com/yui/pure/issues/115
-[#127]: https://github.com/yui/pure/issues/127
-[#172]: https://github.com/yui/pure/pull/172
+[#89]: https://github.com/yahoo/pure/issues/89
+[#90]: https://github.com/yahoo/pure/issues/90
+[#94]: https://github.com/yahoo/pure/issues/94
+[#95]: https://github.com/yahoo/pure/issues/95
+[#96]: https://github.com/yahoo/pure/issues/96
+[#102]: https://github.com/yahoo/pure/issues/102
+[#109]: https://github.com/yahoo/pure/issues/109
+[#115]: https://github.com/yahoo/pure/issues/115
+[#127]: https://github.com/yahoo/pure/issues/127
+[#172]: https://github.com/yahoo/pure/pull/172
 
 
 0.2.0 (2013-06-11)
@@ -241,7 +343,7 @@ NEXT
     * Added `grunt watch` task which runs tests and build.
 
     * Added support to `pure-site` for serving `pure` locally during
-      development. ([#46][], [yui/pure-site#111][])
+      development. ([#46][], [yahoo/pure-site#111][])
 
 * Removed vendor prefixes for `box-shadow`, `text-shadow`, `border-radius`. All
   modern browsers support the non-prefixed versions of these properties.
@@ -283,18 +385,18 @@ NEXT
   background (`#dedede`) for accessibility. ([#22][])
 
 
-[#22]: https://github.com/yui/pure/issues/22
-[#23]: https://github.com/yui/pure/issues/23
-[#25]: https://github.com/yui/pure/issues/25
-[#32]: https://github.com/yui/pure/issues/32
-[#42]: https://github.com/yui/pure/issues/42
-[#44]: https://github.com/yui/pure/issues/44
-[#46]: https://github.com/yui/pure/issues/46
-[#49]: https://github.com/yui/pure/issues/49
-[#53]: https://github.com/yui/pure/issues/53
-[#54]: https://github.com/yui/pure/issues/54
+[#22]: https://github.com/yahoo/pure/issues/22
+[#23]: https://github.com/yahoo/pure/issues/23
+[#25]: https://github.com/yahoo/pure/issues/25
+[#32]: https://github.com/yahoo/pure/issues/32
+[#42]: https://github.com/yahoo/pure/issues/42
+[#44]: https://github.com/yahoo/pure/issues/44
+[#46]: https://github.com/yahoo/pure/issues/46
+[#49]: https://github.com/yahoo/pure/issues/49
+[#53]: https://github.com/yahoo/pure/issues/53
+[#54]: https://github.com/yahoo/pure/issues/54
 
-[yui/pure-site#111]: https://github.com/yui/pure-site/issues/111
+[yahoo/pure-site#111]: https://github.com/yahoo/pure-site/issues/111
 
 
 0.1.0 (2013-05-24)

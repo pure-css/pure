@@ -1,3 +1,11 @@
+/*csslint box-model:false*/
+/*
+Box-model set to false because we're setting a height on select elements, which
+also have border and padding. This is done because some browsers don't render
+the padding. We explicitly set the box-model for select elements to border-box,
+so we can ignore the csslint warning.
+*/
+
 .pure-form input[type="text"],
 .pure-form input[type="password"],
 .pure-form input[type="email"],
@@ -17,18 +25,36 @@
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
-    font-size: 0.8em;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
-    -webkit-transition: 0.3s linear border;
-    -moz-transition: 0.3s linear border;
-    -ms-transition: 0.3s linear border;
-    -o-transition: 0.3s linear border;
-    transition: 0.3s linear border;
+    vertical-align: middle;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.pure-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
 
 .pure-form input[type="text"]:focus,
 .pure-form input[type="password"]:focus,
@@ -47,14 +73,22 @@
 .pure-form select:focus,
 .pure-form textarea:focus {
     outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
+    border-color: #129FEA;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]):focus {
+    outline: 0;
     border-color: #129FEA;
 }
 
 .pure-form input[type="file"]:focus,
 .pure-form input[type="radio"]:focus,
 .pure-form input[type="checkbox"]:focus {
-    outline: thin dotted #333;
+    outline: thin solid #129FEA;
     outline: 1px auto #129FEA;
 }
 .pure-form .pure-checkbox,
@@ -62,6 +96,7 @@
     margin: 0.5em 0;
     display: block;
 }
+
 .pure-form input[type="text"][disabled],
 .pure-form input[type="password"][disabled],
 .pure-form input[type="email"][disabled],
@@ -82,10 +117,20 @@
     background-color: #eaeded;
     color: #cad2d3;
 }
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
 .pure-form input[readonly],
 .pure-form select[readonly],
 .pure-form textarea[readonly] {
-    background: #eee; /* menu hover bg color */
+    background-color: #eee; /* menu hover bg color */
     color: #777; /* menu text color */
     border-color: #ccc;
 }
@@ -94,11 +139,6 @@
 .pure-form textarea:focus:invalid,
 .pure-form select:focus:invalid {
     color: #b94a48;
-    border: 1px solid #ee5f5b;
-}
-.pure-form input:focus:invalid:focus,
-.pure-form textarea:focus:invalid:focus,
-.pure-form select:focus:invalid:focus {
     border-color: #e9322d;
 }
 .pure-form input[type="file"]:focus:invalid:focus,
@@ -107,6 +147,8 @@
     outline-color: #e9322d;
 }
 .pure-form select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25em;
     border: 1px solid #ccc;
     background-color: white;
 }
@@ -115,7 +157,6 @@
 }
 .pure-form label {
     margin: 0.5em 0 0.2em;
-    font-size: 90%;
 }
 .pure-form fieldset {
     margin: 0;
@@ -127,7 +168,6 @@
     width: 100%;
     padding: 0.3em 0;
     margin-bottom: 0.3em;
-    font-size: 125%;
     color: #333;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -146,6 +186,7 @@
 .pure-form-stacked input[type="search"],
 .pure-form-stacked input[type="tel"],
 .pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
 .pure-form-stacked select,
 .pure-form-stacked label,
 .pure-form-stacked textarea {
@@ -153,6 +194,14 @@
     margin: 0.25em 0;
 }
 
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
 .pure-form-aligned input,
 .pure-form-aligned textarea,
 .pure-form-aligned select,
@@ -180,7 +229,7 @@
     margin: 0 1em 0 0;
 }
 .pure-form-aligned .pure-controls {
-    margin: 1.5em 0 0 10em;
+    margin: 1.5em 0 0 11em;
 }
 
 /* Rounded Inputs */
@@ -194,24 +243,36 @@
 .pure-form .pure-group fieldset {
     margin-bottom: 10px;
 }
-.pure-form .pure-group input {
+.pure-form .pure-group input,
+.pure-form .pure-group textarea {
     display: block;
     padding: 10px;
-    margin: 0;
+    margin: 0 0 -1px;
     border-radius: 0;
     position: relative;
     top: -1px;
 }
-.pure-form .pure-group input:focus {
-    z-index: 2;
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
+    z-index: 3;
 }
-.pure-form .pure-group input:first-child {
+.pure-form .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child {
     top: 1px;
     border-radius: 4px 4px 0 0;
+    margin: 0;
 }
-.pure-form .pure-group input:last-child {
+.pure-form .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
+.pure-form .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child {
     top: -2px;
     border-radius: 0 0 4px 4px;
+    margin: 0;
 }
 .pure-form .pure-group button {
     margin: 0.35em 0;
@@ -241,12 +302,12 @@
     padding-left: 0.3em;
     color: #666;
     vertical-align: middle;
-    font-size: 90%;
+    font-size: 0.875em;
 }
 
 /* Block help for forms */
 .pure-form-message {
     display: block;
     color: #666;
-    font-size: 90%;
+    font-size: 0.875em;
 }
