@@ -54,13 +54,10 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Responsive by default, with a non-responsive option.
 
-* Easy one-click customization with the [Skin Builder][].
-
 * Extremely small file size: **4.5KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
-[Skin Builder]: http://yui.github.io/skinbuilder/?mode=pure
 
 
 Get Started
@@ -73,7 +70,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 ```
 
 You can also install Pure using [Bower][], using the following command:
