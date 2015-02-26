@@ -40,7 +40,6 @@
     
     /* Prevents distributing space between rows */
     -ms-align-content: flex-start;
-	-webkit-align-content: flex-start;
 	align-content: flex-start;
 }
 

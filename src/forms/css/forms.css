@@ -28,8 +28,6 @@ so we can ignore the csslint warning.
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
     vertical-align: middle;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -43,8 +41,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
