@@ -28,8 +28,8 @@
   "bugs": {
     "url": "https://github.com/yahoo/pure/issues"
   },
-  "homepage": "https://github.com/yahoo/pure",
-  "main": "README.md",
+  "homepage": "http://purecss.io",
+  "main": "build/pure-min.css",
   "keywords": [
     "pure",
     "css",
