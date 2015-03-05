@@ -23,6 +23,11 @@ Note: You can [customize which Pure modules you need][customize].
 $ bower install --save pure
 ```
 
+**Install with NPM:**
+
+```shell
+$ npm install purecss
+```
 
 [Pure]: http://purecss.io/
 [Bower]: http://bower.io/
@@ -64,7 +69,7 @@ Get Started
 -----------
 
 To get started using Pure, go to the [Pure CSS website][Pure]. The website has
-extensive documentation and examples necessary to get you started using Pure.
+extensive documentation and examples to help you start using Pure.
 
 You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
@@ -79,6 +84,11 @@ You can also install Pure using [Bower][], using the following command:
 $ bower install --save pure
 ```
 
+Or you can install Pure using NPM:
+
+```shell
+$ npm install purecss
+```
 
 Build From Source
 -----------------
