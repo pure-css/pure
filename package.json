@@ -1,11 +1,15 @@
 {
-  "name": "pure",
+  "name": "purecss",
   "version": "0.6.1-pre",
-  "private": true,
-  "repository": "git://github.com/yahoo/pure.git",
-  "scripts": {
-    "test": "grunt test"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yahoo/pure.git"
   },
+  "scripts": {
+    "test": "grunt test",
+    "prepublish": "grunt release"
+  },
+  "files": "build/",
   "devDependencies": {
     "bower": "^1.3.7",
     "grunt": "^0.4.5",
@@ -20,5 +24,24 @@
     "grunt-css-selectors": "^1.1.0",
     "grunt-pure-grids": "^1.0.0",
     "grunt-stripmq": "0.0.6"
-  }
+  },
+  "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
+  "bugs": {
+    "url": "https://github.com/yahoo/pure/issues"
+  },
+  "homepage": "http://purecss.io",
+  "main": "build/pure-min.css",
+  "keywords": [
+    "pure",
+    "css",
+    "purecss",
+    "yahoo"
+  ],
+  "authors": [
+    "ericf <edf@ericf.me>",
+    "tilomitra <tilomitra@gmail.com>",
+    "msweeney <matt.sweeney@yahoo.com>",
+    "jamesalley <manalagi001@yahoo.com>"
+  ],
+  "license": "BSD"
 }
