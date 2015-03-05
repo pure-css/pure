@@ -9,6 +9,7 @@
     "test": "grunt test",
     "prepublish": "grunt release"
   },
+  "files": "build/",
   "devDependencies": {
     "bower": "^1.3.7",
     "grunt": "^0.4.5",
