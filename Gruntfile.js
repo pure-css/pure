@@ -190,7 +190,7 @@ grunt.initConfig({
             dest: 'build/grids-units.css',
 
             options: {
-                units: [5, 24]
+                units: [5, 7, 24]
             }
         },
 
