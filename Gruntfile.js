@@ -4,6 +4,7 @@ module.exports = function (grunt) {
 
 grunt.initConfig({
 
+    nick : 'pure',
     pkg  : grunt.file.readJSON('package.json'),
     bower: grunt.file.readJSON('bower.json'),
 
@@ -82,7 +83,7 @@ grunt.initConfig({
 
                 // Rollups
 
-                {'build/<%= pkg.name %>.css': [
+                {'build/<%= nick %>.css': [
                     'build/base.css',
                     'build/grids.css',
                     'build/buttons.css',
@@ -91,7 +92,7 @@ grunt.initConfig({
                     'build/tables.css'
                 ]},
 
-                {'build/<%= pkg.name %>-nr.css': [
+                {'build/<%= nick %>-nr.css': [
                     'build/base.css',
                     'build/grids.css',
                     'build/buttons.css',
@@ -137,13 +138,13 @@ grunt.initConfig({
     compress: {
         release: {
             options: {
-                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.tar.gz'
+                archive: 'release/<%= pkg.version %>/<%= nick %>-<%= pkg.version %>.tar.gz'
             },
 
             expand : true,
             flatten: true,
             src    : 'build/*',
-            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
+            dest   : '<%= nick %>/<%= pkg.version %>/'
         }
     },
 
@@ -162,7 +163,7 @@ grunt.initConfig({
 
             expand: true,
             cwd   : 'build/',
-            src   : ['base*.css', '<%= pkg.name %>*.css']
+            src   : ['base*.css', '<%= nick %>*.css']
         },
 
         yahoo: {

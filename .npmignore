@@ -1,0 +1,10 @@
+.*
+artifacts/
+bower_components/
+bower.json
+CONTRIBUTING.md
+Gruntfile.js
+node_modules/
+release/
+src/
+tasks/
