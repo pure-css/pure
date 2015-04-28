@@ -281,6 +281,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form .pure-input-1 {
     width: 100%;
 }
+.pure-form .pure-input-3-4 {
+    width: 75%;
+}
 .pure-form .pure-input-2-3 {
     width: 66%;
 }
