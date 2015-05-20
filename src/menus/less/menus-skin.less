@@ -1,0 +1,35 @@
+/* misc default styling */
+.pure-menu-separator {
+  background-color: @menu-color-separator;
+  height:1px;
+  margin:.3em 0;
+}
+.pure-menu-horizontal .pure-menu-separator {
+  width:1px;
+  height:1.3em;
+  margin:0 .3em;
+}
+.pure-menu-heading {
+  text-transform:uppercase;
+  color:@menu-color-heading;
+  padding:.5em 1em;
+}
+.pure-menu-link {
+  color: @menu-color-link;
+  padding:.5em 1em;
+}
+.pure-menu-children {
+  background-color:@menu-color-bg-child;
+}
+.pure-menu-disabled {
+  padding:.5em 1em;
+  opacity:.5;
+}
+.pure-menu-active > .pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
+  background-color:@menu-color-bg-hover;
+}
+.pure-menu-selected {
+  .pure-menu-link, .pure-menu-link:visited {
+    color:#000000;
+  }
+}

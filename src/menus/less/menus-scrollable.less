@@ -1,0 +1,23 @@
+/* scrollable menus */
+.pure-menu-scrollable {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  .pure-menu-list {
+    display: block;
+  }
+  &.pure-menu-horizontal .pure-menu-list {
+    display: inline-block;
+  }
+  &.pure-menu-horizontal {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    /* a little extra padding for this style to allow for scrollbars */
+    padding: .5em 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
