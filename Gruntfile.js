@@ -104,6 +104,25 @@ grunt.initConfig({
         }
     },
 
+    // -- Autoprefixer Config --------------------------------------------------------
+
+    autoprefixer: {
+        options: {
+            browsers: ['last 2 versions', 'ie >= 8', 'iOS >= 6', 'Android >= 4']
+        },
+      
+        dist: {
+            files: {
+                'src/base/css/*.css': '*.css',
+                'src/buttons/css/*.css': '*.css',
+                'src/forms/css/*.css': '*.css',
+                'src/grids/css/*.css': '*.css',
+                'src/menus/css/*.css': '*.css',
+                'src/tables/css/*.css': '*.css'
+            }
+        },
+    },
+  
     // -- CSSLint Config -------------------------------------------------------
 
     csslint: {
@@ -250,6 +269,7 @@ grunt.initConfig({
 // -- Main Tasks ---------------------------------------------------------------
 
 // npm tasks.
+grunt.loadNpmTasks('grunt-autoprefixer');
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-concat');
@@ -275,6 +295,7 @@ grunt.registerTask('build', [
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
+    'autoprefixer',
     'cssmin',
     'license'
 ]);
