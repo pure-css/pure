@@ -9,6 +9,17 @@
  */
 
 /**
+ * Adds box-sizing: border-box; as a wildcard.
+ */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
  * Always hide an element when it has the `hidden` HTML attribute.
  */
 
