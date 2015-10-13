@@ -9,14 +9,21 @@
  */
 
 /**
- * Adds box-sizing: border-box; as a wildcard.
+     * Adds box-sizing: border-box; to html.
+     * Then applies inherit value to the universal selector,
+     * allowing for module-specific box-sizing overrides.
  */
-*,
-*:before,
-*:after {
+html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 /**
