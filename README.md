@@ -109,7 +109,7 @@ Now, all Pure CSS files should be built into the `pure/build/` directory. All
 files that are in this build directory are also available on the CDN. The naming
 conventions of the files in the `build/` directory follow these rules:
 
-* `[module]-core.css`: The minimal set of styles, ususally structural, that
+* `[module]-core.css`: The minimal set of styles, usually structural, that
   provide the base on which the rest of the module's styles build.
 
 * `[module]-nr.css`: Rollup of `[module]-core.css` + `[module].css` +
