@@ -67,9 +67,9 @@ $ grunt watch
 
 Pure is tested and works in:
 
-* IE 7+
+* IE 8+
 * Latest Stable: Firefox, Chrome, Safari
-* iOS 6.x
+* iOS 6-8
 * Android 4.x
 
 Before sending pull requests, please ensure that you open the test HTML files
