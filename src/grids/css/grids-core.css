@@ -37,6 +37,8 @@
     /* IE10 uses display: flexbox */
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: flex;
     
     /* Prevents distributing space between rows */
     -ms-align-content: flex-start;
