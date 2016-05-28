@@ -1,3 +1,5 @@
+/*csslint known-properties:false*/
+
 /**
  * Responsive text alignment for different screen sizes.
  *
@@ -7,6 +9,10 @@
 
 .pure-a-initial {
     text-align: initial;
+}
+
+.pure-a-inherit {
+    text-align: inherit;
 }
 
 .pure-a-justify {
@@ -26,30 +32,38 @@
 }
 
 @media screen and (min-width: 35.5em) {
-  .pure-a-sm-initial {
-      text-align: initial;
-  }
+    .pure-a-sm-initial {
+        text-align: initial;
+    }
 
-  .pure-a-sm-justify {
-      text-align: justify;
-  }
+    .pure-a-sm-inherit {
+        text-align: inherit;
+    }
 
-  .pure-a-sm-center {
-      text-align: center;
-  }
+    .pure-a-sm-justify {
+        text-align: justify;
+    }
 
-  .pure-a-sm-start {
-      text-align: left;
-  }
+    .pure-a-sm-center {
+        text-align: center;
+    }
 
-  .pure-a-sm-end {
-      text-align: right;
-  }
+    .pure-a-sm-start {
+        text-align: left;
+    }
+
+    .pure-a-sm-end {
+        text-align: right;
+    }
 }
 
 @media screen and (min-width: 48em) {
     .pure-a-md-initial {
         text-align: initial;
+    }
+
+    .pure-a-md-inherit {
+        text-align: inherit;
     }
 
     .pure-a-md-justify {
@@ -74,6 +88,10 @@
         text-align: initial;
     }
 
+    .pure-a-lg-inherit {
+        text-align: inherit;
+    }
+
     .pure-a-lg-justify {
         text-align: justify;
     }
@@ -94,6 +112,10 @@
 @media screen and (min-width: 80em) {
     .pure-a-xl-initial {
         text-align: initial;
+    }
+
+    .pure-a-xl-inherit {
+        text-align: inherit;
     }
 
     .pure-a-xl-justify {
