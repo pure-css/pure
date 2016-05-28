@@ -51,7 +51,8 @@ grunt.initConfig({
             files: [
                 {'build/base.css': [
                     'bower_components/normalize-css/normalize.css',
-                    'build/base.css'
+                    'build/base.css',
+                    'build/align.css'
                 ]},
 
                 {'build/buttons.css': [

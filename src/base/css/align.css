@@ -1,0 +1,114 @@
+/**
+ * Responsive text alignment for different screen sizes.
+ *
+ * @author Noor Dawod, noor@fineswap.com
+ * @since May 28th, 2016
+ */
+
+.pure-a-initial {
+    text-align: initial;
+}
+
+.pure-a-justify {
+    text-align: justify;
+}
+
+.pure-a-center {
+    text-align: center;
+}
+
+.pure-a-left {
+    text-align: left;
+}
+
+.pure-a-right {
+    text-align: right;
+}
+
+@media screen and (min-width: 35.5em) {
+  .pure-a-sm-initial {
+      text-align: initial;
+  }
+
+  .pure-a-sm-justify {
+      text-align: justify;
+  }
+
+  .pure-a-sm-center {
+      text-align: center;
+  }
+
+  .pure-a-sm-start {
+      text-align: left;
+  }
+
+  .pure-a-sm-end {
+      text-align: right;
+  }
+}
+
+@media screen and (min-width: 48em) {
+    .pure-a-md-initial {
+        text-align: initial;
+    }
+
+    .pure-a-md-justify {
+        text-align: justify;
+    }
+
+    .pure-a-md-center {
+        text-align: center;
+    }
+
+    .pure-a-md-start {
+        text-align: left;
+    }
+
+    .pure-a-md-end {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .pure-a-lg-initial {
+        text-align: initial;
+    }
+
+    .pure-a-lg-justify {
+        text-align: justify;
+    }
+
+    .pure-a-lg-center {
+        text-align: center;
+    }
+
+    .pure-a-lg-start {
+        text-align: left;
+    }
+
+    .pure-a-lg-end {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .pure-a-xl-initial {
+        text-align: initial;
+    }
+
+    .pure-a-xl-justify {
+        text-align: justify;
+    }
+
+    .pure-a-xl-center {
+        text-align: center;
+    }
+
+    .pure-a-xl-start {
+        text-align: left;
+    }
+
+    .pure-a-xl-end {
+        text-align: right;
+    }
+}
