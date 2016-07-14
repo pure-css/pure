@@ -205,8 +205,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form-aligned .pure-help-inline,
 .pure-form-message-inline {
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
     vertical-align: middle;
 }
 .pure-form-aligned textarea {

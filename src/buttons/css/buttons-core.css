@@ -1,7 +1,6 @@
 .pure-button {
     /* Structure */
     display: inline-block;
-    zoom: 1;
     line-height: normal;
     white-space: nowrap;
     vertical-align: middle;
