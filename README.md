@@ -122,7 +122,7 @@ conventions of the files in the `build/` directory follow these rules:
 * `*-min.css`: A minified file version of the files of the same name.
 
 * `pure.css`: A rollup of all `[module].css` files in the `build/` dir. This is
-  a responsive roll-up of everything, non-minified.  Note: does not contain response grids with @media queries.
+  a responsive roll-up of everything, non-minified.  Note: does not contain responsive grids with @media queries.
 
 * `pure-min.css`: Minified version of `pure.css` that should be used in
   production.
