@@ -42,6 +42,7 @@
     opacity: 0.40;
     cursor: not-allowed;
     box-shadow: none;
+    pointer-events: none;
 }
 
 .pure-button-hidden {

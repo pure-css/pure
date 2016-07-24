@@ -1,4 +1,14 @@
 /* HORIZONTAL MENU */
+.pure-menu.pure-menu-horizontal > .pure-menu-heading {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+.pure-menu.pure-menu-horizontal > ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .pure-menu-horizontal {
     width: 100%;
     white-space: nowrap;
@@ -15,3 +25,5 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+

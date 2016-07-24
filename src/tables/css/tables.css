@@ -30,7 +30,7 @@ there's a rowspan on the first cell. Case added to the tests. issue#432 */
     border-left-width: 0;
 }
 
-.pure-table thead {
+.pure-table thead, .pure-table tfoot {
     background-color: #e0e0e0;
     color: #000;
     text-align: left;

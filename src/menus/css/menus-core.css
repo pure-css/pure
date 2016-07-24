@@ -33,3 +33,48 @@
     text-decoration: none;
     white-space: nowrap;
 }
+
+.pure-menu > ul { position: relative; }
+
+
+.pure-menu-open > ul:focus {
+    outline: 0;
+}
+
+.pure-menu li { position: relative; }
+
+.pure-menu a,
+.pure-menu .pure-menu-heading {
+    display: block;
+    color: inherit;
+    line-height: 1.5em;
+    padding: 5px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.pure-menu li a { padding: 5px 20px; }
+
+.pure-menu-has-children > .pure-menu-label:after {
+    content: '\25B8';
+    float: right;
+    margin-right: -20px;
+    margin-top: -1px;
+}
+
+.pure-menu-has-children > .pure-menu-label {
+    padding-right: 30px;
+}
+
+.pure-menu-separator {
+    background-color: #dfdfdf;
+    display: block;
+    height: 1px;
+    font-size: 0;
+    margin: 7px 2px;
+    overflow: hidden;
+}
+
+.pure-menu-hidden {
+    display: none;
+}

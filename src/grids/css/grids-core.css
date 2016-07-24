@@ -30,6 +30,14 @@
     align-content: flex-start;
 }
 
+/* IE10 display: -ms-flexbox (and display: flex in IE 11) does not work inside a table; fall back to block and rely on font hack */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    table .pure-g {
+        display: block;
+    }
+}
+
+
 /* Opera as of 12 on Windows needs word-spacing.
    The ".opera-only" selector is used to prevent actual prefocus styling
    and is not required in markup.
@@ -43,7 +51,7 @@
     display: inline-block;
     letter-spacing: normal;
     word-spacing: normal;
-    vertical-align: top;
+    vertical-align: bottom;
     text-rendering: auto;
 }
 
