@@ -65,3 +65,31 @@ a.pure-button-selected {
     background-color: rgb(0, 120, 231);
     color: #fff;
 }
+
+.pure-button-expanded {
+    width: 100%;
+}
+
+@media screen and (max-width: 35.5em) {
+    .pure-button-sm-expanded {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .pure-button-md-expanded {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 64em) {
+    .pure-button-lg-expanded {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 80em) {
+    .pure-button-xl-expanded {
+        width: 100%;
+    }
+}
