@@ -16,8 +16,10 @@
 .pure-button-hover,
 .pure-button:hover,
 .pure-button:focus {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
-    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+  filter: alpha(opacity=90);
+  -khtml-opacity: 0.90;
+  -moz-opacity: 0.90;
+   opacity: 0.90;;
 }
 .pure-button:focus {
     outline: 0;
@@ -35,7 +37,6 @@
 .pure-button-disabled:active {
     border: none;
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
     filter: alpha(opacity=40);
     -khtml-opacity: 0.40;
     -moz-opacity: 0.40;
