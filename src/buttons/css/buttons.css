@@ -27,7 +27,7 @@
 .pure-button-active,
 .pure-button:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
-    border-color: #000\9;
+    border-color: #000;
 }
 
 .pure-button[disabled],

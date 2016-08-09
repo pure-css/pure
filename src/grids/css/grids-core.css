@@ -2,7 +2,6 @@
 
 .pure-g {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 
     /*
     Sets the font stack to fonts known to work properly with the above letter
@@ -52,7 +51,6 @@
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: bottom;
-    text-rendering: auto;
 }
 
 /*
