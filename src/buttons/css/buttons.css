@@ -19,7 +19,7 @@
   filter: alpha(opacity=90);
   -khtml-opacity: 0.90;
   -moz-opacity: 0.90;
-   opacity: 0.90;;
+   opacity: 0.90;
 }
 .pure-button:focus {
     outline: 0;
