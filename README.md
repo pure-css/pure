@@ -75,7 +75,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
 ```
 
 You can also install Pure using [Bower][], using the following command:
