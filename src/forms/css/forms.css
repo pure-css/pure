@@ -115,6 +115,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form textarea[disabled] {
     cursor: not-allowed;
     background-color: #eaeded;
+    -webkit-opacity: 1; /* Mobile Safari */
     color: #cad2d3;
 }
 
