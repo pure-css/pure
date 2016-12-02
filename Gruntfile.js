@@ -104,6 +104,26 @@ grunt.initConfig({
         }
     },
 
+    // -- PostCSS Config --------------------------------------------------------
+
+    postcss: {
+        options: {
+            processors: [
+                require('autoprefixer')({
+                    browsers: [
+                        'last 2 versions',
+                        'ie >= 8',
+                        'iOS >= 6',
+                        'Android >= 4'
+                    ]
+                })
+            ]
+        },
+        dist: {
+            src: 'build/*.css'
+        }
+    },
+
     // -- CSSLint Config -------------------------------------------------------
 
     csslint: {
@@ -258,6 +278,7 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
+grunt.loadNpmTasks('grunt-postcss');
 grunt.loadNpmTasks('grunt-pure-grids');
 grunt.loadNpmTasks('grunt-stripmq');
 
@@ -275,6 +296,7 @@ grunt.registerTask('build', [
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
+    'postcss',
     'cssmin',
     'license'
 ]);

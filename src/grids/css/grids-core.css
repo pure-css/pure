@@ -2,8 +2,6 @@
 
 .pure-g {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
     text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 
     /*
@@ -26,21 +24,12 @@
 
     /*
     Use flexbox when possible to avoid `letter-spacing` side-effects.
-
-    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-    `-moz-` prefix version is omitted.
     */
 
-    display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 
-    /* IE10 uses display: flexbox */
-    display: -ms-flexbox;
-    -ms-flex-flow: row wrap;
-    
     /* Prevents distributing space between rows */
-    -ms-align-content: flex-start;
-	-webkit-align-content: flex-start;
 	align-content: flex-start;
 }
 
@@ -55,8 +44,6 @@
 
 .pure-u {
     display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
