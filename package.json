@@ -1,9 +1,9 @@
 {
-  "name": "purecss-conversionready",
-  "version": "0.6.1-pre+conversionready",
+  "name": "purecss",
+  "version": "0.6.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lkraav/pure.git"
+    "url": "git://github.com/yahoo/pure.git"
   },
   "scripts": {
     "test": "grunt test",
@@ -25,11 +25,11 @@
     "grunt-postcss": "^0.7.1",
     "grunt-pure-grids": "^1.0.0",
     "grunt-stripmq": "0.0.6",
-    "normalize.css": "^3.0"
+    "normalize.css": "^4.0"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {
-    "url": "https://github.com/lkraav/pure/issues"
+    "url": "https://github.com/yahoo/pure/issues"
   },
   "homepage": "http://purecss.io",
   "main": "build/pure-min.css",
@@ -44,7 +44,8 @@
     "tilomitra <tilomitra@gmail.com>",
     "msweeney <matt.sweeney@yahoo.com>",
     "jamesalley <manalagi001@yahoo.com>",
-    "lkraav <leho@conversionready.com>"
+    "lkraav <leho@conversionready.com>",
+    "absalomedia <media@absalom.biz>",
   ],
   "license": "BSD"
 }
