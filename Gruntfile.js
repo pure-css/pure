@@ -6,19 +6,6 @@ grunt.initConfig({
 
     nick : 'pure',
     pkg  : grunt.file.readJSON('package.json'),
-    bower: grunt.file.readJSON('bower.json'),
-
-    // -- bower.json Config ---------------------------------------------------------
-
-    bower_json: {
-        release: {
-            values: {
-                main: 'pure.css'
-            },
-
-            dest: 'build/'
-        }
-    },
 
     // -- Clean Config ---------------------------------------------------------
 
@@ -50,7 +37,7 @@ grunt.initConfig({
         build: {
             files: [
                 {'build/base.css': [
-                    'bower_components/normalize-css/normalize.css',
+                    'node_modules/normalize.css/normalize.css',
                     'build/base.css'
                 ]},
 
@@ -101,6 +88,19 @@ grunt.initConfig({
                     'build/tables.css'
                 ]}
             ]
+        }
+    },
+
+    // -- PostCSS Config --------------------------------------------------------
+
+    postcss: {
+        options: {
+            processors: [
+                require('autoprefixer')({browsers: ['last 2 versions', 'ie >= 8', 'iOS >= 6', 'Android >= 4']})
+            ]
+        },
+        dist: {
+            src: 'build/*.css'
         }
     },
 
@@ -155,7 +155,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'normalize.css v<%= bower.devDependencies["normalize-css"] %> | MIT License | git.io/normalize',
+                    'normalize.css | MIT License | git.io/normalize',
                     'Copyright (c) Nicolas Gallagher and Jonathan Neal',
                     '*/\n'
                 ].join('\n')
@@ -258,14 +258,14 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-css-selectors');
+grunt.loadNpmTasks('grunt-postcss');
 grunt.loadNpmTasks('grunt-pure-grids');
 grunt.loadNpmTasks('grunt-stripmq');
 
 // Local tasks.
 grunt.loadTasks('tasks/');
 
-grunt.registerTask('default', ['import', 'test', 'build']);
-grunt.registerTask('import', ['bower_install']);
+grunt.registerTask('default', ['test', 'build']);
 grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
@@ -275,6 +275,7 @@ grunt.registerTask('build', [
     'concat:build',
     'clean:build_res',
     'css_selectors:base',
+    'postcss',
     'cssmin',
     'license'
 ]);
@@ -287,7 +288,6 @@ grunt.registerTask('release', [
     'default',
     'clean:release',
     'copy:release',
-    'bower_json:release',
     'compress:release'
 ]);
 
