@@ -37,11 +37,17 @@
     /* IE10 uses display: flexbox */
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
-    
+
+    /* For modern browsers that understand "flex" */
+    display: flex;
+    flex-flow: row wrap;
+
     /* Prevents distributing space between rows */
     -ms-align-content: flex-start;
-	-webkit-align-content: flex-start;
-	align-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+
+
 }
 
 /* IE10 display: -ms-flexbox (and display: flex in IE 11) does not work inside a table; fall back to block and rely on font hack */
