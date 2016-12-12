@@ -1,6 +1,6 @@
 {
   "name": "purecss",
-  "version": "0.6.1-pre",
+  "version": "0.6.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/yahoo/pure.git"

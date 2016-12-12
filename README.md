@@ -12,7 +12,7 @@ A set of small, responsive CSS modules that you can use in every web project.
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
 ```
 
 Note: You can [customize which Pure modules you need][customize].
@@ -75,7 +75,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
 ```
 
 You can also install Pure using [Bower][], using the following command:
@@ -133,7 +133,7 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: Minified version of `pure-nr.css` that should be used in
   production.
 
-* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which 
+* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which
   includes @media queries.
 
 * `grids-responsive-min.css`: Minified version of `grids-responsive.css` that

@@ -1,6 +1,15 @@
 Pure Change History
 ===================
 
+0.6.1 (2016-10-12)
+------------------
+
+* Migrate to PostCSS for browser prefixes [#617]
+* Remove duplicate Firefox inner focus border [#457]
+* Fix grid inside table in IE 10/11 [#504]
+* Fix CSSLint issues [#609]
+* Upgraded grunt dependencies to 1.x [#609]
+
 0.6.0 (2015-02-07)
 ------------------
 
