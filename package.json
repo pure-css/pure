@@ -23,7 +23,7 @@
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-css-selectors": "^1.1.0",
-    "grunt-postcss": "^0.7.1",
+    "grunt-postcss": "^0.8.0",
     "grunt-pure-grids": "^1.0.0",
     "grunt-stripmq": "0.0.6"
   },
