@@ -6,7 +6,8 @@
     "url": "git://github.com/yahoo/pure.git"
   },
   "scripts": {
-    "test": "grunt test",
+    "pretest": "grunt build",
+    "test": "grunt test && tap test/*.js",
     "prepublish": "grunt release"
   },
   "files": "build/",
@@ -25,14 +26,16 @@
     "grunt-css-selectors": "^1.1.0",
     "grunt-postcss": "^0.8.0",
     "grunt-pure-grids": "^1.0.0",
-    "grunt-stripmq": "0.0.6"
+    "grunt-stripmq": "0.0.6",
+    "tap": "^8.0.1"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {
     "url": "https://github.com/yahoo/pure/issues"
   },
   "homepage": "http://purecss.io",
-  "main": "build/pure-min.css",
+  "main": "index.js",
+  "browser": "build/pure-min.css",
   "keywords": [
     "pure",
     "css",
