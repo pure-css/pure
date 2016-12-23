@@ -1,6 +1,7 @@
 /* misc default styling */
 
-.pure-menu-separator {
+.pure-menu-separator,
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator {
     background-color: #ccc;
     height: 1px;
     margin: .3em 0;
@@ -10,6 +11,12 @@
     width: 1px;
     height: 1.3em;
     margin: 0 .3em ;
+}
+
+/* Need to reset the separator since submenu is vertical */
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator {
+    display: block;
+    width: auto;
 }
 
 .pure-menu-heading {
