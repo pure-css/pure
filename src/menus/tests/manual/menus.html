@@ -10,6 +10,7 @@
     <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
     <style>
         h1 {
+            margin-top: 2em;
             font-size: 15px;
             font-weight: normal;
         }
@@ -194,6 +195,7 @@
                         <a href="#" class="pure-menu-link">More Stuff</a>
                         <ul class="pure-menu-children">
                             <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Foo</a></li>
+                            <li class="pure-menu-separator"></li>
                             <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Bar</a></li>
                             <li class="pure-menu-item"><a class="pure-menu-link" href="/react">Baz</a></li>
                         </ul>
@@ -205,6 +207,30 @@
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
         </ul>
     </div>
+
+    <h1>div.pure-menu.pure-menu-horizontal with nested dropdown and separator</h1>
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Wang</a></li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" class="pure-menu-link">Yahoo</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Foo</a></li>
+                    <li class="pure-menu-separator"></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Bar</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/react">Baz</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
 
     <h1>div.pure-menu.pure-menu-horizontal.pure-menu-scrollable</h1>
     <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
@@ -262,7 +288,7 @@
             <li class="pure-menu-item"><a href="#" class="link-custom pure-menu-link">Twitter</a></li>
         </ul>
     </div>
-    <script src="http://10.73.144.35:5000/js/menus.js"></script>
+    <!-- script src="http://10.73.144.35:5000/js/menus.js"></script -->
 
 </body>
 </html>
