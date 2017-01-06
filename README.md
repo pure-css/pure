@@ -13,7 +13,7 @@ A set of small, responsive CSS modules that you can use in every web project.
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
 ```
 
 Note: You can [customize which Pure modules you need][customize].
@@ -76,7 +76,7 @@ You can include the Pure CSS file in your project by fetching it from Yahoo's
 CDN:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
 ```
 
 You can also install Pure using [Bower][], using the following command:
