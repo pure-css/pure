@@ -1,0 +1,38 @@
+{
+  "name": "yahoo/purecss",
+  "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
+  "keywords": [
+    "css",
+    "mobile-first",
+    "pure",
+    "purecss",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "yahoo"
+  ],
+  "homepage": "http://purecss.io/",
+  "authors": [
+    {
+      "name": "ericf",
+      "email": "edf@ericf.me"
+    },
+    {
+      "name": "tilomitra",
+      "email": "tilomitra@gmail.com"
+    },
+    {
+      "name": "msweeney",
+      "email": "matt.sweeney@yahoo.com"
+    },
+    {
+      "name": "jamesalley",
+      "email": "manalagi001@yahoo.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/yahoo/pure/issues"
+  },
+  "license": "BSD"
+}
