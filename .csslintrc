@@ -4,5 +4,7 @@
     "display-property-grouping": false,
     "order-alphabetical"       : false,
     "star-property-hack"       : false,
-    "unqualified-attributes"   : false
+    "unqualified-attributes"   : false,
+    "adjoining-classes"        : false,
+    "regex-selectors"          : false
 }
