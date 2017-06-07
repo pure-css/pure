@@ -310,3 +310,40 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     color: #666;
     font-size: 0.875em;
 }
+
+/*Message shows when there is anything goes*/
+/*NOTE: pure-wise will inform you to know about on your process*/
+.pure-wise {
+    padding: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.pure-wise strong {
+    color: inherit;
+    font-weight: bold;
+}
+.pure-wise p {
+    color: inherit;
+    margin: 0;
+}
+.pure-wise-success {
+    color: #158c31;
+    background-color: #f0fdf3;
+    border-color: #adf3be;
+}
+.pure-wise-info {
+    color: #186d87;
+    background-color: #eff9fc;
+    border-color: #aee1f0;
+}
+.pure-wise-warn {
+    color: #d67013;
+    background-color: #fef9f4;
+    border-color: #f8d4b2;
+}
+.pure-wise-error {
+    color: #c63636;
+    background-color: #fdf8f8;
+    border-color: #f0c8c8;
+}
