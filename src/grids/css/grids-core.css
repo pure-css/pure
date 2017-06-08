@@ -39,6 +39,16 @@
 	}
 }
 
+/*  Firefox as of 28 supports Flexbox (including flex-wrap) unprefixed.
+    Use unprefixed flexbox when possible with inline-blocks/prefixed flexbox as a fallback.
+*/
+@supports(flex-flow: row wrap)  {
+   .pure-g {
+       display: flex;
+       flex-flow: row wrap;
+   }
+}
+
 /* Opera as of 12 on Windows needs word-spacing.
    The ".opera-only" selector is used to prevent actual prefocus styling
    and is not required in markup.
