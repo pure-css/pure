@@ -16,9 +16,6 @@
 .pure-button-hover,
 .pure-button:hover,
 .pure-button:focus {
-    /* csslint ignore:start */
-    filter: alpha(opacity=90);
-    /* csslint ignore:end */
     background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
 }
 .pure-button:focus {
