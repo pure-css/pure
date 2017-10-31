@@ -36,6 +36,7 @@
   "homepage": "http://purecss.io",
   "main": "index.js",
   "browser": "build/pure-min.css",
+  "style": "build/pure.css",
   "keywords": [
     "pure",
     "css",
