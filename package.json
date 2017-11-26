@@ -27,7 +27,7 @@
     "grunt-postcss": "^0.9.0",
     "grunt-pure-grids": "^1.0.0",
     "grunt-stripmq": "0.0.6",
-    "tap": "^10.7.2"
+    "tap": "^11.0.0"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {
