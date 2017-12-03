@@ -151,7 +151,15 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form select[multiple] {
     height: auto;
 }
+.pure-form input[type="radio"],
+.pure-form input[type="checkbox"] {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
 .pure-form label {
+    position: relative;
+    top: 1px;
     margin: 0.5em 0 0.2em;
 }
 .pure-form fieldset {
