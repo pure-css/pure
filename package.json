@@ -27,6 +27,10 @@
     "grunt-postcss": "^0.9.0",
     "grunt-pure-grids": "^1.0.0",
     "grunt-stripmq": "0.0.6",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.0",
+    "rework": "^1.0.1",
+    "run-sequence": "^2.2.0",
     "tap": "^11.0.0"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
@@ -49,5 +53,6 @@
     "msweeney <matt.sweeney@yahoo.com>",
     "jamesalley <manalagi001@yahoo.com>"
   ],
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {}
 }
