@@ -6,9 +6,9 @@ Pure
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
-[![Build Status](http://img.shields.io/travis/yahoo/pure.svg?style=flat)][Build Status]
-[![Dependency Status](https://david-dm.org/yahoo/pure/dev-status.svg)](https://david-dm.org/yahoo/pure?type=dev)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yahoo/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](http://img.shields.io/travis/pure-css/pure.svg?style=flat)][Build Status]
+[![Dependency Status](https://david-dm.org/pure-css/pure/dev-status.svg)](https://david-dm.org/pure-css/pure?type=dev)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pure-css/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 **Use From the CDN:**
 
@@ -32,7 +32,7 @@ $ npm install purecss
 
 [Pure]: http://purecss.io/
 [Bower]: http://bower.io/
-[Build Status]: https://travis-ci.org/yahoo/pure
+[Build Status]: https://travis-ci.org/pure-css/pure
 [customize]: http://purecss.io/customize/
 
 
@@ -98,7 +98,7 @@ Optionally, you can build Pure from its source on Github. To do this, you'll
 need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
-$ git clone git@github.com:yahoo/pure.git
+$ git clone git@github.com:pure-css/pure.git
 $ cd pure
 $ npm install
 $ grunt
@@ -163,7 +163,7 @@ requests for the docs and website over at the [`pure-site`][pure-site]
 repository.
 
 
-[pure-site]: https://github.com/yahoo/pure-site
+[pure-site]: https://github.com/pure-css/pure-site
 
 
 Contributing
@@ -172,7 +172,7 @@ Contributing
 See the [CONTRIBUTING file][] for information on how to contribute to Pure.
 
 
-[CONTRIBUTING file]: https://github.com/yahoo/pure/blob/master/CONTRIBUTING.md
+[CONTRIBUTING file]: https://github.com/pure-css/pure/blob/master/CONTRIBUTING.md
 
 
 License
@@ -182,4 +182,4 @@ This software is free to use under the Yahoo! Inc. BSD license.
 See the [LICENSE file][] for license text and copyright information.
 
 
-[LICENSE file]: https://github.com/yahoo/pure/blob/master/LICENSE.md
+[LICENSE file]: https://github.com/pure-css/pure/blob/master/LICENSE.md

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yahoo/pure.git"
+    "url": "git://github.com/pure-css/pure.git"
   },
   "scripts": {
     "pretest": "grunt build",
@@ -31,7 +31,7 @@
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {
-    "url": "https://github.com/yahoo/pure/issues"
+    "url": "https://github.com/pure-css/pure/issues"
   },
   "homepage": "http://purecss.io",
   "main": "index.js",

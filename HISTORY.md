@@ -94,8 +94,8 @@ a bit less opinionated, a bit easier to customize on top.
   the amount of padding to `padding: 0.5em 1em`.
 
 
-[#24]: https://github.com/yahoo/pure/issues/24
-[#267]: https://github.com/yahoo/pure/pull/267
+[#24]: https://github.com/pure-css/pure/issues/24
+[#267]: https://github.com/pure-css/pure/pull/267
 
 
 0.4.2 (2014-02-13)
@@ -117,10 +117,10 @@ a bit less opinionated, a bit easier to customize on top.
   `border-width`. ([#295][] @kwando)
 
 
-[#265]: https://github.com/yahoo/pure/issues/265
-[#283]: https://github.com/yahoo/pure/issues/283
-[#286]: https://github.com/yahoo/pure/issues/286
-[#295]: https://github.com/yahoo/pure/issues/295
+[#265]: https://github.com/pure-css/pure/issues/265
+[#283]: https://github.com/pure-css/pure/issues/283
+[#286]: https://github.com/pure-css/pure/issues/286
+[#295]: https://github.com/pure-css/pure/issues/295
 
 
 0.4.1 (2014-02-06)
@@ -178,14 +178,14 @@ a bit less opinionated, a bit easier to customize on top.
 * Removed hard-coded height for horizontal menus. ([#164][])
 
 
-[#144]: https://github.com/yahoo/pure/issues/144
-[#164]: https://github.com/yahoo/pure/issues/164
-[#174]: https://github.com/yahoo/pure/issues/174
-[#177]: https://github.com/yahoo/pure/issues/177
-[#191]: https://github.com/yahoo/pure/issues/191
-[#200]: https://github.com/yahoo/pure/issues/200
-[#221]: https://github.com/yahoo/pure/issues/221
-[#261]: https://github.com/yahoo/pure/issues/261
+[#144]: https://github.com/pure-css/pure/issues/144
+[#164]: https://github.com/pure-css/pure/issues/164
+[#174]: https://github.com/pure-css/pure/issues/174
+[#177]: https://github.com/pure-css/pure/issues/177
+[#191]: https://github.com/pure-css/pure/issues/191
+[#200]: https://github.com/pure-css/pure/issues/200
+[#221]: https://github.com/pure-css/pure/issues/221
+[#261]: https://github.com/pure-css/pure/issues/261
 
 [rework-pure-grids]: https://github.com/ericf/rework-pure-grids
 [Rework]: https://github.com/visionmedia/rework
@@ -280,17 +280,17 @@ a bit less opinionated, a bit easier to customize on top.
   aspect ratios are maintained when the page is resized. ([#172][]: @dchest)
 
 
-[#41]: https://github.com/yahoo/pure/issues/41
-[#143]: https://github.com/yahoo/pure/issues/143
-[#154]: https://github.com/yahoo/pure/issues/154
-[#160]: https://github.com/yahoo/pure/issues/160
-[#162]: https://github.com/yahoo/pure/issues/162
-[#166]: https://github.com/yahoo/pure/issues/166
-[#170]: https://github.com/yahoo/pure/issues/170
-[#171]: https://github.com/yahoo/pure/issues/171
-[#172]: https://github.com/yahoo/pure/issues/172
-[#185]: https://github.com/yahoo/pure/issues/185
-[#189]: https://github.com/yahoo/pure/issues/189
+[#41]: https://github.com/pure-css/pure/issues/41
+[#143]: https://github.com/pure-css/pure/issues/143
+[#154]: https://github.com/pure-css/pure/issues/154
+[#160]: https://github.com/pure-css/pure/issues/160
+[#162]: https://github.com/pure-css/pure/issues/162
+[#166]: https://github.com/pure-css/pure/issues/166
+[#170]: https://github.com/pure-css/pure/issues/170
+[#171]: https://github.com/pure-css/pure/issues/171
+[#172]: https://github.com/pure-css/pure/issues/172
+[#185]: https://github.com/pure-css/pure/issues/185
+[#189]: https://github.com/pure-css/pure/issues/189
 
 [Customize]: http://purecss.io/customize/
 [Grids-fonts]: http://purecss.io/grids/#using-grids-with-custom-fonts
@@ -341,16 +341,16 @@ a bit less opinionated, a bit easier to customize on top.
   where tables inside of grids would break the grid. ([#95][]: @AurelioDeRosa)
 
 
-[#89]: https://github.com/yahoo/pure/issues/89
-[#90]: https://github.com/yahoo/pure/issues/90
-[#94]: https://github.com/yahoo/pure/issues/94
-[#95]: https://github.com/yahoo/pure/issues/95
-[#96]: https://github.com/yahoo/pure/issues/96
-[#102]: https://github.com/yahoo/pure/issues/102
-[#109]: https://github.com/yahoo/pure/issues/109
-[#115]: https://github.com/yahoo/pure/issues/115
-[#127]: https://github.com/yahoo/pure/issues/127
-[#172]: https://github.com/yahoo/pure/pull/172
+[#89]: https://github.com/pure-css/pure/issues/89
+[#90]: https://github.com/pure-css/pure/issues/90
+[#94]: https://github.com/pure-css/pure/issues/94
+[#95]: https://github.com/pure-css/pure/issues/95
+[#96]: https://github.com/pure-css/pure/issues/96
+[#102]: https://github.com/pure-css/pure/issues/102
+[#109]: https://github.com/pure-css/pure/issues/109
+[#115]: https://github.com/pure-css/pure/issues/115
+[#127]: https://github.com/pure-css/pure/issues/127
+[#172]: https://github.com/pure-css/pure/pull/172
 
 
 0.2.0 (2013-06-11)
@@ -373,7 +373,7 @@ a bit less opinionated, a bit easier to customize on top.
     * Added `grunt watch` task which runs tests and build.
 
     * Added support to `pure-site` for serving `pure` locally during
-      development. ([#46][], [yahoo/pure-site#111][])
+      development. ([#46][], [pure-css/pure-site#111][])
 
 * Removed vendor prefixes for `box-shadow`, `text-shadow`, `border-radius`. All
   modern browsers support the non-prefixed versions of these properties.
@@ -415,18 +415,18 @@ a bit less opinionated, a bit easier to customize on top.
   background (`#dedede`) for accessibility. ([#22][])
 
 
-[#22]: https://github.com/yahoo/pure/issues/22
-[#23]: https://github.com/yahoo/pure/issues/23
-[#25]: https://github.com/yahoo/pure/issues/25
-[#32]: https://github.com/yahoo/pure/issues/32
-[#42]: https://github.com/yahoo/pure/issues/42
-[#44]: https://github.com/yahoo/pure/issues/44
-[#46]: https://github.com/yahoo/pure/issues/46
-[#49]: https://github.com/yahoo/pure/issues/49
-[#53]: https://github.com/yahoo/pure/issues/53
-[#54]: https://github.com/yahoo/pure/issues/54
+[#22]: https://github.com/pure-css/pure/issues/22
+[#23]: https://github.com/pure-css/pure/issues/23
+[#25]: https://github.com/pure-css/pure/issues/25
+[#32]: https://github.com/pure-css/pure/issues/32
+[#42]: https://github.com/pure-css/pure/issues/42
+[#44]: https://github.com/pure-css/pure/issues/44
+[#46]: https://github.com/pure-css/pure/issues/46
+[#49]: https://github.com/pure-css/pure/issues/49
+[#53]: https://github.com/pure-css/pure/issues/53
+[#54]: https://github.com/pure-css/pure/issues/54
 
-[yahoo/pure-site#111]: https://github.com/yahoo/pure-site/issues/111
+[pure-css/pure-site#111]: https://github.com/pure-css/pure-site/issues/111
 
 
 0.1.0 (2013-05-24)
