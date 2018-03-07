@@ -186,7 +186,7 @@ grunt.initConfig({
                     'Pure v<%= pkg.version %>',
                     'Copyright 2013 Yahoo!',
                     'Licensed under the BSD License.',
-                    'https://github.com/yahoo/pure/blob/master/LICENSE.md',
+                    'https://github.com/pure-css/pure/blob/master/LICENSE.md',
                     '*/\n'
                 ].join('\n')
             },

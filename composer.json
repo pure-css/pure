@@ -1,5 +1,5 @@
 {
-  "name": "yahoo/purecss",
+  "name": "pure-css/purecss",
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "keywords": [
     "css",
@@ -32,7 +32,7 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/yahoo/pure/issues"
+    "issues": "https://github.com/pure-css/pure/issues"
   },
-  "license": "BSD"
+  "license": "BSD-3-Clause"
 }
