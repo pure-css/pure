@@ -72,8 +72,7 @@ Get Started
 To get started using Pure, go to the [Pure CSS website][Pure]. The website has
 extensive documentation and examples to help you start using Pure.
 
-You can include the Pure CSS file in your project by fetching it from Yahoo's
-CDN:
+You can include the Pure CSS file in your project by fetching it from unpkg:
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
