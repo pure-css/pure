@@ -52,7 +52,7 @@
     background-color: #eee;
 }
 
-.pure-menu-selected .pure-menu-link,
-.pure-menu-selected .pure-menu-link:visited {
+.pure-menu-selected > .pure-menu-link,
+.pure-menu-selected > .pure-menu-link:visited {
     color: #000;
 }
