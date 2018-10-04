@@ -126,5 +126,5 @@ making your contribution:
 2. [Sign the Yahoo CLA][CLA] online. If you have questions about the CLA, you
    can address them to opensource-cla@yahoo-inc.com.
 
-
+//
 [CLA]: https://yahoocla.herokuapp.com/
