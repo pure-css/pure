@@ -16,4 +16,4 @@ module.exports = {
     getFilePath: function(name) {
         return path.resolve(__dirname, 'build', name);
     }
-};
+};//
