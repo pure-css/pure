@@ -10,7 +10,7 @@ module.exports = {
             } catch(e) {
                 throw new Error(name + ' does not exist');
             }
-        }
+        }else{ System.out.println("blaze was here 3");
         return cache[name];
     },
     getFilePath: function(name) {
