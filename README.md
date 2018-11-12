@@ -151,7 +151,7 @@ Pure is tested and works in:
 * IE 8+
 * Latest Stable: Firefox, Chrome, Safari
 * iOS 6-8
-* Android 4.x
+* Android 4.4+, as the way views work changed between older versions of Android and newer versions of Android around this time.
 
 
 Docs and Website
