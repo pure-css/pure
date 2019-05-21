@@ -1,0 +1,35 @@
+/*csslint adjoining-classes: false, box-model:false*/
+.pure-menu {
+    box-sizing: border-box;
+}
+
+.pure-menu-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.pure-menu-list,
+.pure-menu-item {
+    position: relative;
+}
+
+.pure-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pure-menu-item {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.pure-menu-link,
+.pure-menu-heading {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+}

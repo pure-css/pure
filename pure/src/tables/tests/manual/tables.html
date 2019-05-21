@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tables Tests</title>
+
+    <link rel="stylesheet" href="../../../../build/base.css">
+    <link rel="stylesheet" href="../../../../build/tables.css">
+    <style>
+        body {
+            /* adding a little margin so we can see the borders better */
+            margin: 1em;
+        }
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 24px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tables Tests</h1>
+
+    <h2>Default Table</h2>
+
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Checking alignment</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+            </tr>
+            <tr>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+            </tr>
+            <tr>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+                <td><s class="box" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Bordered Table</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Bordered Table with rowspan</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Bordered Table with colspan</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td colspan="3">[ redacted ]</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Table with Horizontal Borders</h2>
+
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Striped Table</h2>
+
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="pure-table-odd">
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ford</td>
+                <td>Focus</td>
+                <td>2008</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>5</td>
+                <td>Nissan</td>
+                <td>Sentra</td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>BMW</td>
+                <td>M3</td>
+                <td>2009</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>7</td>
+                <td>Honda</td>
+                <td>Civic</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Kia</td>
+                <td>Soul</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Nth Child Selector Styling</h3>
+
+    <table class="pure-table pure-table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ford</td>
+                <td>Focus</td>
+                <td>2008</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Nissan</td>
+                <td>Sentra</td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>BMW</td>
+                <td>M3</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Honda</td>
+                <td>Civic</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Kia</td>
+                <td>Soul</td>
+                <td>2010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Nested Table</h2>
+
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Honda</td>
+                <td>Accord</td>
+                <td>
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fuel</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Diesel</td>
+                                <td>2009</td>
+                            </tr>
+                            <tr>
+                                <td>Petrol</td>
+                                <td>2009</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Toyota</td>
+                <td>Camry</td>
+                <td>
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fuel</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Diesel</td>
+                                <td>2012</td>
+                            </tr>
+                            <tr>
+                                <td>Petrol</td>
+                                <td>2012</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hyundai</td>
+                <td>Elantra</td>
+                <td>
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fuel</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Diesel</td>
+                                <td>2010</td>
+                            </tr>
+                            <tr>
+                                <td>Petrol</td>
+                                <td>2010</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "pure",
+  "description": "Use Pure's ridiculously tiny CSS to start any web project.",
+  "version": "1.0.0",
+  "main": "build/pure.css",
+  "devDependencies": {
+    "normalize-css": "^3.0"
+  }
+}

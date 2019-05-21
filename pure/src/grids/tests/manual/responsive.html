@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Grids Tests</title>
+
+    <link rel="stylesheet" href="../../../../build/base.css">
+    <link rel="stylesheet" href="../../../../build/grids.css">
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../../../../build/grids-responsive-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]>
+        <link rel="stylesheet" href="../../../../build/grids-responsive.css">
+    <!--<![endif]-->
+
+    <style>
+        .content {
+            text-align: center;
+            border: 1px solid #999;
+            margin: 10px;
+            padding: 5px;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+
+        .serif,
+        .serif .content {
+            font-family: Georgia, Times, "Times New Roman", serif;
+        }
+
+        .monospace,
+        .monospace .content {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grids Tests</h1>
+
+    <h2>Base Grid</h2>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="content">1/2</div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="content">1/2</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-3-4">
+            <div class="content">3/4</div>
+        </div>
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div class="content">1/3</div>
+        </div>
+        <div class="pure-u-1-3">
+            <div class="content">1/3</div>
+        </div>
+        <div class="pure-u-1-3">
+            <div class="content">1/3</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div class="content">1/3</div>
+        </div>
+        <div class="pure-u-2-3">
+            <div class="content">2/3</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-5">
+            <div class="content">1/5</div>
+        </div>
+        <div class="pure-u-2-5">
+            <div class="content">2/5</div>
+        </div>
+        <div class="pure-u-2-5">
+            <div class="content">2/5</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-3-5">
+            <div class="content">3/5</div>
+        </div>
+        <div class="pure-u-2-5">
+            <div class="content">2/5</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-6">
+            <div class="content">1/6</div>
+        </div>
+        <div class="pure-u-1-6">
+            <div class="content">1/6</div>
+        </div>
+        <div class="pure-u-1-6">
+            <div class="content">1/6</div>
+        </div>
+        <div class="pure-u-1-6">
+            <div class="content">1/6</div>
+        </div>
+        <div class="pure-u-1-6">
+            <div class="content">1/6</div>
+        </div>
+        <div class="pure-u-1-6">
+            <div class="content">1/6</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-6">
+            <div class="content">1/6</div>
+        </div>
+        <div class="pure-u-5-6">
+            <div class="content">5/6</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-8">
+            <div class="content">1/8</div>
+        </div>
+        <div class="pure-u-3-8">
+            <div class="content">3/8</div>
+        </div>
+        <div class="pure-u-3-8">
+            <div class="content">3/8</div>
+        </div>
+        <div class="pure-u-1-8">
+            <div class="content">1/8</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-3-8">
+            <div class="content">3/8</div>
+        </div>
+        <div class="pure-u-5-8">
+            <div class="content">5/8</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-7-8">
+            <div class="content">7/8</div>
+        </div>
+        <div class="pure-u-1-8">
+            <div class="content">1/8</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="content">1/2</div>
+        </div>
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-8">
+            <div class="content">1/8</div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="content">1/2</div>
+        </div>
+        <div class="pure-u-1-8">
+            <div class="content">1/8</div>
+        </div>
+        <div class="pure-u-1-4">
+            <div class="content">1/4</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-12">
+            <div class="content">1/12</div>
+        </div>
+        <div class="pure-u-5-12">
+            <div class="content">5/12</div>
+        </div>
+        <div class="pure-u-1-12">
+            <div class="content">1/12</div>
+        </div>
+        <div class="pure-u-5-12">
+            <div class="content">5/12</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-7-12">
+            <div class="content">7/12</div>
+        </div>
+        <div class="pure-u-5-12">
+            <div class="content">5/12</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-12">
+            <div class="content">1/12</div>
+        </div>
+        <div class="pure-u-11-12">
+            <div class="content">11/12</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-24">
+            <div class="content">1/24</div>
+        </div>
+        <div class="pure-u-5-24">
+            <div class="content">5/24</div>
+        </div>
+        <div class="pure-u-7-24">
+            <div class="content">7/24</div>
+        </div>
+        <div class="pure-u-11-24">
+            <div class="content">11/24</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-17-24">
+            <div class="content">17/24</div>
+        </div>
+        <div class="pure-u-7-24">
+            <div class="content">7/24</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-19-24">
+            <div class="content">19/24</div>
+        </div>
+        <div class="pure-u-5-24">
+            <div class="content">5/24</div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-24">
+            <div class="content">1/24</div>
+        </div>
+        <div class="pure-u-23-24">
+            <div class="content">23/24</div>
+        </div>
+    </div>
+
+
+    <h2>Custom Font and Grids</h2>
+
+    <div class="serif">
+        <p>
+            Grids with a serif font stack.
+        </p>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="content">
+                    <div class="pure-g">
+                        <div class="pure-u-1-2">
+                            <div class="content">Nested 1/2</div>
+                        </div>
+                        <div class="pure-u-1-2">
+                            <div class="content">Nested 1/2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div class="content">
+                    <div class="pure-g">
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="monospace">
+        <p>
+            Grids with a monospace font stack.
+        </p>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="content">
+                    <div class="pure-g">
+                        <div class="pure-u-1-2">
+                            <div class="content">Nested 1/2</div>
+                        </div>
+                        <div class="pure-u-1-2">
+                            <div class="content">Nested 1/2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div class="content">
+                    <div class="pure-g">
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="content">r1/4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Wrapping Grids</h2>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="content">Wrapping 1/2</div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="content">Wrapping 1/2</div>
+        </div>
+        <div class="pure-u-1-3">
+            <div class="content">Wrapping 1/3</div>
+        </div>
+    </div>
+
+    <h2>Responsive Grids</h2>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <div class="content">1 -> 1/2 -> 1/4</div>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <div class="content">1 -> 1/2 -> 1/4</div>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <div class="content">1 -> 1/2 -> 1/4</div>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <div class="content">1 -> 1/2 -> 1/4</div>
+        </div>
+    </div>
+
+    <h2>Nested Responsive Grids</h2>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="content">
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-lg-1-2">
+                        <div class="content">1 -> 1/2</div>
+                    </div>
+                    <div class="pure-u-1 pure-u-lg-1-2">
+                        <div class="content">1 -> 1/2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="content">
+                <div class="pure-g">
+                    <div class="pure-u-1-4 pure-u-lg-1-8">
+                        <div class="content">1/4 -> 1/8</div>
+                    </div>
+                    <div class="pure-u-1-4 pure-u-lg-1-8">
+                        <div class="content">1/4 -> 1/8</div>
+                    </div>
+                    <div class="pure-u-1-4 pure-u-lg-3-8">
+                        <div class="content">1/4 -> 3/8</div>
+                    </div>
+                    <div class="pure-u-1-4 pure-u-lg-3-8">
+                        <div class="content">1/4 -> 3/8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2><code>.pure-img</code> Images</h2>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src="http://placehold.it/350x200">
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src="http://placehold.it/350x200">
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src="http://placehold.it/350x200">
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+            <img class="pure-img" src="http://placehold.it/350x200">
+        </div>
+    </div>
+
+	<h2>Grid Inside Table</h2>
+	<table>
+		<tr>
+			<td>
+				<div class="pure-g">
+					<div class="pure-u-1-2">
+						<div class="content">1/2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Vivamus pharetra eros et mattis venenatis.</div>
+					</div>
+					<div class="pure-u-1-2">
+						<div class="content">1/2 Nam neque sapien, lacinia non lectus non, accumsan suscipit ipsum.</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

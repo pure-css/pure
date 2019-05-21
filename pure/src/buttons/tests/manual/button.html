@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Buttons Tests</title>
+
+    <link rel="stylesheet" href="../../../../build/base.css">
+    <link rel="stylesheet" href="../../../../build/buttons.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome-ie7.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <style>
+        .pure-button-green {
+            text-transform: uppercase;
+            font-weight:bold;
+            color: white;
+            padding: 0.8em 2.5em;
+            background-color: #16bb51;
+            border-radius: 6px;
+            text-shadow: 0 1px 1px rgb(22, 116, 29);
+        }
+
+        .pure-button-red {
+            background: red;
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgb(170, 46, 23);
+            border: 3px solid rgb(131, 2, 2);
+            border-radius: 20px;
+        }
+
+        .pure-button-yellow {
+            background: rgb(255, 236, 15);
+            color: rgb(146, 128, 32);
+            border: 1px solid rgb(201, 189, 52);
+            text-shadow: -1px 1px 1px white;
+        }
+
+        .pure-button-wedding:hover,
+        .pure-button-wedding:focus {
+            background-color: #555;
+            color: #eee;
+        }
+        .pure-button-wedding:active {
+            background-color: #222;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        .custom-fonts {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Buttons Tests</h1>
+
+    <h2>Regular Buttons</h2>
+    <p>
+        <button class="pure-button">A Regular Button</button>
+        <a class="pure-button" href="#">An anchor Button</a>
+    </p>
+
+    <h2>Disabled Buttons</h2>
+    <p>
+        <button class="pure-button pure-button-disabled" disabled>A Regular Button</button>
+        <a class="pure-button pure-button-disabled" href="#">An anchor Button</a>
+    </p>
+
+    <h2>Active Buttons</h2>
+    <p>
+        <button class="pure-button pure-button-active">A Regular Button</button>
+        <a class="pure-button pure-button-active" href="#">An anchor Button</a>
+    </p>
+
+    <h2>Primary/Selected Buttons</h2>
+    <p>
+        <button class="pure-button pure-button-primary">A Regular Button</button>
+        <a class="pure-button pure-button-primary" href="#">An anchor Button</a>
+    </p>
+
+    <h2>Customizing Buttons</h2>
+    <p>
+        <button class="pure-button pure-button-green">A Custom Button</button>
+        <a class="pure-button pure-button-green" href="#">An anchor Button</a>
+    </p>
+    <p>
+        <button class="pure-button pure-button-red">Another custom Button</button>
+        <a class="pure-button pure-button-red" href="#">Custom Button</a>
+    </p>
+    <p>
+        <button class="pure-button pure-button-yellow">Another custom Button</button>
+        <a class="pure-button pure-button-yellow" href="#">Custom Button</a>
+    </p>
+
+    <p>
+        <button class="pure-button pure-button-wedding">
+            <i class="fa fa-film"></i>
+            Start Playing Movie
+        </button>
+
+        <a class="pure-button pure-button-wedding" href="#">
+            <i class="fa fa-film"></i>
+            Start Playing Movie
+        </a>
+    </p>
+
+    <h2>Primary Form Buttons</h2>
+    <p>
+        <a class="pure-button pure-button-primary" href="#">Anchor</a>
+        <button class="pure-button pure-button-primary">Button</button>
+        <input type="submit" class="pure-button pure-button-primary" value="Submit">
+        <input type="button" class="pure-button pure-button-primary" value="Input Button">
+        <input type="reset" class="pure-button pure-button-primary" value="Reset">
+    </p>
+
+    <h2>Primary Form Buttons (Custom Fonts)</h2>
+    <p class="custom-fonts">
+        <a class="pure-button pure-button-primary" href="#">Anchor</a>
+        <button class="pure-button pure-button-primary">Button</button>
+        <input type="submit" class="pure-button pure-button-primary" value="Submit">
+        <input type="button" class="pure-button pure-button-primary" value="Input Button">
+        <input type="reset" class="pure-button pure-button-primary" value="Reset">
+    </p>
+
+    <h2>Button Groups</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div class="pure-button-group">
+        <input type="submit" class="pure-button pure-button-primary" value="Submit">
+        <input type="button" class="pure-button pure-button-primary" value="Input Button">
+        <input type="reset" class="pure-button pure-button-primary" value="Reset">
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div class="pure-button-group">
+        <a href="#" class="pure-button pure-button-primary" value="Submit">Testing</a>
+        <a href="#" class="pure-button pure-button-primary" value="Input Button">Button</a>
+        <a href="#" class="pure-button pure-button-primary pure-button-active" value="Reset">Groups</a>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div class="pure-button-group">
+        <button class="pure-button">Lorem</button>
+        <button class="pure-button pure-button-active">Ipsum</button>
+        <button class="pure-button">Dolor</button>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+</body>
+</html>

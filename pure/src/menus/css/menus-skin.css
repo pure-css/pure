@@ -1,0 +1,58 @@
+/* misc default styling */
+
+.pure-menu-separator,
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator {
+    background-color: #ccc;
+    height: 1px;
+    margin: .3em 0;
+}
+
+.pure-menu-horizontal .pure-menu-separator {
+    width: 1px;
+    height: 1.3em;
+    margin: 0 .3em ;
+}
+
+/* Need to reset the separator since submenu is vertical */
+.pure-menu-horizontal .pure-menu-children .pure-menu-separator {
+    display: block;
+    width: auto;
+}
+
+.pure-menu-heading {
+    text-transform: uppercase;
+    color: #565d64;
+}
+
+.pure-menu-link {
+    color: #777;
+}
+
+.pure-menu-children {
+    background-color: #fff;
+}
+
+.pure-menu-link,
+.pure-menu-disabled,
+.pure-menu-heading {
+    padding: .5em 1em;
+}
+
+.pure-menu-disabled {
+    opacity: .5;
+}
+
+.pure-menu-disabled .pure-menu-link:hover {
+    background-color: transparent;
+}
+
+.pure-menu-active > .pure-menu-link,
+.pure-menu-link:hover,
+.pure-menu-link:focus {
+    background-color: #eee;
+}
+
+.pure-menu-selected > .pure-menu-link,
+.pure-menu-selected > .pure-menu-link:visited {
+    color: #000;
+}
