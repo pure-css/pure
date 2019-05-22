@@ -2,7 +2,7 @@
 
 .pure-button {
     font-family: inherit;
-    font-size: 1em;
+    font-size: 100%;
     padding: 0.5em 1em;
     color: #444; /* rgba not supported (IE 8) */
     color: rgba(0, 0, 0, 0.80); /* rgba supported */
@@ -24,7 +24,7 @@
 .pure-button-active,
 .pure-button:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
-    border-color: #000\9;
+    border-color: #000;
 }
 
 .pure-button[disabled],
@@ -73,6 +73,7 @@ a.pure-button-selected {
     border-bottom-right-radius: 2px;
     border-right: none;
 }
+
 .pure-form-aligned .pure-control-group label:first-child {
 	width: 10em;
 }
