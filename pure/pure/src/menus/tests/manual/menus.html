@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width = device-width">
+    <title>Menus CSS</title>
+    <link rel="stylesheet" type="text/css" href="../../../../build/base-min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../build/buttons-min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../build/menus-min.css">
+    <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    <style>
+        h1 {
+            margin-top: 2em;
+            font-size: 15px;
+            font-weight: normal;
+        }
+        body {
+            padding: 2em 2em 8em;
+        }
+
+        /* Update background on menu. */
+        .menu-custom,
+        .children-custom,
+        .menu-custom .pure-menu-list {
+            background: #111;
+            padding: 0.8em;
+            border-radius: 5px;
+        }
+
+        /* Make the heading white */
+        .heading-custom {
+            color: white;
+        }
+        .heading-custom:hover {
+            background-color: transparent;
+        }
+
+        /* Make links light-gray with a transition */
+        .link-custom {
+            color: #ddd;
+            transition: color 0.5s;
+        }
+
+        /* Color links blue on hover and focus */
+        .link-custom:hover,
+        .link-custom:focus {
+            color: #40a4ff;
+            background-color: transparent;
+        }
+
+        /* Update the positioning of the toggle button
+        because we are modifying the menu's padding, and change its color. */
+        .toggle-custom {
+            margin-right: 15px;
+            color: white;
+        }
+
+        .pure-menu-custom-1 {
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            min-width: 480px;
+        }
+        .pure-menu-custom-2 {
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            width: 150px;
+        }
+        .pure-menu-custom-2 .pure-menu-list {
+            display: block;
+        }
+        .pure-menu-custom-2 .pure-menu-children {
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            width: 170px;
+            box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        }
+        .pure-menu-custom-3 {
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            width: 180px;
+            height: 150px;
+        }
+        .pure-menu-custom-3 .pure-menu-list {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>plain div.pure-menu.pure-menu-horizontal</h1>
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-horizontal.pure-menu-custom-1</h1>
+    <div class="pure-menu pure-menu-horizontal pure-menu-custom-1">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-separator"></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-custom-2</h1>
+    <div class="pure-menu pure-menu-custom-2">
+        <a href="#" class="pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-separator"></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-separator"></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>plain div.pure-menu, with nested children. Note that with no width set, it's funky, but using inline-block would not be desirable for most cases.</h1>
+    <div class="pure-menu">
+        <a href="#" class="pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item pure-menu-has-children">
+                <a href="#" class="pure-menu-link">Blog</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Dust Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/react">React Mixins</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/javascript">Intl Message Format</a></li>
+                </ul>
+            </li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-custom-2, with nested children. Here, a width is set. Sub-sub menu functionality demonstrated as well.</h1>
+    <div class="pure-menu pure-menu-custom-2">
+        <a href="#" class="pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item pure-menu-has-children">
+                <a href="#" class="pure-menu-link">Blog</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Dust Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/react">React Mixins</a></li>
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href="#" class="pure-menu-link">More Stuff</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Foo</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Bar</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="/react">Baz</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-custom-2, with nested children. Here, a width is set to limit the menu width.
+        The .pure-menu-allow-hover class is in play as well, no click required to display a submenu.</h1>
+    <div class="pure-menu pure-menu-custom-2">
+        <a href="#" class="pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" class="pure-menu-link">Blog</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Dust Helpers</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/react">React Mixins</a></li>
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" class="pure-menu-link">More Stuff</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Foo</a></li>
+                            <li class="pure-menu-separator"></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Bar</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="/react">Baz</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-horizontal with nested dropdown and separator</h1>
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Wang</a></li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" class="pure-menu-link">Yahoo</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/handlebars">Foo</a></li>
+                    <li class="pure-menu-separator"></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/dust">Bar</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="/react">Baz</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <h1>div.pure-menu.pure-menu-horizontal.pure-menu-scrollable</h1>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Google</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Apple</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Borland</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Wang</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Yahoo</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-scrollable.pure-menu-custom-3</h1>
+    <div class="pure-menu pure-menu-scrollable pure-menu-custom-3">
+        <a href="#" class="pure-menu-link pure-menu-heading">Title</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Google</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Apple</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Borland</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Wang</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Yahoo</a></li>
+        </ul>
+    </div>
+
+    <h1>div.pure-menu.pure-menu-horizontal, with nested children, customized</h1>
+    <div class="menu-custom pure-menu pure-menu-horizontal" hidden>
+        <a href="#" class="heading-custom pure-menu-link pure-menu-heading">Title</a>
+        <ul class="list-custom pure-menu-list">
+            <li class="item-custom pure-menu-item"><a href="#" class="link-custom pure-menu-link">Home</a></li>
+            <li class="item-custom pure-menu-item"><a href="#" class="link-custom pure-menu-link">About</a></li>
+            <li class="item-custom pure-menu-item pure-menu-has-children">
+                <a href="#" class="link-custom pure-menu-link">Blog</a>
+                <ul class="children-custom pure-menu-children">
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/handlebars">Handlebars Helpers</a></li>
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/dust">Dust Helpers</a></li>
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/react">React Mixins</a></li>
+                    <li class="item-custom pure-menu-item"><a class="link-custom pure-menu-link" href="/javascript">Intl Message Format</a></li>
+                </ul>
+            </li>
+            <li class="pure-menu-item"><a href="#" class="link-custom pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="link-custom pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="link-custom pure-menu-link">Twitter</a></li>
+        </ul>
+    </div>
+    <!-- script src="http://10.73.144.35:5000/js/menus.js"></script -->
+
+</body>
+</html>

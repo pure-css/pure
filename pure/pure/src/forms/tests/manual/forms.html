@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Forms Tests</title>
+
+    <link rel="stylesheet" href="../../../../build/base.css">
+    <link rel="stylesheet" href="../../../../build/grids.css">
+    <link rel="stylesheet" href="../../../../build/grids-responsive.css">
+    <link rel="stylesheet" href="../../../../build/buttons.css">
+    <link rel="stylesheet" href="../../../../build/forms.css">
+</head>
+
+<body>
+    <h1>Forms Tests</h1>
+
+    <h2>Input normalization</h2>
+
+    <form class="pure-form">
+        <fieldset>
+            <legend>An inline form. Check for alignment and input/select sizing.</legend>
+
+            <input type="text" placeholder="text input">
+            <input type="search" placeholder="search input">
+            <select name="fooselect">
+                <option value="CA">CA</option>
+                <option value="NY">NY</option>
+            <select>
+
+
+            <button type="submit" class="pure-button">Sign in</button>
+        </fieldset>
+    </form>
+
+    <h2>Default Form</h2>
+
+    <form class="pure-form">
+        <fieldset>
+            <legend>A default inline form.</legend>
+
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+
+            <button type="submit" class="pure-button">Sign in</button>
+        </fieldset>
+    </form>
+
+
+    <h2>Multi-Column Form with Grids</h2>
+
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+            <legend>Legend</legend>
+
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <label>First Name</label>
+                    <input type="text">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <label>E-Mail</label>
+                    <input type="email" required>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <label>City</label>
+                    <input type="text">
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <label>State</label>
+                    <select class="pure-input-medium">
+                        <option>AL</option>
+                        <option>CA</option>
+                        <option>IL</option>
+                        <option>MD</option>
+                        <option>NY</option>
+                    </select>
+                </div>
+            </div>
+
+            <label class="pure-checkbox">
+                <input type="checkbox"> I've read the terms and conditions
+            </label>
+
+            <button type="submit" class="pure-button">Submit</button>
+            <button type="reset" class="pure-button">Reset</button>
+        </fieldset>
+    </form>
+
+
+    <h2>Stacked Form</h2>
+
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+            <legend>Legend</legend>
+
+            <label>First Name</label>
+            <input type="text">
+
+            <label>Password</label>
+            <input type="password">
+
+            <label>E-Mail</label>
+            <input type="email" required>
+            <aside class="pure-help-inline">This is a required field.</aside>
+
+            <label>City</label>
+            <input type="text">
+            <aside class="pure-form-message">This is another required field.</aside>
+
+            <label>State</label>
+            <select class="pure-input-medium">
+                <option>AL</option>
+                <option>CA</option>
+                <option>IL</option>
+                <option>MD</option>
+                <option>NY</option>
+            </select>
+
+            <label>Color</label>
+            <input type="color">
+
+            <label class="pure-checkbox">
+                <input type="checkbox"> I've read the terms and conditions
+            </label>
+
+            <button type="submit" class="pure-button notice">Submit</button>
+            <button type="reset" class="pure-button">Reset</button>
+        </fieldset>
+    </form>
+
+
+    <h2>Aligned Form</h2>
+
+    <form class="pure-form pure-form-aligned">
+        <fieldset>
+            <div class="pure-control-group">
+                <label>Username</label>
+                <input type="text" placeholder="Username">
+                <aside class="pure-form-message-inline">This is a <code>pure-form-message-inline</code> field.</aside>
+            </div>
+
+            <div class="pure-control-group">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+                <aside class="pure-help-inline">This is a <code>pure-help-inline</code> field. Deprecated.</aside>
+            </div>
+
+            <div class="pure-control-group">
+                <label>Email Address</label>
+                <input type="text" placeholder="Email Address">
+            </div>
+
+            <div class="pure-control-group">
+                <label>Here's a button</label>
+                <input type="button" value="Button" class="pure-button">
+            </div>
+
+            <div class="pure-control-group">
+                <label>Supercalifragilistic Label</label>
+                <input type="text" placeholder="Enter something here...">
+            </div>
+
+            <div class="pure-controls">
+                <label class="pure-checkbox">
+                    <input type="checkbox"> Remember Me
+                </label>
+
+                <button type="submit" class="pure-button">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+
+
+    <h2>Grouped Inputs</h2>
+
+    <form class="pure-form">
+        <fieldset class="pure-group">
+            <input type="text" class="pure-input-1-3" placeholder="Username">
+            <input type="text" class="pure-input-1-3" placeholder="Password">
+            <input type="text" class="pure-input-1-3" placeholder="Email">
+        </fieldset>
+
+        <fieldset class="pure-group">
+            <input type="text" class="pure-input-1-3" placeholder="Another Group">
+            <textarea class="pure-input-1-3" placeholder="Textareas can work here too"></textarea>
+            <input type="text" class="pure-input-1-3" placeholder="Even More Stuff">
+            <input type="text" class="pure-input-1-3" placeholder="Last Item">
+        </fieldset>
+        <button type="submit" class="pure-button pure-input-1-3">Sign in</button>
+    </form>
+
+
+    <h2>Dynamic Grouped Inputs</h2>
+
+    <form class="pure-form" onsubmit="return false">
+        <script type="text/javascript">
+        function testDynamicGroupAdd() {
+            var g = document.getElementById('test-dynamic-group'),
+                newNode = g.getElementsByTagName("input")[0].cloneNode();
+
+            g.appendChild(newNode);
+        }
+        function testDynamicGroupRemove() {
+            var g = document.getElementById('test-dynamic-group'),
+                nodeCount = g.getElementsByTagName("input").length;
+
+            if (nodeCount > 1) {
+                g.removeChild(g.lastChild);
+            }
+        }
+        </script>
+
+        <fieldset class="pure-group">
+            <button type="submit" class="pure-button" onclick="testDynamicGroupAdd()">Add field</button>
+            <button type="submit" class="pure-button" onclick="testDynamicGroupRemove()">Remove field</button>
+        </fieldset>
+
+        <fieldset class="pure-group" id="test-dynamic-group">
+            <input type="text" class="pure-input-1-3" placeholder="Add or remove fields to test">
+        </fieldset>
+    </form>
+
+
+    <h2>Input Sizing</h2>
+
+    <form class="pure-form">
+        <input class="pure-input-1" type="text" placeholder=".pure-input-1"><br/>
+        <input class="pure-input-3-4" type="text" placeholder=".pure-input-3-4"><br/>
+        <input class="pure-input-2-3" type="text" placeholder=".pure-input-2-3"><br/>
+        <input class="pure-input-1-2" type="text" placeholder=".pure-input-1-2"><br/>
+        <input class="pure-input-1-3" type="text" placeholder=".pure-input-1-3"><br/>
+        <input class="pure-input-1-4" type="text" placeholder=".pure-input-1-4"><br/>
+    </form>
+
+
+    <form class="pure-form">
+        <div class="pure-g">
+            <div class="pure-u-1-4">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-4">
+            </div>
+
+            <div class="pure-u-3-4">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-3-4">
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-2">
+            </div>
+
+            <div class="pure-u-1-2">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-2">
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-8">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-8">
+            </div>
+
+            <div class="pure-u-1-8">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-8">
+            </div>
+
+            <div class="pure-u-1-4">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-4">
+            </div>
+
+            <div class="pure-u-1-2">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-2">
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-5">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1-5">
+            </div>
+
+            <div class="pure-u-2-5">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-2-5">
+            </div>
+
+            <div class="pure-u-2-5">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-2-5">
+            </div>
+
+            <div class="pure-u-1">
+                <input class="pure-input-1" type="text" placeholder=".pure-u-1">
+            </div>
+        </div>
+    </form>
+
+
+    <h2>Invalid Inputs</h2>
+
+    <form class="pure-form">
+        <input type="email" placeholder="Requires an email" required>
+    </form>
+
+
+    <h2>Disabled Inputs</h2>
+
+    <form class="pure-form">
+        <input class="pure-input-xlarge" type="text" placeholder="Disabled input here..." value="Foo bar baz" disabled>
+    </form>
+
+
+    <h2>Readonly Inputs</h2>
+
+    <form class="pure-form">
+        <input class="pure-input-xlarge" type="text" placeholder="Readonly input here..." value="Foo bar baz" readonly>
+    </form>
+
+
+    <h2>Rounded Form</h2>
+
+    <form class="pure-form pure-form-stacked">
+        <label>Subject</label>
+        <input type="text" class="pure-input-rounded" placeholder="Subject" />
+
+        <label>Message</label>
+        <textarea class="pure-input-rounded" rows="5" cols="40" placeholder="Message..."></textarea>
+
+        <button type="submit" class="pure-button pure-input-rounded">Search</button>
+        <input type="reset" class="pure-button pure-input-rounded" value="Reset" />
+    </form>
+
+
+    <h2>Selects</h2>
+
+    <form class="pure-form">
+        <select class="pure-input-medium">
+            <option>Brazil</option>
+            <option>Canada</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Venezuela</option>
+        </select>
+
+        <select multiple="multiple" class="pure-input-large">
+            <option>Brazil</option>
+            <option>Canada</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Venezuela</option>
+        </select>
+    </form>
+
+
+    <h2>Checkboxes and Radios</h2>
+
+    <form class="pure-form">
+        <label class="pure-checkbox">
+            <input type="checkbox" value="">
+            Here's option one.
+        </label>
+
+        <label class="pure-radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            Here's a radio button. You can choose this one...
+        </label>
+
+        <label class="pure-radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            ...Or this one!
+        </label>
+    </form>
+
+
+    <h2>Help text</h2>
+
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+            <label>Last Name</label>
+            <input type="text" />
+            <aside class="pure-form-message">Block help text</aside>
+        </fieldset>
+    </form>
+
+
+    <h2>Buttons</h2>
+
+    <form class="pure-form">
+        <a class="pure-button pure-button-primary">Anchor</a>
+        <button class="pure-button pure-button-primary">Button</button>
+        <input type="submit" class="pure-button pure-button-primary" value="Submit" />
+        <input type="button" class="pure-button pure-button-primary" value="Input Button" />
+        <input type="reset" class="pure-button pure-button-primary" value="Reset" />
+    </form>
+</body>
+</html>
