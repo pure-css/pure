@@ -73,3 +73,10 @@ a.pure-button-selected {
     border-bottom-right-radius: 2px;
     border-right: none;
 }
+.pure-form-aligned .pure-control-group label:first-child {
+	width: 10em;
+}
+
+.pure-form-aligned .pure-control-group label:not(:first-child) {
+	width: auto;
+}
