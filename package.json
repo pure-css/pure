@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/pure-css/pure/issues"
   },
-  "homepage": "http://purecss.io",
+  "homepage": "https://purecss.io",
   "main": "index.js",
   "browser": "build/pure-min.css",
   "style": "build/pure.css",
