@@ -16,12 +16,7 @@
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: auto;
-    -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     /* a little extra padding for this style to allow for scrollbars */
     padding: .5em 0;
-}
-
-.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
-    display: none;
 }
