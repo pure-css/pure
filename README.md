@@ -10,12 +10,12 @@ A set of small, responsive CSS modules that you can use in every web project.
 [![Dependency Status](https://david-dm.org/pure-css/pure/dev-status.svg)](https://david-dm.org/pure-css/pure?type=dev)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pure-css/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**This project is looking for maintainers to support and enhance Pure.css. If you are interested please [leave a comment](https://github.com/pure-css/pure/issues/692) in the Github issue.** 
+**This project is looking for maintainers to support and enhance Pure.css. If you are interested please [leave a comment](https://github.com/pure-css/pure/issues/692) in the Github issue.**
 
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 ```
 
 Note: You can [customize which Pure modules you need][customize].
@@ -77,7 +77,7 @@ extensive documentation and examples to help you start using Pure.
 You can include the Pure CSS file in your project by fetching it from unpkg:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 ```
 
 You can also install Pure using [Bower][], using the following command:

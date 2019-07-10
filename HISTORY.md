@@ -1,6 +1,15 @@
 Pure Change History
 ===================
 
+1.0.1 (2019-07-10)
+------------------
+
+* Fix "selected" menu item labels in nested menus (#708)
+* Fix bug in pure-button active state's border color. (#729)
+* Fix horizontal scrollbars not appearing in IE11 and Chrome (#740)
+* Fix pure-table-bordered issues (#718)
+
+
 1.0.0 (2017-06-05)
 ------------------
 
