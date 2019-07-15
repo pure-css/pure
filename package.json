@@ -12,7 +12,7 @@
   },
   "files": "build/",
   "devDependencies": {
-    "autoprefixer": "^7.0.0",
+    "autoprefixer": "^9.6.1",
     "bower": "^1.8.2",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
