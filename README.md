@@ -102,7 +102,7 @@ need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 $ git clone git@github.com:pure-css/pure.git
 $ cd pure
 $ npm install
-$ grunt
+$ npx grunt
 ```
 
 ### Build Files
