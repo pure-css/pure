@@ -1,0 +1,35 @@
+.grids-unit {
+    margin: 0.25em 0;
+    padding-left: 4.5em;
+}
+.grids-unit-width {
+    width: 4em;
+    margin-left: -4.5em;
+    padding-right: 0.5em;
+    line-height: 2em;
+    text-align: right;
+    vertical-align: baseline;
+}
+.grids-unit .grids-unit-width {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+}
+.grids-unit-details {
+    position: relative;
+    background: #fafafa
+}
+.grids-unit-classnames {
+    position: absolute;
+    left: 0.5em;
+}
+.grids-unit-classname {
+    margin-right: 1em;
+}
+.grids-unit-classname code {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+.grids-unit-bar {
+    height: 2em;
+    background: #eee;
+}
