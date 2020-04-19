@@ -9,7 +9,7 @@ function CodeBlock({ children, language = 'javascript', full = false, wrap = fal
     return (
         <div className={fullClass}>
             <div className={codeClass}>
-                <SyntaxHighlighter language={language} style={docco}>{children}</SyntaxHighlighter>
+                <SyntaxHighlighter language={language} style={docco} wrapLines={full}>{children}</SyntaxHighlighter>
             </div>
         </div>
     );

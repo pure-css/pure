@@ -46,9 +46,9 @@ function Start() {
                   The viewport <code>meta</code> element lets you control the the width and scale of the viewport on mobile browsers. Since you're building a responsive website, you want the width to be equal to the device's native width. Add this into your page's <code>&lt;head&gt;</code>.
               </p>
           </div>
-          <div className="is-code-full">
-              <pre className="code code-wrap" data-language="html"><code>&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1&quot;&gt;</code></pre>
-          </div>
+          <CodeBlock full={true} wrap={true} language="html">
+              &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1&quot;&gt;
+          </CodeBlock>
           <div className="content">
               <h2 id="understand-pure-grids" className="content-subhead">
                   Understand Pure Grids
@@ -60,15 +60,13 @@ function Start() {
               <p>
                   Here's a grid with three columns:
               </p>
-              <pre className="code" data-language="html">
-                <code>
-                    &lt;div class="pure-g"&gt;
-                        &lt;div class="pure-u-1-3"&gt;&lt;p&gt;Thirds&lt;/p&gt;&lt;/div&gt;
-                        &lt;div class="pure-u-1-3"&gt;&lt;p&gt;Thirds&lt;/p&gt;&lt;/div&gt;
-                        &lt;div class="pure-u-1-3"&gt;&lt;p&gt;Thirds&lt;/p&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                </code>
-              </pre>
+              <CodeBlock wrap={true} language="html">
+{`<div class="pure-g">
+  <div class="pure-u-1-3"><p>Thirds</p></div>
+  <div class="pure-u-1-3"><p>Thirds</p></div>
+  <div class="pure-u-1-3"><p>Thirds</p></div>
+</div>`}
+              </CodeBlock>
           </div>
           <div className="grids-example">
               <div className="pure-g">
@@ -89,17 +87,15 @@ function Start() {
                   <a href="#responsive-grids" className="content-link" title="Heading anchor"></a>
               </h2>
               <p>
-                  Pure's grid system is also <b>mobile-first</b> and <b>responsive</b>, and you're able to customize the grid by specifying CSS Media Query breakpoints and grid classnames. If needed, you can <a href="#build-your-pure-starter-kit">customize Pure Grids below</a>, but let's start off with an example.
+                  Pure's grid system is also <b>mobile-first</b> and <b>responsive</b>, and you're able to customize the grid by specifying CSS Media Query breakpoints and grid classnames.
+                  {/*If needed, you can <a href="#build-your-pure-starter-kit">customize Pure Grids below</a>, but let's start off with an example.*/}
               </p>
               <p>
                   You'll need to <em>also</em> include Pure's <code>grids-responsive.css</code> onto your page:
               </p>
-              <pre className="code" data-language="html"><code>&lt;!--[if lte IE 8]&gt;
-              &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css&quot;&gt;
-          &lt;![endif]--&gt;
-          &lt;!--[if gt IE 8]&gt;&lt;!--&gt;
-              &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css&quot;&gt;
-          &lt;!--&lt;![endif]--&gt;</code></pre>
+              <CodeBlock wrap={true} language="html">
+                  {`<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css" />`}
+              </CodeBlock>
               <p>
                   Here's the default responsive breakpoints included in <code>grids-responsive.css</code>:
               </p>
@@ -170,6 +166,7 @@ function Start() {
                   <div className="pure-u-1 pure-u-md-1-4">.pure-u-1<br/>.pure-u-md-1-4</div>
               </div>
           </div>
+          {/*
           <div className="content">
               <aside>
                   <p>
@@ -337,6 +334,7 @@ function Start() {
                   </p>
               </aside>
           </div>
+          */}
       </div>
     </Layout>
   );
