@@ -1,13 +1,14 @@
 import React from 'react';
 import classnames from 'classnames';
 import Layout from '../../theme/Layout';
+import Header from '../../../components/Header';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import CodeBlock from '../../../components/CodeBlock';
-import { PURE_DOWNLOAD_SNIPPET } from '../../../lib/pure';
 import styles from './styles.css';
 
+const title = 'Layouts';
+const description = 'Quickstart your next web project with these example layouts.';
 const layouts = [
     {
         type: "blog",
@@ -61,11 +62,8 @@ const layouts = [
 
 function Layouts() {
   return (
-    <Layout description="Quickstart your next web project with these example layouts." title="Layouts">
-        <div className="header">
-            <h1>Layouts</h1>
-            <h2>Quickstart your next web project with these example layouts.</h2>
-        </div>
+    <Layout description={description} title={title}>
+        <Header description={description} title={title} />
         <div className="content">
             <h2 id="common-layouts" className="content-subhead">Common Layouts<a href="#common-layouts" className="content-link" title="Heading anchor"></a></h2>
             <p>

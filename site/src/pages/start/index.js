@@ -2,28 +2,19 @@ import React from 'react';
 import classnames from 'classnames';
 import Layout from '../../theme/Layout';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Header from '../../../components/Header';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import CodeBlock from '../../../components/CodeBlock';
 import { PURE_DOWNLOAD_SNIPPET } from '../../../lib/pure';
 import styles from './styles.css';
 
+const title = 'Get Started';
+const description = 'Start your next web project with Pure.';
+
 function Start() {
-  const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
-  const {
-      customFields: {
-          pureVersion,
-      },
-      organizationName,
-      projectName
-  } = siteConfig;
   return (
-    <Layout description="Start your next web project with Pure." title="Get Started">
-      <div className="header">
-          <h1>Get Started</h1>
-          <h2>Start your next web project with Pure.</h2>
-      </div>
+    <Layout description={description} title={title}>
+      <Header description={description} title={title} />
       <div className="content">
           <h2 id="add-pure-to-your-page" className="content-subhead">Add Pure to Your Page<a href="#add-pure-to-your-page" className="content-link" title="Heading anchor"></a></h2>
           <p>

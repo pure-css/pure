@@ -35,6 +35,7 @@ function Layout(props) {
     description,
     image,
     keywords,
+    pageType,
     permalink,
     version,
   } = props;
