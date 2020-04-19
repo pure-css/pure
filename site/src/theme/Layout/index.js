@@ -38,7 +38,7 @@ function Layout(props) {
     permalink,
     version,
   } = props;
-  const metaTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  const metaTitle = title ? `${title} - ${siteTitle}` : siteTitle;
 
   const metaImage = image || defaultImage;
   let metaImageUrl = siteUrl + useBaseUrl(metaImage);
@@ -81,7 +81,9 @@ function Layout(props) {
         </Head>
         <div id="layout">
             <Menu />
-            {children}
+            <div id="main">
+                {children}
+            </div>
             <Footer siteConfig={siteConfig} />
         </div>
 

@@ -1,0 +1,47 @@
+.layout-item {
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid #eee;
+}
+.layout-item-screenshot {
+    text-align: center;
+}
+.layout-item-head {
+    margin-top: 0; /* so that the .layout-item-head lines up with the image */
+}
+.layout-item-modules {
+    padding: 0;
+}
+.layout-item-module {
+    margin-right: 0.5714em;
+    font-size: 0.875em;
+}
+.layout-item-module-base a {
+    border-left: 3px solid rgb(14, 144, 210);
+}
+.layout-item-module-grids a {
+    border-left: 3px solid rgb(128, 88, 165);
+}
+.layout-item-module-forms a {
+    border-left: 3px solid rgb(94, 185, 94);
+}
+.layout-item-module-buttons a {
+    border-left: 3px solid rgb(221, 81, 76);
+}
+.layout-item-module-tables a {
+    border-left: 3px solid rgb(243, 123, 29);
+}
+.layout-item-module-menus a {
+    border-left: 3px solid rgb(250, 210, 50);
+}
+.layout-item-module a:link,
+.layout-item-module a:visited {
+    text-transform: capitalize;
+    color: rgb(75, 75, 75);
+    padding: 0 0.5714em;
+    line-height: 1.75;
+    display: block;
+}
+.layout-item-content .pure-button {
+    margin-right: 5px;
+}
