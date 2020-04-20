@@ -1,11 +1,10 @@
-import React from 'react';
+import Link from '@docusaurus/Link';
 import classnames from 'classnames';
+import React from 'react';
 import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
-import Link from '@docusaurus/Link';
 import CodeBlock from '../../../components/CodeBlock';
 import SectionHeader from '../../../components/SectionHeader';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const title = 'Base';
 const description = 'Leveraging Normalize.css, an HTML5-ready alternative to CSS resets.';
@@ -14,7 +13,8 @@ function Base() {
   return (
     <Layout description={description} title={title}>
         <Header description={description} title={title} />
-        <div class="content">
+
+        <div className="content">
             <SectionHeader heading="The Foundation" />
 
             <p>
@@ -31,7 +31,7 @@ function Base() {
                 <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> is an open-source project by <a href="http://twitter.com/necolas">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal">Jonathan Neal</a>. <a href="http://nicolasgallagher.com/about-normalize-css/">In their own words</a>:
             </p>
 
-            <blockquote class="content-quote">
+            <blockquote className="content-quote">
                 Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It’s a modern, HTML5-ready, alternative to the traditional CSS reset."
             </blockquote>
 
@@ -72,7 +72,7 @@ function Base() {
             </p>
 
             <p>
-                We made a more opinionated look and feel for these elements, while keeping them minimal enough so that you can customize them for your site or app's needs. Check out our CSS for <a href="/forms/">Forms</a>, <a href="/tables/">Tables</a>, and <a href="/menus/">Menus</a>.
+                We made a more opinionated look and feel for these elements, while keeping them minimal enough so that you can customize them for your site or app's needs. Check out our CSS for <Link to="/forms">Forms</Link>, <Link to="/tables">Tables</Link>, and <Link to="/menus">Menus</Link>.
             </p>
         </div>
     </Layout>
