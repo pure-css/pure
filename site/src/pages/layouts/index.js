@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
+import SectionHeader from '../../../components/SectionHeader';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -64,46 +65,48 @@ function Layouts() {
   return (
     <Layout description={description} title={title}>
         <Header description={description} title={title} />
+        
         <div className="content">
-            <h2 id="common-layouts" className="content-subhead">Common Layouts<a href="#common-layouts" className="content-link" title="Heading anchor"></a></h2>
+            <SectionHeader heading="Common Layouts" />
+
             <p>
                 Pure was crafted with the goal that it can be used in every web project. To showcase this, we've made some common layouts that leverage Pure. These layouts are responsive and don't require JavaScript (except for
                 certain menu interactions).
             </p>
+
             <aside>
                 <p>
                     When viewing these layouts, view or copy the source to get a good understanding of what's happening. These layout examples are free to use in your own projects under the <a href="http://www.zlib.net/zlib_license.html">zLib license</a>.
                 </p>
             </aside>
-            {layouts.map((layout, idx) => {
-                return (
-                    <div key={idx} className="layout-item l-wrap pure-g">
-                        <div className="layout-item-screenshot content pure-u-1 u-sm-1-2">
-                            <a href={`/layouts/${layout.type}/`}>
-                            <img src={`/img/layouts/${layout.type}@2x.jpg`} className="pure-img-responsive" width="400" height="214"
-                                alt={`Screenshot of ${layout.title} example layout`} />
-                            </a>
-                        </div>
-                        <div className="layout-item-content content pure-u-1 u-sm-1-2">
-                            <h3 className="layout-item-head">{layout.title}</h3>
-                            <p>{layout.summary}</p>
-                            <ul className="layout-item-modules pure-g">
-                                {layout.modules.map((m, idx) => (
-                                    <li key={idx} className={`layout-item-module layout-item-module-${m} pure-u`}>
-                                        <a href={`/${m}/`}>{m}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                            <p>
-                                <a href={`/layouts/${layout.type}/`}
-                                    className="pure-button pure-button-primary">View</a>
-                                <a download href={`/layouts/${layout.type}/download`}
-                                    className="pure-button">Download</a>
-                            </p>
-                        </div>
+
+            {layouts.map((layout, idx) => (
+                <div key={idx} className="layout-item l-wrap pure-g">
+                    <div className="layout-item-screenshot content pure-u-1 u-sm-1-2">
+                        <a href={`/layouts/${layout.type}/`}>
+                        <img src={`/img/layouts/${layout.type}@2x.jpg`} className="pure-img-responsive" width="400" height="214"
+                            alt={`Screenshot of ${layout.title} example layout`} />
+                        </a>
                     </div>
-                )
-            })}
+                    <div className="layout-item-content content pure-u-1 u-sm-1-2">
+                        <h3 className="layout-item-head">{layout.title}</h3>
+                        <p>{layout.summary}</p>
+                        <ul className="layout-item-modules pure-g">
+                            {layout.modules.map((m, idx) => (
+                                <li key={idx} className={`layout-item-module layout-item-module-${m} pure-u`}>
+                                    <a href={`/${m}/`}>{m}</a>
+                                </li>
+                            ))}
+                        </ul>
+                        <p>
+                            <a href={`/layouts/${layout.type}/`}
+                                className="pure-button pure-button-primary">View</a>
+                            <a download href={`/layouts/${layout.type}/download`}
+                                className="pure-button">Download</a>
+                        </p>
+                    </div>
+                </div>
+            ))}
         </div>
     </Layout>
   );
