@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import React from 'react';
 
 function Menu(props) {
@@ -6,42 +7,44 @@ function Menu(props) {
             <a href="#menu" id="menuLink" className="menu-link">
                 <span></span>
             </a>
+            
             <div id="menu">
                 <div className="pure-menu">
-                    <a className="pure-menu-heading" href="/">Pure</a>
+                    <Link className="pure-menu-heading" to="/">Pure</Link>
+
                     <ul className="pure-menu-list">
                         <li className="pure-menu-item">
-                            <a href="/start/" className="pure-menu-link">Get Started</a>
+                            <Link to="/start/" className="pure-menu-link">Get Started</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/layouts/" className="pure-menu-link">Layouts</a>
+                            <Link to="/layouts/" className="pure-menu-link">Layouts</Link>
                         </li>
                         <li className="pure-menu-item menu-item-divided">
-                            <a href="/base/" className="pure-menu-link">Base</a>
+                            <Link to="/base/" className="pure-menu-link">Base</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/grids/" className="pure-menu-link">Grids</a>
+                            <Link to="/grids/" className="pure-menu-link">Grids</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/forms/" className="pure-menu-link">Forms</a>
+                            <Link to="/forms/" className="pure-menu-link">Forms</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/buttons/" className="pure-menu-link">Buttons</a>
+                            <Link to="/buttons/" className="pure-menu-link">Buttons</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/tables/" className="pure-menu-link">Tables</a>
+                            <Link to="/tables/" className="pure-menu-link">Tables</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/menus/" className="pure-menu-link">Menus</a>
+                            <Link to="/menus/" className="pure-menu-link">Menus</Link>
                         </li>
                         <li className="pure-menu-item menu-item-divided">
-                            <a href="/tools/" className="pure-menu-link">Tools</a>
+                            <Link to="/tools/" className="pure-menu-link">Tools</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/customize/" className="pure-menu-link">Customize</a>
+                            <Link to="/customize/" className="pure-menu-link">Customize</Link>
                         </li>
                         <li className="pure-menu-item">
-                            <a href="/extend/" className="pure-menu-link">Extend</a>
+                            <Link to="/extend/" className="pure-menu-link">Extend</Link>
                         </li>
                         <li className="pure-menu-item">
                             <a href="http://blog.purecss.io/" className="pure-menu-link">Blog</a>

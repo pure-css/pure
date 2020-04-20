@@ -313,8 +313,8 @@ code {
         border-top: 1px solid #333;
     }
 
-        #menu .pure-menu li a:hover,
-        #menu .pure-menu li a:focus {
+        #menu .pure-menu-list li .pure-menu-link:hover,
+        #menu .pure-menu-list li .pure-menu-link:focus {
             background: #333;
         }
 
@@ -401,19 +401,15 @@ code {
         color: #999;
     }
 
-    #menu .pure-menu-selected {
+    #menu .pure-menu-item .active {
         background: #1f8dd6;
+        color: #fff;
     }
 
-        #menu .pure-menu-selected a {
-            color: #fff;
-        }
-
-        #menu li.pure-menu-selected a:hover,
-        #menu li.pure-menu-selected a:focus {
-            background: none;
-        }
-
+    #menu li.pure-menu-item .active:hover,
+    #menu li.pure-menu-item .active:focus {
+        background: #1f8dd6;
+    }
 
 
 /* ---------------------
