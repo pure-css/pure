@@ -7,7 +7,6 @@ import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import SectionHeader from '../../../components/SectionHeader';
 import CodeBlock from '../../../components/CodeBlock';
-import { PURE_DOWNLOAD_SNIPPET } from '../../../lib/pure';
 import styles from './styles.css';
 
 const title = 'Get Started';
@@ -18,7 +17,8 @@ function Start() {
     const {siteConfig = {}} = context;
     const {
         customFields: {
-            pureVersion,
+            PURE_DOWNLOAD_SNIPPET,
+            pureVersion
         }
     } = siteConfig;
     return (

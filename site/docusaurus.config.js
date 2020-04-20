@@ -1,3 +1,4 @@
+const { moduleSizes, PURE_DOWNLOAD_SNIPPET } = require('./lib/pure');
 const { version } = require('../package.json');
 
 module.exports = {
@@ -10,6 +11,8 @@ module.exports = {
   projectName: 'pure',
   plugins: ['@docusaurus/plugin-content-pages'],
   customFields: {
+    PURE_DOWNLOAD_SNIPPET,
+    moduleSizes: moduleSizes(),
     pureVersion: version,
   },
 };
