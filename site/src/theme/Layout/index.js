@@ -19,6 +19,7 @@ import '../../../../build/pure-min.css';
 import '../../../../build/grids-responsive-min.css';
 import '../../../static/css/main-grid.css';
 import '../../../static/css/main.css';
+import '../../../static/css/customize.css';
 
 function Layout(props) {
   const {siteConfig = {}} = useDocusaurusContext();
@@ -82,7 +83,7 @@ function Layout(props) {
         </Head>
         <div id="layout">
             <Menu />
-            <div id="main">
+            <div id="main" class={title.toLowerCase()}>
                 {children}
             </div>
             <Footer siteConfig={siteConfig} />
