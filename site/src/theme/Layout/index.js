@@ -83,7 +83,7 @@ function Layout(props) {
         </Head>
         <div id="layout">
             <Menu />
-            <div id="main" class={title.toLowerCase()}>
+            <div id="main" class={(title || 'home').toLowerCase()}>
                 {children}
             </div>
             <Footer siteConfig={siteConfig} />
