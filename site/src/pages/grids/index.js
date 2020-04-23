@@ -48,7 +48,7 @@ function Grids() {
                 Let's start with a simple example. Here's a grid with three columns:
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
 {`<div class="pure-g">
     <div class="pure-u-1-3"><p>Thirds</p></div>
     <div class="pure-u-1-3"><p>Thirds</p></div>
@@ -470,7 +470,7 @@ function Grids() {
                 Since media queries cannot be over-written, we <u>do not</u> include the grid system as part of <code>pure.css</code>. You'll have to pull it in as a separate CSS file. You can do this by adding the following <code>&lt;link&gt;</code> tag to your page.
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
                 {`<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css" />`}
             </CodeBlock>
 
@@ -484,7 +484,7 @@ function Grids() {
                 The best way to understand the difference between Pure's regular grid and a responsive grid is through an example.The snippet below shows how regular Pure Grids are written. These grids are unresponsive. They'll always be <code>width: 33.33%</code>, irrespective of the width of the screen.
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
                 {`<div class="pure-g">
     <div class="pure-u-1-3"> ... </div>
     <div class="pure-u-1-3"> ... </div>
@@ -496,7 +496,7 @@ function Grids() {
                 Next, let's look at a responsive grid. Elements within this grid will be <code>width: 100%</code> on small screens, but will shrink to become <code>width: 33.33%</code> on medium-sized screens and above.
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
                 {`<div class="pure-g">
     <div class="pure-u-1 pure-u-md-1-3"> ... </div>
     <div class="pure-u-1 pure-u-md-1-3"> ... </div>
@@ -573,7 +573,7 @@ function Grids() {
                 If you do want to use units other than <code>em</code>, you can always modify the default Media Queries on the <a href="/start/#build-your-pure-starter-kit">Get Started</a> page. Converting from <code>em</code> to <code>px</code> is pretty simple:
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
                 {`1em == 16px *`}
             </CodeBlock>
 
@@ -728,7 +728,7 @@ function Grids() {
                 To add borders and padding to Pure Grids, you have two options. The first option is to nest a <code>&lt;div&gt;</code> inside each Grid unit and style the child container:
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
 {`<style>
     .l-box {
         padding: 1em;
@@ -751,7 +751,7 @@ function Grids() {
                 The second option is to add borders and padding directly to a grid unit. This would ordinarily risk breaking the layout, but you can easily avoid this problem by augmenting the behavior of the grid itself with a <code>box-sizing: border-box</code> rule:
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
 {`<style>
     .pure-g > div {
         box-sizing: border-box;
@@ -779,7 +779,7 @@ function Grids() {
                 Pure Grids use a specific font stack to ensure the greatest OS/browser compatibility, and by default grid units will have <code>font-family: sans-serif;</code> applied — this is the default font stack Pure's Base (Normalize.css) applies to <code>&lt;html&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;textarea&gt;</code> elements. Fortunately, it's quite easy to make sure your project's font stack applies to all content when using Pure. Instead of applying your <code>font-family</code> to only the <code>&lt;body&gt;</code> element, apply it like this:
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
 {`<style>
 /*
 When setting the primary font stack, apply it to the Pure grid units along
@@ -800,7 +800,7 @@ html, button, input, select, textarea,
                 Grids is part of the Pure CSS file. However, if you just want Grids and not the other modules, you can pull it down separately. Just include this <code>&lt;link&gt;</code> element in your <code>&lt;head&gt;</code>.
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
 {`<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-min.css">
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">`}

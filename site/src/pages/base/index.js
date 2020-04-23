@@ -51,7 +51,7 @@ function Base() {
                 Add the <code>hidden</code> attribute to an HTML element to hide it from the screen via <code>display: none !important;</code>. Alternatively, for compatibility with old IE, you may use the CSS classname <code>.hidden</code>.
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
                 {`<input type="text" name="_csrf" hidden>`}
             </CodeBlock>
 
@@ -61,7 +61,7 @@ function Base() {
                 Add the <code>.pure-img</code> class name to an <code>&lt;img&gt;</code> element to make it scale with the viewport. This is handy when building responsive websites.
             </p>
 
-            <CodeBlock language="html" wrap={true}>
+            <CodeBlock wrap={true}>
                 {`<img class="pure-img" src="...">`}
             </CodeBlock>
 
