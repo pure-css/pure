@@ -19,7 +19,6 @@ import '../../../../build/pure-min.css';
 import '../../../../build/grids-responsive-min.css';
 import '../../../static/css/main-grid.css';
 import '../../../static/css/main.css';
-import '../../../static/css/customize.css';
 
 function Layout(props) {
   const {siteConfig = {}} = useDocusaurusContext();
