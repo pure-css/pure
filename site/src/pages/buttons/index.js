@@ -4,6 +4,7 @@ import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import Example from '../../../components/Example';
 import SectionHeader from '../../../components/SectionHeader';
+import { handleClick } from '../../../lib/utils';
 
 const title = 'Buttons';
 const description = 'Simple CSS for buttons.';
@@ -13,7 +14,7 @@ function Buttons() {
     <Layout description={description} title={title}>
         <Header description={description} title={title} />
 
-        <div className="content">
+        <div className="content" onClick={handleClick}>
             <SectionHeader heading="Default Buttons" />
 
             <p>
@@ -168,14 +169,6 @@ function Buttons() {
                 </div>
             </Example>
         </div>
-
-        {/*
-        <script dangerouslySetInnerHTML={{ __html: `
-        (function() {
-            $$('a[href="#"]').forEach(a => a.addEventListener('click', (e) => { e.preventDefault(); }));
-        }());
-        `}} />
-        */}
     </Layout>
   );
 }

@@ -15,3 +15,12 @@ export function filePercent({ modules, module, filesizes }) {
     }, 0);
     return (filesizes[module] / total * 100).toFixed(4) + '%';
 }
+
+/**
+ * Generic click handler for pages
+ */
+export function handleClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+}
