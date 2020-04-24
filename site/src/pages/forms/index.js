@@ -5,8 +5,6 @@ import Header from '../../../components/Header';
 import Example from '../../../components/Example';
 import SectionHeader from '../../../components/SectionHeader';
 
-import styles from './styles.css';
-
 const title = 'Forms';
 const description = 'Simple CSS for HTML forms.';
 

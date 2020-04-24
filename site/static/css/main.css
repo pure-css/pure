@@ -224,6 +224,9 @@ code {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+.example .code {
+    margin-top: 1em;
+}
 
 /* --------------------------
  * Footer Module Styles

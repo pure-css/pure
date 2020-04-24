@@ -7,10 +7,10 @@ function Example({ children }) {
     const opts = { inline: 'b' };
     const markup = html(ReactDOMServer.renderToStaticMarkup(children), opts);
     return (
-        <>
+        <div className="example">
             <div dangerouslySetInnerHTML={{ __html: markup }} />
             <CodeBlock>{markup}</CodeBlock>
-        </>
+        </div>
     );
 }
 
