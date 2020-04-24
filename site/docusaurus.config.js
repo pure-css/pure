@@ -9,7 +9,16 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'pure-css',
   projectName: 'pure',
-  plugins: ['@docusaurus/plugin-content-pages'],
+  plugins: [
+    '@docusaurus/plugin-content-pages',
+    '@docusaurus/plugin-google-analytics',
+  ],
+  themeConfig: {
+    googleAnalytics: {
+      trackingID: 'UA-41480445-1',
+      anonymizeIP: true,
+    },
+  },
   customFields: {
     PURE_DOWNLOAD_SNIPPET,
     moduleSizes: moduleSizes(),
