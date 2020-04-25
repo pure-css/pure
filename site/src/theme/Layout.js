@@ -1,24 +1,17 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 import React from 'react';
 import Head from '@docusaurus/Head';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-import Menu from '../../../components/Menu';
-import Footer from '../../../components/Footer';
+import Menu from '../../components/Menu';
+import Footer from '../../components/Footer';
 
 // load common custom css
-import '../../../../build/pure-min.css';
-import '../../../../build/grids-responsive-min.css';
-import '../../../static/css/main-grid.css';
-import '../../../static/css/main.css';
+import '../../../build/pure-min.css';
+import '../../../build/grids-responsive-min.css';
+import '../../static/css/main-grid.css';
+import '../../static/css/main.css';
 
 function Layout(props) {
   const {siteConfig = {}} = useDocusaurusContext();
@@ -84,11 +77,9 @@ function Layout(props) {
             <Menu />
             <div id="main" className={(title || 'home').toLowerCase()}>
                 {children}
+                <Footer siteConfig={siteConfig} />
             </div>
-            <Footer siteConfig={siteConfig} />
         </div>
-
-        <script src="/js/ui.js"></script>
       </>
   );
 }

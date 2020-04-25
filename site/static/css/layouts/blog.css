@@ -27,7 +27,7 @@ h3 {
     padding: 0;
 }
 
-.header {
+.hdr {
     text-align: center;
     top: auto;
     margin: 3em auto;
@@ -41,6 +41,7 @@ h3 {
 .brand-title,
 .brand-tagline {
     margin: 0;
+    color: #fff;
 }
 .brand-title {
     text-transform: uppercase;
@@ -161,7 +162,7 @@ h3 {
         margin-left: 25%;
     }
 
-    .header {
+    .hdr {
         margin: 80% 2em 0;
         text-align: right;
     }
