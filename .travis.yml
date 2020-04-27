@@ -11,5 +11,4 @@ script:
   - echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
   - npm install
   - npm run pretest
-  - export GIT_USER="${GH_NAME}"
-  - cd site && npm install && npm run deploy
+  - cd site && npm install && GIT_USER="${GH_NAME}" npm run deploy
