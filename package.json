@@ -6,9 +6,9 @@
     "url": "git://github.com/pure-css/pure.git"
   },
   "scripts": {
+    "prepare": "grunt release",
     "pretest": "grunt build",
-    "test": "grunt test && tap test/*.js",
-    "prepublish": "grunt release"
+    "test": "grunt test && tap test/*.js"
   },
   "files": "build/",
   "devDependencies": {
@@ -49,5 +49,13 @@
     "msweeney <matt.sweeney@yahoo.com>",
     "jamesalley <manalagi001@yahoo.com>"
   ],
-  "license": "BSD"
+  "license": "BSD",
+  "browserslist": {
+    "production": [
+      "last 2 versions",
+      "ie >= 8",
+      "iOS >= 6",
+      "Android >= 4"
+    ]
+  }
 }
