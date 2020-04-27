@@ -8,7 +8,7 @@ module.exports = {
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'pure-css',
-  projectName: 'pure',
+  projectName: 'purecss.github.io',
   plugins: [
     '@docusaurus/plugin-content-pages',
     '@docusaurus/plugin-google-analytics',
