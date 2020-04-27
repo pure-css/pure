@@ -9,8 +9,9 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.50",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.50",
+    "@docusaurus/core": "^2.0.0-alpha.53",
+    "@docusaurus/plugin-content-pages": "^2.0.0-alpha.53",
+    "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.53",
     "classnames": "^2.2.6",
     "gzip-size": "^5.1.1",
     "js-beautify": "^1.11.0",
