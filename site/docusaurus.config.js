@@ -4,7 +4,7 @@ const { version } = require('../package.json');
 module.exports = {
   title: 'Pure',
   tagline: 'Pure is a ridiculously tiny CSS library you can use to start any web project.',
-  url: 'https://purecss.io',
+  url: 'https://purecss.github.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'pure-css',
