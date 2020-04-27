@@ -10,7 +10,6 @@ function Layout(props) {
     children,
     description,
     title,
-    type,
   } = props;
   return (
       <>
