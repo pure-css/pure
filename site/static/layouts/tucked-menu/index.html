@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Showcases a horizontal menu that hides at small window widths, and which scrolls when revealed.">
+    <title>Responsive Horizontal-to-Scrollable Menu &ndash; Layout Examples &ndash; Pure</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
+</head>
+<body>
+
+<style>
+.custom-menu-wrapper {
+    background-color: #808080;
+    margin-bottom: 2.5em;
+    white-space: nowrap;
+    position: relative;
+}
+
+.custom-menu {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+    background-color: transparent;
+}
+
+.custom-menu-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.custom-menu-brand {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: none;
+}
+
+.custom-menu-toggle .bar {
+    background-color: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-menu-screen {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 70em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.custom-menu-tucked .custom-menu-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+
+@media (max-width: 62em) {
+
+    .custom-menu {
+        display: block;
+    }
+
+    .custom-menu-toggle {
+        display: block;
+        display: none\9;
+    }
+
+    .custom-menu-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: #808080\9;
+        z-index: 100;
+    }
+
+    .custom-menu-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+
+    .pure-menu-horizontal.custom-menu-tucked {
+        z-index: -1;
+        top: 45px;
+        position: absolute;
+        overflow: hidden;
+    }
+
+}
+</style>
+<div class="custom-menu-wrapper">
+    <div class="pure-menu custom-menu custom-menu-top">
+        <a href="#" class="pure-menu-heading custom-menu-brand">Brand</a>
+        <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+        <div class="custom-menu-screen"></div>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Apple</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Google</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Wang</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Yahoo</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">W3C</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+(function (window, document) {
+document.getElementById('toggle').addEventListener('click', function (e) {
+    document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+    document.getElementById('toggle').classList.toggle('x');
+});
+})(this, this.document);
+</script>
+<style>
+.main {
+    padding: 2em;
+    color: black;
+}
+</style>
+
+<div class="main">
+
+    <h1>Responsive Horizontal-to-Scrollable Menu</h1>
+
+    <p>This example shows how you can build upon Pure menu classes
+    such as pure-menu-horizontal
+    and pure-menu-scrollable. At wide window-widths we display a horizontal menu.
+    At smaller window-widths,
+    we switch to a scrollable horizontal menu with a toggle control. Older IE
+    clients won't get all the bells and whistles, but it should still be usable.
+    Remember that the JavaScript provided is plain vanilla JS so it won't work in
+    some browsers; you'll need to polyfill or adapt the code to your library of choice.</p>
+
+    <p>Code reproduced below:</p>
+
+<pre class="code" data-language="html"><code>&lt;style&gt;
+      .custom-menu-wrapper {
+          background-color: #808080;
+          margin-bottom: 2.5em;
+          white-space: nowrap;
+          position: relative;
+      }
+
+      .custom-menu {
+          display: inline-block;
+          width: auto;
+          vertical-align: middle;
+          -webkit-font-smoothing: antialiased;
+      }
+
+      .custom-menu .pure-menu-link,
+      .custom-menu .pure-menu-heading {
+          color: white;
+      }
+
+      .custom-menu .pure-menu-link:hover,
+      .custom-menu .pure-menu-heading:hover {
+          background-color: transparent;
+      }
+
+      .custom-menu-top {
+          position: relative;
+          padding-top: .5em;
+          padding-bottom: .5em;
+      }
+
+      .custom-menu-brand {
+          display: block;
+          text-align: center;
+          position: relative;
+      }
+
+      .custom-menu-toggle {
+          width: 44px;
+          height: 44px;
+          display: block;
+          position: absolute;
+          top: 3px;
+          right: 0;
+          display: none;
+      }
+
+      .custom-menu-toggle .bar {
+          background-color: white;
+          display: block;
+          width: 20px;
+          height: 2px;
+          border-radius: 100px;
+          position: absolute;
+          top: 22px;
+          right: 12px;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          transition: all 0.5s;
+      }
+
+      .custom-menu-toggle .bar:first-child {
+          -webkit-transform: translateY(-6px);
+          -moz-transform: translateY(-6px);
+          -ms-transform: translateY(-6px);
+          transform: translateY(-6px);
+      }
+
+      .custom-menu-toggle.x .bar {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+      }
+
+      .custom-menu-toggle.x .bar:first-child {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+      }
+
+      .custom-menu-screen {
+          background-color: rgba(0, 0, 0, 0.5);
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          transition: all 0.5s;
+          height: 3em;
+          width: 70em;
+          position: absolute;
+          top: 0;
+          z-index: -1;
+      }
+
+      .custom-menu-tucked .custom-menu-screen {
+          -webkit-transform: translateY(-44px);
+          -moz-transform: translateY(-44px);
+          -ms-transform: translateY(-44px);
+          transform: translateY(-44px);
+      }
+
+      @media (max-width: 62em) {
+
+          .custom-menu {
+              display: block;
+          }
+
+          .custom-menu-toggle {
+              display: block;
+              display: none\9;
+          }
+
+          .custom-menu-bottom {
+              position: absolute;
+              width: 100%;
+              border-top: 1px solid #eee;
+              background-color: #808080\9;
+              z-index: 100;
+          }
+
+          .custom-menu-bottom .pure-menu-link {
+              opacity: 1;
+              -webkit-transform: translateX(0);
+              -moz-transform: translateX(0);
+              -ms-transform: translateX(0);
+              transform: translateX(0);
+              -webkit-transition: all 0.5s;
+              -moz-transition: all 0.5s;
+              -ms-transition: all 0.5s;
+              transition: all 0.5s;
+          }
+
+          .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+              -webkit-transform: translateX(-140px);
+              -moz-transform: translateX(-140px);
+              -ms-transform: translateX(-140px);
+              transform: translateX(-140px);
+              opacity: 0;
+              opacity: 1\9;
+          }
+
+          .pure-menu-horizontal.custom-menu-tucked {
+              z-index: -1;
+              top: 45px;
+              position: absolute;
+              overflow: hidden;
+          }
+
+      }
+      &lt;/style&gt;
+      &lt;div class&#x3D;&quot;custom-menu-wrapper&quot;&gt;
+          &lt;div class&#x3D;&quot;pure-menu custom-menu custom-menu-top&quot;&gt;
+              &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-heading custom-menu-brand&quot;&gt;Brand&lt;/a&gt;
+              &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;custom-menu-toggle&quot; id&#x3D;&quot;toggle&quot;&gt;&lt;s class&#x3D;&quot;bar&quot;&gt;&lt;/s&gt;&lt;s class&#x3D;&quot;bar&quot;&gt;&lt;/s&gt;&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked&quot; id&#x3D;&quot;tuckedMenu&quot;&gt;
+              &lt;div class&#x3D;&quot;custom-menu-screen&quot;&gt;&lt;/div&gt;
+              &lt;ul class&#x3D;&quot;pure-menu-list&quot;&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Google&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Wang&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;Yahoo&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class&#x3D;&quot;pure-menu-item&quot;&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;pure-menu-link&quot;&gt;W3C&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;script&gt;
+      (function (window, document) {
+      document.getElementById(&#x27;toggle&#x27;).addEventListener(&#x27;click&#x27;, function (e) {
+          document.getElementById(&#x27;tuckedMenu&#x27;).classList.toggle(&#x27;custom-menu-tucked&#x27;);
+          document.getElementById(&#x27;toggle&#x27;).classList.toggle(&#x27;x&#x27;);
+      });
+      })(this, this.document);
+      &lt;/script&gt;</code></pre>
+</div>
+
+
+</body>
+</html>

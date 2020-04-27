@@ -109,7 +109,7 @@ grunt.initConfig({
     postcss: {
         options: {
             processors: [
-                require('autoprefixer')({browsers: ['last 2 versions', 'ie >= 8', 'iOS >= 6', 'Android >= 4']})
+                require('autoprefixer')()
             ]
         },
         dist: {

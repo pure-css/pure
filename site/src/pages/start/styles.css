@@ -1,0 +1,197 @@
+.pure-form label {
+    font-size: 100%;
+}
+
+.grids-example {
+    border-top: 0;
+}
+
+.grid-input,
+.grid-output {
+    margin-bottom: 1em;
+}
+
+.grid-tabs {
+    padding: 3em 0 0;
+    margin: 0;
+}
+
+
+.grid-output-download {
+    font-size: 1.2em;
+}
+
+.grid-tab-link,
+.grid-tab-link:visited {
+    font-weight: bold;
+    padding: 1em 1em;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    color: #666;
+    transition: all 0.1s;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+.grid-output-tabs .grid-tab-link,
+.grid-output-tabs .grid-tab-link:visited,
+.download-link {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.grid-tab-link-selected,
+.grid-tab-link-selected:visited {
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.grid-content {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    overflow-y: hidden;
+}
+
+.grid-panel {
+    /*
+    By default, we hide these off screen. Not using display:none; to preserve
+    accessibility.
+    */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+}
+.grid-panel-selected {
+    /* when a tab is selected, we remove the position: absolute;*/
+    position: static;
+}
+
+.grid-output .code {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+}
+#css .code,
+#css-old-ie .code {
+    max-height: 35em;
+}
+
+.offset-1-12 {
+    margin-left: 8.33%;
+}
+
+#media-query-table {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+#media-query-table td {
+    padding: 0.3em;
+}
+
+.media-query-table-example {
+    font-size: 0.875em;
+    font-weight: normal;
+    display: none;
+}
+.media-query-table-example code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+.mq-key,
+.mq-value {
+    width: 100%;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 1em;
+}
+
+#options .cols-control label,
+#options .prefix-control label {
+    width: 8.75em;
+}
+.cols-control input {
+    text-align: center;
+}
+
+.remove-row {
+    text-align: center;
+}
+
+.remove-mq {
+    background: white;
+    border: 1px solid rgb(229, 53, 53);
+    font-weight: 500;
+    color: rgb(229, 53, 53);
+    margin-top: 0.25em;
+    padding: 0.25em 0.5em;
+    box-shadow: none;
+    -webkit-transition: background 0.1s;
+    -moz-transition: background 0.1s;
+    transition: background 0.1s;
+}
+
+.remove-mq:hover,
+.remove-mq:active {
+    color: white;
+    background: rgb(249, 114, 114);
+    box-shadow: none;
+}
+
+.grids-example [class *= "pure-u"] {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    text-align: center;
+    padding: 1em 0;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-bottom: none;
+}
+
+.invalid-message {
+    color: #b94a48;
+    font-size: 90%;
+}
+
+.pure-form input[invalid] {
+    border: 1px solid rgb(229, 53, 53);
+}
+
+.download-link {
+    display: block;
+}
+
+@media screen and (min-width: 48em) {
+    .controls {
+        text-align: left;
+    }
+
+    .grid-content {
+        padding: 1em;
+    }
+
+    .grid-tab-link {
+        font-size: 1em;
+    }
+
+    .invalid-message {
+        padding-top: 0.625em;
+    }
+
+    .grid-output-download {
+        font-size: 1.5em;
+    }
+
+    .media-query-table-example {
+        display: block;
+    }
+}
