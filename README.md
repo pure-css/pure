@@ -159,12 +159,12 @@ Pure is tested and works in:
 Docs and Website
 ----------------
 
-[Pure's website][Pure] is also open source, so please open any issues or pull
-requests for the docs and website over at the [`pure-site`][pure-site]
-repository.
+[Pure's website][Pure] is located in the [`site`][pure-site] directory. Please feel free
+to open issues or questions in the Issue tab.
 
 
-[pure-site]: https://github.com/pure-css/pure-site
+[Pure]: http://purecss.io/
+[pure-site]: https://github.com/pure-css/pure/tree/master/site
 
 
 Contributing

@@ -18,13 +18,12 @@ contributions along with all other developers who use Pure.
 Docs and Website
 ----------------
 
-[Pure's website][Pure] is also open source, so please open any issues or pull
-requests for the docs and website over at the [`pure-site`][pure-site]
-repository.
+[Pure's website][Pure] is located in the `site` directory. Please feel free
+to open issues or questions in the Issue tab.
 
 
 [Pure]: http://purecss.io/
-[pure-site]: https://github.com/pure-css/pure-site
+[pure-site]: https://github.com/pure-css/pure/tree/master/site
 
 
 Building and Testing Pure
@@ -68,8 +67,8 @@ $ grunt watch
 Pure is tested and works in:
 
 * IE 8+
-* Latest Stable: Firefox, Chrome, Safari
-* iOS 6-8
+* Latest Stable: Edge, Firefox, Chrome, Safari
+* iOS 6+
 * Android 4.x
 
 Before sending pull requests, please ensure that you open the test HTML files
