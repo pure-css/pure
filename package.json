@@ -8,6 +8,8 @@
   "scripts": {
     "prepare": "grunt release",
     "pretest": "grunt build",
+    "site:build": "npm run pretest && cd site && npm run build",
+    "site:start": "cd site && npm run start",
     "test": "grunt test && tap test/*.js"
   },
   "files": "build/",
