@@ -20,12 +20,6 @@ A set of small, responsive CSS modules that you can use in every web project.
 
 Note: You can [customize which Pure modules you need][customize].
 
-**Install with Bower:**
-
-```shell
-$ bower install --save pure
-```
-
 **Install with NPM:**
 
 ```shell
@@ -33,7 +27,6 @@ $ npm install purecss
 ```
 
 [Pure]: http://purecss.io/
-[Bower]: http://bower.io/
 [Build Status]: https://travis-ci.org/pure-css/pure
 [customize]: http://purecss.io/customize/
 
@@ -80,13 +73,7 @@ You can include the Pure CSS file in your project by fetching it from unpkg:
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 ```
 
-You can also install Pure using [Bower][], using the following command:
-
-```shell
-$ bower install --save pure
-```
-
-Or you can install Pure using NPM:
+You can also install Pure using NPM:
 
 ```shell
 $ npm install purecss

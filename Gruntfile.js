@@ -6,19 +6,6 @@ grunt.initConfig({
 
     nick : 'pure',
     pkg  : grunt.file.readJSON('package.json'),
-    bower: grunt.file.readJSON('bower.json'),
-
-    // -- bower.json Config ---------------------------------------------------------
-
-    bower_json: {
-        release: {
-            values: {
-                main: 'pure.css'
-            },
-
-            dest: 'build/'
-        }
-    },
 
     // -- Clean Config ---------------------------------------------------------
 
@@ -279,7 +266,6 @@ grunt.loadNpmTasks('grunt-stripmq');
 grunt.loadTasks('tasks/');
 
 grunt.registerTask('default', ['test', 'build']);
-grunt.registerTask('import', ['bower_install']);
 grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
@@ -302,7 +288,6 @@ grunt.registerTask('release', [
     'default',
     'clean:release',
     'copy:release',
-    'bower_json:release',
     'compress:release'
 ]);
 

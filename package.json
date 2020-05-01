@@ -15,7 +15,6 @@
   "files": "build/",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
-    "bower": "^1.8.2",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^2.0.0",

@@ -33,14 +33,6 @@ function Tools() {
                 &ndash; Return full path to a Pure file.
             </ul>
 
-            <SectionHeader heading="Installing Pure with Bower" />
-
-            <p>
-                You can add Pure to your project through <a href="http://bower.io">Bower</a>. This works great if your website is SSL-encrypted.
-            </p>
-
-            <CodeBlock>$ bower install pure --save</CodeBlock>
-
             <SectionHeader heading="Installing Pure with Composer" />
 
             <p>
