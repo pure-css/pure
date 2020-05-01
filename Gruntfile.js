@@ -50,7 +50,7 @@ grunt.initConfig({
         build: {
             files: [
                 {'build/base.css': [
-                    'bower_components/normalize-css/normalize.css',
+                    'node_modules/normalize.css/normalize.css',
                     'build/base.css'
                 ]},
 
@@ -168,7 +168,7 @@ grunt.initConfig({
             options: {
                 banner: [
                     '/*!',
-                    'normalize.css v<%= bower.devDependencies["normalize-css"] %> | MIT License | git.io/normalize',
+                    'normalize.css v<%= pkg.devDependencies["normalize-css"] %> | MIT License | git.io/normalize',
                     'Copyright (c) Nicolas Gallagher and Jonathan Neal',
                     '*/\n'
                 ].join('\n')
@@ -278,7 +278,7 @@ grunt.loadNpmTasks('grunt-stripmq');
 // Local tasks.
 grunt.loadTasks('tasks/');
 
-grunt.registerTask('default', ['import', 'test', 'build']);
+grunt.registerTask('default', ['test', 'build']);
 grunt.registerTask('import', ['bower_install']);
 grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
