@@ -52,8 +52,6 @@
         margin: 1.5em 0 0 0;
     }
 
-    /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
-    .pure-form .pure-help-inline,
     .pure-form-message-inline,
     .pure-form-message {
         display: block;

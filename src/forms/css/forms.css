@@ -201,12 +201,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form-aligned input,
 .pure-form-aligned textarea,
 .pure-form-aligned select,
-/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
-.pure-form-aligned .pure-help-inline,
 .pure-form-message-inline {
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
     vertical-align: middle;
 }
 .pure-form-aligned textarea {
@@ -294,8 +290,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 /* Inline help for forms */
-/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
-.pure-form .pure-help-inline,
 .pure-form-message-inline {
     display: inline-block;
     padding-left: 0.3em;
