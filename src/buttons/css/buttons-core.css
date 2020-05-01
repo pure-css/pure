@@ -1,7 +1,6 @@
 .pure-button {
     /* Structure */
     display: inline-block;
-    zoom: 1;
     line-height: normal;
     white-space: nowrap;
     vertical-align: middle;
@@ -21,8 +20,6 @@
 /* Inherit .pure-g styles */
 .pure-button-group {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
     text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 }
 
