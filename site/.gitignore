@@ -4,6 +4,9 @@
 # Production
 /build
 
+# Ignore manually copied pure files to static/css folder
+/static/css/pure
+
 # Generated files
 .docusaurus
 .cache-loader

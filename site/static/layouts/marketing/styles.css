@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: sans-serif;
+}
+
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
