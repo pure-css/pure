@@ -474,10 +474,6 @@ function Grids() {
                 {`<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css" />`}
             </CodeBlock>
 
-            <p>
-                Even though Pure Grids are designed to be mobile-first, you may want to show the "desktop-experience" to users who view your website in IE 8 or below. Just include the <code>grids-responsive-old-ie.css</code> file inside an IE conditional statement and Pure Grids will adapt to show the desktop experience.
-            </p>
-
             <h3>Pure's Regular Grid vs. Responsive Grid</h3>
 
             <p>
