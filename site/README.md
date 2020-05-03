@@ -30,4 +30,11 @@ This command generates static content into the `build` directory and can be serv
 $ GIT_USER=<Your GitHub username> USE_SSH=true npm run deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The site is hosted on [Vercel](https://vercel.com/) and will automatically deploy when commits are merged to `master`.
+
+### Including Pure
+
+We want to use the locally built version of Pure so that the [layout examples](https://purecss.io/layouts/) are always using the `master` version, previously they had used a hardcoded CDN link.
+
+To get Docusaurus to register the css as `static`, they have to exist in the `static/` directory before the site is built. Therefore, we copy the Pure `build/` in manually and `.gitignore` them. Once Docusaurus builds, they resolve as proper CSS files.
+
