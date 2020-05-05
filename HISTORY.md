@@ -1,6 +1,35 @@
 Pure Change History
 ===================
 
+2.0.0 (2020-05-05)
+------------------
+
+This is a major version bump that has the following changes:
+
+* Reduced overall size of Pure to 3.6kb (gzipped/min)
+* Updated Normalize to v8.
+* Removed bower
+* Removed old IE 8 hacks
+* Removed deprecated `pure-help-inline` form class
+
+### Migration
+
+This major version should not include too many breaking changes for your app, but please check the following:
+
+- Normalize Upgraded from v3 to v8. [Many things have changed](https://github.com/necolas/normalize.css/blob/master/CHANGELOG.md), be sure to verify your site properly.
+- Normalize removed the default `font-family`, but we have added to the `base.css` for consistency and due to the fact that the grids system leverages the `font-family` for `letter-spacing`.
+
+### New Browser support
+- Chrome
+- Edge
+- Firefox
+- Internet Explorer 10+
+- Safari 8+
+- Opera
+
+> Deprecated support for < IE 10
+
+
 1.0.1 (2019-07-10)
 ------------------
 
