@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "copy:pure": "cp -r ../build/ ./static/css/pure/",
-    "start": "docusaurus start",
     "build": "docusaurus build",
+    "copy:pure": "cp -r ../build/ ./static/css/pure/",
+    "deploy": "docusaurus deploy",
     "prebuild": "npm run copy:pure",
+    "predeploy": "npm run copy:pure",
     "prestart": "npm run copy:pure",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy"
+    "start": "docusaurus start",
+    "swizzle": "docusaurus swizzle"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.53",
