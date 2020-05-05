@@ -34,9 +34,6 @@
 .pure-button-disabled:active {
     border: none;
     background-image: none;
-    /* csslint ignore:start */
-    filter: alpha(opacity=40);
-    /* csslint ignore:end */
     opacity: 0.40;
     cursor: not-allowed;
     box-shadow: none;

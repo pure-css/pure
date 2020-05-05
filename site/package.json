@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "copy:pure": "cp -r ../build/ ./static/css/pure/",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "prebuild": "npm run copy:pure",
+    "prestart": "npm run copy:pure",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy"
   },

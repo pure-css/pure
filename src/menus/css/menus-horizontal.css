@@ -13,7 +13,5 @@
 .pure-menu-horizontal .pure-menu-heading,
 .pure-menu-horizontal .pure-menu-separator {
     display: inline-block;
-    *display: inline;
-    zoom: 1;
     vertical-align: middle;
 }

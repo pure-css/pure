@@ -8,6 +8,10 @@
  * Extra rules that Pure adds on top of Normalize.css
  */
 
+html {
+    font-family: sans-serif;
+}
+
 /**
  * Always hide an element when it has the `hidden` HTML attribute.
  */
