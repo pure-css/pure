@@ -16,7 +16,6 @@
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     /* a little extra padding for this style to allow for scrollbars */
     padding: .5em 0;
 }

@@ -74,7 +74,6 @@
 
 .grid-output .code {
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     margin: 0;
 }
 #css .code,

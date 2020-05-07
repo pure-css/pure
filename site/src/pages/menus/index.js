@@ -85,7 +85,7 @@ function Menus() {
 
             <p>
                 We recommend enabling submenus via JavaScript to enable accessibility.
-                To help get you started, <a href="/js/menus.js">an example script</a>
+                To help get you started, <a href="/js/menus.js">an example script</a> 
                 written in vanilla JS provides ARIA support, limited submenu arrow-key
                 navigation, and the ability to dismiss menus with an outside event or
                 the ESC key. But you may wish to go further by adding edge detection,
@@ -154,7 +154,7 @@ function Menus() {
 
             <p>
                 To create a scrollable horizontal menu, add the <code>pure-menu-scrollable</code> class name. When
-                there isn't enough room, the menu items can be scrolled or flicked. Dropdown menus are not supported.
+                there isn't enough room, the menu items can be scrolled or flicked. Dropdown menus are not supported. If you would like momentum-based scrolling we recommend using a JS library like <a href="https://github.com/ilyashubin/scrollbooster">scrollbooster</a> to add such effects. 
             </p>
 
             <Example>

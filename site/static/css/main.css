@@ -208,7 +208,6 @@ code {
     border-left-width: 0;
     border-right-width: 0;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
 .code pre {
     margin: 0;
@@ -291,7 +290,6 @@ code {
     z-index: 1000; /* so the menu or its navicon stays above all content */
     background: #191818;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 }
     #menu a {
         color: #999;
@@ -464,7 +462,6 @@ a.pure-button-primary {
     margin-left: -1em;
     margin-right: -1em;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     margin-bottom: 1em;
 }
 .table-responsive table {

@@ -89,7 +89,6 @@ appears on the left side of the page.
     z-index: 1000; /* so the menu or its navicon stays above all content */
     background: #191818;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 }
     /*
     All anchors inside the menu should be styled like this.
