@@ -1,6 +1,11 @@
 Pure Change History
 ===================
 
+2.0.1 (2020-05-05)
+------------------
+
+* refactor: remove usage of deprecated webkit-overflow-scrolling
+
 2.0.0 (2020-05-05)
 ------------------
 
