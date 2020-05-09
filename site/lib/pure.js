@@ -4,8 +4,8 @@ const gzip = require('gzip-size');
 const path = require('path');
 const { version } = require('../../package.json');
 
-const pureDir = path.resolve(__dirname, '..', '..', 'build');
-const pureMin = fs.readFileSync(path.resolve(__dirname, '..', '..', 'build', 'pure-min.css'), 'utf-8');
+const pureDir = path.resolve(__dirname, '..', 'static', 'css', 'pure');
+const pureMin = fs.readFileSync(path.resolve(pureDir, 'pure-min.css'), 'utf-8');
 
 // use pure-min.css to determine site integrity hash
 const sriHash = crypto.createHash('sha384').update(pureMin, 'utf8').digest('base64');
