@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "build": "docusaurus build",
-    "copy:pure": "cp -rf ../build/ ./static/css/pure/",
+    "copy:pure": "cat ../build/pure-min.css && cp -rf ../build/ ./static/css/pure/",
     "deploy": "docusaurus deploy",
     "prebuild": "npm run copy:pure",
-    "predeploy": "npm run copy:pure && npm run build",
+    "predeploy": "npm run build",
     "prestart": "npm run copy:pure",
     "start": "docusaurus start",
     "swizzle": "docusaurus swizzle"
