@@ -6,9 +6,12 @@ const { version } = require('../../package.json');
 
 const pureDir = path.resolve(__dirname, '..', 'static', 'css', 'pure');
 const pureMin = fs.readFileSync(path.resolve(pureDir, 'pure-min.css'), 'utf-8');
+console.log('pureMin Location', path.resolve(pureDir, 'pure-min.css'));
+console.log('pureMin', pureMin);
 
 // use pure-min.css to determine site integrity hash
 const sriHash = crypto.createHash('sha384').update(pureMin, 'utf8').digest('base64');
+console.log('sriHash', sriHash);
 
 // copy/pastable code snippet for users
 module.exports.PURE_DOWNLOAD_SNIPPET = `<link rel="stylesheet" href="https://unpkg.com/purecss@${version}/build/pure-min.css" integrity="sha384-${sriHash}" crossorigin="anonymous">`;
