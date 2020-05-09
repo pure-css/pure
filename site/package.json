@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "docusaurus build",
-    "copy:pure": "cp -r ../build/ ./static/css/pure/",
+    "copy:pure": "cp -rf ../build/ ./static/css/pure/",
     "deploy": "docusaurus deploy",
     "prebuild": "npm run copy:pure",
     "predeploy": "npm run copy:pure",
