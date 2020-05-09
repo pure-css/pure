@@ -7,7 +7,7 @@
     "copy:pure": "cp -rf ../build/ ./static/css/pure/",
     "deploy": "docusaurus deploy",
     "prebuild": "npm run copy:pure",
-    "predeploy": "npm run copy:pure",
+    "predeploy": "npm run copy:pure && npm run build",
     "prestart": "npm run copy:pure",
     "start": "docusaurus start",
     "swizzle": "docusaurus swizzle"
