@@ -50,12 +50,10 @@
     "jamesalley <manalagi001@yahoo.com>"
   ],
   "license": "BSD",
-  "browserslist": {
-    "production": [
-      "last 2 versions",
-      "ie >= 10",
-      "iOS >= 12",
-      "Android >= 6"
-    ]
-  }
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 10",
+    "iOS >= 12",
+    "Android >= 6"
+  ]
 }
