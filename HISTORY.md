@@ -1,6 +1,11 @@
 Pure Change History
 ===================
 
+2.0.3 (2020-05-11)
+------------------
+
+* fix: update browser list for all environments
+
 2.0.2 (2020-05-11)
 ------------------
 
