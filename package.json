@@ -53,9 +53,9 @@
   "browserslist": {
     "production": [
       "last 2 versions",
-      "ie >= 8",
-      "iOS >= 6",
-      "Android >= 4"
+      "ie >= 10",
+      "iOS >= 12",
+      "Android >= 6"
     ]
   }
 }

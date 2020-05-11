@@ -2,6 +2,7 @@
     "adjoining-classes"        : false,
     "box-sizing"               : false,
     "display-property-grouping": false,
+    "fallback-colors"          : false,
     "order-alphabetical"       : false,
     "star-property-hack"       : false,
     "unqualified-attributes"   : false
