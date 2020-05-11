@@ -6,7 +6,7 @@
     "url": "git://github.com/pure-css/pure.git"
   },
   "scripts": {
-    "prepare": "ls -al ./static/css/pure/ && cat ./build/pure-min.css && grunt release && cat ./build/pure-min.css",
+    "prepare": "grunt release && cat ./build/pure-min.css",
     "site:build": "npm run pretest && cd site && npm install && npm run build",
     "site:start": "cd site && npm run start",
     "test": "grunt test && tap test/*.js"
