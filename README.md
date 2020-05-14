@@ -15,7 +15,7 @@ A set of small, responsive CSS modules that you can use in every web project.
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css" integrity="sha384-QkSsJi6SGgWv5LAx1TdvIDRf8TW5Ui4NVKqDDlK1wY2eKioo7wvYIJvGWFQSFE4U" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 ```
 
 Note: You can [customize which Pure modules you need][customize].
@@ -55,7 +55,7 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 
 * Responsive by default, with a non-responsive option.
 
-* Extremely small file size: **4.5KB minified + gzip**.
+* Extremely small file size: **3.7KB minified + gzip**.
 
 
 [Normalize.css]: http://necolas.github.io/normalize.css/
@@ -70,7 +70,7 @@ extensive documentation and examples to help you start using Pure.
 You can include the Pure CSS file in your project by fetching it from unpkg:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 ```
 
 You can also install Pure using NPM:
@@ -137,10 +137,10 @@ Browser Support and Testing
 
 Pure is tested and works in:
 
-* IE 8+
+* IE 10+
 * Latest Stable: Firefox, Chrome, Safari
-* iOS 6-8
-* Android 4.4+, as the way views work changed between older versions of Android and newer versions of Android around this time.
+* iOS 12+
+* Android 6+
 
 
 Docs and Website
