@@ -64,10 +64,10 @@ const layouts = [
 const renderLayouts = (layout, idx) => (
     <div key={idx} className="layout-item l-wrap pure-g">
         <div className="layout-item-screenshot content pure-u-1 u-sm-1-2">
-            <Link to={`/layouts/${layout.type}`}>
+            <a href={`/layouts/${layout.type}/`}>
                 <img src={useBaseUrl(`img/layouts/${layout.type}@2x.jpg`)} className="pure-img-responsive" width="400" height="214"
                 alt={`Screenshot of ${layout.title} example layout`} />
-            </Link>
+            </a>
         </div>
         <div className="layout-item-content content pure-u-1 u-sm-1-2">
             <h3 className="layout-item-head">{layout.title}</h3>
