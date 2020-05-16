@@ -6,6 +6,7 @@
     "url": "git://github.com/pure-css/pure.git"
   },
   "scripts": {
+    "lint": "eslint . --ext .js",
     "prepare": "grunt release",
     "site:build": "npm run pretest && cd site && npm install && npm run build",
     "site:start": "cd site && npm run start",
@@ -14,6 +15,8 @@
   "files": "build/",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "eslint": "^7.0.0",
+    "eslint-plugin-react": "^7.20.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^2.0.0",
