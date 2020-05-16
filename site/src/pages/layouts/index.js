@@ -1,63 +1,62 @@
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import classnames from 'classnames';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Header from '../../../components/Header';
 import SectionHeader from '../../../components/SectionHeader';
 
-import styles from './styles.css';
+import './styles.css';
 
 const title = 'Layouts';
 const description = 'Quickstart your next web project with these example layouts.';
 const layouts = [
     {
-        type: "blog",
-        title: "Blog",
-        summary: "A layout example that shows off a blog page with a list of posts.",
-        modules: ["base", "grids", "buttons", "menus"]
+        type: 'blog',
+        title: 'Blog',
+        summary: 'A layout example that shows off a blog page with a list of posts.',
+        modules: ['base', 'grids', 'buttons', 'menus']
     },
     {
-        type: "email",
-        title: "Email",
-        summary: "A layout example that shows off a responsive email layout.",
-        modules: ["base", "grids", "buttons", "menus"]
+        type: 'email',
+        title: 'Email',
+        summary: 'A layout example that shows off a responsive email layout.',
+        modules: ['base', 'grids', 'buttons', 'menus']
     },
     {
-        type: "gallery",
-        title: "Photo Gallery",
-        summary: "A layout example that shows off a responsive photo gallery.",
-        modules: ["base", "grids", "forms", "buttons", "menus"]
+        type: 'gallery',
+        title: 'Photo Gallery',
+        summary: 'A layout example that shows off a responsive photo gallery.',
+        modules: ['base', 'grids', 'forms', 'buttons', 'menus']
     },
     {
-        type: "marketing",
-        title: "Landing Page",
-        summary: "A layout example that shows off a responsive product landing page.",
-        modules: ["base", "grids", "forms", "buttons", "menus"]
+        type: 'marketing',
+        title: 'Landing Page',
+        summary: 'A layout example that shows off a responsive product landing page.',
+        modules: ['base', 'grids', 'forms', 'buttons', 'menus']
     },
     {
-        type: "pricing",
-        title: "Pricing Table",
-        summary: "A layout example that shows off a responsive pricing table.",
-        modules: ["base", "grids", "buttons", "menus"]
+        type: 'pricing',
+        title: 'Pricing Table',
+        summary: 'A layout example that shows off a responsive pricing table.',
+        modules: ['base', 'grids', 'buttons', 'menus']
     },
     {
-        type: "side-menu",
-        title: "Responsive Side Menu",
-        summary: "A layout example with a side menu that hides on mobile, just like the Pure website.",
-        modules: ["base", "grids", "menus"]
+        type: 'side-menu',
+        title: 'Responsive Side Menu',
+        summary: 'A layout example with a side menu that hides on mobile, just like the Pure website.',
+        modules: ['base', 'grids', 'menus']
     },
     {
-        type: "tucked-menu-vertical",
-        title: "Responsive Horizontal-to-Vertical Menu",
-        summary: "A set of horizontal menus that switch to vertical and which hide at small window widths.",
-        modules: ["base", "grids", "menus"]
+        type: 'tucked-menu-vertical',
+        title: 'Responsive Horizontal-to-Vertical Menu',
+        summary: 'A set of horizontal menus that switch to vertical and which hide at small window widths.',
+        modules: ['base', 'grids', 'menus']
     },
     {
-        type: "tucked-menu",
-        title: "Responsive Horizontal-to-Scrollable Menu",
-        summary: "Showcases a horizontal menu that hides at small window widths, and which scrolls when revealed.",
-        modules: ["base", "menus"]
+        type: 'tucked-menu',
+        title: 'Responsive Horizontal-to-Scrollable Menu',
+        summary: 'Showcases a horizontal menu that hides at small window widths, and which scrolls when revealed.',
+        modules: ['base', 'menus']
     }
 ];
 
@@ -66,7 +65,7 @@ const renderLayouts = (layout, idx) => (
         <div className="layout-item-screenshot content pure-u-1 u-sm-1-2">
             <a href={`/layouts/${layout.type}/`}>
                 <img src={useBaseUrl(`img/layouts/${layout.type}@2x.jpg`)} className="pure-img-responsive" width="400" height="214"
-                alt={`Screenshot of ${layout.title} example layout`} />
+                    alt={`Screenshot of ${layout.title} example layout`} />
             </a>
         </div>
         <div className="layout-item-content content pure-u-1 u-sm-1-2">

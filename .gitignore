@@ -1,4 +1,5 @@
 .DS_Store
+.nyc_output/
 artifacts/
 build/
 coverage/

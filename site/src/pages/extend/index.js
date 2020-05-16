@@ -50,7 +50,7 @@ function Extend() {
                 </p>
 
                 <CodeBlock>
-                    {`<form class="pure-form pure-form-stacked"></form>`}
+                    {'<form class="pure-form pure-form-stacked"></form>'}
                 </CodeBlock>
 
                 <h4>Stacked Form: CSS</h4>
@@ -84,7 +84,7 @@ function Extend() {
                 </p>
 
                 <CodeBlock>
-                    {`<form class="form-custom pure-form"></form>`}
+                    {'<form class="form-custom pure-form"></form>'}
                 </CodeBlock>
 
                 <CodeBlock className="test">

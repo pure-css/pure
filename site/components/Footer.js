@@ -1,5 +1,4 @@
 import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function Footer({ siteConfig }) {
     const { customFields, organizationName, projectName } = siteConfig;
