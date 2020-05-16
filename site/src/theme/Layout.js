@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from '@docusaurus/Head';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -12,6 +12,8 @@ import '../../../build/pure-min.css';
 import '../../../build/grids-responsive-min.css';
 import '../../static/css/main-grid.css';
 import '../../static/css/main.css';
+
+let jsLoaded = false;
 
 function Layout(props) {
   const {siteConfig = {}} = useDocusaurusContext();
@@ -41,6 +43,17 @@ function Layout(props) {
   }
 
   const faviconUrl = useBaseUrl(favicon);
+  
+  // load external menu js dynamically
+  useEffect(() => {
+      if (!jsLoaded) {
+          const script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = '/js/ui.js';
+          document.head.appendChild(script);
+          jsLoaded = true;
+      }
+  });
 
   return (
       <>

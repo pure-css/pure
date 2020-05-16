@@ -10,7 +10,7 @@
             length = classes.length,
             i = 0;
 
-        for(; i < length; i++) {
+        for (; i < length; i++) {
           if (classes[i] === className) {
             classes.splice(i, 1);
             break;
@@ -25,6 +25,7 @@
     }
 
     function toggleAll(e) {
+        console.log('toggle', e.target);
         var active = 'active';
 
         e.preventDefault();
@@ -32,15 +33,17 @@
         toggleClass(menu, active);
         toggleClass(menuLink, active);
     }
-
-    menuLink.onclick = function (e) {
-        toggleAll(e);
-    };
-
-    content.onclick = function(e) {
-        if (menu.className.indexOf('active') !== -1) {
-            toggleAll(e);
+    
+    function handleEvent(e) {
+        if (e.target.id === menuLink.id) {
+            return toggleAll(e);
         }
-    };
+        
+        if (menu.className.indexOf('active') !== -1) {
+            return toggleAll(e);
+        }
+    }
+    
+    document.addEventListener('click', handleEvent);
 
 }(this, this.document));
