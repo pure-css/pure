@@ -1,13 +1,13 @@
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import classnames from 'classnames';
 import React from 'react';
 import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import CodeBlock from '../../../components/CodeBlock';
 import SectionHeader from '../../../components/SectionHeader';
+import { stripIndent } from 'common-tags';
 
-import styles from './styles.css';
+import './styles.css';
 
 const title = 'Grids';
 const description = 'Fully customizable and responsive CSS grids.';
@@ -57,11 +57,13 @@ function Grids() {
                 </p>
 
                 <CodeBlock wrap={true}>
-{`<div class="pure-g">
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-</div>`}
+                    {stripIndent`
+                        <div class="pure-g">
+                            <div class="pure-u-1-3"><p>Thirds</p></div>
+                            <div class="pure-u-1-3"><p>Thirds</p></div>
+                            <div class="pure-u-1-3"><p>Thirds</p></div>
+                        </div>
+                    `}
                 </CodeBlock>
 
                 <SectionHeader heading="Grids Units Sizes" />
@@ -489,11 +491,13 @@ function Grids() {
                 </p>
 
                 <CodeBlock wrap={true}>
-                {`<div class="pure-g">
-    <div class="pure-u-1-3"> ... </div>
-    <div class="pure-u-1-3"> ... </div>
-    <div class="pure-u-1-3"> ... </div>
-</div>`}
+                    {stripIndent`
+                        <div class="pure-g">
+                            <div class="pure-u-1-3"> ... </div>
+                            <div class="pure-u-1-3"> ... </div>
+                            <div class="pure-u-1-3"> ... </div>
+                        </div>
+                    `}
                 </CodeBlock>
 
                 <p>
@@ -501,11 +505,13 @@ function Grids() {
                 </p>
 
                 <CodeBlock wrap={true}>
-                {`<div class="pure-g">
-    <div class="pure-u-1 pure-u-md-1-3"> ... </div>
-    <div class="pure-u-1 pure-u-md-1-3"> ... </div>
-    <div class="pure-u-1 pure-u-md-1-3"> ... </div>
-</div>`}
+                    {stripIndent`
+                        <div class="pure-g">
+                            <div class="pure-u-1 pure-u-md-1-3"> ... </div>
+                            <div class="pure-u-1 pure-u-md-1-3"> ... </div>
+                            <div class="pure-u-1 pure-u-md-1-3"> ... </div>
+                        </div>
+                    `}
                 </CodeBlock>
 
                 <h3>Default Media Queries</h3>
@@ -578,7 +584,7 @@ function Grids() {
                 </p>
 
                 <CodeBlock wrap={true}>
-                    {`1em == 16px *`}
+                    {'1em == 16px *'}
                 </CodeBlock>
 
                 <p>
@@ -733,22 +739,24 @@ function Grids() {
                 </p>
 
                 <CodeBlock wrap={true}>
-{`<style>
-    .l-box {
-        padding: 1em;
-    }
-</style>
+                    {stripIndent`
+                        <style>
+                            .l-box {
+                                padding: 1em;
+                            }
+                        </style>
 
-...
+                        ...
 
-<div class="pure-g">
-    <div class="pure-u-1-2">
-        <div class="l-box"> ... </div>
-    </div>
-    <div class="pure-u-1-2">
-        <div class="l-box"> ... </div>
-    </div>
-</div>`}
+                        <div class="pure-g">
+                            <div class="pure-u-1-2">
+                                <div class="l-box"> ... </div>
+                            </div>
+                            <div class="pure-u-1-2">
+                                <div class="l-box"> ... </div>
+                            </div>
+                        </div>
+                    `}
                 </CodeBlock>
 
                 <p>
@@ -756,21 +764,23 @@ function Grids() {
                 </p>
 
                 <CodeBlock wrap={true}>
-{`<style>
-    .pure-g > div {
-        box-sizing: border-box;
-    }
-    .l-box {
-        padding: 1em;
-    }
-</style>
+                    {stripIndent`
+                        <style>
+                            .pure-g > div {
+                                box-sizing: border-box;
+                            }
+                            .l-box {
+                                padding: 1em;
+                            }
+                        </style>
 
-...
+                        ...
 
-<div class="pure-g">
-    <div class="pure-u-1-2 l-box"> ... </div>
-    <div class="pure-u-1-2 l-box"> ... </div>
-</div>`}
+                        <div class="pure-g">
+                            <div class="pure-u-1-2 l-box"> ... </div>
+                            <div class="pure-u-1-2 l-box"> ... </div>
+                        </div>
+                    `}
                 </CodeBlock>
 
                 <p>
@@ -784,18 +794,20 @@ function Grids() {
                 </p>
 
                 <CodeBlock wrap={true}>
-{`<style>
-/*
-When setting the primary font stack, apply it to the Pure grid units along
-with "html", "button", "input", "select", and "textarea". Pure Grids use
-specific font stacks to ensure the greatest OS/browser compatibility.
-*/
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    /* Set your content font stack here: */
-    font-family: Georgia, Times, "Times New Roman", serif;
-}
-</style>`}
+                    {stripIndent`
+                        <style>
+                        /*
+                        When setting the primary font stack, apply it to the Pure grid units along
+                        with "html", "button", "input", "select", and "textarea". Pure Grids use
+                        specific font stacks to ensure the greatest OS/browser compatibility.
+                        */
+                        html, button, input, select, textarea,
+                        .pure-g [class *= "pure-u"] {
+                            /* Set your content font stack here: */
+                            font-family: Georgia, Times, "Times New Roman", serif;
+                        }
+                        </style>
+                    `}
                 </CodeBlock>
 
                 <SectionHeader heading="Want to just use Grids?" />
@@ -805,9 +817,11 @@ html, button, input, select, textarea,
                 </p>
 
                 <CodeBlock>
-{`<link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/base-min.css">
-<link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-min.css">
-<link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-responsive-min.css">`}
+                    {stripIndent`
+                        <link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/base-min.css">
+                        <link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-min.css">
+                        <link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-responsive-min.css">
+                    `}
                 </CodeBlock>
 
                 {/*

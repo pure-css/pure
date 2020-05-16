@@ -7,7 +7,8 @@ import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import SectionHeader from '../../../components/SectionHeader';
 import CodeBlock from '../../../components/CodeBlock';
-import styles from './styles.css';
+import { stripIndent } from 'common-tags';
+import './styles.css';
 
 const title = 'Get Started';
 const description = 'Start your next web project with Pure.';
@@ -65,11 +66,13 @@ function Start() {
               </p>
 
               <CodeBlock wrap={true}>
-        {`<div class="pure-g">
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-    <div class="pure-u-1-3"><p>Thirds</p></div>
-</div>`}
+                {stripIndent`
+                    <div class="pure-g">
+                        <div class="pure-u-1-3"><p>Thirds</p></div>
+                        <div class="pure-u-1-3"><p>Thirds</p></div>
+                        <div class="pure-u-1-3"><p>Thirds</p></div>
+                    </div>
+                `}
               </CodeBlock>
           </div>
 

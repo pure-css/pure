@@ -4,6 +4,7 @@ import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import CodeBlock from '../../../components/CodeBlock';
 import SectionHeader from '../../../components/SectionHeader';
+import { stripIndent } from 'common-tags';
 
 const title = 'Tools';
 const description = 'Write, manipulate, and do more with CSS.';
@@ -84,20 +85,22 @@ function Tools() {
             </p>
 
             <CodeBlock>
-{`grunt.initConfig({
-    pure_grids: {
-        dest : "build/public/css/main-grid.css",
-        options: {
-            units: 12, // 12-column grid
-            mediaQueries: {
-                sm: 'screen and (min-width: 35.5em)', // 568px
-                md: 'screen and (min-width: 48em)',   // 768px
-                lg: 'screen and (min-width: 64em)',   // 1024px
-                xl: 'screen and (min-width: 80em)'    // 1280px
-            }
-        }
-    }
-});`}
+                {stripIndent`
+                    grunt.initConfig({
+                        pure_grids: {
+                            dest : "build/public/css/main-grid.css",
+                            options: {
+                                units: 12, // 12-column grid
+                                mediaQueries: {
+                                    sm: 'screen and (min-width: 35.5em)', // 568px
+                                    md: 'screen and (min-width: 48em)',   // 768px
+                                    lg: 'screen and (min-width: 64em)',   // 1024px
+                                    xl: 'screen and (min-width: 80em)'    // 1280px
+                                }
+                            }
+                        }
+                    });
+                `}
             </CodeBlock>
 
             <h3>Via Rework</h3>
@@ -117,20 +120,22 @@ function Tools() {
             </p>
 
             <CodeBlock>
-{`import rework from 'rework';
-import pureGrids from 'rework-pure-grids';
+                {stripIndent`
+                    import rework from 'rework';
+                    import pureGrids from 'rework-pure-grids';
 
-const css = rework('').use(pureGrids.units({
-    mediaQueries: {
-        sm: 'screen and (min-width: 35.5em)', // 568px
-        md: 'screen and (min-width: 48em)',   // 768px
-        lg: 'screen and (min-width: 64em)',   // 1024px
-        xl: 'screen and (min-width: 80em)'    // 1280px
-    }
-})).toString();
+                    const css = rework('').use(pureGrids.units({
+                        mediaQueries: {
+                            sm: 'screen and (min-width: 35.5em)', // 568px
+                            md: 'screen and (min-width: 48em)',   // 768px
+                            lg: 'screen and (min-width: 64em)',   // 1024px
+                            xl: 'screen and (min-width: 80em)'    // 1280px
+                        }
+                    })).toString();
 
-// This will log-out the grid CSS.
-console.log(css);`}
+                    // This will log-out the grid CSS.
+                    console.log(css);
+                `}
             </CodeBlock>
 
             <SectionHeader heading="Mutating Selectors" />
@@ -158,18 +163,20 @@ console.log(css);`}
             </p>
 
             <CodeBlock>
-{`grunt.initConfig({
-    css_selectors: {
-        options: {
-            mutations: [
-                {prefix: '.foo'}
-            ]
-        },
-        files: {
-            'dest/foo-prefixed.css': ['src/foo.css'],
-        }
-    }
-});`}
+                {stripIndent`
+                    grunt.initConfig({
+                        css_selectors: {
+                            options: {
+                                mutations: [
+                                    {prefix: '.foo'}
+                                ]
+                            },
+                            files: {
+                                'dest/foo-prefixed.css': ['src/foo.css'],
+                            }
+                        }
+                    });
+                `}
             </CodeBlock>
 
             <h3>Via Rework</h3>
@@ -189,16 +196,18 @@ console.log(css);`}
             </p>
 
             <CodeBlock>
-{`import rework from 'rework';
-import selectors from 'rework-mutate-selectors';
+                {stripIndent`
+                    import rework from 'rework';
+                    import selectors from 'rework-mutate-selectors';
 
-const css = rework(inputCSS)
-    .use(selectors.prefix('.foo'))
-    .use(selectors.replace(/^\.pure/g, '.bar'))
-    .toString();
+                    const css = rework(inputCSS)
+                        .use(selectors.prefix('.foo'))
+                        .use(selectors.replace(/^\.pure/g, '.bar'))
+                        .toString();
 
-// This will log-out the resulting CSS.
-console.log(css);`}
+                    // This will log-out the resulting CSS.
+                    console.log(css);
+                `}
             </CodeBlock>
 
             <aside>
