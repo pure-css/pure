@@ -1,7 +1,7 @@
 import Link from '@docusaurus/Link';
 import React from 'react';
 
-function Menu(props) {
+function Menu() {
     return (
         <>
             <a href="#menu" id="menuLink" className="menu-link">
@@ -46,9 +46,11 @@ function Menu(props) {
                         <li className="pure-menu-item">
                             <Link to="/extend/" className="pure-menu-link">Extend</Link>
                         </li>
+                        {/*
                         <li className="pure-menu-item">
                             <a href="http://blog.purecss.io/" className="pure-menu-link">Blog</a>
                         </li>
+                        */}
                         <li className="pure-menu-item">
                             <a href="https://github.com/pure-css/pure/releases/" className="pure-menu-link">Releases</a>
                         </li>

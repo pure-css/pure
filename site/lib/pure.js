@@ -18,8 +18,8 @@ module.exports.moduleSizes = function moduleSizes() {
     const files = fs.readdirSync(pureDir);
 
     // collect all minified module files
-    const modules = files.filter(file => (/\-min\.css$/).test(file))
-                         .map(file => file.replace(/\-min\.css$/, ''));
+    const modules = files.filter(file => (/-min\.css$/).test(file))
+        .map(file => file.replace(/-min\.css$/, ''));
 
     // get sizes across all modules
     const moduleSizes = modules.map(module => {
@@ -33,4 +33,4 @@ module.exports.moduleSizes = function moduleSizes() {
         map[modules[i]] = size;
         return map;
     }, {});
-}
+};

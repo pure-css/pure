@@ -6,7 +6,9 @@
     "url": "git://github.com/pure-css/pure.git"
   },
   "scripts": {
+    "lint": "eslint . --ext .js",
     "prepare": "grunt release",
+    "pretest": "npm run lint",
     "site:build": "npm run pretest && cd site && npm install && npm run build",
     "site:start": "cd site && npm run start",
     "test": "grunt test && tap test/*.js"
@@ -14,6 +16,8 @@
   "files": "build/",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "eslint": "^7.0.0",
+    "eslint-plugin-react": "^7.20.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^2.0.0",
@@ -26,6 +30,7 @@
     "grunt-css-selectors": "^1.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-pure-grids": "^2.0.0",
+    "husky": "^4.2.5",
     "normalize.css": "^8.0.1",
     "tap": "^14.4.1"
   },
@@ -55,5 +60,10 @@
     "ie >= 10",
     "iOS >= 12",
     "Android >= 6"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
 }

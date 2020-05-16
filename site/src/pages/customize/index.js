@@ -5,7 +5,7 @@ import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import CodeBlock from '../../../components/CodeBlock';
 import SectionHeader from '../../../components/SectionHeader';
-import { filePercent, fileSize } from '../../../lib/utils';
+import { fileSize } from '../../../lib/utils';
 
 const title = 'Customize';
 const description = 'Choose the modules that you need.';
@@ -79,37 +79,31 @@ function Customize() {
                         <tbody>
                             <tr>
                                 <td><a href="http://cdnjs.com/">cdnjs</a></td>
-                                <td>//cdnjs.cloudflare.com/ajax/libs/pure/{pureVersion}/pure-min.css</td>
-                                <td>Yes</td>
-                                <td>No</td>
-                            </tr>
-                            <tr>
-                                <td><a href="http://www.jsdelivr.com/">jsDelivr</a></td>
-                                <td>//cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/pure-min.css</td>
+                                <td>{`//cdnjs.cloudflare.com/ajax/libs/pure/${pureVersion}/build/pure-min.css`}</td>
                                 <td>Yes</td>
                                 <td>Yes</td>
                             </tr>
                             <tr>
                                 <td><a href="https://www.keycdn.com/">KeyCDN</a></td>
-                                <td>//opensource.keycdn.com/pure/{pureVersion}/pure-min.css</td>
+                                <td>{`//opensource.keycdn.com/pure/${pureVersion}/pure-min.css`}</td>
                                 <td>Yes</td>
                                 <td>No</td>
                             </tr>
                             <tr>
                                 <td><a href="http://www.osscdn.com/">OSS MaxCDN</a></td>
-                                <td>//oss.maxcdn.com/libs/pure/{pureVersion}/pure-min.css</td>
+                                <td>{`//oss.maxcdn.com/libs/pure/${pureVersion}/pure-min.css`}</td>
                                 <td>Yes</td>
                                 <td>No</td>
                             </tr>
                             <tr>
                                 <td><a href="http://rawgit.com/">RawGit</a></td>
-                                <td>//cdn.rawgit.com/pure-css/pure-release/v{pureVersion}/pure-min.css</td>
+                                <td>{`//cdn.rawgit.com/pure-css/pure-release/v${pureVersion}/pure-min.css`}</td>
                                 <td>Yes</td>
                                 <td>No</td>
                             </tr>
                             <tr>
                                 <td><a href="http://www.staticfile.org/">Staticfile</a></td>
-                                <td>//cdn.staticfile.org/pure/{pureVersion}/pure-min.css</td>
+                                <td>{`//cdn.staticfile.org/pure/${pureVersion}/pure-min.css`}</td>
                                 <td>Yes</td>
                                 <td>No</td>
                             </tr>

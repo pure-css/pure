@@ -2,8 +2,7 @@
 
     var layout   = document.getElementById('layout'),
         menu     = document.getElementById('menu'),
-        menuLink = document.getElementById('menuLink'),
-        content  = document.getElementById('main');
+        menuLink = document.getElementById('menuLink');
 
     function toggleClass(element, className) {
         var classes = element.className.split(/\s+/),
@@ -11,10 +10,10 @@
             i = 0;
 
         for (; i < length; i++) {
-          if (classes[i] === className) {
-            classes.splice(i, 1);
-            break;
-          }
+            if (classes[i] === className) {
+                classes.splice(i, 1);
+                break;
+            }
         }
         // The className is not found
         if (length === classes.length) {
