@@ -30,6 +30,7 @@
     "grunt-css-selectors": "^1.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-pure-grids": "^2.0.0",
+    "husky": "^4.2.5",
     "normalize.css": "^8.0.1",
     "tap": "^14.4.1"
   },
@@ -59,5 +60,10 @@
     "ie >= 10",
     "iOS >= 12",
     "Android >= 6"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
 }
