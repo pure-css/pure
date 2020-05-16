@@ -25,7 +25,6 @@
     }
 
     function toggleAll(e) {
-        console.log('toggle', e.target);
         var active = 'active';
 
         e.preventDefault();
