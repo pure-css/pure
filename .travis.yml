@@ -5,6 +5,7 @@ script:
   - npm t
 deploy:
   provider: script
+  skip_cleanup: true
   script: scripts/deploy.sh
   on:
     branch: master
