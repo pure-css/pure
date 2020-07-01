@@ -64,7 +64,7 @@ function Base() {
                     {'<img class="pure-img" src="...">'}
                 </CodeBlock>
 
-                <SectionHeader heading="Moving beyong Normalize" />
+                <SectionHeader heading="Moving beyond Normalize" />
 
                 <p>
                 Normalize.css is a great starting place for your project, but some HTML elements such as forms, tables, and menus require more styling than what's provided by Normalize.
