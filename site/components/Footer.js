@@ -1,19 +1,19 @@
 import React from 'react';
 
 function Footer({ siteConfig }) {
-    const { customFields, organizationName, projectName } = siteConfig;
+    const { customFields, organizationName } = siteConfig;
     return (
         <div className="footer">
             <div className="legal pure-g">
                 <div className="pure-u-1 u-sm-1-2">
                     <p className="legal-license">
                         This site is built with ❤️ using Pure v{customFields.pureVersion}<br />
-                        All code on this site is licensed under the <a href={`https://github.com/${organizationName}/${projectName}/blob/master/LICENSE`}>Yahoo BSD License</a> unless otherwise stated.
+                        All code on this site is licensed under the <a href={`https://github.com/${organizationName}/${customFields.repoName}/blob/master/LICENSE`}>Yahoo BSD License</a> unless otherwise stated.
                     </p>
                 </div>
                 <div className="pure-u-1 u-sm-1-2">
                     <ul className="legal-links">
-                        <li><a href={`https://github.com/${organizationName}/${projectName}/`}>GitHub Project</a></li>
+                        <li><a href={`https://github.com/${organizationName}/${customFields.repoName}/`}>GitHub Project</a></li>
                         <li><a href="https://hackerone.com/yahoo/">Security Contact Info</a></li>
                     </ul>
                     <p className="legal-copyright">
