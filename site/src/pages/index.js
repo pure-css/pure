@@ -28,9 +28,9 @@ function Home() {
         customFields: {
             moduleSizes,
             PURE_DOWNLOAD_SNIPPET,
+            repoName,
         },
         organizationName,
-        projectName,
     } = siteConfig;
     const renderSize = renderModuleSize(moduleSizes);
     return (
@@ -47,7 +47,7 @@ function Home() {
 
                     <p>
                         <Link className="button-cta pure-button" to="/start/">Get Started</Link>
-                        <a className="button-secondary pure-button" href={`https://github.com/${organizationName}/${projectName}/`}>View on GitHub</a>
+                        <a className="button-secondary pure-button" href={`https://github.com/${organizationName}/${repoName}/`}>View on GitHub</a>
                     </p>
                 </div>
             </div>

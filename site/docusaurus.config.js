@@ -23,5 +23,6 @@ module.exports = {
         PURE_DOWNLOAD_SNIPPET,
         moduleSizes: moduleSizes(),
         pureVersion: version,
+        repoName: 'pure',
     },
 };
