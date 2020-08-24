@@ -304,3 +304,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     color: #666;
     font-size: 0.875em;
 }
+
+/* File Upload Label */
+.pure-form label.pure-button {
+    margin: 0;
+}
