@@ -813,7 +813,7 @@ function Grids() {
                 <SectionHeader heading="Want to just use Grids?" />
 
                 <p>
-                    Grids is part of the Pure CSS file. However, if you just want Grids and not the other modules, you can pull it down separately. Just include this <code>&lt;link&gt;</code> element in your <code>&lt;head&gt;</code>.
+                    Grids is part of the Pure CSS file. However, if you just want Grids and not the other modules, you can pull it down separately. Just include these <code>&lt;link&gt;</code> elements in your <code>&lt;head&gt;</code>.
                 </p>
 
                 <CodeBlock>
