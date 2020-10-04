@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<title>my website</title>
+<style>
+header{padding:10px;
+background-color:green;
+color:white;
+text-align:center;
+border:1px solid black;
+}
+footer{
+background-color:yellow;
+color:black;
+text-align:centre;
+}
+header {font-family:"comic sans ms"}
+nav {background-color:black;
+text-decoration:none;
+padding:20px;
+}
+nav a:hover{color:blue;
+bgcolor white;
+}
+nav a{color:white;
+padding:5px;
+text-decoration:none;}
+p{text-align:justify;
+}
+body{background-color:lightgreen;}
+marquee{color:white;
+}
+</style>
+<head>
+<body>
+<marquee bgcolor="red">Welcome to the official website of Anish Pokhrel</marquee>
+<header>
+<h1>welcome to my portpolio</h1>
+The Anish Pokhrel website</header>
+<nav>
+<a href="index.html">HOME</a>
+<a href="interest.html">INTEREST</a>
+<a href="friends.html">FRIEND LIST</a>
+<a href="gallary.html">GALLERY</a>
+<a href="contact.html">CONTACT ME</a></nav>
+<!-- opening of About myself -->
+<samp><h2>About myself</h2>
+<img title="anish pokhrel photograph" src="ani.jpg" height"300" width="250">
+<p title="About Anish Pokhrel">My name is <strong>Anish pokhrel</strong>.I am student of <b>BSC.CSIT</b> studying in <i>Mahendra moarang Aadarsha multiple Campus</i> biratnagar.I have  passed my graduation from my home town jhapa and further studying post graduation on biratnagar since 2075BS.
+I have competed my SLC examination from <b>Shree Kavishiromani Secondary School</b>with <b>GPA</b>3.37 and further studied +2 in science faculty from <b>Shree Dhulabari Higher Secondary School and passed with </b> with aggirate <b>GPA 3.36</b></p>
+<!-- my intrest-->
+<h2>My interest</h2>
+<p title="Anish intrest">To apply my knowledge in a more challenging position with the opportunity of career advancement, while gaining my abilities of new skills and expertise; 
+where I can utilize the best of my skills and abilities that fit to my education and experiences, a place where encouraged and permitted to be an active participant
+ as well as vital contributor to the development of the company..</p></samp>
+<!--copyright information--><footer>
+<p>&copycopyright 2019 Anish pokhrel<p/>
+</footer>
+
+</body>
+</html>
