@@ -26,7 +26,7 @@ module.exports = function (grunt) {
             },
 
             release: {
-                src : '{LICENSE.md,README.md,HISTORY.md}',
+                src : '{LICENSE,README.md,HISTORY.md}',
                 dest: 'build/'
             }
         },
@@ -173,7 +173,7 @@ module.exports = function (grunt) {
                         'Pure v<%= pkg.version %>',
                         'Copyright 2013 Yahoo!',
                         'Licensed under the BSD License.',
-                        'https://github.com/pure-css/pure/blob/master/LICENSE.md',
+                        'https://github.com/pure-css/pure/blob/master/LICENSE',
                         '*/\n'
                     ].join('\n')
                 },
