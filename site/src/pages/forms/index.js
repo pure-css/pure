@@ -27,8 +27,7 @@ function Forms() {
                             <input type="email" placeholder="Email" />
                             <input type="password" placeholder="Password" />
                             <label htmlFor="default-remember">
-                                <input id="default-remember" type="checkbox" />
-                        Remember me
+                                <input id="default-remember" type="checkbox" /> Remember me
                             </label>
                             <button type="submit" className="pure-button pure-button-primary">Sign in</button>
                         </fieldset>
@@ -284,16 +283,13 @@ function Forms() {
                 <Example>
                     <form className="pure-form">
                         <label htmlFor="checkbox-radio-option-one" className="pure-checkbox">
-                            <input id="checkbox-radio-option-one" type="checkbox" value="" />
-                  Here's option one.
+                            <input id="checkbox-radio-option-one" type="checkbox" value="" /> Here's option one.
                         </label>
                         <label htmlFor="checkbox-radio-option-two" className="pure-radio">
-                            <input id="checkbox-radio-option-two" type="radio" name="optionsRadios" value="option1" defaultChecked />
-                  Here's a radio button. You can choose this one..
+                            <input id="checkbox-radio-option-two" type="radio" name="optionsRadios" value="option1" defaultChecked /> Here's a radio button. You can choose this one..
                         </label>
                         <label htmlFor="checkbox-radio-option-three" className="pure-radio">
-                            <input id="checkbox-radio-option-three" type="radio" name="optionsRadios" value="option2" />
-                  ..Or this one!
+                            <input id="checkbox-radio-option-three" type="radio" name="optionsRadios" value="option2" /> ..Or this one!
                         </label>
                     </form>
                 </Example>
