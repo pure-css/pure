@@ -54,7 +54,7 @@
     "msweeney <matt.sweeney@yahoo.com>",
     "jamesalley <manalagi001@yahoo.com>"
   ],
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "browserslist": [
     "last 2 versions",
     "ie >= 10",

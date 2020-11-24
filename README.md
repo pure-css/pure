@@ -166,7 +166,7 @@ See the [CONTRIBUTING file][] for information on how to contribute to Pure.
 License
 -------
 
-This software is free to use under the Yahoo! Inc. BSD license.
+This software is free to use under the Yahoo! Inc. BSD-3-Clause license.
 See the [LICENSE file][] for license text and copyright information.
 
 
