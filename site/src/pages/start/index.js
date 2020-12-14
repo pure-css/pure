@@ -36,7 +36,7 @@ function Start() {
             <div className="content">
                 <aside>
                     <p>
-                      Alternatively, you can <a href={`https://github.com/pure-css/pure/archive/v${pureVersion}.zip`}>download Pure</a>, or <a href="/customize/">check out other CDNs</a> that host Pure.
+                      Alternatively, <a href="/customize/">check out other CDNs</a> that host Pure or you can install Pure via a <a href="/tools/">package manager</a>.
                     </p>
                 </aside>
 
