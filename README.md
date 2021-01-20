@@ -12,23 +12,8 @@ A set of small, responsive CSS modules that you can use in every web project.
 
 **This project is looking for maintainers to support and enhance Pure.css. If you are interested please [leave a comment](https://github.com/pure-css/pure/issues/692) in the Github issue.**
 
-**Use From the CDN:**
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.4/build/pure-min.css" integrity="sha384-LJy5cxQRSMIYu2ic+Tvw0Azob5Z3dQxRkR8LNGIq46AJEdfE9DtuBOCNtifRJeB7" crossorigin="anonymous">
-```
-
-Note: You can [customize which Pure modules you need][customize].
-
-**Install with NPM:**
-
-```shell
-$ npm install purecss
-```
-
 [Pure]: http://purecss.io/
 [Build Status]: https://travis-ci.com/pure-css/pure
-[customize]: http://purecss.io/customize/
 
 
 Features
@@ -64,20 +49,9 @@ of all the CSS work that every site needs, without making it look cookie-cutter:
 Get Started
 -----------
 
-To get started using Pure, go to the [Pure CSS website][Pure]. The website has
-extensive documentation and examples to help you start using Pure.
+Check out the [Get Started][Started] page for more information.
 
-You can include the Pure CSS file in your project by fetching it from unpkg:
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.4/build/pure-min.css" integrity="sha384-LJy5cxQRSMIYu2ic+Tvw0Azob5Z3dQxRkR8LNGIq46AJEdfE9DtuBOCNtifRJeB7" crossorigin="anonymous">
-```
-
-You can also install Pure using NPM:
-
-```shell
-$ npm install purecss
-```
+[Started]: https://purecss.io/start/
 
 Build From Source
 -----------------
