@@ -348,6 +348,7 @@ code {
         .menu-link span:before,
         .menu-link span:after {
             background-color: #fff;
+            pointer-events: none;
             width: 100%;
             height: .2em;
             -webkit-transition: all 0.4s;
