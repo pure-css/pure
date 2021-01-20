@@ -15,13 +15,13 @@
   },
   "files": "build/",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "eslint": "^7.0.0",
-    "eslint-plugin-react": "^7.20.0",
-    "grunt": "^1.0.1",
+    "autoprefixer": "^9.8.6",
+    "eslint": "^7.18.0",
+    "eslint-plugin-react": "^7.22.0",
+    "grunt": "^1.3.0",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-compress": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-csslint": "^2.0.0",
@@ -30,9 +30,9 @@
     "grunt-css-selectors": "^1.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-pure-grids": "^2.0.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.8",
     "normalize.css": "^8.0.1",
-    "tap": "^14.4.1"
+    "tap": "^14.11.0"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {
