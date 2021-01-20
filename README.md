@@ -27,7 +27,7 @@ $ npm install purecss
 ```
 
 [Pure]: http://purecss.io/
-[Build Status]: https://travis-ci.org/pure-css/pure
+[Build Status]: https://travis-ci.com/pure-css/pure
 [customize]: http://purecss.io/customize/
 
 
