@@ -33,7 +33,6 @@
 }
 
 .pure-menu-link,
-.pure-menu-disabled,
 .pure-menu-heading {
     padding: .5em 1em;
 }
@@ -44,6 +43,7 @@
 
 .pure-menu-disabled .pure-menu-link:hover {
     background-color: transparent;
+    cursor: default;
 }
 
 .pure-menu-active > .pure-menu-link,

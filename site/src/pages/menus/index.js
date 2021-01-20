@@ -78,7 +78,7 @@ function Menus() {
                 <SectionHeader heading="Selected and Disabled Items" />
 
                 <p>
-                    Mark a selected list element by adding the <code>pure-menu-selected</code> class to the list element. To mark a link as disabled, add an <code>&lt;a&gt;</code> element with the <code>pure-menu-disabled</code> class name. Disabled items appear faded and do not inherit hover styles.
+                    Mark a selected list element by adding the <code>pure-menu-selected</code> class to the list element. To mark a link as disabled, add the class name <code>pure-menu-disabled</code> to the list element. Disabled items appear faded and do not inherit hover styles.
                 </p>
 
                 <Example>
@@ -86,7 +86,7 @@ function Menus() {
                         <ul className="pure-menu-list">
                             <li className="pure-menu-item pure-menu-selected"><a href="#" className="pure-menu-link">Selected</a></li>
                             <li className="pure-menu-item"><a href="#" className="pure-menu-link">Normal</a></li>
-                            <li className="pure-menu-item pure-menu-disabled">Disabled</li>
+                            <li className="pure-menu-item pure-menu-disabled"><a href="#" className="pure-menu-link">Disabled</a></li>
                         </ul>
                     </div>
                 </Example>
