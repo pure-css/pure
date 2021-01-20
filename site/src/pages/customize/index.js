@@ -54,9 +54,9 @@ function Customize() {
                     </table>
                 </div>
 
-                <aside>
+                <aside>                
                     <p>
-                        The non-responsive rollup does not include media queries, thus making it easier for you to override styles in the base library. Additionally, you can also create a <Link to="/grids/#pure-responsive-grids">custom grid</Link> that better suits your projects needs.
+                        You will need to include the grid stylesheets separately as they are not included in the rollup. The non-responsive rollup does not include media queries, thus making it easier for you to override styles in the base library. Additionally, you can also create a <Link to="/grids/#pure-responsive-grids">custom grid</Link> that better suits your projects needs.
                     </p>
                 </aside>
 
