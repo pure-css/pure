@@ -13,7 +13,7 @@
     "site:start": "cd site && npm run start",
     "test": "grunt test && tap test/*.js"
   },
-  "files": "build/",
+  "files": ["build/"],
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "eslint": "^7.18.0",
