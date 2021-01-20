@@ -1,13 +1,19 @@
 (function (window, document) {
 
-    var layout   = document.getElementById('layout'),
-        menu     = document.getElementById('menu'),
-        menuLink = document.getElementById('menuLink');
+    // we fetch the elements each time because docusaurus removes the previous
+    // element references on page navigation
+    function getElements() {
+        return {
+            layout: document.getElementById('layout'),
+            menu: document.getElementById('menu'),
+            menuLink: document.getElementById('menuLink')
+        };
+    }
 
     function toggleClass(element, className) {
-        var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
+        var classes = element.className.split(/\s+/);
+        var length = classes.length;
+        var i = 0;
 
         for (; i < length; i++) {
             if (classes[i] === className) {
@@ -23,22 +29,23 @@
         element.className = classes.join(' ');
     }
 
-    function toggleAll(e) {
+    function toggleAll() {
         var active = 'active';
+        var elements = getElements();
 
-        e.preventDefault();
-        toggleClass(layout, active);
-        toggleClass(menu, active);
-        toggleClass(menuLink, active);
+        toggleClass(elements.layout, active);
+        toggleClass(elements.menu, active);
+        toggleClass(elements.menuLink, active);
     }
     
     function handleEvent(e) {
-        if (e.target.id === menuLink.id) {
-            return toggleAll(e);
-        }
+        var elements = getElements();
         
-        if (menu.className.indexOf('active') !== -1) {
-            return toggleAll(e);
+        if (e.target.id === elements.menuLink.id) {
+            toggleAll();
+            e.preventDefault();
+        } else if (elements.menu.className.indexOf('active') !== -1) {
+            toggleAll();
         }
     }
     
