@@ -1,6 +1,6 @@
 {
   "name": "purecss",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "repository": {
     "type": "git",
     "url": "git://github.com/pure-css/pure.git"
@@ -13,7 +13,9 @@
     "site:start": "cd site && npm run start",
     "test": "grunt test && tap test/*.js"
   },
-  "files": ["build/"],
+  "files": [
+    "build/"
+  ],
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "eslint": "^7.18.0",
