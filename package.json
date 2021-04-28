@@ -34,7 +34,7 @@
     "grunt-pure-grids": "^2.0.0",
     "husky": "^6.0.0",
     "normalize.css": "^8.0.1",
-    "tap": "^14.11.0"
+    "tap": "^15.0.5"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {
