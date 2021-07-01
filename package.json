@@ -32,7 +32,7 @@
     "grunt-css-selectors": "^1.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-pure-grids": "^2.0.0",
-    "husky": "^6.0.0",
+    "husky": "^7.0.0",
     "normalize.css": "^8.0.1",
     "tap": "^14.11.0"
   },
