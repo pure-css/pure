@@ -17,7 +17,9 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
-      - run: npm run deploy
+      - run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/pure-css/pure-css.github.io.git
+          npm run deploy
         env:
           GH_EMAIL: ${{ secrets.GH_EMAIL }}
           GH_NAME: ${{ secrets.GH_NAME }}
