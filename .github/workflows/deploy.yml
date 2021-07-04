@@ -18,3 +18,7 @@ jobs:
       - run: npm run lint
       - run: npm test
       - run: npm run deploy
+        env:
+          GH_EMAIL: ${{ secrets.GH_EMAIL }}
+          GH_NAME: ${{ secrets.GH_NAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
