@@ -6,7 +6,7 @@ Pure
 A set of small, responsive CSS modules that you can use in every web project.
 [http://purecss.io/][Pure]
 
-[![Build Status](http://img.shields.io/travis/pure-css/pure.svg?style=flat)][Build Status]
+![Build Status](https://github.com/pure-css/pure/actions/workflows/test.yml/badge.svg)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pure-css/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 **This project is looking for maintainers to support and enhance Pure.css. If you are interested please [leave a comment](https://github.com/pure-css/pure/issues/692) in the Github issue.**
