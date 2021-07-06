@@ -1,33 +1,26 @@
-How to Contribute to Pure
-=========================
+# How to Contribute to Pure
 
 Feel free to [open issues][] and send pull requests on GitHub! When sending a
 pull request, please create a new topic/feature branch, and send your pull
-request from that branch. Please do *not* send pull requests from your `master`
+request from that branch. Please do _not_ send pull requests from your `master`
 branch because this tends to lead to merge conflicts.
 
 In order for us to to merge your pull requests, we need you to review and sign
 our [Contributor License Agreement][]. The CLA protects you and your
 contributions along with all other developers who use Pure.
 
-
-[Contributor License Agreement]: #contributor-license-agreement
+[contributor license agreement]: #contributor-license-agreement
 [open issues]: https://github.com/pure-css/pure/issues
 
+## Docs and Website
 
-Docs and Website
-----------------
-
-[Pure's website][Pure] is located in the `site` directory. Please feel free
+[Pure's website][pure] is located in the `site` directory. Please feel free
 to open issues or questions in the Issue tab.
 
-
-[Pure]: http://purecss.io/
+[pure]: http://purecss.io/
 [pure-site]: https://github.com/pure-css/pure/tree/master/site
 
-
-Building and Testing Pure
--------------------------
+## Building and Testing Pure
 
 Pure uses [Grunt][], a JavaScript task runner that runs on [Node.js][], for
 building and testing. You'll need Node.js and Grunt installed to work on Pure.
@@ -66,24 +59,21 @@ $ grunt watch
 
 Pure is tested and works in:
 
-* IE 8+
-* Latest Stable: Edge, Firefox, Chrome, Safari
-* iOS 6+
-* Android 4.x
+- IE 10+
+- Latest Stable: Edge, Firefox, Chrome, Safari
+- iOS 6+
+- Android 4.x
 
 Before sending pull requests, please ensure that you open the test HTML files
 in these environments. If you don't have access to all these environments, list
 the ones that you have tested in on the pull request description. That way, we
 know what's missing, and can help you out.
 
+[grunt]: http://gruntjs.com/
+[node.js]: http://nodejs.org/
+[csslint]: https://github.com/stubbornella/csslint
 
-[Grunt]: http://gruntjs.com/
-[Node.js]: http://nodejs.org/
-[CSSLint]: https://github.com/stubbornella/csslint
-
-
-Coding Standards and Style Guide
---------------------------------
+## Coding Standards and Style Guide
 
 Pure has adopted the [SMACSS][] conventions for writing CSS. If you are new to
 SMACSS, you should give it a read, especially the section on [module rules][].
@@ -91,16 +81,13 @@ SMACSS, you should give it a read, especially the section on [module rules][].
 The [Extend][] section of the Pure website more info about the style guide and
 naming conventions, along with examples of how to extend the library.
 
-
-[SMACSS]: http://smacss.com/
+[smacss]: http://smacss.com/
 [module rules]: http://smacss.com/book/type-module
-[Extend]: http://purecss.io/extend/
+[extend]: http://purecss.io/extend/
 
+## Contributor License Agreement
 
-Contributor License Agreement
------------------------------
-
-Please [sign the Yahoo CLA][CLA] after sending pull requests. We can't merge
+Please [sign the Yahoo CLA][cla] after sending pull requests. We can't merge
 your pull requests unless you have a signed CLA.
 
 The CLA ensures that everyone who submits a work of authorship to Pure is
@@ -122,8 +109,7 @@ making your contribution:
    **Note:** that the BSD license is very liberal; it allows for reuse and
    adaptation in commercial projects.
 
-2. [Sign the Yahoo CLA][CLA] online. If you have questions about the CLA, you
+2. [Sign the Yahoo CLA][cla] online. If you have questions about the CLA, you
    can address them to opensource-cla@yahoo-inc.com.
 
-
-[CLA]: https://yahoocla.herokuapp.com/
+[cla]: https://yahoocla.herokuapp.com/

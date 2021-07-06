@@ -6,7 +6,6 @@
     "url": "git://github.com/pure-css/pure.git"
   },
   "scripts": {
-    "deploy": "./scripts/deploy.sh",
     "lint": "eslint . --ext .js",
     "prepare": "grunt release",
     "site:build": "npm run pretest && cd site && npm install && npm run build",
