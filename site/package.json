@@ -11,16 +11,17 @@
     "swizzle": "docusaurus swizzle"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.53",
-    "@docusaurus/plugin-content-pages": "^2.0.0-alpha.53",
-    "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.53",
+    "@docusaurus/core": "^2.0.0-beta.3",
+    "@docusaurus/plugin-content-pages": "^2.0.0-beta.3",
+    "@docusaurus/plugin-google-analytics": "^2.0.0-beta.3",
+    "@docusaurus/preset-classic": "^2.0.0-beta.3",
     "classnames": "^2.2.6",
     "common-tags": "^1.8.0",
-    "gzip-size": "^5.1.1",
+    "gzip-size": "^6.0.0",
     "js-beautify": "^1.11.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-syntax-highlighter": "^12.2.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-syntax-highlighter": "^15.4.3"
   },
   "browserslist": {
     "production": [
