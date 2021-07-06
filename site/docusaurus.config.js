@@ -13,6 +13,7 @@ module.exports = {
         '@docusaurus/plugin-content-pages',
         '@docusaurus/plugin-google-analytics',
     ],
+    themes: ['@docusaurus/theme-classic'],
     themeConfig: {
         googleAnalytics: {
             trackingID: 'UA-41480445-1',
