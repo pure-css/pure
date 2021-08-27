@@ -14,7 +14,7 @@
     "@docusaurus/core": "^2.0.0-beta.4",
     "@docusaurus/plugin-content-pages": "^2.0.0-beta.4",
     "@docusaurus/plugin-google-analytics": "^2.0.0-beta.4",
-    "@docusaurus/preset-classic": "^2.0.0-beta.4",
+    "@docusaurus/preset-classic": "^2.0.0-beta.5",
     "classnames": "^2.2.6",
     "common-tags": "^1.8.0",
     "gzip-size": "^6.0.0",
