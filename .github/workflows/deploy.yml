@@ -19,6 +19,7 @@ jobs:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
       - name: Release to GitHub Pages
         env:
+          DEPLOYMENT_BRANCH: master
           GH_EMAIL: ${{ secrets.GH_EMAIL }}
           GH_NAME: ${{ secrets.GH_NAME }}
           GIT_USER: ${{ secrets.GH_NAME }}
