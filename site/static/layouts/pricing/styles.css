@@ -3,29 +3,29 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
 body {
-    color: #526066;
+  color: #526066;
 }
 
-h2, h3 {
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    font-weight: 600;
+h2,
+h3 {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 p {
-    line-height: 1.6em;
+  line-height: 1.6em;
 }
-
 
 /*
  * -- Layout Styles --
  */
 .l-content {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .l-box {
-    padding: 0.5em 2em;
+  padding: 0.5em 2em;
 }
 
 /*
@@ -33,13 +33,12 @@ p {
  * Make the menu have a very faint box-shadow.
  */
 .pure-menu {
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .pure-menu-link {
-    padding: .5em .7em;
+  padding: 0.5em 0.7em;
 }
-
 
 /*
  * -- BANNER --
@@ -49,41 +48,41 @@ p {
  */
 
 .banner {
-    background: transparent url('http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg') 0 0 no-repeat fixed;
-    text-align: center;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
+  background: transparent
+    url("https://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg")
+    0 0 no-repeat fixed;
+  text-align: center;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');
 
-    height: 200px;
-    width: 100%;
-    margin-bottom: 3em;
-    display: table;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 3em;
+  display: table;
 }
 
-    .banner-head {
-        display: table-cell;
-        vertical-align: middle;
-        margin-bottom: 0;
-        font-size: 2em;
-        color: white;
-        font-weight: 500;
-        text-shadow: 0 1px 1px black;
-    }
-
-
+.banner-head {
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
+}
 
 /*
  * -- PRICING TABLE WRAPPER --
  * This element wraps up all the pricing table elements
  */
- .pricing-tables,
- .information {
-    max-width: 980px;
-    margin: 0 auto;
- }
+.pricing-tables,
+.information {
+  max-width: 980px;
+  margin: 0 auto;
+}
 .pricing-tables {
-    margin-bottom: 3.125em;
-    text-align: center;
+  margin-bottom: 3.125em;
+  text-align: center;
 }
 
 /*
@@ -91,9 +90,9 @@ p {
  * Every pricing table has the .pricing-table class
  */
 .pricing-table {
-    border: 1px solid #ddd;
-    margin: 0 0.5em 2em;
-    padding: 0 0 3em;
+  border: 1px solid #ddd;
+  margin: 0 0.5em 2em;
+  padding: 0 0 3em;
 }
 
 /*
@@ -101,11 +100,11 @@ p {
  * Choose a different color based on the type of pricing table.
  */
 .pricing-table-free .pricing-table-header {
-    background: #519251;
+  background: #519251;
 }
 
 .pricing-table-biz .pricing-table-header {
-    background: #2c4985;
+  background: #2c4985;
 }
 
 /*
@@ -113,61 +112,55 @@ p {
  * By default, a header is black/white, and has some styles for its <h2> name.
  */
 .pricing-table-header {
-    background: #111;
-    color: #fff;
+  background: #111;
+  color: #fff;
 }
-    .pricing-table-header h2 {
-        margin: 0;
-        padding-top: 2em;
-        font-size: 1em;
-        font-weight: normal;
-
-    }
-
+.pricing-table-header h2 {
+  margin: 0;
+  padding-top: 2em;
+  font-size: 1em;
+  font-weight: normal;
+}
 
 /*
  * -- PRICING TABLE PRICE --
  * Styles for the price and the corresponding <span>per month</span>
  */
 .pricing-table-price {
-    font-size: 6em;
-    margin: 0.2em 0 0;
-    font-weight: 100;
+  font-size: 6em;
+  margin: 0.2em 0 0;
+  font-weight: 100;
 }
-    .pricing-table-price span {
-        display: block;
-        text-transform: uppercase;
-        font-size: 0.2em;
-        padding-bottom: 2em;
-        font-weight: 400;
-        color: rgba(255, 255, 255, 0.5);
-        *color: #fff;
-    }
-
-
+.pricing-table-price span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  padding-bottom: 2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  *color: #fff;
+}
 
 /*
  * -- PRICING TABLE LIST --
  * Each pricing table has a <ul> which is denoted by the .pricing-table-list class
  */
 .pricing-table-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-
 
 /*
  * -- PRICING TABLE LIST ELEMENTS --
  * Styles for the individual list elements within each pricing table
  */
 .pricing-table-list li {
-    padding: 0.8em 0;
-    background: #f7f7f7;
-    border-bottom: 1px solid #e7e7e7;
+  padding: 0.8em 0;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
 }
-
 
 /*
  * -- PRICING TABLE BUTTON --
@@ -175,45 +168,41 @@ p {
  * This inherits from Pure Button.
  */
 .button-choose {
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #333;
-    border-radius: 2em;
-    font-weight: bold;
-    position: relative;
-    bottom: -1.5em;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  border-radius: 2em;
+  font-weight: bold;
+  position: relative;
+  bottom: -1.5em;
 }
 
 .information-head {
-    color: black;
-    font-weight: 500;
+  color: black;
+  font-weight: 500;
 }
 
 .footer {
-    background: #111;
-    color: #888;
-    text-align: center;
+  background: #111;
+  color: #888;
+  text-align: center;
 }
-    .footer a {
-        color: #ddd;
-    }
-
-
+.footer a {
+  color: #ddd;
+}
 
 /*
  * -- TABLET MEDIA QUERIES --
  * On tablets, we want to slightly adjust the size of the banner
  * text and add some vertical space between the various pricing tables
  */
-@media(min-width: 767px) {
-
-    .banner-head {
-        font-size: 4em;
-    }
-    .pricing-table {
-        margin-bottom: 0;
-    }
-
+@media (min-width: 767px) {
+  .banner-head {
+    font-size: 4em;
+  }
+  .pricing-table {
+    margin-bottom: 0;
+  }
 }
 
 /*
@@ -221,10 +210,10 @@ p {
  * On phones, we want to reduce the height and font-size of the banner further
  */
 @media (min-width: 480px) {
-    .banner {
-        height: 400px;
-    }
-    .banner-head {
-        font-size: 3em;
-    }
+  .banner {
+    height: 400px;
+  }
+  .banner-head {
+    font-size: 3em;
+  }
 }
