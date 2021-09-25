@@ -81,6 +81,7 @@ function Layout(props) {
                     <meta property="og:url" content={siteUrl + permalink} />
                 )}
                 <meta name="twitter:card" content="summary_large_image" />
+                <meta name="google-site-verification" content="SOiZLX92OWf6JU_zcwEprxstgfUnSQwOpuTASyOv9tM" />
 
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200" />
             </Head>
