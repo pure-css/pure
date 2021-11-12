@@ -16,7 +16,7 @@
     "@docusaurus/plugin-google-analytics": "^2.0.0-beta.6",
     "@docusaurus/preset-classic": "^2.0.0-beta.8",
     "classnames": "^2.2.6",
-    "common-tags": "^1.8.0",
+    "common-tags": "^1.8.1",
     "gzip-size": "^6.0.0",
     "js-beautify": "^1.11.0",
     "react": "^17.0.2",
