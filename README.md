@@ -3,7 +3,7 @@
 [![Pure](https://cloud.githubusercontent.com/assets/449779/5291099/1b554cca-7b03-11e4-9157-53a12d91b34a.png)][pure]
 
 A set of small, responsive CSS modules that you can use in every web project.
-[http://purecss.io/][pure]
+[https://purecss.io/][pure]
 
 ![Build Status](https://github.com/pure-css/pure/actions/workflows/test.yml/badge.svg)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pure-css/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
