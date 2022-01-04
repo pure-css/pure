@@ -17,7 +17,7 @@ function Buttons() {
                 <SectionHeader heading="Default Buttons" />
 
                 <p>
-              To create a Pure Button, add the <code>pure-button</code> classname to any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element.
+                    To create a Pure Button, add the <code>pure-button</code> classname to any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element.
                 </p>
 
                 <Example>
@@ -28,8 +28,8 @@ function Buttons() {
                 <SectionHeader heading="Disabled Buttons" />
 
                 <p>
-              To mark a button as disabled, add the <code>pure-button-disabled</code> classname alongside <code>pure-button</code>.
-              Alternatively, add the "disabled" attribute directly to your button.
+                    To mark a button as disabled, add the <code>pure-button-disabled</code> classname alongside <code>pure-button</code>.
+                    Alternatively, add the "disabled" attribute directly to your button.
                 </p>
 
                 <Example>
@@ -40,7 +40,7 @@ function Buttons() {
                 <SectionHeader heading="Active Buttons" />
 
                 <p>
-              To style a button so that it appears "pressed", add the <code>pure-button-active</code> classname alongside <code>pure-button</code>.
+                    To style a button so that it appears "pressed", add the <code>pure-button-active</code> classname alongside <code>pure-button</code>.
                 </p>
 
                 <Example>
@@ -51,7 +51,7 @@ function Buttons() {
                 <SectionHeader heading="Primary Buttons" />
 
                 <p>
-              To indicate that a button represents a primary action, add the <code>pure-button-primary</code> classname alongside <code>pure-button</code>.
+                    To indicate that a button represents a primary action, add the <code>pure-button-primary</code> classname alongside <code>pure-button</code>.
                 </p>
 
                 <Example>
@@ -62,11 +62,11 @@ function Buttons() {
                 <SectionHeader heading="Customizing Buttons" />
 
                 <p>
-              Thanks to Pure's minimal styling, it is easy to build off of the generic Pure button and create customized buttons for your own application.
+                    Thanks to Pure's minimal styling, it is easy to build off of the generic Pure button and create customized buttons for your own application.
                 </p>
 
                 <p>
-              To customize button styles, you should group your custom CSS into a class such as <code>button-foo</code>, which you can then add to an element that already has the <code>pure-button</code> classname. Here are some examples.
+                    To customize button styles, you should group your custom CSS into a class such as <code>button-foo</code>, which you can then add to an element that already has the <code>pure-button</code> classname. Here are some examples.
                 </p>
 
                 <h3 className="content-subhead">Colored buttons with rounded corners</h3>
@@ -131,32 +131,32 @@ function Buttons() {
                 <h3 className="content-subhead">Buttons with icons</h3>
 
                 <p>
-              Pure doesn't ship with icon fonts, but we play nice with existing ones. Incorporating icon fonts with Pure Buttons is easy. In the example below, we're using icon fonts from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. Put the <a href="http://fortawesome.github.io/Font-Awesome/get-started/">Font Awesome CSS file</a> on your page and use an <code>&lt;i&gt;</code> element within a <code>pure-button</code> element.
+                    Pure doesn't ship with icon fonts, but we play nice with existing ones. Incorporating icon fonts with Pure Buttons is easy. In the example below, we're using icon fonts from <a href="https://fontawesome.com/">Font Awesome</a>. Put the <a href="https://fontawesome.com/start">Font Awesome CSS file</a> on your page and use an <code>&lt;i&gt;</code> element within a <code>pure-button</code> element.
                 </p>
 
                 <Example>
                     <button className="pure-button">
                         <i className="fa fa-cog"></i>
-                    Settings
+                        Settings
                     </button>
                     <a className="pure-button" href="#">
                         <i className="fa fa-shopping-cart fa-lg"></i>
-                    Checkout
+                        Checkout
                     </a>
                 </Example>
 
                 <SectionHeader heading="Button Groups" />
 
                 <p>
-              Group multiple buttons together on a single line.
+                    Group multiple buttons together on a single line.
                 </p>
 
                 <aside>
                     <p>
-                 For assistive technologies (i.e, screen readers) a <code>role</code> attribute should be provided to ensure that proper meaning is conveyed. Button groups should have a <code>role&#x3D;&quot;group&quot;</code>, while toolbars should have <code>role&#x3D;&quot;toolbar&quot;</code>.
+                        For assistive technologies (i.e, screen readers) a <code>role</code> attribute should be provided to ensure that proper meaning is conveyed. Button groups should have a <code>role&#x3D;&quot;group&quot;</code>, while toolbars should have <code>role&#x3D;&quot;toolbar&quot;</code>.
                     </p>
                     <p>
-                 Additionally, a clear label should be provided since most assistive technologies will not announce them. The code snippet below provides an example.
+                        Additionally, a clear label should be provided since most assistive technologies will not announce them. The code snippet below provides an example.
                     </p>
                 </aside>
 

@@ -24,6 +24,12 @@ module.exports = {
         ],
     ],
     projectName: 'pure-css.github.io',
+    scripts: [
+        {
+            src: 'https://kit.fontawesome.com/f7f35653b1.js',
+            defer: true,
+        }
+    ],
     themes: ['@docusaurus/theme-classic'],
     customFields: {
         PURE_DOWNLOAD_SNIPPET,
