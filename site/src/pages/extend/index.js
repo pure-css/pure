@@ -130,7 +130,7 @@ function Extend() {
                     {stripIndent`
                         <!-- Button to trigger modal -->
                         <p>
-                            <a href="#myModal" role="button" className="pure-button-primary pure-button" data-toggle="modal">
+                            <a href="#myModal" role="button" class="pure-button-primary pure-button" data-toggle="modal">
                             Launch Pure + Bootstrap Modal
                             </a>
                         </p>
@@ -145,15 +145,15 @@ function Extend() {
                             *
                             * Designed and built with all the love in the world @twitter by @mdo and @fat.
                             -->
-                        <div id="myModal" className="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div className="modal-header">
+                        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-header">
                                 <h1 id="myModalLabel">A Bootstrap Modal with Pure</h1>
                             </div>
-                            <div className="modal-body">
+                            <div class="modal-body">
                                 <p>
                                     This modal is launched by including <em>just</em> the <code>modal.css</code> and <code>modal.js</code> file from Bootstrap, and including Pure to drive all low-level styles. The result is a fully-functional Modal using just a fraction of the CSS.
                                 </p>
-                                <form className="pure-form pure-form-stacked">
+                                <form class="pure-form pure-form-stacked">
                                     <legend>A Stacked Form</legend>
                                     <label for="email">Email</label>
                                     <input id="email" type="text" placeholder="Email">
@@ -165,14 +165,14 @@ function Extend() {
                                         <option>CA</option>
                                         <option>IL</option>
                                     </select>
-                                    <label className="pure-checkbox">
+                                    <label class="pure-checkbox">
                                     <input type="checkbox"> Remember me
                                     </label>
                                 </form>
                             </div>
-                            <div className="modal-footer">
-                                <button className="pure-button" data-dismiss="modal" aria-hidden="true">Close</button>
-                                <button className="pure-button pure-button-primary">Submit</button>
+                            <div class="modal-footer">
+                                <button class="pure-button" data-dismiss="modal" aria-hidden="true">Close</button>
+                                <button class="pure-button pure-button-primary">Submit</button>
                             </div>
                         </div>
                         <script src="//code.jquery.com/jquery-1.9.1.js"></script>
