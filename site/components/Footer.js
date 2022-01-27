@@ -17,7 +17,7 @@ function Footer({ siteConfig }) {
                         <li><a href="https://hackerone.com/yahoo/">Security Contact Info</a></li>
                     </ul>
                     <p className="legal-copyright">
-                        &copy; 2014 - Present Yahoo! Inc. All rights reserved.
+                        &copy; 2014 - Present Yahoo Inc. All rights reserved.
                     </p>
                 </div>
             </div>
