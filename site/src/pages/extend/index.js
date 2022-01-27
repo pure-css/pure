@@ -101,7 +101,7 @@ function Extend() {
                 <SectionHeader heading="Pure + Bootstrap + JavaScript" />
 
                 <p>
-                    Pure plays well with other libraries, including Bootstrap and jQuery. As a developer, you can pull in Pure as a foundational CSS framework, and then include specific Bootstrap or jQuery modules that your application may require. There are several benefits to doing this:
+                    Pure plays well with other libraries, including Bootstrap. As a developer, you can pull in Pure as a foundational CSS framework, and then include specific Bootstrap modules that your application may require. There are several benefits to doing this:
                 </p>
 
                 <ul>
@@ -115,68 +115,57 @@ function Extend() {
                             You get Pure's minimalist look that's easy to build on top of. No need to overwrite styles!
                         </p>
                     </li>
-                    <li>
-                        <p>
-                            You can take advantage of Bootstrap's ecosystem without pulling in a monolithic Bootstrap CSS file.
-                        </p>
-                    </li>
                 </ul>
 
                 <p>
-                    For example, here's a Bootstrap Modal. It's created by including the Pure CSS Rollup, and just adding Bootstrap's <a href="/css/bootstrap/modal.css"><code>modal.css</code></a> along with the jQuery plugin.
+                    For example, here's a Bootstrap Modal. It's created by including the Pure CSS Rollup, and just adding Bootstrap's <a href="https://getbootstrap.com/docs/5.0/components/modal/">Modal component</a> CSS and JS plugin.
                 </p>
 
                 <CodeBlock>
                     {stripIndent`
-                        <!-- Button to trigger modal -->
-                        <p>
-                            <a href="#myModal" role="button" class="pure-button-primary pure-button" data-toggle="modal">
-                            Launch Pure + Bootstrap Modal
-                            </a>
-                        </p>
+                    <!-- Button to trigger modal -->
+                    <button type="button" class="pure-button-primary pure-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch Pure + Bootstrap Modal
+                    </button>
 
-                        <!-- Modal -->
-                        <!--
-                            * Bootstrap v2.3.2
-                            *
-                            * Copyright 2012 Twitter, Inc
-                            * Licensed under the Apache License v2.0
-                            * http://www.apache.org/licenses/LICENSE-2.0
-                            *
-                            * Designed and built with all the love in the world @twitter by @mdo and @fat.
-                            -->
-                        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-header">
-                                <h1 id="myModalLabel">A Bootstrap Modal with Pure</h1>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    This modal is launched by including <em>just</em> the <code>modal.css</code> and <code>modal.js</code> file from Bootstrap, and including Pure to drive all low-level styles. The result is a fully-functional Modal using just a fraction of the CSS.
-                                </p>
-                                <form class="pure-form pure-form-stacked">
-                                    <legend>A Stacked Form</legend>
-                                    <label for="email">Email</label>
-                                    <input id="email" type="text" placeholder="Email">
-                                    <label for="password">Password</label>
-                                    <input id="password" type="password" placeholder="Password">
-                                    <label for="state">State</label>
-                                    <select id="state">
-                                        <option>AL</option>
-                                        <option>CA</option>
-                                        <option>IL</option>
-                                    </select>
-                                    <label class="pure-checkbox">
-                                    <input type="checkbox"> Remember me
-                                    </label>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="pure-button" data-dismiss="modal" aria-hidden="true">Close</button>
-                                <button class="pure-button pure-button-primary">Submit</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        This modal is launched by including <em>just</em> the <code>modal.css</code> and <code>modal.js</code> file from Bootstrap, and including Pure to drive all low-level styles. The result is a fully-functional Modal using just a fraction of the CSS.
+                                    </p>
+                                    <form class="pure-form pure-form-stacked">
+                                        <legend>A Stacked Form</legend>
+                                        <label for="email">Email</label>
+                                        <input id="email" type="text" placeholder="Email">
+                                        <label for="password">Password</label>
+                                        <input id="password" type="password" placeholder="Password">
+                                        <label for="state">State</label>
+                                        <select id="state">
+                                            <option>AL</option>
+                                            <option>CA</option>
+                                            <option>IL</option>
+                                        </select>
+                                        <label class="pure-checkbox">
+                                        <input type="checkbox"> Remember me
+                                        </label>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="pure-button" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="pure-button pure-button-primary">Save changes</button>
+                                </div>
                             </div>
                         </div>
-                        <script src="//code.jquery.com/jquery-1.9.1.js"></script>
-                        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+                    </div>
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
                     `}
                 </CodeBlock>
             </div>
