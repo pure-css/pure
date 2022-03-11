@@ -202,7 +202,8 @@ module.exports = function (grunt) {
                         sm: 'screen and (min-width: 35.5em)',   // 568px
                         md: 'screen and (min-width: 48em)',     // 768px
                         lg: 'screen and (min-width: 64em)',     // 1024px
-                        xl: 'screen and (min-width: 80em)'      // 1280px
+                        xl: 'screen and (min-width: 80em)',     // 1280px
+                        xxl: 'screen and (min-width: 120em)'    // 1920px
                     }
                 }
             }
