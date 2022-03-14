@@ -69,14 +69,14 @@ function Home() {
                 </div>
             </div>
             <div className="marketing l-wrap pure-g">
-                <div className="content pure-u-1 u-sm-1-2 u-xl-1-3">
+                <div className="content pure-u-1 pure-u-sm-1-2 pure-u-xl-1-3">
                     <h3 className="marketing-header">Your CSS foundation.</h3>
                     <p>
                   Pure builds on <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> and provides layout and styling for native HTML elements, plus the most common UI components. It's what you need, without the cruft.
                     </p>
                 </div>
 
-                <div className="content pure-u-1 u-sm-1-2 u-xl-1-3">
+                <div className="content pure-u-1 pure-u-sm-1-2 pure-u-xl-1-3">
                     <h3 className="marketing-header">Made with mobile in mind.</h3>
 
                     <p>
@@ -84,7 +84,7 @@ function Home() {
                     </p>
                 </div>
 
-                <div className="content pure-u-1 u-lg-3-4 u-xl-1-3">
+                <div className="content pure-u-1 pure-u-lg-3-4 pure-u-xl-1-3">
                     <h3 className="marketing-header">Stays out of your way.</h3>
 
                     <p>
@@ -93,13 +93,13 @@ function Home() {
                 </div>
             </div>
             <div className="marketing l-wrap pure-g">
-                <div className="marketing-diagram content pure-u-1 u-sm-2-3 u-md-1-2">
+                <div className="marketing-diagram content pure-u-1 pure-u-sm-2-3 pure-u-md-1-2">
                     <Link to="/layouts">
                         <img src={useBaseUrl('img/layout-icon.jpg')} className="pure-img-responsive" alt="Diagram of a sample layout." />
                     </Link>
                 </div>
 
-                <div className="content pure-u-1 u-md-1-2">
+                <div className="content pure-u-1 pure-u-md-1-2">
                     <h3 className="marketing-header">Create responsive layouts.</h3>
                     <p>
                   By using <a href="/grids/">Grids</a>, <a href="/menus/">Menus</a>, and more, it's easy to create beautiful responsive layouts for all screen sizes. We've made it easy for you to get started. Take a look at a few different <a href="/layouts/">layouts</a> and start your next web project with a rock-solid foundation.
@@ -110,7 +110,7 @@ function Home() {
                 </div>
             </div>
             <div className="marketing marketing-customize l-wrap pure-g">
-                <div className="content pure-u-1 u-md-1-2">
+                <div className="content pure-u-1 pure-u-md-1-2">
                     <h3 className="marketing-header">Create your own look and feel.</h3>
                     <p>
                   Unlike other frameworks, Pure's design is unopinionated, minimal and flat. We believe that it's much easier to add new CSS rules than to overwrite existing rules. By adding a few lines of CSS, you can customize Pure's appearance to work with your web project.
@@ -119,33 +119,33 @@ function Home() {
                         <Link to="/extend/" className="pure-button">Extend Pure</Link>
                     </p>
                 </div>
-                <div className="sample-buttons content pure-u-1 u-md-1-2">
+                <div className="sample-buttons content pure-u-1 pure-u-md-1-2">
                     <div className="pure-g">
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="pure-button">Default</button>
                         </span>
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="button-a pure-button">Blue</button>
                         </span>
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="button-b pure-button">Yellow</button>
                         </span>
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="button-c pure-button">Black</button>
                         </span>
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="button-d pure-button">Green</button>
                         </span>
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="button-e pure-button">Red</button>
                         </span>
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="button-f pure-button">Purple</button>
                         </span>
-                        <span className="sample-button pure-u-1-2 u-sm-1-3">
+                        <span className="sample-button pure-u-1-2 pure-u-sm-1-3">
                             <button className="button-g pure-button">Orange</button>
                         </span>
-                        <span className="sample-button pure-u-1 u-sm-1-3">
+                        <span className="sample-button pure-u-1 pure-u-sm-1-3">
                             <button className="button-h pure-button">Indigo</button>
                         </span>
                     </div>

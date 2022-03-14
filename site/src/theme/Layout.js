@@ -10,7 +10,6 @@ import Footer from '../../components/Footer';
 // load common custom css
 import '../../../build/pure-min.css';
 import '../../../build/grids-responsive-min.css';
-import '../../static/css/main-grid.css';
 import '../../static/css/main.css';
 
 let jsLoaded = false;
