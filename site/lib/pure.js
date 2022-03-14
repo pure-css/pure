@@ -2,10 +2,12 @@ const crypto = require('crypto');
 const fs = require('fs');
 const gzip = require('gzip-size');
 const path = require('path');
-const { version } = require('../../package.json');
 
-const pureDir = path.resolve(__dirname, '..', 'static', 'css', 'pure');
-const pureMin = fs.readFileSync(path.resolve(pureDir, 'pure-min.css'), 'utf8');
+// load pure package metadata
+const pureDir = path.dirname(require.resolve('purecss'));
+const { version } = require(path.resolve(pureDir, 'package.json'));
+const pureFiles = path.resolve(pureDir, 'build');
+const pureMin = fs.readFileSync(path.resolve(pureFiles, 'pure-min.css'), 'utf8');
 
 // use pure-min.css to determine site integrity hash
 const sriHash = crypto.createHash('sha384').update(pureMin, 'utf8').digest('base64');
@@ -15,7 +17,7 @@ module.exports.PURE_DOWNLOAD_SNIPPET = `<link rel="stylesheet" href="https://unp
 
 // calculate each pure module size
 module.exports.moduleSizes = function moduleSizes() {
-    const files = fs.readdirSync(pureDir);
+    const files = fs.readdirSync(pureFiles);
 
     // collect all minified module files
     const modules = files.filter(file => (/-min\.css$/).test(file))
@@ -23,7 +25,7 @@ module.exports.moduleSizes = function moduleSizes() {
 
     // get sizes across all modules
     const moduleSizes = modules.map(module => {
-        const filePath = path.join(pureDir, module + '-min.css');
+        const filePath = path.join(pureFiles, module + '-min.css');
         const contents = fs.readFileSync(filePath, { encoding: 'utf-8' });
         return gzip.sync(contents);
     });

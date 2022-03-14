@@ -8,8 +8,7 @@
   "scripts": {
     "lint": "eslint . --ext .js",
     "prepare": "grunt release",
-    "site:build": "npm run pretest && cd site && npm install && npm run build",
-    "site:start": "cd site && npm run start",
+    "start": "cd site && npm install && npm run start",
     "test": "grunt test && tap test/*.js --no-coverage"
   },
   "files": [

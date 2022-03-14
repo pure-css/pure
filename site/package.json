@@ -5,8 +5,9 @@
   "scripts": {
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
-    "predeploy": "npm run build",
-    "prestart": "cp -rf ../build/ ./static/css/pure/",
+    "predeploy": "npm run pure && npm run build",
+    "prestart": "npm run pure",
+    "pure": "cp -rf ./node_modules/purecss/build/ ./static/css/pure/",
     "start": "docusaurus start",
     "swizzle": "docusaurus swizzle"
   },
@@ -19,6 +20,7 @@
     "common-tags": "^1.8.2",
     "gzip-size": "^6.0.0",
     "js-beautify": "^1.11.0",
+    "purecss": "^2.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-syntax-highlighter": "^15.5.0",
