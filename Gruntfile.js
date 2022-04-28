@@ -155,7 +155,7 @@ module.exports = function (grunt) {
                 options: {
                     banner: [
                         '/*!',
-                        'normalize.css v<%= pkg.devDependencies["normalize-css"] %> | MIT License | git.io/normalize',
+                        'normalize.css v<%= pkg.devDependencies["normalize-css"] %> | MIT License | https://necolas.github.io/normalize.css/',
                         'Copyright (c) Nicolas Gallagher and Jonathan Neal',
                         '*/\n'
                     ].join('\n')
