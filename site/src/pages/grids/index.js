@@ -582,7 +582,7 @@ function Grids() {
                 <h3>Using Relative Units for Widths</h3>
 
                 <p>
-                    You may have noticed that we use <code>em</code> for our default CSS Media Query widths instead of <code>px</code>. This was a conscious decision since it allows the Media Queries to respond appropriately when people zoom the webpage. Check out <a href="http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#relative">this article by Brad Frost</a> for some background information on using relative units within Media Queries.
+                    You may have noticed that we use <code>em</code> for our default CSS Media Query widths instead of <code>px</code>. This was a conscious decision since it allows the Media Queries to respond appropriately when people zoom the webpage. Check out <a href="https://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/">this article by Brad Frost</a> for some background information on using relative units within Media Queries.
                 </p>
 
                 <p>
