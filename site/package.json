@@ -19,7 +19,7 @@
     "classnames": "^2.2.6",
     "common-tags": "^1.8.2",
     "gzip-size": "^6.0.0",
-    "js-beautify": "^1.14.3",
+    "js-beautify": "^1.14.4",
     "purecss": "^2.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
