@@ -31,6 +31,7 @@ module.exports = {
         }
     ],
     themes: ['@docusaurus/theme-classic'],
+    trailingSlash: true,
     customFields: {
         PURE_DOWNLOAD_SNIPPET,
         moduleSizes: moduleSizes(),
