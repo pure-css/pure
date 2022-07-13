@@ -27,7 +27,7 @@ function Start() {
                 <SectionHeader heading="Add Pure to Your Page" />
 
                 <p>
-                  You can add Pure to your page via the <b>free unpkg CDN</b>. Just add the following <code>&lt;link&gt;</code> element into your page's <code>&lt;head&gt;</code>, before your project's stylesheets.
+                  You can add Pure to your page via the <b>free jsDelivr CDN</b>. Just add the following <code>&lt;link&gt;</code> element into your page's <code>&lt;head&gt;</code>, before your project's stylesheets.
                 </p>
             </div>
 
@@ -100,7 +100,7 @@ function Start() {
                 </p>
 
                 <CodeBlock wrap={true}>
-                    {`<link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-responsive-min.css">`}
+                    {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@${pureVersion}/build/grids-responsive-min.css">`}
                 </CodeBlock>
 
                 <p>
@@ -318,7 +318,7 @@ function Start() {
 
                                   &lt;title&gt;Your page title&lt;/title&gt;
 
-                                  &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https://unpkg.com/purecss@1.0.1/build/pure-min.css&quot;&gt;&lt;/head&gt;
+                                  &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https://cdn.jsdelivr.net/npm/purecss@1.0.1/build/pure-min.css&quot;&gt;&lt;/head&gt;
 
                               &lt;body&gt;
                                   &lt;!--

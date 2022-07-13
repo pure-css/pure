@@ -1,4 +1,5 @@
 import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React from 'react';
 import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
@@ -9,6 +10,14 @@ const title = 'Base';
 const description = 'Leveraging Normalize.css, an HTML5-ready alternative to CSS resets.';
 
 function Base() {
+    const context = useDocusaurusContext();
+    const {siteConfig = {}} = context;
+    const {
+        customFields: {
+            pureVersion,
+        },
+    } = siteConfig;
+
     return (
         <Layout description={description} title={title}>
             <Header description={description} title={title} />
@@ -21,7 +30,7 @@ function Base() {
                 </p>
 
                 <CodeBlock wrap={true}>
-                    {'<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">'}
+                    {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@${pureVersion}/build/base-min.css">`}
                 </CodeBlock>
 
                 <h3>A bit about Normalize.css</h3>

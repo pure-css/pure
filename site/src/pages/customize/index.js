@@ -42,12 +42,12 @@ function Customize() {
                         <tbody>
                             <tr>
                                 <td>Responsive Rollup</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/pure-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/pure-min.css</td>
                                 <td>{fileSize({ module: 'pure', filesizes })}</td>
                             </tr>
                             <tr>
                                 <td>Non-Responsive Rollup</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/pure-nr-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/pure-nr-min.css</td>
                                 <td>{fileSize({ module: 'pure-nr', filesizes })}</td>
                             </tr>
                         </tbody>
@@ -63,7 +63,7 @@ function Customize() {
                 <h3>Alternate CDNs</h3>
 
                 <p>
-                    The main host for Pure is the unpkg CDN where Pure is available over HTTPS. The following table lists alternate CDNs where Pure is hosted.
+                    The main host for Pure is the jsDelivr CDN where Pure is available over HTTPS. The following table lists alternate CDNs where Pure is hosted.
                 </p>
 
                 <div className="table-responsive">
@@ -132,35 +132,35 @@ function Customize() {
                         <tbody>
                             <tr>
                                 <td>Base</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/base-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/base-min.css</td>
                             </tr>
                             <tr>
                                 <td>Buttons</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/buttons-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/buttons-min.css</td>
                             </tr>
                             <tr>
                                 <td>Forms (Responsive)</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/forms-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/forms-min.css</td>
                             </tr>
                             <tr>
                                 <td>Forms (Non-Responsive)</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/forms-nr-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/forms-nr-min.css</td>
                             </tr>
                             <tr>
                                 <td>Grids (Base)</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/grids-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/grids-min.css</td>
                             </tr>
                             <tr>
                                 <td>Grids (Responsive)</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/grids-responsive-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/grids-responsive-min.css</td>
                             </tr>
                             <tr>
                                 <td>Menus (Responsive)</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/menus-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/menus-min.css</td>
                             </tr>
                             <tr>
                                 <td>Tables</td>
-                                <td>https://unpkg.com/purecss@{pureVersion}/build/tables-min.css</td>
+                                <td>https://cdn.jsdelivr.net/npm/purecss@{pureVersion}/build/tables-min.css</td>
                             </tr>
                         </tbody>
                     </table>
@@ -169,7 +169,7 @@ function Customize() {
                 <SectionHeader heading="Combo Handling" />
 
                 <p>
-                    jsDelivr is a CDN that supports combo handling. Here's an example of a combo URL that includes the same CSS <a href="/base/">Base</a>, <a href="/grids/">Grids</a>, and <a href="/forms/">Forms</a> as above.
+                    jsDelivr is also a CDN that supports combo handling. Here's an example of a combo URL that includes the same CSS <a href="/base/">Base</a>, <a href="/grids/">Grids</a>, and <a href="/forms/">Forms</a> as above.
                 </p>
 
                 <CodeBlock>

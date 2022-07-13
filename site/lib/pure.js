@@ -13,7 +13,7 @@ const pureMin = fs.readFileSync(path.resolve(pureFiles, 'pure-min.css'), 'utf8')
 const sriHash = crypto.createHash('sha384').update(pureMin, 'utf8').digest('base64');
 
 // copy/pastable code snippet for users
-module.exports.PURE_DOWNLOAD_SNIPPET = `<link rel="stylesheet" href="https://unpkg.com/purecss@${version}/build/pure-min.css" integrity="sha384-${sriHash}" crossorigin="anonymous">`;
+module.exports.PURE_DOWNLOAD_SNIPPET = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@${version}/build/pure-min.css" integrity="sha384-${sriHash}" crossorigin="anonymous">`;
 
 // calculate each pure module size
 module.exports.moduleSizes = function moduleSizes() {

@@ -481,7 +481,7 @@ function Grids() {
                 </p>
 
                 <CodeBlock>
-                    {`<link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-responsive-min.css" />`}
+                    {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@${pureVersion}/build/grids-responsive-min.css" />`}
                 </CodeBlock>
 
                 <h3>Pure's Regular Grid vs. Responsive Grid</h3>
@@ -824,9 +824,9 @@ function Grids() {
 
                 <CodeBlock>
                     {stripIndent`
-                        <link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/base-min.css">
-                        <link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-min.css">
-                        <link rel="stylesheet" href="https://unpkg.com/purecss@${pureVersion}/build/grids-responsive-min.css">
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@${pureVersion}/build/base-min.css">
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@${pureVersion}/build/grids-min.css">
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@${pureVersion}/build/grids-responsive-min.css">
                     `}
                 </CodeBlock>
 
