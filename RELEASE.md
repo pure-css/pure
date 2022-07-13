@@ -76,13 +76,13 @@ This assumes the following repo's are cloned and `npm` installed:
 
 ## Publish pure to NPM
 
-From the `pure` repo run the following command to publish Pure to NPM. This will ensure `unpkg.com` CDN gets the new files.
+From the `pure` repo run the following command to publish Pure to NPM. This will ensure `jsdelivr.com` CDN gets the new files.
 
 ```bash
 npm publish .
 ```
 
-Verify via https://unpkg.com/purecss@VERSION
+Verify via https://www.jsdelivr.com/package/npm/purecss
 
 ## Draft releases on Github
 
