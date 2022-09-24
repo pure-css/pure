@@ -160,6 +160,12 @@ function Start() {
                                 <td>≥ <b>2560px</b></td>
                                 <td><code>.pure-u-<b>xxxl</b>-*</code></td>
                             </tr>
+                            <tr>
+                                <td className="highlight"><b><code>x4k</code></b></td>
+                                <td className="mq-table-mq highlight"><code>@media screen and (min-width: 240em)</code></td>
+                                <td>≥ <b>3840px</b></td>
+                                <td><code>.pure-u-<b>x4k</b>-*</code></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
