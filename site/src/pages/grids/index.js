@@ -567,6 +567,12 @@ function Grids() {
                                 <td>≥ <b>1920px</b></td>
                                 <td><code>.pure-u-<b>xxl</b>-*</code></td>
                             </tr>
+                            <tr>
+                                <td className="highlight"><b><code>xxxl</code></b></td>
+                                <td className="mq-table-mq highlight"><code>@media screen and (min-width: 160em)</code></td>
+                                <td>≥ <b>2560px</b></td>
+                                <td><code>.pure-u-<b>xxl</b>-*</code></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
