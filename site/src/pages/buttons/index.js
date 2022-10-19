@@ -73,7 +73,7 @@ function Buttons() {
 
                 <Example>
                     <div>
-                        <style scoped dangerouslySetInnerHTML={{ __html: `
+                        <style dangerouslySetInnerHTML={{ __html: `
                      .button-success,
                      .button-error,
                      .button-warning,
@@ -106,7 +106,7 @@ function Buttons() {
 
                 <Example>
                     <div>
-                        <style scoped dangerouslySetInnerHTML={{ __html: `
+                        <style dangerouslySetInnerHTML={{ __html: `
                      .button-xsmall {
                          font-size: 70%;
                      }
