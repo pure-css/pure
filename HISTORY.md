@@ -1,6 +1,11 @@
 Pure Change History
 ===================
 
+2.2.0 (2022-10-19)
+------------------
+
+* feat: added media queries for 2.5K and 4K screens (#1065)
+
 2.1.0 (2022-03-14)
 ------------------
 
