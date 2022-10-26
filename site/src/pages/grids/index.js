@@ -1,4 +1,3 @@
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React from 'react';
 import Layout from '../../theme/Layout';
@@ -47,10 +46,6 @@ function Grids() {
                         All content which is visible to people needs to be contained inside a grid unit. This ensures that the content will be rendered properly.
                     </dd>
                 </dl>
-
-                <aside>
-                    <p>When setting a <code>font-family</code> in your project, be sure to check out the section on <Link to="#using-grids-with-your-font-family">using Grids with your font-family</Link>.</p>
-                </aside>
 
                 <p>
                     Let's start with a simple example. Here's a grid with three columns:
@@ -805,29 +800,6 @@ function Grids() {
                 <p>
                     Using <code>box-sizing: border-box</code> keeps your markup cleaner, but has one minor drawback. Setting this property on all grid units makes it harder to override or unset the value later on. As an unopinionated library, Pure lets <code>box-sizing</code> remain at the default value of <code>content-box</code> and leaves the choice up to you.
                 </p>
-
-                <SectionHeader heading="Using Grids with Your Font-Family" />
-
-                <p>
-                    Pure Grids use a specific font stack to ensure the greatest OS/browser compatibility, and by default grid units will have <code>font-family: sans-serif;</code> applied — this is the default font stack Pure's Base (Normalize.css) applies to <code>&lt;html&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;textarea&gt;</code> elements. Fortunately, it's quite easy to make sure your project's font stack applies to all content when using Pure. Instead of applying your <code>font-family</code> to only the <code>&lt;body&gt;</code> element, apply it like this:
-                </p>
-
-                <CodeBlock wrap={true}>
-                    {stripIndent`
-                        <style>
-                        /*
-                        When setting the primary font stack, apply it to the Pure grid units along
-                        with "html", "button", "input", "select", and "textarea". Pure Grids use
-                        specific font stacks to ensure the greatest OS/browser compatibility.
-                        */
-                        html, button, input, select, textarea,
-                        .pure-g [class *= "pure-u"] {
-                            /* Set your content font stack here: */
-                            font-family: Georgia, Times, "Times New Roman", serif;
-                        }
-                        </style>
-                    `}
-                </CodeBlock>
 
                 <SectionHeader heading="Want to just use Grids?" />
 
