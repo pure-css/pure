@@ -31,9 +31,6 @@ This assumes the following repo's are cloned and `npm` installed:
   - [ ] Chrome
   - [ ] Firefox
   - [ ] Safari
-  - [ ] iOS 10.x
-  - [ ] Android 4.x
-  - [ ] Android 5.x
 
 - [ ] **Review pure-site in target environments with [Pure served locally](https://github.com/pure-css/pure-site/blob/master/README.md#running-with-pure-served-locally)**
 
@@ -41,9 +38,6 @@ This assumes the following repo's are cloned and `npm` installed:
   - [ ] Chrome
   - [ ] Firefox
   - [ ] Safari
-  - [ ] iOS 10.x
-  - [ ] Android 4.x
-  - [ ] Android 5.x
 
 - [ ] **Review HISTORY.md**
 
