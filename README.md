@@ -88,7 +88,6 @@ conventions of the files in the `build/` directory follow these rules:
 
 Pure is tested and works in:
 
-- IE 10+
 - Latest Stable: Firefox, Chrome, Safari
 - iOS 12+
 - Android 6+

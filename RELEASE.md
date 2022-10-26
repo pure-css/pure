@@ -27,7 +27,6 @@ This assumes the following repo's are cloned and `npm` installed:
 
 - [ ] **Review all src/.../tests/manual/ files in target environments, including:**
 
-  - [ ] IE 11
   - [ ] Edge
   - [ ] Chrome
   - [ ] Firefox
@@ -38,7 +37,6 @@ This assumes the following repo's are cloned and `npm` installed:
 
 - [ ] **Review pure-site in target environments with [Pure served locally](https://github.com/pure-css/pure-site/blob/master/README.md#running-with-pure-served-locally)**
 
-  - [ ] IE 11
   - [ ] Edge
   - [ ] Chrome
   - [ ] Firefox

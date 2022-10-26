@@ -76,8 +76,7 @@
     overflow-y: scroll;
     margin: 0;
 }
-#css .code,
-#css-old-ie .code {
+#css .code {
     max-height: 35em;
 }
 

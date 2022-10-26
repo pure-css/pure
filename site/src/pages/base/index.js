@@ -56,7 +56,7 @@ function Base() {
                 <h3>Hiding Elements</h3>
 
                 <p>
-                Add the <code>hidden</code> attribute to an HTML element to hide it from the screen via <code>display: none !important;</code>. Alternatively, for compatibility with old IE, you may use the CSS classname <code>.hidden</code>.
+                Add the <code>hidden</code> attribute to an HTML element to hide it from the screen via <code>display: none !important;</code>.
                 </p>
 
                 <CodeBlock wrap={true}>

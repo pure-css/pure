@@ -59,7 +59,6 @@ $ grunt watch
 
 Pure is tested and works in:
 
-- IE 10+
 - Latest Stable: Edge, Firefox, Chrome, Safari
 - iOS 6+
 - Android 4.x

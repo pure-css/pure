@@ -58,7 +58,6 @@
   "license": "BSD-3-Clause",
   "browserslist": [
     "last 2 versions",
-    "ie >= 10",
     "iOS >= 12",
     "Android >= 6"
   ],
