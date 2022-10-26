@@ -1,6 +1,22 @@
 Pure Change History
 ===================
 
+3.0.0 (2022-10-26)
+------------------
+
+This is a major version bump that has the following changes:
+
+* Removed the `font-family` hack from Grids (#1074)
+* IE is no longer supported and all code and documentation references have been removed
+* The browserslist configuration has been updated to "> 1%" browser usage. You can use the [browserslist tool](https://browserslist.dev/?q=PiAxJQ%3D%3D) to see which browsers this now covers.
+
+### Migration
+
+This major version should not include too many breaking changes for your app, but please check the following:
+
+- Since the list of supported browsers has now changed, please check that your site is still functioning in any browsers that you continue to support.
+- Verify your grids are still functioning correctly with the `font-family` hack still removed. This should not affect you as it was a hack for older browsers.
+
 2.2.0 (2022-10-19)
 ------------------
 
