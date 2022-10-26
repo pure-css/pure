@@ -56,11 +56,7 @@
     "jamesalley <manalagi001@yahoo.com>"
   ],
   "license": "BSD-3-Clause",
-  "browserslist": [
-    "last 2 versions",
-    "iOS >= 12",
-    "Android >= 6"
-  ],
+  "browserslist": "> 1%",
   "husky": {
     "hooks": {
       "pre-commit": "npm test"
