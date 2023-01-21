@@ -22,7 +22,7 @@ html {
 }
 
 /**
- * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+ * Add this class to an image to make it fit within its fluid parent wrapper while maintaining
  * aspect ratio.
  */
 .pure-img {
