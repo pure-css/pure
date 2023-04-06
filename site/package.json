@@ -24,7 +24,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-syntax-highlighter": "^15.5.0",
-    "webpack": "^5.77.0"
+    "webpack": "^5.78.0"
   },
   "browserslist": {
     "production": [
