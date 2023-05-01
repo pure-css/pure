@@ -26,7 +26,7 @@
     "grunt-contrib-concat": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-csslint": "^2.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-css-selectors": "^1.1.0",
     "grunt-pure-grids": "^2.0.0",
