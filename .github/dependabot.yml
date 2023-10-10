@@ -17,6 +17,6 @@ updates:
       interval: daily
     open-pull-requests-limit: 10
     groups:
-      remix-updates:
+      docusaurus:
         patterns:
           - '@docusaurus/*'
