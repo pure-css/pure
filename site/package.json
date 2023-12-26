@@ -16,7 +16,7 @@
     "@docusaurus/plugin-content-pages": "^2.4.3",
     "@docusaurus/plugin-google-analytics": "^2.4.3",
     "@docusaurus/theme-classic": "^2.4.3",
-    "classnames": "^2.3.2",
+    "classnames": "^2.4.0",
     "common-tags": "^1.8.2",
     "gzip-size": "^6.0.0",
     "js-beautify": "^1.14.9",
