@@ -590,18 +590,6 @@ a.pure-button-primary {
 
 }
 
-@media (max-width: 58em) {
-    /* Only apply this when the window is smaller. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small. (Rotate to portrait on a mobile.)
-        * Tap the menu to trigger the active state.
-        * Make the window large again. (Rotate to landscape on mobile.)
-    */
-    #layout.active {
-        position: relative;
-    }
-}
-
 @media (min-width: 58em) {
 
     #layout {
