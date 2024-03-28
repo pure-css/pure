@@ -30,7 +30,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-css-selectors": "^1.1.0",
     "grunt-pure-grids": "^2.0.0",
-    "husky": "^8.0.1",
+    "husky": "^9.0.11",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.8",
     "tap": "^16.0.0"
