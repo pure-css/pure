@@ -173,7 +173,7 @@ module.exports = function (grunt) {
                         'Pure v<%= pkg.version %>',
                         'Copyright 2013 Yahoo!',
                         'Licensed under the BSD License.',
-                        'https://github.com/pure-css/pure/blob/master/LICENSE',
+                        'https://github.com/pure-css/pure/blob/main/LICENSE',
                         '*/\n'
                     ].join('\n')
                 },

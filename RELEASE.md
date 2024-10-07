@@ -12,11 +12,11 @@ This assumes the following repo's are cloned and `npm` installed:
 
 ## First, check everything
 
-- [ ] **Update local Pure to latest from pure-css/pure#master**
+- [ ] **Update local Pure to latest from pure-css/pure#main**
 
   ```bash
   $ cd pure/
-  $ git pull upstream master
+  $ git pull upstream main
   ```
 
 - [ ] **Build Pure via `grunt`**
@@ -32,7 +32,7 @@ This assumes the following repo's are cloned and `npm` installed:
   - [ ] Firefox
   - [ ] Safari
 
-- [ ] **Review pure-site in target environments with [Pure served locally](https://github.com/pure-css/pure-site/blob/master/README.md#running-with-pure-served-locally)**
+- [ ] **Review pure-site in target environments with [Pure served locally](https://github.com/pure-css/pure-site/blob/main/README.md#running-with-pure-served-locally)**
 
   - [ ] Edge
   - [ ] Chrome
@@ -41,7 +41,7 @@ This assumes the following repo's are cloned and `npm` installed:
 
 - [ ] **Review HISTORY.md**
 
-  https://github.com/pure-css/pure/blob/master/HISTORY.md
+  https://github.com/pure-css/pure/blob/main/HISTORY.md
 
   Make sure all the major changes since the last release of Pure are reflected in HISTORY.md entries.
 
@@ -97,4 +97,4 @@ Now all our files are out there and everything is looking good.
 
 ## Mark repo as pre-release
 
-- [ ] We should mark the version number of the project (in package.json) as 0.6.1-pre for clarity, so there's no mistaking the leading edge of the project from the last release. Commit those changes and push to master.
+- [ ] We should mark the version number of the project (in package.json) as 0.6.1-pre for clarity, so there's no mistaking the leading edge of the project from the last release. Commit those changes and push to main.

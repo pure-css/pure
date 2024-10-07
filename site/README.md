@@ -30,11 +30,10 @@ This command generates static content into the `build` directory and can be serv
 $ GIT_USER=<Your GitHub username> USE_SSH=true npm run deploy
 ```
 
-The site is hosted on [Vercel](https://vercel.com/) and will automatically deploy when commits are merged to `master`.
+The site is hosted on [Vercel](https://vercel.com/) and will automatically deploy when commits are merged to `main`.
 
 ### Including Pure
 
-We want to use the locally built version of Pure so that the [layout examples](https://purecss.io/layouts/) are always using the `master` version, previously they had used a hardcoded CDN link.
+We want to use the locally built version of Pure so that the [layout examples](https://purecss.io/layouts/) are always using the `main` version, previously they had used a hardcoded CDN link.
 
 To get Docusaurus to register the css as `static`, they have to exist in the `static/` directory before the site is built. Therefore, we copy the Pure `build/` in manually and `.gitignore` them. Once Docusaurus builds, they resolve as proper CSS files.
-

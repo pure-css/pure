@@ -84,7 +84,7 @@ const renderLayouts = (layout, idx) => (
             <p>
                 <a href={`/layouts/${layout.type}/`}
                     className="pure-button pure-button-primary">View</a>
-                <a href={`https://github.com/pure-css/pure/tree/master/site/static/layouts/${layout.type}`}
+                <a href={`https://github.com/pure-css/pure/tree/main/site/static/layouts/${layout.type}`}
                     className="pure-button">Source</a>
             </p>
         </div>
