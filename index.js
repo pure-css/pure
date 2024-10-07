@@ -8,7 +8,7 @@ module.exports = {
             try {
                 cache[name] = fs.readFileSync(this.getFilePath(name), 'utf-8');
             } catch(e) {
-                throw new Error(name + ' does not exist');
+                throw new Error(name + ' does not exist', e);
             }
         }
         return cache[name];

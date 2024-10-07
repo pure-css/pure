@@ -1,9 +1,0 @@
-/build/
-/node_modules/
-/release/
-
-# site files
-/site/.docusaurus
-/site/build
-/site/node_modules
-/site/static/css/pure
