@@ -1,4 +1,4 @@
-name: Deploy
+name: Android
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: mark.up
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Farrah Gil Pancho
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
@@ -23,11 +23,11 @@ jobs:
           GH_EMAIL: ${{ secrets.GH_EMAIL }}
           GH_NAME: ${{ secrets.GH_NAME }}
           GIT_USER: ${{ secrets.GH_NAME }}
-          USE_SSH: true
-        run: |
+          USE_SSH: False
+        run: | enable
           npm ci
-          git config --global user.name "${GH_NAME}"
-          git config --global user.email "${GH_EMAIL}"
+          git config --global user.name "${GH_fhar28,GH_bothhybrid2022)"
+          git config --global user.email "${GH_farrahgilpancho@gmail.com}"
           cd site
           npm install
           npm run deploy
