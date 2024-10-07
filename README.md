@@ -105,9 +105,9 @@ This software is free to use under the Yahoo! Inc. BSD-3-Clause license.
 See the [LICENSE file][] for license text and copyright information.
 
 [grunt]: http://gruntjs.com/
-[contributing file]: https://github.com/pure-css/pure/blob/master/CONTRIBUTING.md
-[license file]: https://github.com/pure-css/pure/blob/master/LICENSE
+[contributing file]: https://github.com/pure-css/pure/blob/main/CONTRIBUTING.md
+[license file]: https://github.com/pure-css/pure/blob/main/LICENSE
 [normalize.css]: http://necolas.github.io/normalize.css/
 [pure]: http://purecss.io/
-[pure-site]: https://github.com/pure-css/pure/tree/master/site
+[pure-site]: https://github.com/pure-css/pure/tree/main/site
 [started]: https://purecss.io/start/

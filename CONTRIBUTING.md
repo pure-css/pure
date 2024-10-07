@@ -2,7 +2,7 @@
 
 Feel free to [open issues][] and send pull requests on GitHub! When sending a
 pull request, please create a new topic/feature branch, and send your pull
-request from that branch. Please do _not_ send pull requests from your `master`
+request from that branch. Please do _not_ send pull requests from your `main`
 branch because this tends to lead to merge conflicts.
 
 In order for us to to merge your pull requests, we need you to review and sign
@@ -18,7 +18,7 @@ contributions along with all other developers who use Pure.
 to open issues or questions in the Issue tab.
 
 [pure]: http://purecss.io/
-[pure-site]: https://github.com/pure-css/pure/tree/master/site
+[pure-site]: https://github.com/pure-css/pure/tree/main/site
 
 ## Building and Testing Pure
 

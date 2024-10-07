@@ -8,7 +8,7 @@ function Footer({ siteConfig }) {
                 <div className="pure-u-1 u-sm-1-2">
                     <p className="legal-license">
                         This site is built with ❤️ using Pure v{customFields.pureVersion}<br />
-                        All code on this site is licensed under the <a href={`https://github.com/${organizationName}/${customFields.repoName}/blob/master/LICENSE`}>Yahoo BSD License</a> unless otherwise stated.
+                        All code on this site is licensed under the <a href={`https://github.com/${organizationName}/${customFields.repoName}/blob/main/LICENSE`}>Yahoo BSD License</a> unless otherwise stated.
                     </p>
                 </div>
                 <div className="pure-u-1 u-sm-1-2">
