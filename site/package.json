@@ -12,10 +12,10 @@
     "swizzle": "docusaurus swizzle"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.0.0",
-    "@docusaurus/plugin-content-pages": "^3.0.0",
-    "@docusaurus/plugin-google-analytics": "^3.0.0",
-    "@docusaurus/theme-classic": "^3.0.0",
+    "@docusaurus/core": "^3.6.2",
+    "@docusaurus/plugin-content-pages": "^3.6.2",
+    "@docusaurus/plugin-google-analytics": "^3.6.2",
+    "@docusaurus/theme-classic": "^3.6.2",
     "classnames": "^2.5.1",
     "common-tags": "^1.8.2",
     "gzip-size": "^6.0.0",
