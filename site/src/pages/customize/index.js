@@ -180,16 +180,6 @@ function Customize() {
                     See the <a href="https://github.com/jsdelivr/jsdelivr#combine-multiple-files">jsDelivr combo handler documentation</a> to learn more about its features.
                 </p>
 
-                <SectionHeader heading="Using Pure with Google AMP" />
-
-                <p>
-                    Google's <a href="https://www.ampproject.org/">Accelerated Mobile Pages</a> (AMP) allow web pages to get pre-rendered on Google at the cost of restrictions on JS and <a href="https://www.ampproject.org/docs/guides/responsive/style_pages#disallowed-styles">CSS</a>, such as completely inlining all styles rather than using stylesheets in external files such as those hosted at the CDNs mentioned above.
-                </p>
-
-                <p>
-                    Furthermore, AMP disallows some CSS functionality. In Pure, the only bit currently used disallowed by AMP is '!important', currently used in the definition of the '.hidden' helper class. Removing this modifier should suffice to render Pure usable with AMP.
-                </p>
-
                 <SectionHeader heading="Contribute on GitHub" />
 
                 <p>
