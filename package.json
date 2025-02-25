@@ -34,7 +34,7 @@
     "husky": "^9.0.11",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.8",
-    "tap": "^16.0.0"
+    "tap": "^21.1.0"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {
