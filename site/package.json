@@ -12,19 +12,19 @@
     "swizzle": "docusaurus swizzle"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.7.0",
-    "@docusaurus/plugin-content-pages": "^3.7.0",
-    "@docusaurus/plugin-google-analytics": "^3.7.0",
-    "@docusaurus/theme-classic": "^3.7.0",
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/plugin-content-pages": "^3.10.2",
+    "@docusaurus/plugin-google-analytics": "^3.10.2",
+    "@docusaurus/theme-classic": "^3.10.2",
     "classnames": "^2.5.1",
     "common-tags": "^1.8.2",
     "gzip-size": "^6.0.0",
-    "js-beautify": "^1.15.4",
+    "js-beautify": "^2.0.3",
     "purecss": "^3.0.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-syntax-highlighter": "^15.6.1",
-    "webpack": "^5.98.0"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.8",
+    "react-syntax-highlighter": "^16.1.1",
+    "webpack": "^5.109.2"
   },
   "browserslist": {
     "production": [
