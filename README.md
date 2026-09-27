@@ -39,13 +39,13 @@ Check out the [Get Started][started] page for more information.
 ## Build From Source
 
 Optionally, you can build Pure from its source on Github. To do this, you'll
-need to have Node.js and npm installed. We use [Grunt][] to build Pure.
+need to have Node.js 26+ and npm 12+ installed (see `.nvmrc`).
 
 ```shell
 git clone git@github.com:pure-css/pure.git
 cd pure
 npm install
-grunt
+npm run build
 ```
 
 ### Build Files
@@ -104,7 +104,6 @@ See the [CONTRIBUTING file][] for information on how to contribute to Pure.
 This software is free to use under the Yahoo! Inc. BSD-3-Clause license.
 See the [LICENSE file][] for license text and copyright information.
 
-[grunt]: http://gruntjs.com/
 [contributing file]: https://github.com/pure-css/pure/blob/main/CONTRIBUTING.md
 [license file]: https://github.com/pure-css/pure/blob/main/LICENSE
 [normalize.css]: http://necolas.github.io/normalize.css/

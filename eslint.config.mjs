@@ -23,7 +23,7 @@ export default [
         files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
         languageOptions: {
             ...reactPlugin.configs.flat.recommended.languageOptions,
-            ecmaVersion: 2024,
+            ecmaVersion: 'latest',
             globals: {
                 ...globals.browser,
                 ...globals.jest,

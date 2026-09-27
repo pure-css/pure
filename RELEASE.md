@@ -19,10 +19,10 @@ This assumes the following repo's are cloned and `npm` installed:
   $ git pull upstream main
   ```
 
-- [ ] **Build Pure via `grunt`**
+- [ ] **Build Pure via `npm run build`**
 
   ```bash
-  $ grunt
+  $ npm run build
   ```
 
 - [ ] **Review all src/.../tests/manual/ files in target environments, including:**
@@ -56,12 +56,12 @@ This assumes the following repo's are cloned and `npm` installed:
   - [ ] package.json
   - [ ] HISTORY.md (Update "NEXT")
 
-- [ ] **Build Pure release files via `grunt release`**
+- [ ] **Build Pure release files via `npm run release`**
 
-  Using Grunt, create the release/[version]/pure-[version].tar.gz file:
+  Create the release/[version]/pure-[version].tar.gz file:
 
   ```bash
-  $ grunt release
+  $ npm run release
   ```
 
   **Note:** If the build fails it's for a good reason, most likely because there's code which is not passing CSSLint. We should always fix these issues and never force a release.
