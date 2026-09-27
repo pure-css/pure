@@ -39,7 +39,7 @@ function Tools() {
                 You can also install Pure with <a href="https://getcomposer.org/">Composer</a>.
                 </p>
 
-                <CodeBlock>$ composer require pure-css/pure</CodeBlock>
+                <CodeBlock>$ composer require yahoo/purecss</CodeBlock>
 
                 <SectionHeader heading="Extending Pure with Grunt" />
 
