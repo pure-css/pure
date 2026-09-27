@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
-const gzip = require('gzip-size');
 const path = require('path');
+const zlib = require('zlib');
 
 // load pure package metadata
 const pureDir = path.dirname(require.resolve('purecss'));
@@ -27,7 +27,7 @@ module.exports.moduleSizes = function moduleSizes() {
     const moduleSizes = modules.map(module => {
         const filePath = path.join(pureFiles, module + '-min.css');
         const contents = fs.readFileSync(filePath, { encoding: 'utf-8' });
-        return gzip.sync(contents);
+        return zlib.gzipSync(contents, { level: 9 }).length;
     });
 
     // return final list of sizes
