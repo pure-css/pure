@@ -9,7 +9,7 @@
     "lint": "eslint . --fix",
     "prepare": "grunt release",
     "start": "cd site && npm install && npm run start",
-    "test": "grunt test && tap test/*.js --no-coverage"
+    "test": "grunt test && tap test/*.js --disable-coverage"
   },
   "files": [
     "build/"
@@ -35,7 +35,7 @@
     "husky": "^9.0.11",
     "normalize.css": "^8.0.1",
     "postcss": "^8.5.28",
-    "tap": "^16.0.0"
+    "tap": "^21.8.0"
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
   "bugs": {

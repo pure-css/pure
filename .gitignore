@@ -1,5 +1,6 @@
 .DS_Store
 .nyc_output/
+.tap/
 artifacts/
 build/
 coverage/
