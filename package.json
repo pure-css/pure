@@ -62,5 +62,8 @@
     "hooks": {
       "pre-commit": "npm test"
     }
+  },
+  "overrides": {
+    "lodash": "^4.18.1"
   }
 }
