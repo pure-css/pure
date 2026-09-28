@@ -200,6 +200,13 @@ code {
 .content p code {
     font-size: 90%;
 }
+/* On small screens, let long inline code wrap instead of widening the page. */
+@media (max-width: 48em) {
+    .content p code {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+}
 
 .code {
     margin-left: -1em;
