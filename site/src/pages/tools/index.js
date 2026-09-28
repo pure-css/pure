@@ -40,38 +40,23 @@ function Tools() {
 
                 <CodeBlock>$ composer require yahoo/purecss</CodeBlock>
 
-                <SectionHeader heading="Extending Pure with Rework" />
-
-                <p>
-                We've written several tools that help you extend Pure and integrate it with your project's CSS. These tools are built as <b><a href="https://github.com/reworkcss/rework">Rework</a></b> plugins, which allows you to compose Pure's Rework plugins together with other Rework plugins.
-                </p>
-
                 <SectionHeader heading="Generating Custom Responsive Grids" />
 
                 <p>
-                Pure was created to help developer's build mobile-first responsive web projects. However, since CSS Media Queries cannot be over-written via CSS, you can use Pure's tooling to customize Pure's Responsive Grids for your project.
+                Pure was created to help developers build mobile-first responsive web projects. However, since CSS Media Queries cannot be over-written via CSS, you can use Pure's tooling to customize Pure's Responsive Grids for your project.
                 </p>
 
                 <p>
-                You can generate your custom responsive grids using the <a href="https://www.npmjs.org/package/rework-pure-grids">Pure Grids Rework Plugin</a>.
+                The <code>purecss</code> npm package includes <code>generateGrids()</code>, the same generator Pure uses to build its own grid files. It has no dependencies and returns the CSS as a string.
                 </p>
 
-                <p>
-                You can install the Rework plugin through npm.
-                </p>
-
-                <CodeBlock>$ npm install rework rework-pure-grids</CodeBlock>
-
-                <p>
-                And it can be used on it's own like this, or along side other Rework plugins you might be using.
-                </p>
+                <CodeBlock>$ npm install purecss --save-dev</CodeBlock>
 
                 <CodeBlock>
                     {stripIndent`
-                    import rework from 'rework';
-                    import pureGrids from 'rework-pure-grids';
+                    import { generateGrids } from 'purecss';
 
-                    const css = rework('').use(pureGrids.units({
+                    const css = generateGrids({
                         mediaQueries: {
                             sm: 'screen and (min-width: 35.5em)', // 568px
                             md: 'screen and (min-width: 48em)',   // 768px
@@ -81,53 +66,66 @@ function Tools() {
                             xxxl: 'screen and (min-width: 160em)', // 2560px
                             x4k: 'screen and (min-width: 240em)'  // 3840px
                         }
-                    })).toString();
+                    });
 
                     // This will log-out the grid CSS.
                     console.log(css);
                 `}
                 </CodeBlock>
 
+                <p>
+                To use your own unit sizes, pass them first. For example, <code>generateGrids([12], options)</code> creates a 12-column grid, including rules outside of any media query. Other options are <code>selectorPrefix</code> (default <code>.pure-u-</code>), <code>decimals</code> (default <code>4</code>), <code>includeReducedFractions</code>, <code>includeWholeNumbers</code> and <code>indent</code>.
+                </p>
+
+                <aside>
+                    <p>
+                        <code>generateGrids()</code> replaces the <a href="https://www.npmjs.org/package/rework-pure-grids">Pure Grids Rework Plugin</a>. It takes the same arguments as <code>pureGrids.units()</code> and produces the same CSS, so you can drop Rework: <code>rework(&#x27;&#x27;).use(pureGrids.units(units, options)).toString()</code> becomes <code>generateGrids(units, options)</code>.
+                    </p>
+                </aside>
+
                 <SectionHeader heading="Mutating Selectors" />
 
                 <p>
-                All selectors defined in Pure's source code begin with the <code>.pure-</code> prefix. However, you may want to change this. To accomplish this task, you can use Pure's tooling to mutate CSS selectors.
+                All selectors defined in Pure's source code begin with the <code>.pure-</code> prefix. However, you may want to change this, or scope Pure to part of your page.
                 </p>
 
                 <p>
-                You can mutate CSS selectors using the <a href="https://www.npmjs.org/package/rework-mutate-selectors">Mutate Selectors Rework Plugin</a>.
+                To scope Pure's base styles, use the prebuilt <code>base-context.css</code>. It applies them only inside an element with the <code>pure</code> class.
                 </p>
 
                 <p>
-                You can install the Rework plugin through npm.
+                For anything else, a few lines of <a href="https://postcss.org/">PostCSS</a> will rewrite Pure's selectors:
                 </p>
 
-                <CodeBlock>$ npm install rework rework-mutate-selectors</CodeBlock>
-
-                <p>
-                And it can be used on it's own like this, or along side other Rework plugins you might be using.
-                </p>
+                <CodeBlock>$ npm install postcss --save-dev</CodeBlock>
 
                 <CodeBlock>
                     {stripIndent`
-                    import rework from 'rework';
-                    import selectors from 'rework-mutate-selectors';
+                    import postcss from 'postcss';
 
-                    const css = rework(inputCSS)
-                        .use(selectors.prefix('.foo'))
-                        .use(selectors.replace(/^\.pure/g, '.bar'))
-                        .toString();
+                    const mutateSelectors = {
+                        postcssPlugin: 'mutate-selectors',
+                        Once(root) {
+                            root.walkRules((rule) => {
+                                // Skip keyframe steps such as \`from\` and \`50%\`.
+                                if (rule.parent.type === 'atrule' && /keyframes$/.test(rule.parent.name)) {
+                                    return;
+                                }
+
+                                rule.selectors = rule.selectors.map((selector) =>
+                                    // Rename Pure's classes, then scope them under \`.foo\`.
+                                    '.foo ' + selector.replace(/\\.pure-/g, '.bar-'),
+                                );
+                            });
+                        },
+                    };
+
+                    const { css } = await postcss([mutateSelectors]).process(inputCSS, { from: undefined });
 
                     // This will log-out the resulting CSS.
                     console.log(css);
                 `}
                 </CodeBlock>
-
-                <aside>
-                    <p>
-                    If you have questions or run into issues while these tools, please file them on their respective GitHub repositories.
-                    </p>
-                </aside>
             </div>
         </Layout>
     );

@@ -1,0 +1,51 @@
+{
+    "grids": [
+        {
+            "name": "units",
+            "units": [5, 24],
+            "options": { "indent": "    " }
+        },
+        {
+            "name": "responsive",
+            "options": {
+                "indent": "    ",
+                "mediaQueries": {
+                    "sm": "screen and (min-width: 35.5em)",
+                    "md": "screen and (min-width: 48em)",
+                    "lg": "screen and (min-width: 64em)",
+                    "xl": "screen and (min-width: 80em)",
+                    "xxl": "screen and (min-width: 120em)",
+                    "xxxl": "screen and (min-width: 160em)",
+                    "x4k": "screen and (min-width: 240em)"
+                }
+            }
+        },
+        {
+            "name": "12-default-indent",
+            "units": 12
+        },
+        {
+            "name": "12-decimals-2",
+            "units": 12,
+            "options": { "decimals": 2 }
+        },
+        {
+            "name": "12-old-ie",
+            "units": 12,
+            "options": { "includeOldIEWidths": true }
+        },
+        {
+            "name": "12-unreduced",
+            "units": 12,
+            "options": { "includeReducedFractions": false }
+        },
+        {
+            "name": "12-custom-prefix-media",
+            "units": [12],
+            "options": {
+                "selectorPrefix": ".col-",
+                "mediaQueries": { "md": "screen and (min-width: 48em)" }
+            }
+        }
+    ]
+}
