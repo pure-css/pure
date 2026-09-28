@@ -7,6 +7,8 @@ function Example({ children }) {
     const markup = html(ReactDOMServer.renderToStaticMarkup(children), opts);
     return (
         <div className="example">
+            {/* markup is rendered from our own static example components, not user input */}
+            {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml */}
             <div dangerouslySetInnerHTML={{ __html: markup }} />
             <CodeBlock>{markup}</CodeBlock>
         </div>
