@@ -21,7 +21,7 @@
     "classnames": "^2.5.1",
     "common-tags": "^1.8.2",
     "js-beautify": "^2.0.3",
-    "purecss": "^3.0.0",
+    "purecss": "^3.1.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-syntax-highlighter": "^16.1.1",
