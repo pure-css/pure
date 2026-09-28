@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Head from '@docusaurus/Head';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';

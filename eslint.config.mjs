@@ -1,10 +1,10 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import reactPlugin from 'eslint-plugin-react';
+import eslintReact from '@eslint-react/eslint-plugin';
 
 export default [
     js.configs.recommended,
-    reactPlugin.configs.flat.recommended,
+    eslintReact.configs.recommended,
     {
         ignores: [
             '.idea/',
@@ -22,7 +22,6 @@ export default [
     {
         files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
         languageOptions: {
-            ...reactPlugin.configs.flat.recommended.languageOptions,
             ecmaVersion: 'latest',
             globals: {
                 ...globals.browser,
@@ -38,20 +37,10 @@ export default [
                 sourceType: 'module',
             },
         },
-        plugins: {
-            react: reactPlugin,
-        },
         rules: {
             indent: [2, 4, { SwitchCase: 1 }],
             quotes: [0, 'single'],
             'no-console': 0,
-            'react/no-unescaped-entities': 0,
-            'react/prop-types': 0,
-        },
-        settings: {
-            react: {
-                version: 'detect',
-            },
         },
     },
 ];

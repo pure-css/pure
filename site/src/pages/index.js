@@ -1,7 +1,6 @@
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import React from 'react';
 import Layout from '@theme/Layout';
 import CodeBlock from '../../components/CodeBlock';
 import { filePercent, fileSize } from '../../lib/utils';
@@ -9,8 +8,8 @@ import './styles.css';
 
 const renderModuleSize = (filesizes) => {
     const modules = ['base', 'grids', 'forms', 'buttons', 'tables', 'menus'];
-    return modules.map((module, idx) => (
-        <div key={idx} className={`size-chart-${module} pure-u`} style={{width: filePercent({ modules, module, filesizes })}}>
+    return modules.map((module) => (
+        <div key={module} className={`size-chart-${module} pure-u`} style={{width: filePercent({ modules, module, filesizes })}}>
             <Link className="size-chart-item" to={`/${module}`}>
                 <span className="size-chart-label">
                     <span className="size-chart-mod">{module}</span>

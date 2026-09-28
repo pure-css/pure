@@ -1,5 +1,5 @@
 import Link from '@docusaurus/Link';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import Example from '../../../components/Example';

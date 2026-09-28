@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import CodeBlock from './CodeBlock';
 import { html } from 'js-beautify';
