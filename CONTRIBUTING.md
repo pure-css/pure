@@ -55,6 +55,18 @@ CSS file changes:
 $ npm run watch
 ```
 
+The documentation site in `site/` bundles the built CSS. CI also checks that
+every docs page renders in a browser (desktop and mobile). To run that check
+locally after `npm run build`:
+
+```shell
+$ cd site
+$ npm install
+$ npm run pure && npm run build
+$ npx playwright install chromium
+$ npm test
+```
+
 ### Browser Support and Testing
 
 Pure is tested and works in:

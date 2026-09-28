@@ -1,0 +1,57 @@
+name: Dependabot auto-merge
+
+# Called by the Testing workflow once all of its test jobs have passed.
+# Merges Dependabot PRs that only contain minor or patch version updates;
+# major updates are left open for review.
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    # Only Dependabot's own PRs, and only when Dependabot triggered the run
+    # (skips PRs someone else pushed to or re-ran).
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.actor == 'dependabot[bot]'
+    permissions:
+      actions: write        # dispatch the Deploy workflow
+      contents: write       # merge the PR
+      pull-requests: write  # merge the PR
+    steps:
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
+        with:
+          github-token: ${{ github.token }}
+
+      - name: Merge minor and patch updates
+        id: merge
+        if: >-
+          steps.metadata.outputs.update-type == 'version-update:semver-minor' ||
+          steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        # --match-head-commit: only merge the exact commit that was tested.
+        run: gh pr merge "$PR_URL" --squash --match-head-commit "$HEAD_SHA"
+
+      - name: Deploy the site
+        # Merges made with GITHUB_TOKEN don't trigger `push` workflows, so
+        # start the Deploy workflow explicitly.
+        if: steps.merge.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run deploy.yml --ref main
+
+      - name: Leave other updates for review
+        if: steps.merge.outcome == 'skipped'
+        env:
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+          DEPENDENCIES: ${{ steps.metadata.outputs.dependency-names }}
+        run: echo "::notice::Not auto-merging ${DEPENDENCIES} (${UPDATE_TYPE:-unknown update type}); needs manual review."

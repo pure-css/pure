@@ -8,8 +8,10 @@
     "predeploy": "npm run pure && npm run build",
     "prestart": "npm run pure",
     "pure": "cp -rf ./node_modules/purecss/build/ ./static/css/pure/",
+    "serve": "docusaurus serve",
     "start": "docusaurus start",
-    "swizzle": "docusaurus swizzle"
+    "swizzle": "docusaurus swizzle",
+    "test": "playwright test"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",
@@ -36,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
   }
 }
