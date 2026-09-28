@@ -39,12 +39,12 @@
     "runtime": {
       "name": "node",
       "version": ">=26",
-      "onFail": "error"
+      "onFail": "warn"
     },
     "packageManager": {
       "name": "npm",
       "version": ">=12",
-      "onFail": "error"
+      "onFail": "warn"
     }
   },
   "description": "Pure is a ridiculously tiny CSS library you can use to start any web project.",
