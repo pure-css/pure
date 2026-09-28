@@ -3,6 +3,17 @@ name: Deploy
 on:
   push:
     branches: [main]
+  # Started by the Dependabot auto-merge workflow, since merges made with
+  # GITHUB_TOKEN don't trigger `push` workflows.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Deploy one at a time, in order; never cancel a deploy in progress.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -18,10 +29,24 @@ jobs:
           # below, which fails the devEngines npm >=12 check.
           package-manager-cache: false
       - run: npm install -g npm@12
+      # Builds Pure into build/, which the docs site bundles.
+      - run: npm ci
+      - name: Build the docs site
+        working-directory: site
+        run: |
+          npm ci
+          npm run pure
+          npm run build
+      - name: Check that every docs page renders
+        working-directory: site
+        run: |
+          npx playwright install --with-deps --only-shell chromium
+          npm test
       - uses: webfactory/ssh-agent@v0.10.0
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
       - name: Release to GitHub Pages
+        working-directory: site
         env:
           DEPLOYMENT_BRANCH: main
           GH_EMAIL: ${{ secrets.GH_EMAIL }}
@@ -29,9 +54,6 @@ jobs:
           GIT_USER: ${{ secrets.GH_NAME }}
           USE_SSH: true
         run: |
-          npm ci
           git config --global user.name "${GH_NAME}"
           git config --global user.email "${GH_EMAIL}"
-          cd site
-          npm install
-          npm run deploy
+          npx docusaurus deploy --skip-build

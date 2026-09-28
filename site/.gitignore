@@ -11,6 +11,10 @@
 .docusaurus
 .cache-loader
 
+# Playwright
+/test-results
+/playwright-report
+
 # Misc
 .DS_Store
 .env.local

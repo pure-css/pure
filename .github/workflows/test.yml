@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,3 +26,46 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
+
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+      - name: Use Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          # See the `test` job.
+          package-manager-cache: false
+      - run: npm install -g npm@12
+      # Builds Pure into build/, which the docs site bundles.
+      - run: npm ci
+      - name: Build the docs site
+        working-directory: site
+        run: |
+          npm ci
+          npm run pure
+          npm run build
+      - name: Install Playwright's browser
+        working-directory: site
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Check that every docs page renders
+        working-directory: site
+        run: npm test
+      - name: Upload the Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: site/playwright-report/
+          retention-days: 14
+
+  automerge:
+    needs: [test, docs]
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/dependabot-automerge.yml
