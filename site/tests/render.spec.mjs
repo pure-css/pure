@@ -99,3 +99,29 @@ for (const path of PAGES) {
         expect(problems).toEqual([]);
     });
 }
+
+// On small screens the docs menu should slide in over the content, not push the
+// page sideways past the edge of the screen (#1143). `window.scrollX` stays 0
+// here even when the page overflows, so compare widths instead.
+for (const path of EXPECTED_PAGES) {
+    test(`opening the menu keeps ${path} within the viewport`, async ({ page, baseURL }) => {
+        test.skip(test.info().project.name !== 'mobile', 'the menu toggle only shows on small screens');
+
+        const origin = new URL(baseURL).origin;
+        await page.route((url) => url.origin !== origin, (route) => route.abort());
+        await page.goto(path, { waitUntil: 'networkidle' });
+
+        await page.locator('#menuLink').click();
+        await expect(page.locator('#menu')).toHaveClass(/\bactive\b/);
+        // Wait for the 0.2s slide-in transition to finish.
+        await expect(page.locator('#menu')).toHaveJSProperty('offsetLeft', 0);
+
+        const size = await page.evaluate(() => ({
+            viewport: document.documentElement.clientWidth,
+            page: document.documentElement.scrollWidth,
+            contentLeft: Math.round(document.getElementById('layout').getBoundingClientRect().left),
+        }));
+        expect(size.page, 'page should not be wider than the viewport').toBeLessThanOrEqual(size.viewport);
+        expect(size.contentLeft, 'content should stay in place under the menu').toBe(0);
+    });
+}
