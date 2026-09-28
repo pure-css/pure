@@ -72,6 +72,7 @@ function Buttons() {
 
                 <Example>
                     <div>
+                        {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- static CSS; JSX text would escape selectors like > */}
                         <style dangerouslySetInnerHTML={{ __html: `
                      .button-success,
                      .button-error,
@@ -105,6 +106,7 @@ function Buttons() {
 
                 <Example>
                     <div>
+                        {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- static CSS; JSX text would escape selectors like > */}
                         <style dangerouslySetInnerHTML={{ __html: `
                      .button-xsmall {
                          font-size: 70%;
