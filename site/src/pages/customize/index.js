@@ -62,7 +62,7 @@ function Customize() {
                 <h3>Alternate CDNs</h3>
 
                 <p>
-                    The main host for Pure is the jsDelivr CDN where Pure is available over HTTPS. The following table lists alternate CDNs where Pure is hosted.
+                    The main host for Pure is the jsDelivr CDN. The following table lists alternate CDNs where Pure is hosted. unpkg serves the npm package, so it has each release as soon as it's published. On cdnjs, files sit at the top level instead of under <code>build/</code>.
                 </p>
 
                 <div className="table-responsive">
@@ -71,40 +71,16 @@ function Customize() {
                             <tr>
                                 <th>CDN</th>
                                 <th>URL</th>
-                                <th>HTTPS</th>
-                                <th>Combo</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="http://cdnjs.com/">cdnjs</a></td>
-                                <td>{`//cdnjs.cloudflare.com/ajax/libs/pure/${pureVersion}/build/pure-min.css`}</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
+                                <td><a href="https://unpkg.com/">unpkg</a></td>
+                                <td>{`https://unpkg.com/purecss@${pureVersion}/build/pure-min.css`}</td>
                             </tr>
                             <tr>
-                                <td><a href="https://www.keycdn.com/">KeyCDN</a></td>
-                                <td>{`//opensource.keycdn.com/pure/${pureVersion}/pure-min.css`}</td>
-                                <td>Yes</td>
-                                <td>No</td>
-                            </tr>
-                            <tr>
-                                <td><a href="http://www.osscdn.com/">OSS MaxCDN</a></td>
-                                <td>{`//oss.maxcdn.com/libs/pure/${pureVersion}/pure-min.css`}</td>
-                                <td>Yes</td>
-                                <td>No</td>
-                            </tr>
-                            <tr>
-                                <td><a href="http://rawgit.com/">RawGit</a></td>
-                                <td>{`//cdn.rawgit.com/pure-css/pure-release/v${pureVersion}/pure-min.css`}</td>
-                                <td>Yes</td>
-                                <td>No</td>
-                            </tr>
-                            <tr>
-                                <td><a href="http://www.staticfile.org/">Staticfile</a></td>
-                                <td>{`//cdn.staticfile.org/pure/${pureVersion}/pure-min.css`}</td>
-                                <td>Yes</td>
-                                <td>No</td>
+                                <td><a href="https://cdnjs.com/libraries/pure">cdnjs</a></td>
+                                <td>{`https://cdnjs.cloudflare.com/ajax/libs/pure/${pureVersion}/pure-min.css`}</td>
                             </tr>
                         </tbody>
                     </table>
