@@ -14,6 +14,9 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
+          # Auto-caching runs the bundled npm (v11) before it is upgraded
+          # below, which fails the devEngines npm >=12 check.
+          package-manager-cache: false
       - run: npm install -g npm@12
       - uses: webfactory/ssh-agent@v0.10.0
         with:
