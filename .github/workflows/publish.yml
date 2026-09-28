@@ -30,6 +30,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
+      actions: write   # dispatch the Deploy workflow
       contents: write  # create the tag and GitHub Release
       id-token: write  # npm trusted publishing (OIDC)
 
@@ -127,3 +128,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.check.outputs.version }}
           PRERELEASE: ${{ steps.check.outputs.prerelease }}
+
+      # The Deploy run for this push started before the version was on npm, so
+      # it linked to the previous release. Redeploy now that it's published.
+      - name: Redeploy the docs site
+        if: steps.check.outputs.publish == 'true'
+        run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}

@@ -69,6 +69,7 @@ This assumes the following repo's are cloned and `npm` installed:
   1. builds and tests Pure
   2. publishes it to npm with provenance, using [trusted publishing](https://docs.npmjs.com/trusted-publishers) (no npm token)
   3. tags the merged commit `v1.0.0` and creates a GitHub Release, with the HISTORY.md section as notes and `pure-1.0.0.tar.gz` attached
+  4. redeploys https://pure-css.github.io, whose CDN links and SRI hash come from the newly published package (no need to bump `purecss` in `site/package.json`)
 
   Versions like `1.0.0-rc.1` are published under npm's `next` tag as a GitHub pre-release. Versions ending in `-pre` are never published.
 
@@ -79,6 +80,7 @@ This assumes the following repo's are cloned and `npm` installed:
   - https://www.npmjs.com/package/purecss shows the new version, with provenance
   - https://www.jsdelivr.com/package/npm/purecss has the new files
   - https://github.com/pure-css/pure/releases has the release
+  - https://pure-css.github.io shows the new version in the CDN snippet, once the Deploy workflow finishes
 
 ## Spread the word
 
