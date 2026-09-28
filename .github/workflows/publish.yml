@@ -1,0 +1,129 @@
+name: Publish
+
+# Publishes to npm when the version in package.json changes on main, then tags
+# the commit and creates a GitHub Release. Authenticates with npm trusted
+# publishing (OIDC), so no npm token is stored in the repo.
+#
+# - `X.Y.Z`          -> npm `latest`, GitHub Release
+# - `X.Y.Z-rc.1` etc -> npm `next`, GitHub pre-release
+# - `X.Y.Z-pre`      -> skipped (marks unreleased work on main, see RELEASE.md)
+#
+# Re-running is safe: each step is skipped if its result already exists.
+
+on:
+  push:
+    branches: [main]
+    paths: [package.json]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Publish one version at a time; never cancel a publish in progress.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # A manual run can target any branch; only ever publish from main.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # create the tag and GitHub Release
+      id-token: write  # npm trusted publishing (OIDC)
+
+    steps:
+      - uses: actions/checkout@v7
+      - name: Use Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org
+          # Never cache in release builds. This also avoids running the bundled
+          # npm (v11) before the upgrade below, which fails the devEngines check.
+          package-manager-cache: false
+      - run: npm install -g npm@12
+
+      - name: Check what needs releasing
+        id: check
+        run: |
+          name=$(node -p "require('./package.json').name")
+          version=$(node -p "require('./package.json').version")
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+          if [[ "$version" =~ -pre(\.|$) ]]; then
+            echo "::notice::$version is a -pre development version; nothing to release."
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [[ "$version" == *-* ]]; then
+            echo "dist_tag=next" >> "$GITHUB_OUTPUT"
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "dist_tag=latest" >> "$GITHUB_OUTPUT"
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          # A missing version is an E404; any other failure stops the job.
+          if out=$(npm view "$name@$version" version 2>&1); then
+            echo "::notice::$name@$version is already on npm."
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          elif grep -q E404 <<< "$out"; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "$out"
+            exit 1
+          fi
+
+          if gh release view "v$version" > /dev/null 2>&1; then
+            echo "::notice::GitHub Release v$version already exists."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "release=true" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      # Runs `prepare`, which builds build/ and the release tarball.
+      - if: steps.check.outputs.publish == 'true' || steps.check.outputs.release == 'true'
+        run: npm ci
+      - if: steps.check.outputs.publish == 'true'
+        run: npm run lint
+      - if: steps.check.outputs.publish == 'true'
+        run: npm test
+
+      # Provenance is added automatically with trusted publishing.
+      - name: Publish to npm
+        if: steps.check.outputs.publish == 'true'
+        run: npm publish --tag "$DIST_TAG"
+        env:
+          DIST_TAG: ${{ steps.check.outputs.dist_tag }}
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.release == 'true'
+        run: |
+          # Release notes: the version's section of HISTORY.md, if it has one.
+          awk -v heading="## $VERSION" '
+            index($0, heading) == 1 && (length($0) == length(heading) || substr($0, length(heading) + 1, 1) == " ") { found = 1; next }
+            found && /^## / { exit }
+            found { print }
+          ' HISTORY.md > notes.md
+
+          args=(--target "$GITHUB_SHA" --title "v$VERSION")
+          if [[ -s notes.md ]]; then
+            args+=(--notes-file notes.md)
+          else
+            args+=(--generate-notes)
+          fi
+          if [[ "$PRERELEASE" == 'true' ]]; then
+            args+=(--prerelease --latest=false)
+          fi
+
+          gh release create "v$VERSION" "release/$VERSION/pure-$VERSION.tar.gz" "${args[@]}"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.check.outputs.version }}
+          PRERELEASE: ${{ steps.check.outputs.prerelease }}

@@ -49,46 +49,36 @@ This assumes the following repo's are cloned and `npm` installed:
 
 ### Pure repo
 
-- [ ] **Bump versions**
+- [ ] **Open a release PR that bumps the version**
 
-  It should have already been determined whether this is a minor or patch version release. Update Pure's version number to the new version in the following places. You'll likely be dropping a "-pre" suffix which was in place during the last development cycle. Do not use a "v" in the version (e.g., 1.0.0):
+  It should have already been determined whether this is a minor or patch version release. On a new branch, update Pure's version number to the new version in the following places. You'll likely be dropping a "-pre" suffix which was in place during the last development cycle. Do not use a "v" in the version (e.g., 1.0.0):
 
-  - [ ] package.json
-  - [ ] HISTORY.md (Update "NEXT")
+  - [ ] package.json (e.g. `npm version 1.0.0 --no-git-tag-version`, which also updates package-lock.json)
+  - [ ] HISTORY.md (rename "NEXT" to `## 1.0.0 (YYYY-MM-DD)`; this section becomes the GitHub Release notes)
 
-- [ ] **Build Pure release files via `npm run release`**
-
-  Create the release/[version]/pure-[version].tar.gz file:
-
-  ```bash
-  $ npm run release
-  ```
+  `main` is protected, so this has to go through a pull request, and CI must pass before it can merge.
 
   **Note:** If the build fails it's for a good reason, most likely because there's code which is not passing CSSLint. We should always fix these issues and never force a release.
 
-## Publish pure to NPM
+## Publish
 
-From the `pure` repo run the following command to publish Pure to NPM. This will ensure `jsdelivr.com` CDN gets the new files.
+- [ ] **Merge the release PR**
 
-```bash
-npm publish .
-```
+  When a change to the version in package.json lands on `main`, the [Publish workflow](.github/workflows/publish.yml) runs. It:
 
-Verify via https://www.jsdelivr.com/package/npm/purecss
+  1. builds and tests Pure
+  2. publishes it to npm with provenance, using [trusted publishing](https://docs.npmjs.com/trusted-publishers) (no npm token)
+  3. tags the merged commit `v1.0.0` and creates a GitHub Release, with the HISTORY.md section as notes and `pure-1.0.0.tar.gz` attached
 
-## Draft releases on Github
+  Versions like `1.0.0-rc.1` are published under npm's `next` tag as a GitHub pre-release. Versions ending in `-pre` are never published.
 
-- [ ] **Draft a new release on [GitHub](https://github.com/pure-css/pure/releases) for all three repos,** using "v" in the version number (e.g., v1.0.0). Drafts are invisible to the public. Once these are published, the repos will be visible, and they will be tagged. **Don't publish them just yet.**
+  Don't run `npm publish` locally. If a step fails, fix the cause and re-run the workflow from the Actions tab. Steps that already succeeded are skipped.
 
-  - [ ] **pure**
+- [ ] **Verify**
 
-## Formally publish Pure
-
-Now all our files are out there and everything is looking good.
-
-- [ ] **Publish pure**
-
-  From the [pure repo](https://github.com/pure-css/pure/releases), publish the release. This will tag the repo and signal to the public that the new Pure release is complete.
+  - https://www.npmjs.com/package/purecss shows the new version, with provenance
+  - https://www.jsdelivr.com/package/npm/purecss has the new files
+  - https://github.com/pure-css/pure/releases has the release
 
 ## Spread the word
 
@@ -97,4 +87,12 @@ Now all our files are out there and everything is looking good.
 
 ## Mark repo as pre-release
 
-- [ ] We should mark the version number of the project (in package.json) as 0.6.1-pre for clarity, so there's no mistaking the leading edge of the project from the last release. Commit those changes and push to main.
+- [ ] We should mark the version number of the project (in package.json) as 0.6.1-pre for clarity, so there's no mistaking the leading edge of the project from the last release. Open a PR with those changes. The Publish workflow skips `-pre` versions.
+
+## One-time setup
+
+A package maintainer does these once, before the first automated release.
+
+- **npm trusted publisher:** on npmjs.com, under the package's Settings → Trusted Publisher, add GitHub Actions with organization `pure-css`, repository `pure`, and workflow `publish.yml`.
+- **npm publishing access:** under Settings → Publishing access, select "Require two-factor authentication and disallow tokens". Trusted publishing keeps working; npm tokens can no longer publish.
+- **GitHub:** the "Protect main" ruleset requires a pull request and passing `test`/`docs` checks for `main`.
