@@ -24,7 +24,11 @@ export function write(file, contents) {
     writeFileSync(file, contents);
 }
 
-/** Returns the files matching `pattern`, sorted for deterministic output. */
+/**
+ * Returns the files matching `pattern`, sorted for deterministic output.
+ * Uses the same locale-aware, case-insensitive order as Grunt's `glob` so the
+ * release tarball entries stay in the same order as before.
+ */
 export function glob(pattern) {
-    return globSync(pattern).sort();
+    return globSync(pattern).sort((a, b) => a.localeCompare(b, 'en'));
 }
