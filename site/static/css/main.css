@@ -74,7 +74,7 @@ aside {
  * --------------------------
 */
 
-/* Navigation Push Styles */
+/* Navigation Styles: on small screens the menu slides in over the content */
 #layout {
     position: relative;
     padding-left: 0;
@@ -199,6 +199,13 @@ code {
 }
 .content p code {
     font-size: 90%;
+}
+/* On small screens, let long inline code wrap instead of widening the page. */
+@media (max-width: 48em) {
+    .content p code {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
 }
 
 .code {
@@ -588,19 +595,6 @@ a.pure-button-primary {
         border-right-width: 1px;
     }
 
-}
-
-@media (max-width: 58em) {
-    /* Only apply this when the window is smaller. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small. (Rotate to portrait on a mobile.)
-        * Tap the menu to trigger the active state.
-        * Make the window large again. (Rotate to landscape on mobile.)
-    */
-    #layout.active {
-        position: relative;
-        left: 160px;
-    }
 }
 
 @media (min-width: 58em) {
