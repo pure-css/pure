@@ -87,6 +87,40 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     outline: thin solid #129FEA;
     outline: 1px auto #129FEA;
 }
+
+/* Style the file input's button like a `.pure-button`. */
+.pure-form input[type="file"]::file-selector-button {
+    display: inline-block;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    color: rgba(0, 0, 0, 0.80);
+    border: none rgba(0, 0, 0, 0);
+    background-color: #E6E6E6;
+    border-radius: 2px;
+}
+.pure-form input[type="file"]:hover::file-selector-button,
+.pure-form input[type="file"]:focus::file-selector-button {
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.pure-form input[type="file"]:active::file-selector-button {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000;
+}
+.pure-form input[type="file"][disabled]::file-selector-button {
+    background-image: none;
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
 .pure-form .pure-checkbox,
 .pure-form .pure-radio {
     margin: 0.5em 0;
