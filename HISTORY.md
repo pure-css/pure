@@ -1,5 +1,10 @@
 # Pure Change History
 
+## NEXT
+
+- Replaced the deprecated Grunt build with ESM npm scripts (`npm run build`, `npm test`, `npm run watch`, `npm run release`). Build output is unchanged.
+- Development now requires Node.js 26+ and npm 12+ (see `.nvmrc`).
+
 ## 3.0.0 (2022-10-26)
 
 This is a major version bump that has the following changes:

@@ -11,11 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v7
         with:
-          node-version: 20.x
+          node-version-file: .nvmrc
+          # Auto-caching runs the bundled npm (v11) before it is upgraded
+          # below, which fails the devEngines npm >=12 check.
+          package-manager-cache: false
+      - run: npm install -g npm@12
       - run: npm ci
       - run: npm run lint
       - run: npm test

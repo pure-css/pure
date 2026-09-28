@@ -22,10 +22,10 @@ to open issues or questions in the Issue tab.
 
 ## Building and Testing Pure
 
-Pure uses [Grunt][], a JavaScript task runner that runs on [Node.js][], for
-building and testing. You'll need Node.js and Grunt installed to work on Pure.
-Once installed, clone the `pure` repo (either the main repo or your fork) and
-install Pure's gruntplugins via npm:
+Pure is built and tested with npm scripts (see `scripts/`) that run on
+[Node.js][]. You'll need Node.js 26+ and npm 12+ installed to work on Pure (the
+exact Node.js version is in `.nvmrc`). Once installed, clone the `pure` repo
+(either the main repo or your fork) and install its dependencies via npm:
 
 ```shell
 $ git clone git://github.com/pure-css/pure.git
@@ -33,26 +33,26 @@ $ cd pure/
 $ npm install
 ```
 
-Building Pure is easy, run `grunt`:
+Building Pure is easy, run `npm run build`:
 
 ```shell
-$ grunt
+$ npm run build
 ```
 
 Pure uses [CSSLint][] for basic testing to make sure we're shipping valid CSS
 which complies with standard best practices. To run Pure's tests, run
-`grunt test`:
+`npm test`:
 
 ```shell
-$ grunt test
+$ npm test
 ```
 
 **Note:** To save your fingers from The Developer Konami Code: ⌘⇥ ↑ ⏎ run the
-`grunt watch` task with will continuously test and build Pure anytime a CSS file
-changes:
+`npm run watch` script which will continuously test and build Pure anytime a
+CSS file changes:
 
 ```shell
-$ grunt watch
+$ npm run watch
 ```
 
 ### Browser Support and Testing
@@ -68,7 +68,6 @@ in these environments. If you don't have access to all these environments, list
 the ones that you have tested in on the pull request description. That way, we
 know what's missing, and can help you out.
 
-[grunt]: http://gruntjs.com/
 [node.js]: http://nodejs.org/
 [csslint]: https://github.com/stubbornella/csslint
 
