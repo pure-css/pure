@@ -1,6 +1,5 @@
 import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import React from 'react';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Header from '../../../components/Header';
 import SectionHeader from '../../../components/SectionHeader';
@@ -60,11 +59,11 @@ const layouts = [
     }
 ];
 
-const renderLayouts = (layout, idx) => (
+const renderLayout = (layout, idx, withBaseUrl) => (
     <div key={idx} className="layout-item l-wrap pure-g">
         <div className="layout-item-screenshot content pure-u-1 u-sm-1-2">
             <a href={`/layouts/${layout.type}/`}>
-                <img src={useBaseUrl(`img/layouts/${layout.type}@2x.jpg`)} className="pure-img-responsive" width="400" height="214"
+                <img src={withBaseUrl(`img/layouts/${layout.type}@2x.jpg`)} className="pure-img-responsive" width="400" height="214"
                     alt={`Screenshot of ${layout.title} example layout`} />
             </a>
         </div>
@@ -74,8 +73,8 @@ const renderLayouts = (layout, idx) => (
             <p>{layout.summary}</p>
 
             <ul className="layout-item-modules pure-g">
-                {layout.modules.map((m, idx) => (
-                    <li key={idx} className={`layout-item-module layout-item-module-${m} pure-u`}>
+                {layout.modules.map((m) => (
+                    <li key={m} className={`layout-item-module layout-item-module-${m} pure-u`}>
                         <Link to={`/${m}`}>{m}</Link>
                     </li>
                 ))}
@@ -92,7 +91,8 @@ const renderLayouts = (layout, idx) => (
 );
 
 function Layouts() {
-    const layoutMarkup = layouts.map(renderLayouts);
+    const { withBaseUrl } = useBaseUrlUtils();
+    const layoutMarkup = layouts.map((layout, idx) => renderLayout(layout, idx, withBaseUrl));
     return (
         <Layout description={description} title={title}>
             <Header description={description} title={title} />

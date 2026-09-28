@@ -1,5 +1,5 @@
 import Link from '@docusaurus/Link';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Layout from '../../theme/Layout';
 import Header from '../../../components/Header';
 import Example from '../../../components/Example';
@@ -35,6 +35,7 @@ function Menus() {
                 </p>
 
                 <Example>
+                    {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- static CSS; JSX text would escape selectors like > */}
                     <style dangerouslySetInnerHTML={{ __html: `
                         .custom-restricted-width {
                             /* To limit the menu width to the content of the menu: */
@@ -184,6 +185,7 @@ function Menus() {
                 </p>
 
                 <Example>
+                    {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- static CSS; JSX text would escape selectors like > */}
                     <style dangerouslySetInnerHTML={{ __html: `
                         /* Customization to limit height of the menu */
                         .custom-restricted {

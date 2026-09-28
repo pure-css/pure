@@ -1,4 +1,3 @@
-import React from 'react';
 
 function SectionHeader({ heading, TagName = 'h2' }) {
     // Remove HTML entities, and all chars except whitespace, word chars, and from the `heading`.

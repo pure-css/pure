@@ -1,4 +1,3 @@
-import React from 'react';
 
 function Footer({ siteConfig }) {
     const { customFields, organizationName } = siteConfig;
