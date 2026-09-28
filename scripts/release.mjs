@@ -5,7 +5,7 @@ import { copyFileSync, createWriteStream, mkdirSync, rmSync, statSync } from 'no
 import { basename, join } from 'node:path';
 import { finished } from 'node:stream/promises';
 
-import archiver from 'archiver';
+import { TarArchive } from 'archiver';
 
 import { NICK, glob, pkg } from './util.mjs';
 
@@ -23,7 +23,7 @@ export async function release() {
     mkdirSync(releaseDir, { recursive: true });
 
     const files = glob('build/*');
-    const archive = archiver('tar', { gzip: true });
+    const archive = new TarArchive({ gzip: true });
     const output = createWriteStream(archivePath);
 
     archive.pipe(output);
