@@ -1,5 +1,6 @@
-const { moduleSizes, PURE_DOWNLOAD_SNIPPET } = require('./lib/pure');
-const { version } = require('../package.json');
+// Use the installed purecss package (not ../package.json) so every CDN link
+// points at a published version that matches the snippet's SRI hash.
+const { moduleSizes, PURE_DOWNLOAD_SNIPPET, version } = require('./lib/pure');
 
 module.exports = {
     title: 'Pure',

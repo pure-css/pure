@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
   # Started by the Dependabot auto-merge workflow, since merges made with
-  # GITHUB_TOKEN don't trigger `push` workflows.
+  # GITHUB_TOKEN don't trigger `push` workflows, and by the Publish workflow
+  # after a release reaches npm.
   workflow_dispatch:
 
 permissions:
@@ -35,6 +36,16 @@ jobs:
         working-directory: site
         run: |
           npm ci
+          # Link to the root package.json version once it's on npm, so a
+          # release updates the site without bumping site/package.json.
+          # Otherwise (a -pre version, or not yet published) keep the pinned
+          # version, which is always a published one.
+          version=$(node -p "require('../package.json').version")
+          if npm view "purecss@$version" version > /dev/null 2>&1; then
+            npm install --no-save "purecss@$version"
+          else
+            echo "::notice::purecss@$version is not on npm; using the pinned version."
+          fi
           npm run pure
           npm run build
       - name: Check that every docs page renders
