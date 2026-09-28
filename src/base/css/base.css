@@ -1,4 +1,4 @@
-/*csslint important:false*/
+/*csslint important:false, known-properties:false*/
 
 /* ==========================================================================
    Pure Base Extras
@@ -14,11 +14,18 @@ html {
 
 /**
  * Always hide an element when it has the `hidden` HTML attribute.
+ * `hidden="until-found"` is left to the browser, which hides it with
+ * `content-visibility` so find-in-page can still reveal it.
  */
 
 .hidden,
-[hidden] {
+[hidden]:not([hidden="until-found"]) {
     display: none !important;
+}
+
+/* Undo Normalize.css's `[hidden] { display: none; }` for `until-found`. */
+[hidden="until-found"] {
+    display: revert;
 }
 
 /**
