@@ -1,8 +1,10 @@
 var fs = require('fs');
 var path = require('path');
+var generateGrids = require('./lib/grids.js');
 var cache = {};
 
 module.exports = {
+    generateGrids: generateGrids,
     getFile: function(name) {
         if (!cache[name]) {
             try {

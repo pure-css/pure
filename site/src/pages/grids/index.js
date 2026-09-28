@@ -459,7 +459,7 @@ function Grids() {
                 <h3>Custom Unit Sizes</h3>
 
                 <p>
-                    We are working on building tools to allow people to customize Pure Grids. The first low-level tools, the <b><a href="https://github.com/ericf/rework-pure-grids">Pure Grids Rework Plugin</a></b>, is available to use today&mdash;we use this tool to generate Pure's built-in unit sizes.
+                    You can generate Pure Grids with your own unit sizes using <code>generateGrids()</code> from the <code>purecss</code> npm package&mdash;it's the same generator we use to build Pure's built-in unit sizes. See the <a href="/tools/">Tools</a> page for details.
                 </p>
 
                 <SectionHeader heading="Pure Responsive Grids" />

@@ -4,6 +4,8 @@
 
 - Replaced the deprecated Grunt build with ESM npm scripts (`npm run build`, `npm test`, `npm run watch`, `npm run release`). Build output is unchanged.
 - Development now requires Node.js 26+ and npm 12+ (see `.nvmrc`).
+- Removed the deprecated Rework (`rework`, `rework-pure-grids`, `rework-mutate-selectors`) from the build. Grids and `base-context.css` are now generated without it. Build output is unchanged.
+- Added `generateGrids()` to the `purecss` package (`require('purecss').generateGrids`) for building custom grids. It takes the same arguments as `rework-pure-grids`' `units()` and returns the CSS string, with no Rework needed.
 
 ## 3.0.0 (2022-10-26)
 

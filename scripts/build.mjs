@@ -7,10 +7,9 @@ import { basename, dirname, join } from 'node:path';
 import autoprefixer from 'autoprefixer';
 import CleanCSS from 'clean-css';
 import postcss from 'postcss';
-import rework from 'rework';
-import pureGrids from 'rework-pure-grids';
-import selectors from 'rework-mutate-selectors';
 
+import generateGridsCSS from '../lib/grids.js';
+import { prefixSelectors } from './prefix-selectors.mjs';
 import { MODULES, NICK, glob, pkg, read, write } from './util.mjs';
 
 // -- Config -------------------------------------------------------------------
@@ -121,11 +120,8 @@ function copySources() {
 }
 
 function generateGrids() {
-    for (const { dest, units, options: gridOptions } of GRIDS) {
-        const options = { indent: '    ', ...gridOptions };
-        const css = rework('').use(pureGrids.units(units, options));
-
-        write(dest, css.toString(options));
+    for (const { dest, units, options } of GRIDS) {
+        write(dest, generateGridsCSS(units, { indent: '    ', ...options }));
     }
 }
 
@@ -136,9 +132,7 @@ function concat() {
 }
 
 function baseContext() {
-    const css = rework(read('build/base.css')).use(selectors.prefix('.pure'));
-
-    write('build/base-context.css', css.toString({ indent: '    ' }));
+    write('build/base-context.css', prefixSelectors(read('build/base.css'), '.pure'));
 }
 
 async function autoprefix() {
