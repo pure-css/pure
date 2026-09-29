@@ -3,7 +3,7 @@ import Link from '@docusaurus/Link';
 function Menu() {
     return (
         <>
-            <a href="#menu" id="menuLink" className="menu-link">
+            <a href="#menu" id="menuLink" className="menu-link" aria-label="Menu" aria-controls="menu" aria-expanded="false">
                 <span></span>
             </a>
             

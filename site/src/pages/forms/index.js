@@ -256,7 +256,7 @@ function Forms() {
 
                 <Example>
                     <form className="pure-form">
-                        <input type="text" value="Readonly input here..." readOnly />
+                        <input type="text" value="Readonly input here..." aria-label="Read-only example" readOnly />
                     </form>
                 </Example>
 
@@ -268,7 +268,7 @@ function Forms() {
 
                 <Example>
                     <form className="pure-form">
-                        <input type="text" className="pure-input-rounded" />
+                        <input type="text" className="pure-input-rounded" aria-label="Search" />
                         <button type="submit" className="pure-button">Search</button>
                     </form>
                 </Example>

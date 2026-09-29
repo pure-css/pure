@@ -52,9 +52,9 @@ a.button-secondary {
 }
 
 a.button-cta {
-  background: #1f8dd6;
+  background: #1a75b3;
   color: #fff;
-  border: 1px solid #1f8dd6;
+  border: 1px solid #1a75b3;
 }
 
 a.button-secondary {
@@ -91,40 +91,46 @@ a.size-chart-item {
 }
 
 .size-chart-base {
-  background: #1f8dd6;
+  background: #1a75b3;
 }
 .size-chart-base .size-chart-size {
-  color: rgb(103, 194, 240);
+  color: #fff;
 }
 
 .size-chart-grids {
   background: rgb(128, 88, 165);
 }
 .size-chart-grids .size-chart-size {
-  color: rgb(200, 131, 255);
+  color: #fff;
 }
 
 .size-chart-forms {
   background: #5eb95e;
 }
+/* Dark text on the lighter colors keeps the labels readable. */
+.size-chart-forms a.size-chart-item,
+.size-chart-menus a.size-chart-item,
+.size-chart-tables a.size-chart-item {
+  color: #222;
+}
 
 .size-chart-forms .size-chart-size {
-  color: rgb(161, 240, 137);
+  color: #222;
 }
 
 .size-chart-buttons {
-  background: #dd514c;
+  background: #d83933;
 }
 
 .size-chart-buttons .size-chart-size {
-  color: rgb(236, 164, 154);
+  color: #fff;
 }
 
 .size-chart-menus {
   background: rgb(250, 210, 50);
 }
 .size-chart-menus .size-chart-size {
-  color: rgb(255, 240, 134);
+  color: #222;
 }
 
 .size-chart-tables {
@@ -134,7 +140,7 @@ a.size-chart-item {
   margin-left: -0.5em;
 }
 .size-chart-tables .size-chart-size {
-  color: rgb(255, 190, 129);
+  color: #222;
 }
 
 .marketing {
@@ -176,12 +182,12 @@ a.size-chart-item {
 
 .button-a {
   background: #e1f2fa;
-  color: #5992aa;
+  color: #447184;
 }
 
 .button-b {
   background: #fcebbd;
-  color: #af9540;
+  color: #7b682d;
 }
 
 .button-c,
@@ -202,25 +208,25 @@ a.size-chart-item {
 }
 .button-d {
   background: #d3eda3;
-  color: #72962e;
+  color: #526c21;
 }
 
 .button-e {
   background: #f5ab9e;
-  color: #8c3a2b;
+  color: #7e3427;
 }
 .button-f {
   background: #ddaeff;
-  color: #8156a7;
+  color: #5f3f7b;
 }
 
 .button-g {
   background: #f57b00;
-  color: #ffca95;
+  color: #222;
 }
 
 .button-h {
-  background: #008ed4;
+  background: #007bb7;
   color: #fff;
 }
 .sample-button .button-h {

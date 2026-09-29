@@ -26,10 +26,8 @@ function Tools() {
                 </p>
 
                 <ul>
-                    <li><code>getFile(name)</code></li>
-                &ndash; Retrieve contents of a Pure module file.
-                    <li><code>getFilePath(name)</code></li>
-                &ndash; Return full path to a Pure file.
+                    <li><code>getFile(name)</code> &ndash; Retrieve contents of a Pure module file.</li>
+                    <li><code>getFilePath(name)</code> &ndash; Return full path to a Pure file.</li>
                 </ul>
 
                 <SectionHeader heading="Installing Pure with Composer" />

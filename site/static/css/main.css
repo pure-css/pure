@@ -26,7 +26,7 @@ html, button, input, select, textarea,
 body {
     min-width: 320px;
     background-color: #fff;
-    color: #777;
+    color: #666;
     line-height: 1.6;
 }
 
@@ -42,12 +42,20 @@ h4 {
 }
 
 a {
-    color: #3b8bba; /* block-background-text-normal */
+    color: #31739a; /* block-background-text-normal */
     text-decoration: none;
 }
 
 a:visited {
     color: #265778; /* block-normal-text-normal */
+}
+
+/* Underline links in running text so they don't rely on color alone. */
+p a:not(.pure-button),
+li a:not(.pure-button):not(.pure-menu-link),
+td a:not(.pure-button),
+dd a {
+    text-decoration: underline;
 }
 
 dt {
@@ -58,14 +66,14 @@ dd {
 }
 
 aside {
-    background: #1f8dd6; /* same color as selected state on site menu */
+    background: #1a75b3; /* same color as selected state on site menu */
     margin: 1em 0;
     padding: 0.3em 1em;
     border-radius: 3px;
     color: #fff;
 }
     aside a, aside a:visited {
-        color: rgb(169, 226, 255);
+        color: #fff;
     }
 
 
@@ -146,7 +154,7 @@ aside {
     .content .content-subhead {
         margin: 2em 0 1em 0;
         font-weight: 300;
-        color: #888;
+        color: #666;
         position: relative;
     }
 
@@ -260,6 +268,11 @@ code {
         list-style: none;
         padding: 0;
         margin-bottom: 0;
+    }
+    /* Keep footer links at least 24px tall so they're easy to tap. */
+    .legal-links a {
+        display: inline-block;
+        min-height: 24px;
     }
     .legal-copyright {
         margin-top: 0;
@@ -411,13 +424,13 @@ code {
     }
 
     #menu .pure-menu-item .active {
-        background: #1f8dd6;
+        background: #1a75b3;
         color: #fff;
     }
 
     #menu li.pure-menu-item .active:hover,
     #menu li.pure-menu-item .active:focus {
-        background: #1f8dd6;
+        background: #1a75b3;
     }
 
 
