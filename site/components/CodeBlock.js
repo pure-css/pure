@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function CodeBlock({ children, language = 'html', full = false, wrap = false }) {
     var fullClass = classnames({ 'is-code-full': full });
@@ -8,7 +8,7 @@ function CodeBlock({ children, language = 'html', full = false, wrap = false }) 
     return (
         <div className={fullClass}>
             <div className={codeClass}>
-                <SyntaxHighlighter language={language} style={docco} wrapLongLines={full}>{children}</SyntaxHighlighter>
+                <SyntaxHighlighter language={language} style={a11yLight} wrapLongLines={full}>{children}</SyntaxHighlighter>
             </div>
         </div>
     );

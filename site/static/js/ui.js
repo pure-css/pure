@@ -36,6 +36,8 @@
         toggleClass(elements.layout, active);
         toggleClass(elements.menu, active);
         toggleClass(elements.menuLink, active);
+        elements.menuLink.setAttribute('aria-expanded',
+            String(elements.menu.className.indexOf(active) !== -1));
     }
     
     function handleEvent(e) {
