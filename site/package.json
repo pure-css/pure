@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.63.0"
+    "@playwright/test": "^1.64.0"
   },
   "overrides": {
     "serialize-javascript": "^7.0.5",
