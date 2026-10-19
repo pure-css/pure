@@ -22,7 +22,7 @@
     "common-tags": "^1.8.2",
     "js-beautify": "^2.0.3",
     "purecss": "^3.1.0",
-    "react": "^19.3.0",
+    "react": "^19.3.1",
     "react-dom": "^19.3.0",
     "react-syntax-highlighter": "^16.1.2",
     "webpack": "^5.111.1"
